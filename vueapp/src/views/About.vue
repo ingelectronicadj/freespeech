@@ -1,16 +1,13 @@
 <template>
 	<v-container class="pb-10">
-		<!-- eslint-disable-next-line vue/no-v-html -->
 		<div v-html="compiledMarkdown" />
 	</v-container>
 </template>
 
 <script>
-import readMeAboutMarkDownText from '!raw-loader!../../../README.md';
-const createDOMPurify = require('dompurify');
-const DOMPurify = createDOMPurify(window);
-
-const marked = require('marked');
+import readMeAboutMarkDownText from '../../../README.md?raw';
+import DOMPurify from 'dompurify';
+import { marked } from 'marked';
 
 export default {
 	name: 'About',
@@ -20,10 +17,9 @@ export default {
 		};
 	},
 	computed: {
-		compiledMarkdown: function () {
-			let htmlFromMarkDown = marked(readMeAboutMarkDownText, { sanitize: false });			
-			let cleanHtml = DOMPurify.sanitize(htmlFromMarkDown);
-			return cleanHtml;
+		compiledMarkdown () {
+			const htmlFromMarkDown = marked.parse(this.readMeAboutMarkDownText);
+			return DOMPurify.sanitize(htmlFromMarkDown);
 		}
 	}
 };

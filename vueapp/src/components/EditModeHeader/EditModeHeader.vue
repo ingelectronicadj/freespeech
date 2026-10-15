@@ -11,9 +11,12 @@
 					id="exitEditModeButton"
 					class="mx-2"
 					color="success"
-					@click.native="exitEditMode"
+					@click="exitEditMode"
 				>
-					<v-icon class="pr-2">
+					<v-icon
+						class="pr-2"
+						aria-hidden="true"
+					>
 						save
 					</v-icon>
 					{{ $t('editMode.buttonSave') }}
@@ -32,9 +35,10 @@
 import { mapActions } from 'vuex';
 
 export default {
+	name: 'EditModeHeader',
 	methods: {
 		...mapActions('tilePad', ['setEditMode']),
-		exitEditMode() {
+		exitEditMode () {
 			this.setEditMode(false);
 		}
 	}
@@ -42,11 +46,11 @@ export default {
 </script>
 <style scoped>
 .sentenceCardContainer {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 56px;
-  z-index: 100;
-  padding: 5px;
-  background-color: white;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 56px;
+	z-index: 100;
+	padding: 5px;
+	background-color: white;
 }
 </style>

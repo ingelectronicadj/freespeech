@@ -1,66 +1,56 @@
-import { expect } from 'chai';
-import { createLocalVue, shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { shallowMount } from '@vue/test-utils';
+import { createStore } from 'vuex';
+import { createRouter, createMemoryHistory } from 'vue-router';
 import tilePad from '@/store/modules/tilePad';
-import TilePad from '@/views/TilePad';
-import VueRouter from 'vue-router';
-import Vuetify from 'vuetify/lib';
+import settings from '@/store/modules/settings';
+import TilePad from '@/views/TilePad.vue';
 
-//Using clonedeep cause if you dont store values move over in each test
-const cloneDeep = require('clone-deep');
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
-const opts = {
-	description: 'iPhone 6 (portrait)',
-	width: 375,
-	height: 667,
-	name: 'xs',
-	mustBeTrue: [
-		'xs',
-		'xsOnly',
-		'smAndDown',
-		'mdAndDown',
-		'lgAndDown',
-	]
-};
-
-let vuetify = new Vuetify({
-	mocks: {
-		$vuetify: {
-			breakpoint: opts,
-		},
+const routes = [
+	{
+		path: '/',
+		name: 'tilePad',
+		component: TilePad
+	},
+	{
+		path: '/layout/:layout',
+		name: 'tilePadWithRoute',
+		component: TilePad,
+		props: true
 	}
-});
-localVue.use(Vuetify);
-
-
-const routes = [{
-	path: '/layout/:layout',
-	name: 'tilePadWithRoute',
-	component: TilePad,
-	props: true
-}];
-const router = new VueRouter({ routes });
-localVue.use(VueRouter);
+];
 
 function getWrapper () {
-	return shallowMount(TilePad, {
-		localVue,
-		store: new Vuex.Store({
-			modules: {
-				tilePad: cloneDeep(tilePad)
+	const store = createStore({
+		modules: {
+			tilePad: {
+				...tilePad,
+				state: () => JSON.parse(JSON.stringify(tilePad.state))
 			},
-		}),
-		router,
-		vuetify
+			settings: {
+				...settings,
+				state: () => ({ ...settings.state })
+			}
+		},
+	});
+	const router = createRouter({
+		history: createMemoryHistory(),
+		routes
+	});
+
+	return shallowMount(TilePad, {
+		global: {
+			plugins: [store, router],
+			stubs: {
+				'v-container': { template: '<div><slot /></div>' },
+				'v-row': { template: '<div><slot /></div>' },
+				'v-col': { template: '<div><slot /></div>' },
+			}
+		}
 	});
 }
 
-/***
- * This feature has been removed for now till it can be re added at a later date
- */
-describe.skip('TilePad.Vue', () => {
+describe('TilePad.vue', () => {
 	let wrapper;
 
 	beforeEach(() => {
@@ -70,12 +60,12 @@ describe.skip('TilePad.Vue', () => {
 	it('new tile is showing in edit mode only', async () => {
 		wrapper.vm.$store.commit('tilePad/SET_EDIT_MODE', false);
 		await wrapper.vm.$nextTick();
-		let newTileNotDuringEditMode = wrapper.find('#newTile');
-		expect(newTileNotDuringEditMode.exists()).to.be.false;
+		const newTileNotDuringEditMode = wrapper.find('#newTile');
+		expect(newTileNotDuringEditMode.exists()).toBe(false);
 
 		wrapper.vm.$store.commit('tilePad/SET_EDIT_MODE', true);
 		await wrapper.vm.$nextTick();
-		let newTileDuringEditMode = wrapper.find('#newTile');
-		expect(newTileDuringEditMode.exists()).to.be.true;
+		const newTileDuringEditMode = wrapper.find('#newTile');
+		expect(newTileDuringEditMode.exists()).toBe(true);
 	});
 });

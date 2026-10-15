@@ -2,7 +2,18 @@
   "languageName": "English",
   "app": {
     "titleEnterPasscode": "Enter Passcode to unlock",
-    "errorIncorrectPasscode": "Incorrect passcode"
+    "errorIncorrectPasscode": "Incorrect passcode",
+    "navHome": "Home board",
+    "navLock": "Lock application",
+    "navUnlock": "Unlock application",
+    "navEdit": "Enter edit mode",
+    "navSave": "Save changes and exit edit mode",
+    "navAbout": "About Free Speech",
+    "navSettings": "Settings",
+    "navFloatingWindow": "Open in floating window",
+    "padBackspace": "Delete last digit",
+    "padClose": "Cancel",
+    "padConfirm": "Confirm passcode"
   },
   "settings": {
     "title": "Settings",
@@ -21,14 +32,20 @@
   "sentence": {
     "title": "Sentence",
     "instructions": "Add tiles to this sentence by tapping on them below.",
+    "textPreviewLabel": "Constructed message:",
     "buttonSpeak": "Speak",
-    "buttonClear": "Clear"
+    "buttonCopy": "Copy text",
+    "buttonInsert": "Insert into page",
+    "buttonClear": "Clear",
+    "copiedSuccess": "Message copied to clipboard!",
+    "insertedSuccess": "Message inserted into active field!"
   },
   "editMode": {
     "title": "You're in edit mode!",
     "buttonSave": "Save Changes",
     "instructions": "You can edit tiles while in edit mode by clicking on them to edit them or clicking and dragging them to move them around. Press the save icon or the button above to save your changes.",
     "tile": {
+      "addNew": "Add a New Tile",
       "navigation": "Navigation",
       "title": "Edit",
       "name": "Name",
@@ -37,7 +54,7 @@
       "accentColor": "Accent color",
       "buttonSave": "Save",
       "buttonClose": "Close",
-	  "navigationLabel" : "Navigation name"
+      "navigationLabel": "Navigation name"
     }
   }
 }

@@ -1,10 +1,10 @@
-<!-- Add a new tile button, appears in edit mode -->
 <template>
 	<v-btn
 		raised
 		tile
 		class="mx-auto"
 		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFFFF' : cardColor"
+		:aria-label="newTile ? 'Add a New Tile' : localeTileData.name"
 		style="height: unset"
 		@click="tileClickedEvent"
 	>
@@ -19,13 +19,14 @@
 				<v-img
 					max-height="32"
 					max-width="32"
-					aspect-ratio="1"					
+					aspect-ratio="1"
+					alt=""
+					aria-hidden="true"
 					src="https://img.icons8.com/officexs/64/000000/plus-math.png"
 				/>
 			</v-row>
 			<v-row>
 				<v-card-text
-					class
 					align="center"
 					justify="center"
 				>
@@ -40,9 +41,8 @@
 			<span
 				v-if="displayTapCount && !editMode"
 				class="taps-count"
-			>{{
-				taps
-			}}</span>
+				aria-hidden="true"
+			>{{ taps }}</span>
 			<v-row
 				align="center"
 				justify="center"
@@ -51,12 +51,13 @@
 					max-height="32"
 					max-width="32"
 					aspect-ratio="1"
+					alt=""
+					aria-hidden="true"
 					:src="localeTileData.image"
 				/>
 			</v-row>
 			<v-row>
 				<v-card-text
-					class
 					align="center"
 					justify="center"
 				>
@@ -64,6 +65,9 @@
 					<img
 						v-if="editMode"
 						id="drag-handle"
+						class="drag-handle"
+						alt=""
+						aria-hidden="true"
 						src="https://img.icons8.com/officexs/16/000000/resize-four-directions.png"
 						style="padding-top: 8px; margin-bottom: -12px;"
 					>
@@ -76,15 +80,13 @@
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex';
 
-/* Tile creation */
 export default {
 	name: 'Tile',
 	props: {
 		tileData: {
 			type: Object,
-			default() {
+			default () {
 				return {
-					/* All attributes from json file for each tile object */
 					name: '',
 					text: '',
 					accent: '',
@@ -106,11 +108,12 @@ export default {
 			type: Number,
 			default: null
 		},
-		newTile:{
+		newTile: {
 			type: Boolean,
 			default: false
-		}	
+		}
 	},
+	emits: ['removeFromSentence', 'speakText', 'addToSentence'],
 	computed: {
 		...mapState('settings', ['sentenceMode']),
 		...mapGetters({
@@ -119,40 +122,40 @@ export default {
 			displayTapCount: 'settings/displayTapCount',
 			tileTapsCount: 'tilePad/tileTapsCount',
 		}),
-		
-		/* Make card color, if hex value return that. */
-		//Might delete this feature and replace with just listed accents for simplicity.
-		cardColor: function () {
+		cardColor () {
 			switch (this.localeTileData.accent) {
-			case 'blush':
-				return '#FFB7B2';
-			case 'peach':
-				return '#FFB7B2';
-			case 'pear':
-				return '#E2F0CB';
-			case 'mint':
-				return '#B5EAD7';
-			case 'violet':
-				return '#C7CEEA';
-			case 'white':
-				return '#FFFFFF';
-			default:
-				return '#FFFFFF';
+				case 'blush':
+					return '#FFB7B2';
+				case 'peach':
+					return '#FFB7B2';
+				case 'pear':
+					return '#E2F0CB';
+				case 'mint':
+					return '#B5EAD7';
+				case 'violet':
+					return '#C7CEEA';
+				case 'white':
+					return '#FFFFFF';
+				default:
+					return '#FFFFFF';
 			}
 		},
-		localeTileData() {
+		localeTileData () {
 			const messages = this.tileData.messages;
-			if (
-				typeof messages !== 'undefined' &&
-        typeof messages[this.locale] === 'object'
-			) {
-				return { ...this.tileData,
-					...messages[this.locale] };
-			} else {
-				return this.tileData;
+			if (typeof messages !== 'undefined' && messages !== null) {
+				const localeKey = (this.locale === 'es' && !messages.es && messages.sp)
+					? 'sp'
+					: this.locale;
+				if (typeof messages[localeKey] === 'object') {
+					return {
+						...this.tileData,
+						...messages[localeKey]
+					};
+				}
 			}
+			return this.tileData;
 		},
-		taps() {
+		taps () {
 			const indexOfTile = this.tileTapsCount.findIndex(
 				(obj) => obj.id == this.tileData.id
 			);
@@ -162,31 +165,27 @@ export default {
 	},
 	methods: {
 		...mapActions('tilePad', [
-			'toggleEditDialogVisibility', 
+			'toggleEditDialogVisibility',
 			'setCurrentTileBeingEdited',
 			'createNewTile',
-			'logTileTap']),
-		tileClickedEvent() {
-			let keyboardTile =
-        typeof this.tileData.navigation !== 'undefined' &&
-        this.tileData.navigation !== '';
+			'logTileTap'
+		]),
+		tileClickedEvent () {
+			const keyboardTile =
+				typeof this.tileData.navigation !== 'undefined' &&
+				this.tileData.navigation !== '';
 
 			if (this.editMode) {
-				// if in edit tiles mode
-				let tileDataToEdit = this.tileData;
-				tileDataToEdit.page = this.tilePage;
-				if(this.newTile){
+				const tileDataToEdit = { ...this.tileData, page: this.tilePage };
+				if (this.newTile) {
 					tileDataToEdit.newTile = true;
 				}
 				this.setCurrentTileBeingEdited(tileDataToEdit);
 				this.toggleEditDialogVisibility();
 			} else if (this.sentenceMode && !keyboardTile) {
-				// if in sentence mode
 				if (this.inSentenceComponent) {
-					// if its in the sentence component, remove it from the sentence
 					this.$emit('removeFromSentence', this.sentenceIndex);
 				} else {
-					// if its not in the sentence component, speak it and add it to the sentence
 					this.$emit('speakText', this.localeTileData.text);
 					this.$emit('addToSentence', this.localeTileData);
 				}
@@ -205,8 +204,8 @@ export default {
 </script>
 <style>
 .taps-count {
-  position: absolute;
-  bottom: 3px;
-  right: 3px;
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
 }
 </style>

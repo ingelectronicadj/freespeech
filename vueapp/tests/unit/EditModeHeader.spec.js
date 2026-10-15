@@ -1,41 +1,48 @@
-import { expect } from 'chai';
-import { createLocalVue, shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
-import EditModeHeader from '@/components/EditModeHeader/EditModeHeader';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { shallowMount } from '@vue/test-utils';
+import { createStore } from 'vuex';
+import EditModeHeader from '@/components/EditModeHeader/EditModeHeader.vue';
 import tilePad from '@/store/modules/tilePad';
 
-//Using clonedeep cause if you dont store values move over in each test
-const cloneDeep = require('clone-deep');
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
 function getWrapper () {
+	const store = createStore({
+		modules: {
+			tilePad: {
+				...tilePad,
+				state: () => JSON.parse(JSON.stringify(tilePad.state))
+			}
+		},
+	});
 	return shallowMount(EditModeHeader, {
-		localVue,
-		store: new Vuex.Store({
-			modules: {
-				tilePad: cloneDeep(tilePad),
+		global: {
+			plugins: [store],
+			mocks: {
+				$t: () => 'Save Changes',
 			},
-		}),
-		mocks: {
-			$t: () => 'Save Changes',
+			stubs: {
+				'v-card': { template: '<div><slot /></div>' },
+				'v-card-title': { template: '<div><slot /></div>' },
+				'v-container': { template: '<div><slot /></div>' },
+				'v-spacer': { template: '<span />' },
+				'v-btn': { template: '<button><slot /></button>' },
+				'v-icon': { template: '<span><slot /></span>' },
+			}
 		},
 	});
 }
 
-describe('EditModeHeader.Vue', () => {
-	let wrapper; 
+describe('EditModeHeader.vue', () => {
+	let wrapper;
 
 	beforeEach(() => {
 		wrapper = getWrapper();
 		wrapper.vm.$store.commit('tilePad/SET_EDIT_MODE', true);
-
 	});
-    
-	it('Save changes button exits edit mode', () => {
-		let button = wrapper.find('#exitEditModeButton');
-		expect(button.exists()).to.be.true;
-		button.trigger('click');
-		expect(wrapper.vm.$store.state.tilePad.editMode).to.be.false;
+
+	it('Save changes button exits edit mode', async () => {
+		const button = wrapper.find('#exitEditModeButton');
+		expect(button.exists()).toBe(true);
+		await button.trigger('click');
+		expect(wrapper.vm.$store.state.tilePad.editMode).toBe(false);
 	});
 });

@@ -1,23 +1,25 @@
-import { expect } from 'chai';
-import { createLocalVue, shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { shallowMount } from '@vue/test-utils';
+import { createStore } from 'vuex';
 import NumberPad from '@/components/NumberPad/NumberPad.vue';
 import settings from '@/store/modules/settings';
 
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
-function getWrapper (propsData = {}) {
+function getWrapper (props = {}) {
+	const store = createStore({
+		modules: {
+			settings: {
+				...settings,
+				state: () => ({ ...settings.state })
+			}
+		},
+	});
 	return shallowMount(NumberPad, {
-		localVue,
-		store: new Vuex.Store({
-			modules: {
-				settings
-			},
-		}),
-		propsData: {
+		global: {
+			plugins: [store],
+		},
+		props: {
 			title: 'Test NumberPad',
-			...propsData
+			...props
 		}
 	});
 }
@@ -30,34 +32,34 @@ describe('NumberPad.vue', () => {
 	});
 
 	it('has a title', () => {
-		expect(wrapper.vm.title).to.equal('Test NumberPad');
+		expect(wrapper.vm.title).toBe('Test NumberPad');
 	});
 
 	it('starts with close button', () => {
-		expect(wrapper.vm.isBackspaceEnabled).to.be.false;
+		expect(wrapper.vm.isBackspaceEnabled).toBe(false);
 	});
 
 	it('starts with empty passcode', () => {
-		expect(wrapper.vm.input).to.equal('');
+		expect(wrapper.vm.input).toBe('');
 	});
 
 	it('starts with numbers active', () => {
-		expect(wrapper.vm.isNumbersEnabled).to.be.true;
+		expect(wrapper.vm.isNumbersEnabled).toBe(true);
 	});
 
 	it('starts with save button disabled', () => {
-		expect(wrapper.vm.isSaveEnabled).to.be.false;
+		expect(wrapper.vm.isSaveEnabled).toBe(false);
 	});
 
 	it('appends digit to passcode when button clicked', () => {
 		wrapper.vm.padInput(1);
-		expect(wrapper.vm.input).to.equal('1');
+		expect(wrapper.vm.input).toBe('1');
 	});
 
 	it('appends digit to passcode when numeric key pressed', () => {
 		const e = new KeyboardEvent('keyup', { key: '2' });
 		wrapper.vm.keyboardInput(e);
-		expect(wrapper.vm.input).to.equal('2');
+		expect(wrapper.vm.input).toBe('2');
 	});
 
 	it('removes last digit from passcode when keyboard backspace key is pressed', () => {
@@ -65,11 +67,12 @@ describe('NumberPad.vue', () => {
 		wrapper.vm.padInput(2);
 		const e = new KeyboardEvent('keyup', { key: 'Backspace' });
 		wrapper.vm.keyboardInput(e);
-		expect(wrapper.vm.input).to.equal('1');
+		expect(wrapper.vm.input).toBe('1');
 	});
 
 	it('replaces close button with backspace when passcode is not empty', () => {
-		expect(wrapper.vm.isBackspaceEnabled).to.be.false;
+		wrapper.vm.padInput(1);
+		expect(wrapper.vm.isBackspaceEnabled).toBe(true);
 	});
 
 	it('saves when enter key pressed', async () => {
@@ -77,20 +80,20 @@ describe('NumberPad.vue', () => {
 		const e = new KeyboardEvent('keyup', { key: 'Enter' });
 		wrapper.vm.keyboardInput(e);
 		await wrapper.vm.$nextTick();
-		const emitted = wrapper.emitted().input;
-		expect(emitted.length).to.equal(1);
-		expect(emitted[0].length).to.equal(1);
-		expect(emitted[0][0]).to.equal('1');
+		const emitted = wrapper.emitted('input');
+		expect(emitted.length).toBe(1);
+		expect(emitted[0].length).toBe(1);
+		expect(emitted[0][0]).toBe('1');
 	});
 
 	it('saves when save button is clicked', async () => {
 		wrapper.vm.padInput(2);
 		wrapper.vm.save();
 		await wrapper.vm.$nextTick();
-		const emitted = wrapper.emitted().input;
-		expect(emitted.length).to.equal(1);
-		expect(emitted[0].length).to.equal(1);
-		expect(emitted[0][0]).to.equal('2');
+		const emitted = wrapper.emitted('input');
+		expect(emitted.length).toBe(1);
+		expect(emitted[0].length).toBe(1);
+		expect(emitted[0][0]).toBe('2');
 	});
 });
 
@@ -105,30 +108,30 @@ describe('NumberPad.vue (with length)', () => {
 		for (let step = 1; step <= 3; step++) {
 			wrapper.vm.padInput(step);
 		}
-		expect(wrapper.vm.isSaveEnabled).to.be.false;
+		expect(wrapper.vm.isSaveEnabled).toBe(false);
 	});
 
 	it('allows saving once expected number of digits are entered', () => {
 		for (let step = 1; step <= 4; step++) {
 			wrapper.vm.padInput(step);
 		}
-		expect(wrapper.vm.isSaveEnabled).to.be.true;
+		expect(wrapper.vm.isSaveEnabled).toBe(true);
 	});
 
 	it('disables number buttons once expected number of digits are entered', () => {
 		for (let step = 1; step <= 4; step++) {
 			wrapper.vm.padInput(step);
 		}
-		expect(wrapper.vm.isNumbersEnabled).to.be.false;
+		expect(wrapper.vm.isNumbersEnabled).toBe(false);
 	});
 
 	it('does not accept further keyboard digit entry once expected number of digits are entered', () => {
 		for (let step = 1; step <= 5; step++) {
-			const e = new KeyboardEvent('keyup', { key: step });
+			const e = new KeyboardEvent('keyup', { key: String(step) });
 			wrapper.vm.keyboardInput(e);
 		}
 
-		expect(wrapper.vm.input).to.equal('1234');
+		expect(wrapper.vm.input).toBe('1234');
 	});
 });
 
@@ -143,6 +146,6 @@ describe('NumberPad.vue (hidden)', () => {
 		for (let step = 1; step <= 3; step++) {
 			wrapper.vm.padInput(step);
 		}
-		expect(wrapper.vm.display).to.equal(wrapper.vm.hiddenCharacter.repeat(3));
+		expect(wrapper.vm.display).toBe(wrapper.vm.hiddenCharacter.repeat(3));
 	});
 });

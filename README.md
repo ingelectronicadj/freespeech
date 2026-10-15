@@ -1,10 +1,13 @@
-# [Free Speech](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/merkie/freespeech/blob/main/LICENSE)
+# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.0.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
 
-Free Speech is an augmentative and alternative communication web application designed to help the non-verbal communicate without cost.
+Free Speech is an open-source **Augmentative and Alternative Communication (AAC / SAAC)** web application designed to help non-verbal people communicate without cost, both as a standalone communicator and as an **embeddable floating window** over platforms such as **Moodle LMS**, search engines, or desktop editors.
 
-* **Free & Open-Source, Forever:** Free Speech is committed to providing its services at no cost for the entire duration of the application's lifespan. We believe that communication is a right that everyone deserves to have access too regaurdless of income status.
-* **Hosted on the Internet:** Free Speech is completely hosted from your web browser, meaning it will run on about anything with an internet connection. Our team reccommends tablets, touch screen laptops, and computers to run the software, however smart-phones can be used too.
-* **Fully Customizable:** Free Speech's edit mode makes it easy for just about anyone to start programming AAC tile layouts. The app is designed to support both extensive large-scale custom tile layouts as well as small and quick edits on the fly. You can also export and import tile layouts from a file, meaning they're sharable across devices. Your customizations save automatically in the browser, so there's no need to worry about lost progress.
+* **Free & Open-Source, Forever:** Free Speech is committed to providing its services at no cost for the entire duration of the application's lifespan. We believe that communication is a right that everyone deserves to have access to regardless of income status.
+* **Plain-Text Output & One-Click Copy:** Build sentences with pictograms while seeing the plain-text phrase in real time, and copy it with one click to paste into search engines, Word, WhatsApp, or Moodle forums.
+* **Floating Window & `customTrigger` for Moodle / Web:** Load Free Speech as a draggable, resizable floating window over any website or LMS triggered by your own custom button (`customTrigger`) or keyboard shortcut (`Alt + Shift + S`), with direct text insertion into active inputs.
+* **WCAG 2.2 AA Accessible & Fully Customizable:** Built with Vue 3, Vuetify 4, and Vite, supporting screen readers (`aria-label`, `aria-live`), full keyboard navigation, custom tile boards, drag-and-drop reordering, and import/export in English (`en`), Spanish (`es`), and German (`de`).
+
+See [CHANGELOG.md](./CHANGELOG.md) for full details on version **2.0.0**.
 
 ## Quick start
 
@@ -17,9 +20,43 @@ Free Speech is an augmentative and alternative communication web application des
 
 ### For Developers:
 * First make sure you have your Node and NPM installed and updated. If you need to install Node, [visit this website](https://nodejs.org/en/download/).
-* Run `git clone https://github.com/merkie/freespeech freespeech` in your directory of choice then `cd freepeech/vueapp`
-* Next, run `npm i` and after that is complete you can run the Vue app on your machine by running `npm run serve` you can also build the application by running `npm run build`
+* Run `git clone https://github.com/ingelectronicadj/freespeech freespeech` in your directory of choice then `cd freespeech/vueapp`
+* Next, run `npm i` and after that is complete you can run the Vue 3 + Vite app on your machine by running `npm run dev` (or `npm run serve`). You can run unit tests with `npm run test:unit` and build the application with `npm run build`.
 * Please be sure to also read our [contributing guide](https://github.com/Merkie/freespeech/blob/master/.github/CONTRIBUTING.md)!
+
+## SAAC Enhancements: Plain-Text Copy & Floating Window (Moodle / LMS Integration)
+
+Free Speech includes capabilities designed so users do not have to rely solely on visual glyphs when communicating across external tools (search engines, Word, Moodle, email):
+
+1. **Plain-Text Sentence Preview & One-Click Copy (`Copy text`)**:
+   * As tiles are tapped, the Sentence bar shows the plain-text phrase being built (`#sentenceTextOutput`).
+   * Clicking **Copy text** copies the constructed message directly to the clipboard so it can be pasted anywhere (Google, Word, chat, etc.).
+   * Clicking **Open in floating window** (`↗`) in the top bar pops out a compact standalone window to keep alongside desktop applications.
+
+2. **Floating Window Widget over Moodle or Any Web Platform (`freespeech-widget.js`)**:
+   * Load the floating SAAC widget over any LMS or website and bind it to your own **`customTrigger`** button (or use the `Alt + Shift + S` keyboard shortcut):
+   ```html
+   <!-- Custom trigger button in Moodle / LMS template -->
+   <button id="moodle-saac-trigger" type="button">Abrir Comunicador SAAC</button>
+
+   <!-- Floating SAAC widget script -->
+   <script
+     src="https://your-freespeech-host.example/freespeech-widget.js"
+     data-saac-url="https://your-freespeech-host.example/"
+     data-custom-trigger="#moodle-saac-trigger"
+     data-show-default-trigger="true"
+   ></script>
+   ```
+   * Or initialize programmatically via JavaScript:
+   ```js
+   window.FreeSpeechSAAC.init({
+     url: 'https://your-freespeech-host.example/',
+     customTrigger: '#moodle-saac-trigger',
+     showDefaultTrigger: false
+   });
+   ```
+   * When embedded via `freespeech-widget.js`, the Sentence bar also displays an **Insert into page (`Insertar en página`)** button that writes the constructed sentence directly into the last focused `<input>`, `<textarea>`, or `contenteditable` editor in Moodle.
+   * Try the interactive simulation locally at `http://localhost:8080/moodle-demo.html`.
 
 ## Authors
 

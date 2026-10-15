@@ -1,79 +1,79 @@
 <template>
 	<v-dialog
-		v-model="editDialogVisibility"
+		:model-value="editDialogVisibility"
 		persistent
 		max-width="600px"
 	>
 		<v-card>
 			<v-card-title>
-				<span class="headline"> <v-icon>{{ currentTileBeingEdited.newTile ? 'add' : 'edit' }}</v-icon>{{ currentTileBeingEdited.newTile ? "Add a new tile" : "Edit" }}</span>
+				<span class="headline">
+					<v-icon aria-hidden="true">{{ currentTileBeingEdited.newTile ? 'add' : 'edit' }}</v-icon>
+					{{ currentTileBeingEdited.newTile ? $t('editMode.tile.addNew') : $t('editMode.tile.title') }}
+				</span>
 			</v-card-title>
 			<v-card-text>
 				<v-container>
 					<v-form
-						ref="form"
 						id="editTileForm"
+						ref="form"
 						v-model="valid"
 					>
-						<v-row >
-
+						<v-row>
 							<v-col cols="12">
 								<v-text-field
-									:value="currentTileBeingEdited.name"
+									:model-value="currentTileBeingEdited.name"
 									:label="$t('editMode.tile.name')"
-									@input="update('name', $event)"
 									:rules="[rules.required]"
+									@update:model-value="update('name', $event)"
 								/>
 								<v-text-field
-									:value="currentTileBeingEdited.image"
+									:model-value="currentTileBeingEdited.image"
 									:label="$t('editMode.tile.imageUrl')"
-									@input="update('image', $event)"
+									@update:model-value="update('image', $event)"
 								/>
 								<v-img
 									max-height="32"
 									max-width="32"
 									aspect-ratio="1"
+									alt=""
 									:src="currentTileBeingEdited.image"
 								/>
 								<v-text-field
 									class="pt-5"
-									:value="currentTileBeingEdited.text"
+									:model-value="currentTileBeingEdited.text"
 									:label="$t('editMode.tile.textToSpeak')"
-									@input="update('text', $event)"
 									:rules="[rules.required]"
+									@update:model-value="update('text', $event)"
 								/>
 								<p class="text-left">
 									{{ $t('editMode.tile.accentColor') }}
 								</p>
 								<v-select
+									:model-value="currentTileBeingEdited.accent"
 									:items="tileColors"
-									v-model="currentTileBeingEdited.accent"
-									filled
-									label="Accent"
-								></v-select>
+									:label="$t('editMode.tile.accentColor')"
+									@update:model-value="update('accent', $event)"
+								/>
 
-								<p class="text-left" >
+								<p class="text-left">
 									{{ $t('editMode.tile.navigation') }}
 								</p>
 
 								<v-text-field
-									:value="currentTileBeingEdited.navigation"
+									:model-value="currentTileBeingEdited.navigation"
 									:label="$t('editMode.tile.navigationLabel')"
-									@input="update('navigation', $event)"
+									@update:model-value="update('navigation', $event)"
 								/>
-
 							</v-col>
-
 						</v-row>
 					</v-form>
-
 				</v-container>
 			</v-card-text>
 			<v-card-actions>
 				<v-spacer />
 				<v-btn
 					color="blue darken-1"
-					text
+					variant="text"
 					@click="saveCurrentEdit"
 				>
 					{{ $t('editMode.tile.buttonSave') }}
@@ -81,7 +81,7 @@
 
 				<v-btn
 					color="blue darken-1"
-					text
+					variant="text"
 					@click="toggleEditDialogVisibility"
 				>
 					{{ $t('editMode.tile.buttonClose') }}
@@ -95,15 +95,12 @@
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
-	...mapGetters('tilePad', [
-		'currentTileBeingEdited',
-	]),
 	name: 'EditTileDialog',
 	data () {
 		return {
 			tileColors: ['blush', 'peach', 'pear', 'mint', 'violet', 'white'],
 			currentColor: 'peach',
-			valid:false,
+			valid: false,
 			color: '',
 			newTileObject: {},
 			rules: {
@@ -117,72 +114,57 @@ export default {
 			'currentTileBeingEdited',
 			'customTilePadData'
 		]),
-		areRequiredFieldsFilled:function(){
+		areRequiredFieldsFilled () {
 			return !!this.newTileObject.name && !!this.newTileObject.text;
 		},
-		navigations: function (){
-			return  Object.keys(this.customTilePadData);
+		navigations () {
+			return Object.keys(this.customTilePadData);
 		}
-
 	},
 	methods: {
 		...mapActions('tilePad', [
 			'toggleEditDialogVisibility',
 			'saveEditsToTileBeingEdited',
 			'createNewTile',
-			'saveTileEdit']),
+			'saveTileEdit'
+		]),
 		validate () {
-			this.$refs.form.validate();
+			if (this.$refs.form && this.$refs.form.validate) {
+				this.$refs.form.validate();
+			}
 		},
 		resetValidation () {
-			this.$refs.form.resetValidation();
+			if (this.$refs.form && this.$refs.form.resetValidation) {
+				this.$refs.form.resetValidation();
+			}
 		},
 		saveCurrentEdit () {
-
-			if(this.currentTileBeingEdited.newTile){
+			if (this.currentTileBeingEdited.newTile) {
 				this.validate();
 
-				if(this.valid)
-				{
+				if (this.valid || this.areRequiredFieldsFilled) {
 					this.resetValidation();
-					var maxid = 0;
-
-					this.newTileObject.id = maxid + 1;
 					delete this.currentTileBeingEdited.newTile;
-					this.createNewTile(this.newTileObject);
+					this.createNewTile({ ...this.newTileObject });
+					this.newTileObject = {};
 					this.toggleEditDialogVisibility();
 				}
 				return;
-			}else{
-
+			} else {
 				this.saveTileEdit();
 				this.toggleEditDialogVisibility();
 			}
 		},
-		update (key, value ) {
-			if(!this.currentTileBeingEdited.newTile){
+		update (key, value) {
+			if (!this.currentTileBeingEdited.newTile) {
 				this.saveEditsToTileBeingEdited({
-					'key': key,
-					'value': value
+					key,
+					value
 				});
-			}else{
-				this.newTileObject[key] = value;
-			}
-		},
-		onBlurUpdate(key, value){
-			if(!this.currentTileBeingEdited.newTile){
-				this.saveEditsToTileBeingEdited({
-					'key': key,
-					'value': value.target.value
-				});
-			}else{
+			} else {
 				this.newTileObject[key] = value;
 			}
 		}
 	},
 };
 </script>
-
-<style>
-
-</style>

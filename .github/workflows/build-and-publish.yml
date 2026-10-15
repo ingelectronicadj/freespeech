@@ -3,23 +3,22 @@ on:
   push:
     branches:
       - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: cache node modules
-        uses: actions/cache@v1
-        env:
-          cache-name: cache-node-modules
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('vueapp/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: vueapp/package-lock.json
       - name: npm install
-        run: cd vueapp && npm ci && cd ../
+        run: cd vueapp && npm ci
       - name: lint
-        run: cd vueapp && npm run lint && cd ../
+        run: cd vueapp && npm run lint:nofix
+      - name: unit tests
+        run: cd vueapp && npm run test:unit
       - name: production build
-        run: cd vueapp && npm run build && cd ../
+        run: cd vueapp && npm run build

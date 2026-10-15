@@ -11,7 +11,11 @@
 			<v-row>
 				<v-col cols="12">
 					<v-card>
-						<v-card-text class="text-center title">
+						<v-card-text
+							class="text-center title"
+							role="status"
+							aria-live="polite"
+						>
 							&nbsp;{{ display }}&nbsp;
 						</v-card-text>
 					</v-card>
@@ -19,15 +23,13 @@
 			</v-row>
 
 			<v-row class="d-flex">
-				<template v-for="n in 9">
-					<v-col
-						:key="n"
-						cols="4"
-					>
+				<template v-for="n in 9" :key="n">
+					<v-col cols="4">
 						<v-btn
 							block
-							x-large
+							size="x-large"
 							:disabled="!isNumbersEnabled"
+							:aria-label="String(n)"
 							@click="padInput(n)"
 						>
 							{{ n }}
@@ -39,29 +41,32 @@
 					<v-btn
 						v-if="isBackspaceEnabled"
 						block
-						x-large
+						size="x-large"
 						color="warning"
+						aria-label="Backspace"
 						@click="backspace"
 					>
-						<v-icon>backspace</v-icon>
+						<v-icon aria-hidden="true">backspace</v-icon>
 					</v-btn>
 
 					<v-btn
 						v-else
 						block
-						x-large
+						size="x-large"
 						color="error"
+						aria-label="Close"
 						@click="close"
 					>
-						<v-icon>close</v-icon>
+						<v-icon aria-hidden="true">close</v-icon>
 					</v-btn>
 				</v-col>
 
 				<v-col cols="4">
 					<v-btn
 						block
-						x-large
+						size="x-large"
 						:disabled="!isNumbersEnabled"
+						aria-label="0"
 						@click="padInput(0)"
 					>
 						0
@@ -71,12 +76,13 @@
 				<v-col cols="4">
 					<v-btn
 						block
-						x-large
+						size="x-large"
 						color="success"
 						:disabled="!isSaveEnabled"
+						aria-label="Confirm"
 						@click="save"
 					>
-						<v-icon>done</v-icon>
+						<v-icon aria-hidden="true">done</v-icon>
 					</v-btn>
 				</v-col>
 			</v-row>
@@ -101,6 +107,7 @@ export default {
 			default: null
 		}
 	},
+	emits: ['input'],
 	data () {
 		return {
 			input: '',
@@ -133,10 +140,10 @@ export default {
 			}
 		}
 	},
-	created: function () {
+	created () {
 		window.addEventListener('keyup', this.keyboardInput);
 	},
-	beforeDestroy: function () {
+	beforeUnmount () {
 		window.removeEventListener('keyup', this.keyboardInput);
 	},
 	methods: {

@@ -1,5 +1,10 @@
-import blankKeyboardTemplate from  '../../staticData/blankKeyboardTemplate.json';
-const cloneDeep = require('clone-deep');
+import blankKeyboardTemplate from '../../staticData/blankKeyboardTemplate.json';
+
+function cloneDeep (value) {
+	return JSON.parse(JSON.stringify(value));
+}
+
+const APP_VERSION = '2.0.0';
 
 const state = {
 	customTilePadData: {},
@@ -7,8 +12,7 @@ const state = {
 	editDialogVisibility: false,
 	currentTileBeingEdited: {},
 	tileTapsCount: [],
-	systemBackupTilePads:[]
-
+	systemBackupTilePads: []
 };
 
 const mutations = {
@@ -28,55 +32,74 @@ const mutations = {
 		state.currentTileBeingEdited[value.key] = value.value;
 	},
 	SET_TILE_BEING_EDITED (state) {
-		let indexOfTileInCustomTilePadData = state.customTilePadData[state.currentTileBeingEdited.page].tileData.findIndex(tile => tile.id == state.currentTileBeingEdited.id);
-		//Checks to see if the navigation/keyboard exits. If not creates a new one in the local data for the custom keyboard
-		if(state.currentTileBeingEdited.navigation !== undefined){
-			let navigationDoesNotExist = !Object.keys(state.customTilePadData).includes(state.currentTileBeingEdited.navigation);
-			if(navigationDoesNotExist){
-				let blankTemplate = cloneDeep(blankKeyboardTemplate);
+		const page = state.currentTileBeingEdited.page;
+		if (!page || !state.customTilePadData[page]) {
+			return;
+		}
+		const indexOfTileInCustomTilePadData = state.customTilePadData[page].tileData.findIndex(
+			tile => tile.id == state.currentTileBeingEdited.id
+		);
+		if (state.currentTileBeingEdited.navigation !== undefined && state.currentTileBeingEdited.navigation !== '') {
+			const navigationDoesNotExist = !Object.keys(state.customTilePadData).includes(state.currentTileBeingEdited.navigation);
+			if (navigationDoesNotExist) {
+				const blankTemplate = cloneDeep(blankKeyboardTemplate);
 				state.customTilePadData[state.currentTileBeingEdited.navigation] = { tileData: blankTemplate };
-
 			}
 		}
 
-		state.customTilePadData[state.currentTileBeingEdited.page].tileData.splice(indexOfTileInCustomTilePadData, state.currentTileBeingEdited);
+		if (indexOfTileInCustomTilePadData !== -1) {
+			state.customTilePadData[page].tileData.splice(
+				indexOfTileInCustomTilePadData,
+				1,
+				cloneDeep(state.currentTileBeingEdited)
+			);
+		}
+	},
+	MOVE_TILE (state, { page, fromIndex, toIndex }) {
+		if (!page || !state.customTilePadData[page]) {
+			return;
+		}
+		const list = state.customTilePadData[page].tileData;
+		if (fromIndex < 0 || fromIndex >= list.length || toIndex < 0 || toIndex >= list.length) {
+			return;
+		}
+		const [movedTile] = list.splice(fromIndex, 1);
+		list.splice(toIndex, 0, movedTile);
 	},
 	SET_EDIT_MODE (state, value) {
 		state.editMode = value;
 	},
-	LOG_TILE_TAP(state, value) {
+	LOG_TILE_TAP (state, value) {
 		const indexOfTile = state.tileTapsCount.findIndex((obj) => obj.id == value);
-		if (indexOfTile >= 0)
+		if (indexOfTile >= 0) {
 			state.tileTapsCount[indexOfTile].taps++;
-		else {
-			const tile = { id: value,
-				taps: 1 };
+		} else {
+			const tile = {
+				id: value,
+				taps: 1
+			};
 			state.tileTapsCount.push(tile);
 		}
 	},
-	CREATE_NEW_TILE(state, value){
+	CREATE_NEW_TILE (state, value) {
+		const page = state.currentTileBeingEdited.page || 'home';
+		if (!state.customTilePadData[page]) {
+			return;
+		}
 		let maxid = 0;
-		state.customTilePadData[state.currentTileBeingEdited.page].tileData.map(function(obj){
+		state.customTilePadData[page].tileData.forEach((obj) => {
 			if (obj.id > maxid) maxid = obj.id;
 		});
 		value.id = maxid + 1;
-		state.customTilePadData[state.currentTileBeingEdited.page].tileData.unshift(value);
+		state.customTilePadData[page].tileData.unshift(value);
 		state.currentTileBeingEdited = {};
 	},
-	/***
-	 * This is a backup that runs when version number changes inchase we break something
-	 * @param state
-	 * @param value
-	 * @constructor
-	 */
-	SAVE_SYSTEM_BACKUP(state, value){
-		state.systemBackupTilePads.push(
-			{
-				version: process.env.VUE_APP_CURRENT_VERSION,
-				tilePad: value,
-				date: new Date().toLocaleDateString()
-			}
-		);
+	SAVE_SYSTEM_BACKUP (state, value) {
+		state.systemBackupTilePads.push({
+			version: APP_VERSION,
+			tilePad: value,
+			date: new Date().toLocaleDateString()
+		});
 	}
 };
 
@@ -99,15 +122,20 @@ const actions = {
 	saveTileEdit: ({ commit }) => {
 		commit('SET_TILE_BEING_EDITED');
 	},
+	createNewTile: ({ commit }, value) => {
+		commit('CREATE_NEW_TILE', value);
+	},
+	moveTile: ({ commit }, payload) => {
+		commit('MOVE_TILE', payload);
+	},
 	setEditMode: ({ commit }, value) => {
 		commit('SET_EDIT_MODE', value);
 	},
 	logTileTap: ({ commit }, value) => {
 		commit('LOG_TILE_TAP', value);
 	},
-	systemSaveBackupOfTilePad:({ commit, state }) =>{
-		let currentVersion = process.env.VUE_APP_CURRENT_VERSION;
-		if(state.systemBackupTilePads.filter(x => x.version === currentVersion).length === 0){
+	systemSaveBackupOfTilePad: ({ commit, state }) => {
+		if (state.systemBackupTilePads.filter(x => x.version === APP_VERSION).length === 0) {
 			commit('SAVE_SYSTEM_BACKUP', state.customTilePadData);
 		}
 	}

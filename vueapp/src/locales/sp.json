@@ -2,7 +2,18 @@
   "languageName": "Español",
   "app": {
     "titleEnterPasscode": "Ingrese el código de acceso para desbloquear",
-    "errorIncorrectPasscode": "Código de acceso incorrecto"
+    "errorIncorrectPasscode": "Código de acceso incorrecto",
+    "navHome": "Tablero principal",
+    "navLock": "Bloquear aplicación",
+    "navUnlock": "Desbloquear aplicación",
+    "navEdit": "Entrar en modo de edición",
+    "navSave": "Guardar cambios y salir de edición",
+    "navAbout": "Acerca de Free Speech",
+    "navSettings": "Configuraciones",
+    "navFloatingWindow": "Abrir en ventana flotante",
+    "padBackspace": "Borrar último dígito",
+    "padClose": "Cancelar",
+    "padConfirm": "Confirmar código de acceso"
   },
   "settings": {
     "title": "Configuraciones",
@@ -21,24 +32,30 @@
   "sentence": {
     "title": "Oración",
     "instructions": "Agregar mosaicos a esta oración simplemente pulsando sobre los mismos.",
+    "textPreviewLabel": "Mensaje construido:",
     "buttonSpeak": "Hablar",
-    "buttonClear": "Borrar"
+    "buttonCopy": "Copiar texto",
+    "buttonInsert": "Insertar en página",
+    "buttonClear": "Borrar",
+    "copiedSuccess": "¡Mensaje copiado al portapapeles!",
+    "insertedSuccess": "¡Mensaje insertado en el campo activo!"
   },
   "editMode": {
     "title": "Estás en modo de edición!",
     "buttonSave": "Guardar cambios",
     "instructions": "Puedes editar los mosaicos haciendo clic sobre ellos. También puedes arrastrarlos para reordenarlos. Haz clic en el botón de arriba para guardar tus cambios.",
     "tile": {
+      "addNew": "Agregar nuevo mosaico",
       "title": "Editar",
       "name": "Nombre",
       "imageUrl": "URL de la imagen",
       "textToSpeak": "Texto a pronunciar",
       "accentColor": "Color de énfasis",
+      "buttonSave": "Guardar",
       "butonSave": "Guardar",
       "buttonClose": "Cancelar",
-	  "navigationLabel" : "Puede ingresar manualmente para un nuevo mosaico de navegación",
-	  "navigation" : "navegación"
-
-	}
+      "navigationLabel": "Puede ingresar manualmente para un nuevo mosaico de navegación",
+      "navigation": "navegación"
+    }
   }
 }

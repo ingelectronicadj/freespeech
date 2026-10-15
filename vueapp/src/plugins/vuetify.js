@@ -1,11 +1,13 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
-import 'material-design-icons-iconfont/dist/material-design-icons.css'; // Ensure you are using css-loader
+import 'vuetify/styles';
+import { createVuetify } from 'vuetify';
+import { aliases, md } from 'vuetify/iconsets/md';
 
-Vue.use(Vuetify);
-
-export default new Vuetify({
+export default createVuetify({
 	icons: {
-		iconfont: 'md'
+		defaultSet: 'md',
+		aliases,
+		sets: {
+			md
+		}
 	}
 });

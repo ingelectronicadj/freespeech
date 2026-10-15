@@ -2,7 +2,18 @@
 	"languageName": "Deutsch",
 	"app": {
 		"titleEnterPasscode": "Geben Sie den Passcode",
-		"errorIncorrectPasscode": "Der Passcode ist falsch"
+		"errorIncorrectPasscode": "Der Passcode ist falsch",
+		"navHome": "Startseite",
+		"navLock": "Anwendung sperren",
+		"navUnlock": "Anwendung entsperren",
+		"navEdit": "Bearbeitungsmodus starten",
+		"navSave": "Änderungen speichern",
+		"navAbout": "Über Free Speech",
+		"navSettings": "Einstellungen",
+		"navFloatingWindow": "In schwebendem Fenster öffnen",
+		"padBackspace": "Letzte Ziffer löschen",
+		"padClose": "Abbrechen",
+		"padConfirm": "Passcode bestätigen"
 	},
 	"settings": {
 		"title": "Einstellungen",
@@ -15,12 +26,35 @@
 		"buttonReset": "Alle Einstellungen und Kacheln zurücksetzen",
 		"buttonExport": "Einstellungen & Kacheln exportieren",
 		"buttonImport": "Einstellungen & Kacheln importieren",
-		"titleSetPasscode": "Passcode einstellen"
+		"titleSetPasscode": "Passcode einstellen",
+		"displayTapCounter": "Kachelzähler anzeigen"
 	},
 	"sentence": {
 		"title": "Satz",
 		"instructions": "Fügen Sie diesem Satz Kacheln hinzu, indem Sie unten darauf tippen.",
+		"textPreviewLabel": "Erstellte Nachricht:",
 		"buttonSpeak": "Sprechen",
-		"buttonClear": "Löschen"
+		"buttonCopy": "Text kopieren",
+		"buttonInsert": "In Seite einfügen",
+		"buttonClear": "Löschen",
+		"copiedSuccess": "Nachricht in die Zwischenablage kopiert!",
+		"insertedSuccess": "Nachricht in das aktive Feld eingefügt!"
+	},
+	"editMode": {
+		"title": "Sie befinden sich im Bearbeitungsmodus!",
+		"buttonSave": "Änderungen speichern",
+		"instructions": "Sie können Kacheln im Bearbeitungsmodus anklicken, um sie zu bearbeiten, oder ziehen, um sie neu anzuordnen.",
+		"tile": {
+			"addNew": "Neue Kachel hinzufügen",
+			"navigation": "Navigation",
+			"title": "Bearbeiten",
+			"name": "Name",
+			"imageUrl": "Bild-URL",
+			"textToSpeak": "Zu sprechender Text",
+			"accentColor": "Akzentfarbe",
+			"buttonSave": "Speichern",
+			"buttonClose": "Schließen",
+			"navigationLabel": "Navigationsname"
+		}
 	}
 }

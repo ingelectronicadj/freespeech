@@ -7,47 +7,42 @@
 		<v-select
 			v-model="selectedLanguage"
 			:items="languageOptions"
+			item-title="text"
+			item-value="value"
 			:label="$t('settings.optionLanguage')"
 		/>
 
 		<v-select
 			v-model="selectedVoiceIndex"
 			:items="voiceOptions"
+			item-title="text"
+			item-value="value"
 			:label="$t('settings.optionVoice')"
 		/>
 
 		<v-switch
 			v-model="customTilePad"
+			color="primary"
 			:label="$t('settings.optionCustomTilePad')"
 		/>
 
 		<v-switch
 			v-model="sentenceMode"
+			color="primary"
 			:label="$t('settings.optionCreateSentences')"
 		/>
 
 		<v-switch
 			v-model="passcodeEnabled"
+			color="primary"
 			:label="$t('settings.optionPasscodeEnabled')"
 		/>
 
 		<v-switch
 			v-model="tapCount"
+			color="primary"
 			:label="$t('settings.displayTapCounter')"
 		/>
-
-		<v-dialog
-			v-model="passcodeEntry"
-			width="400"
-			persistent
-		>
-			<NumberPad
-				:title="$t('settings.titleSetPasscode')"
-				:length="passcodeLength"
-				:hidden="true"
-				@input="handlePasscodeInput"
-			/>
-		</v-dialog>
 
 		<v-dialog
 			v-model="passcodeEntry"
@@ -68,7 +63,10 @@
 				class="mt-4 mr-4"
 				@click="fullReset"
 			>
-				<v-icon class="mr-2">
+				<v-icon
+					class="mr-2"
+					aria-hidden="true"
+				>
 					refresh
 				</v-icon>
 				{{ $t('settings.buttonReset') }}
@@ -81,7 +79,10 @@
 				class="mt-4 mr-4"
 				@click="exportSettings"
 			>
-				<v-icon class="mr-2">
+				<v-icon
+					class="mr-2"
+					aria-hidden="true"
+				>
 					cloud_download
 				</v-icon>
 				{{ $t('settings.buttonExport') }}
@@ -92,7 +93,10 @@
 				class="mt-4 mr-4"
 				@click="$refs.importSettingsFile.click()"
 			>
-				<v-icon class="mr-2">
+				<v-icon
+					class="mr-2"
+					aria-hidden="true"
+				>
 					cloud_upload
 				</v-icon>
 				{{ $t('settings.buttonImport') }}
@@ -101,7 +105,9 @@
 			<input
 				ref="importSettingsFile"
 				type="file"
+				accept=".json,application/json"
 				style="display: none"
+				:aria-label="$t('settings.buttonImport')"
 				@change="importSettings"
 			>
 		</div>
@@ -112,11 +118,12 @@
 import { mapActions, mapGetters } from 'vuex';
 import { saveAs } from 'file-saver';
 import NumberPad from '@/components/NumberPad/NumberPad.vue';
+import { messages as localeMessages } from '@/i18n';
 
 export default {
 	name: 'Settings',
 	components: { NumberPad },
-	data() {
+	data () {
 		return {
 			passcodeEntry: false,
 			passcodeLength: 4,
@@ -124,7 +131,6 @@ export default {
 	},
 	computed: {
 		...mapGetters({
-			customTilePad: 'settings/customTilePad',
 			customTilePadData: 'tilePad/customTilePadData',
 			locale: 'settings/locale',
 			passcode: 'settings/passcode',
@@ -133,33 +139,36 @@ export default {
 			displayTapCount: 'settings/displayTapCount',
 		}),
 		selectedVoiceIndex: {
-			get() {
-				let voiceIndex = this.$store.state.settings.selectedVoiceIndex;
-				return this.voiceOptions.filter(x => x.value === voiceIndex)[0];
+			get () {
+				return this.$store.state.settings.selectedVoiceIndex;
 			},
-			set(value) {
+			set (value) {
 				this.setSelectedVoiceIndex(value);
-				const speechSynthesisUtterance = new SpeechSynthesisUtterance('Welcome to Free Speech');
-				speechSynthesisUtterance.voice = this.voices[value];
-				window.speechSynthesis.speak(speechSynthesisUtterance);
+				if (typeof window !== 'undefined' && window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined') {
+					const speechSynthesisUtterance = new SpeechSynthesisUtterance('Welcome to Free Speech');
+					if (this.voices && this.voices[value]) {
+						speechSynthesisUtterance.voice = this.voices[value];
+					}
+					window.speechSynthesis.speak(speechSynthesisUtterance);
+				}
 			}
 		},
 		customTilePad: {
-			get(){
+			get () {
 				return this.$store.state.settings.customTilePad;
 			},
-			set(value){
-				if(!value){
+			set (value) {
+				if (!value) {
 					this.setEditMode(false);
 				}
 				this.toggleCustomTilePad();
 			}
 		},
 		passcodeEnabled: {
-			get(){
+			get () {
 				return this.passcode !== null;
 			},
-			set(value){
+			set (value) {
 				if (value === true) {
 					this.setPasscode('');
 					this.passcodeEntry = true;
@@ -169,33 +178,38 @@ export default {
 			}
 		},
 		sentenceMode: {
-			get(){
+			get () {
 				return this.$store.state.settings.sentenceMode;
 			},
-			set(){
+			set () {
 				this.toggleSentenceMode();
 			}
 		},
 		selectedLanguage: {
-			get() {
-				return this.locale;
+			get () {
+				return this.locale === 'sp' ? 'es' : this.locale;
 			},
-			set(value) {
-				this.$root.$i18n.locale = value;
+			set (value) {
+				if (this.$i18n) {
+					this.$i18n.locale = value;
+				}
 				this.setLocale(value);
 			}
 		},
-		languageOptions() {
-			return Object.entries(this.$i18n.messages).map(entry => {
-				return { value: entry[0],
-					text: entry[1].languageName };
-			});
+		languageOptions () {
+			const supported = ['en', 'es', 'de'];
+			return supported
+				.filter(code => localeMessages[code])
+				.map(code => ({
+					value: code,
+					text: localeMessages[code].languageName
+				}));
 		},
 		tapCount: {
-			get(){
+			get () {
 				return this.displayTapCount;
 			},
-			set(value){
+			set (value) {
 				this.setDisplayTapCount(value);
 			}
 		}
@@ -211,7 +225,7 @@ export default {
 			toggleSentenceMode: 'settings/toggleSentenceMode',
 			setDisplayTapCount: 'settings/setDisplayTapCount',
 		}),
-		exportSettings() {
+		exportSettings () {
 			const json = JSON.stringify({
 				'settings/setSentenceMode': this.sentenceMode,
 				'settings/setCustomTilePad': this.customTilePad,
@@ -222,8 +236,8 @@ export default {
 			const blob = new Blob([json], { type: 'application/json;charset=utf-8' });
 			saveAs(blob, 'freespeech-settings.json');
 		},
-		async importSettings() {
-			if (typeof this.$refs.importSettingsFile.files === 'undefined') {
+		async importSettings () {
+			if (!this.$refs.importSettingsFile || !this.$refs.importSettingsFile.files || !this.$refs.importSettingsFile.files[0]) {
 				return;
 			}
 
@@ -235,7 +249,7 @@ export default {
 				}
 			}
 		},
-		fullReset() {
+		fullReset () {
 			if (!confirm('Are you sure you want to reset all settings and custom tiles?')) {
 				return false;
 			}
@@ -246,7 +260,7 @@ export default {
 
 			document.location.reload();
 		},
-		handlePasscodeInput(input) {
+		handlePasscodeInput (input) {
 			this.passcodeEntry = false;
 
 			if (input !== null && input.length === this.passcodeLength) {
