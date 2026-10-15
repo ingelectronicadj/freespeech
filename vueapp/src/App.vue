@@ -1,9 +1,10 @@
 <template>
-	<v-app>
+	<v-app theme="light">
 		<v-app-bar
 			app
 			:color="taskbarColor"
 			theme="dark"
+			elevation="2"
 		>
 			<div class="d-flex align-center px-3">
 				<h1 class="text-h6 font-weight-bold mb-0">Freespeech</h1>

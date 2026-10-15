@@ -1,4 +1,4 @@
-# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.0.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
+# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.1.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
 
 Free Speech is an open-source **Augmentative and Alternative Communication (AAC / SAAC)** web application designed to help non-verbal people communicate without cost, both as a standalone communicator and as an **embeddable floating window** over platforms such as **Moodle LMS**, search engines, or desktop editors.
 
@@ -60,7 +60,8 @@ Free Speech includes capabilities designed so users do not have to rely solely o
 
 ## Authors
 
-* **Archer Calder** - *Founder/Lead Developer* - [GitHub](https://github.com/Merkie) [Donate](https://ko-fi.com/merkie) *archercalder@gmail.com*
+* **Diego Javier Mena Amado** - *SAAC Evolution, WCAG 2.2 AA Accessibility & Vue 3 Modernization* - [GitHub](https://github.com/ingelectronicadj) · [A11Y PRO](https://a11ypro.tech/) · [LinkedIn](https://www.linkedin.com/in/ingelectronicadj/) · [diegomena.rocks](https://diegomena.rocks/)
+* **Archer Calder** - *Founder/Original Lead Developer* - [GitHub](https://github.com/Merkie) [Donate](https://ko-fi.com/merkie) *archercalder@gmail.com*
 * **Bailey Townsend** - *Core Team Member/Lead Developer* - [GitHub](https://github.com/fatfingers23) [Linkedin](https://www.linkedin.com/in/bailey-townsend-25b195105)
 
 None of this would be possible without you all. Thank you!

@@ -40,21 +40,48 @@
 		"copiedSuccess": "Nachricht in die Zwischenablage kopiert!",
 		"insertedSuccess": "Nachricht in das aktive Feld eingefügt!"
 	},
+	"collections": {
+		"badgeFolder": "Sammlung",
+		"badgeBackHome": "Zurück",
+		"barLabel": "Wortsammlungen:",
+		"backToMain": "Zurück zur Haupttafel",
+		"home": "Haupttafel",
+		"feelings": "Gefühle & Bedürfnisse",
+		"numbers": "Zahlen & Zeit",
+		"keyboard": "ABC-Tastatur"
+	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",
 		"buttonSave": "Änderungen speichern",
 		"instructions": "Sie können Kacheln im Bearbeitungsmodus anklicken, um sie zu bearbeiten, oder ziehen, um sie neu anzuordnen.",
 		"tile": {
 			"addNew": "Neue Kachel hinzufügen",
-			"navigation": "Navigation",
-			"title": "Bearbeiten",
-			"name": "Name",
-			"imageUrl": "Bild-URL",
+			"navigation": "Navigation zu einem anderen Board",
+			"title": "Kachel bearbeiten",
+			"preview": "Kachel-Vorschau",
+			"name": "Sichtbare Beschriftung",
+			"imageUrl": "Piktogramm- oder Bild-URL",
+			"iconCatalog": "Schnelles Piktogramm wählen oder ARASAAC durchsuchen",
+			"searchArasaac": "ARASAAC-Piktogramme suchen...",
+			"searchBtn": "Suchen",
+			"uploadImage": "Lokales Bild hochladen",
 			"textToSpeak": "Zu sprechender Text",
-			"accentColor": "Akzentfarbe",
+			"testSpeak": "Stimme testen",
+			"accentColor": "Kategoriefarbe (UK-Farbschlüssel)",
 			"buttonSave": "Speichern",
-			"buttonClose": "Schließen",
-			"navigationLabel": "Navigationsname"
+			"buttonDelete": "Löschen",
+			"buttonClose": "Abbrechen",
+			"navigationLabel": "Ziel-Board (optional)",
+			"colors": {
+				"white": "Weiß (Neutral)",
+				"peach": "Pfirsich (Soziales)",
+				"blush": "Koralle (Gefühle)",
+				"pear": "Grün (Verben / Aktionen)",
+				"mint": "Minze (Orte / Tastatur)",
+				"violet": "Violett (Fragen / Adjektive)",
+				"sky": "Himmelblau (Substantive)",
+				"sunny": "Gelb (Personen / Pronomen)"
+			}
 		}
 	}
 }

@@ -40,22 +40,49 @@
     "copiedSuccess": "¡Mensaje copiado al portapapeles!",
     "insertedSuccess": "¡Mensaje insertado en el campo activo!"
   },
+  "collections": {
+    "badgeFolder": "Colección",
+    "badgeBackHome": "Volver",
+    "barLabel": "Colecciones de palabras:",
+    "backToMain": "Volver al tablero principal",
+    "home": "Principal",
+    "feelings": "Sentir y Emociones",
+    "numbers": "Números y Tiempo",
+    "keyboard": "Teclado ABC"
+  },
   "editMode": {
     "title": "Estás en modo de edición!",
     "buttonSave": "Guardar cambios",
     "instructions": "Puedes editar los mosaicos haciendo clic sobre ellos. También puedes arrastrarlos para reordenarlos. Haz clic en el botón de arriba para guardar tus cambios.",
     "tile": {
-      "addNew": "Agregar nuevo mosaico",
-      "title": "Editar",
-      "name": "Nombre",
-      "imageUrl": "URL de la imagen",
-      "textToSpeak": "Texto a pronunciar",
-      "accentColor": "Color de énfasis",
-      "buttonSave": "Guardar",
-      "butonSave": "Guardar",
+      "addNew": "Agregar baldosa",
+      "title": "Editar baldosa",
+      "preview": "Vista previa de la baldosa",
+      "name": "Etiqueta visible en la baldosa",
+      "imageUrl": "URL del pictograma o imagen",
+      "iconCatalog": "Elegir pictograma rápido o buscar en ARASAAC",
+      "searchArasaac": "Buscar pictograma en ARASAAC (ej. comer, casa, feliz)...",
+      "searchBtn": "Buscar",
+      "uploadImage": "Subir imagen local",
+      "textToSpeak": "Texto o frase a pronunciar",
+      "testSpeak": "Probar voz",
+      "accentColor": "Color de categoría (Clave CAA)",
+      "buttonSave": "Guardar baldosa",
+      "butonSave": "Guardar baldosa",
+      "buttonDelete": "Eliminar",
       "buttonClose": "Cancelar",
-      "navigationLabel": "Puede ingresar manualmente para un nuevo mosaico de navegación",
-      "navigation": "navegación"
+      "navigationLabel": "Tablero de destino (opcional, ej. numbers o keyboard)",
+      "navigation": "Navegación a otro tablero",
+      "colors": {
+        "white": "Blanco (Neutro)",
+        "peach": "Durazno (Social / Negación)",
+        "blush": "Coral (Emociones)",
+        "pear": "Verde (Verbos / Acciones)",
+        "mint": "Menta (Lugares / Teclado)",
+        "violet": "Violeta (Preguntas / Descriptores)",
+        "sky": "Celeste (Sustantivos / Objetos)",
+        "sunny": "Amarillo (Personas / Pronombres)"
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="tilepad-page">
 		<Sentence
 			v-if="sentenceMode && !editMode"
 			:tile-pad-to-display="sentenceTiles"
@@ -8,10 +8,45 @@
 			@remove-from-sentence="sentenceTiles.splice($event, 1)"
 		/>
 		<edit-mode-header v-if="editMode" />
+
+		<!-- Barra de Colecciones de palabras y ubicación actual -->
+		<nav
+			id="collectionsBar"
+			class="collections-nav-bar px-4 pt-3 pb-1"
+			:aria-label="collectionsBarLabel"
+		>
+			<div class="collections-nav-inner">
+				<button
+					v-if="currentTilePadPage !== 'home'"
+					type="button"
+					class="collection-back-btn"
+					@click="$router.push({ name: 'tilePad' })"
+				>
+					⬅ {{ backToMainLabel }}
+				</button>
+
+				<span class="collections-title-label">{{ collectionsBarLabel }}</span>
+
+				<div class="collections-pills" role="group">
+					<button
+						v-for="col in collectionTabs"
+						:key="col.key"
+						type="button"
+						class="collection-pill-btn"
+						:class="{ 'is-active': currentTilePadPage === col.key }"
+						:aria-current="currentTilePadPage === col.key ? 'page' : undefined"
+						@click="navigateToCollection(col.key)"
+					>
+						<span aria-hidden="true">{{ col.icon }}</span>
+						<span>{{ col.label }}</span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
 		<v-container
 			fluid
-			class="grey lighten-5 pb-10"
-			style="text-align: center;"
+			class="tilepad-grid-wrapper pb-10 pt-2 px-4"
 		>
 			<v-row
 				ref="tileGrid"
@@ -21,11 +56,11 @@
 				<v-col
 					v-if="editMode"
 					id="newTile"
-					cols="3"
-					sm="2"
-					md="1"
+					cols="6"
+					sm="4"
+					md="2"
 					class="d-flex child-flex"
-					style="padding: 4px"
+					style="padding: 6px"
 				>
 					<Tile
 						:new-tile="true"
@@ -33,13 +68,13 @@
 					/>
 				</v-col>
 				<v-col
-					v-for="(tile, tileIndex) in tilePadToDisplay.tileData"
+					v-for="(tile, tileIndex) in visibleTiles"
 					:key="tile.id !== undefined ? tile.id : tileIndex"
-					cols="3"
-					sm="2"
-					md="1"
+					cols="6"
+					sm="4"
+					md="2"
 					class="d-flex child-flex tile-col"
-					style="padding: 4px"
+					style="padding: 6px"
 				>
 					<Tile
 						:tile-data="tile"
@@ -85,6 +120,21 @@ export default {
 			customTilePadData: 'tilePad/customTilePadData',
 			voices: 'settings/voices',
 		}),
+		collectionsBarLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.barLabel') : 'Word collections:';
+		},
+		backToMainLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.backToMain') : 'Back to main board';
+		},
+		collectionTabs () {
+			const tr = (key, fallback) => (typeof this.$t === 'function' ? this.$t(key) : fallback);
+			return [
+				{ key: 'home', icon: '🏠', label: tr('collections.home', 'Principal') },
+				{ key: '1', icon: '😊', label: tr('collections.feelings', 'Sentir y Emociones') },
+				{ key: 'numbers', icon: '🔢', label: tr('collections.numbers', 'Números y Tiempo') },
+				{ key: 'keyboard', icon: '⌨️', label: tr('collections.keyboard', 'Teclado ABC') },
+			];
+		},
 		tilePadToDisplay () {
 			if (
 				!this.customTilePadData ||
@@ -92,6 +142,17 @@ export default {
 					this.customTilePadData.constructor === Object)
 			) {
 				this.setCustomTilePadData(JSON.parse(JSON.stringify(this.tileData)));
+			} else if (
+				this.customTilePadData['1'] &&
+				Array.isArray(this.customTilePadData['1'].tileData) &&
+				this.customTilePadData['1'].tileData.length > 15 &&
+				this.customTilePadData['1'].tileData[1] &&
+				this.customTilePadData['1'].tileData[1].name === ''
+			) {
+				// Actualizar tablero '1' (Sentir) si tenía las 59 celdas en blanco heredadas en localStorage
+				const updated = JSON.parse(JSON.stringify(this.customTilePadData));
+				updated['1'] = JSON.parse(JSON.stringify(this.tileData['1']));
+				this.setCustomTilePadData(updated);
 			}
 
 			const tilePadTiles = (this.customTilePadOption && Object.keys(this.customTilePadData).length > 0)
@@ -103,6 +164,22 @@ export default {
 			} else {
 				return tilePadTiles[routeParam];
 			}
+		},
+		visibleTiles () {
+			const list = (this.tilePadToDisplay && Array.isArray(this.tilePadToDisplay.tileData))
+				? this.tilePadToDisplay.tileData
+				: [];
+			if (this.editMode) {
+				return list;
+			}
+			return list.filter(tile => {
+				if (!tile) return false;
+				return Boolean(
+					(tile.name && String(tile.name).trim()) ||
+					(tile.text && String(tile.text).trim()) ||
+					(tile.navigation && String(tile.navigation).trim())
+				);
+			});
 		},
 		currentTilePadPage () {
 			const routeParam = this.$route && this.$route.params ? this.$route.params.layout : undefined;
@@ -135,6 +212,16 @@ export default {
 			moveTile: 'tilePad/moveTile',
 			logTileTap: 'tilePad/logTileTap',
 		}),
+		navigateToCollection (key) {
+			if (key === 'home') {
+				this.$router.push({ name: 'tilePad' });
+			} else {
+				this.$router.push({
+					name: 'tilePadWithRoute',
+					params: { layout: key }
+				});
+			}
+		},
 		initSortable () {
 			const gridEl = this.$refs.tileGrid && (this.$refs.tileGrid.$el || this.$refs.tileGrid);
 			if (!gridEl || typeof Sortable === 'undefined') {
@@ -179,3 +266,80 @@ export default {
 	}
 };
 </script>
+<style scoped>
+.tilepad-page {
+	background-color: #f1f5f9;
+	min-height: calc(100vh - 64px);
+}
+.tilepad-grid-wrapper {
+	text-align: center;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.collections-nav-bar {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.collections-nav-inner {
+	background: #ffffff;
+	border: 2px solid #cbd5e1;
+	border-radius: 12px;
+	padding: 10px 16px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+.collections-title-label {
+	font-size: 0.88rem;
+	font-weight: 800;
+	color: #334155;
+}
+.collections-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.collection-pill-btn {
+	background: #f1f5f9;
+	color: #0f172a;
+	border: 2px solid #cbd5e1;
+	border-radius: 999px;
+	padding: 6px 14px;
+	font-size: 0.88rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	transition: all 0.15s ease;
+}
+.collection-pill-btn:hover {
+	border-color: #0284c7;
+	background: #e0f2fe;
+}
+.collection-pill-btn.is-active {
+	background: #0284c7;
+	color: #ffffff;
+	border-color: #0369a1;
+}
+.collection-back-btn {
+	background: #0f766e;
+	color: #ffffff;
+	border: 2px solid #0f766e;
+	border-radius: 8px;
+	padding: 6px 14px;
+	font-size: 0.88rem;
+	font-weight: 800;
+	cursor: pointer;
+}
+.collection-back-btn:hover {
+	background: #115e59;
+}
+.collection-pill-btn:focus-visible,
+.collection-back-btn:focus-visible {
+	outline: 3px solid #f59e0b;
+	outline-offset: 2px;
+}
+</style>

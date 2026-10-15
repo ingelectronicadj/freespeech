@@ -40,21 +40,48 @@
     "copiedSuccess": "Message copied to clipboard!",
     "insertedSuccess": "Message inserted into active field!"
   },
+  "collections": {
+    "badgeFolder": "Collection",
+    "badgeBackHome": "Back",
+    "barLabel": "Word collections:",
+    "backToMain": "Back to main board",
+    "home": "Main Board",
+    "feelings": "Feelings & Needs",
+    "numbers": "Numbers & Time",
+    "keyboard": "ABC Keyboard"
+  },
   "editMode": {
     "title": "You're in edit mode!",
     "buttonSave": "Save Changes",
     "instructions": "You can edit tiles while in edit mode by clicking on them to edit them or clicking and dragging them to move them around. Press the save icon or the button above to save your changes.",
     "tile": {
       "addNew": "Add a New Tile",
-      "navigation": "Navigation",
-      "title": "Edit",
-      "name": "Name",
-      "imageUrl": "Image URL",
-      "textToSpeak": "Text to speak",
-      "accentColor": "Accent color",
-      "buttonSave": "Save",
-      "buttonClose": "Close",
-      "navigationLabel": "Navigation name"
+      "navigation": "Navigation to another board",
+      "title": "Edit Tile",
+      "preview": "Live tile preview",
+      "name": "Visible tile label",
+      "imageUrl": "Pictogram or image URL",
+      "iconCatalog": "Choose a quick pictogram or search ARASAAC",
+      "searchArasaac": "Search ARASAAC pictograms (e.g. eat, home, happy)...",
+      "searchBtn": "Search",
+      "uploadImage": "Upload local image",
+      "textToSpeak": "Text or phrase to speak",
+      "testSpeak": "Test voice",
+      "accentColor": "Category color (AAC Key)",
+      "buttonSave": "Save Tile",
+      "buttonDelete": "Delete",
+      "buttonClose": "Cancel",
+      "navigationLabel": "Target board name (optional, e.g. numbers or keyboard)",
+      "colors": {
+        "white": "White (Neutral)",
+        "peach": "Peach (Social / Negation)",
+        "blush": "Coral (Feelings)",
+        "pear": "Green (Verbs / Actions)",
+        "mint": "Mint (Places / Keyboard)",
+        "violet": "Violet (Questions / Adjectives)",
+        "sky": "Sky Blue (Nouns / Objects)",
+        "sunny": "Yellow (People / Pronouns)"
+      }
     }
   }
 }

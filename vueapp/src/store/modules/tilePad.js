@@ -30,6 +30,13 @@ const mutations = {
 	},
 	SAVE_EDITS_TO_TILE_BEING_EDITED (state, value) {
 		state.currentTileBeingEdited[value.key] = value.value;
+		if ((value.key === 'name' || value.key === 'text') && state.currentTileBeingEdited.messages) {
+			Object.keys(state.currentTileBeingEdited.messages).forEach((langKey) => {
+				if (state.currentTileBeingEdited.messages[langKey] && typeof state.currentTileBeingEdited.messages[langKey] === 'object') {
+					state.currentTileBeingEdited.messages[langKey][value.key] = value.value;
+				}
+			});
+		}
 	},
 	SET_TILE_BEING_EDITED (state) {
 		const page = state.currentTileBeingEdited.page;
@@ -54,6 +61,19 @@ const mutations = {
 				cloneDeep(state.currentTileBeingEdited)
 			);
 		}
+	},
+	DELETE_CURRENT_TILE (state) {
+		const page = state.currentTileBeingEdited.page;
+		if (!page || !state.customTilePadData[page]) {
+			return;
+		}
+		const idx = state.customTilePadData[page].tileData.findIndex(
+			tile => tile.id == state.currentTileBeingEdited.id
+		);
+		if (idx !== -1) {
+			state.customTilePadData[page].tileData.splice(idx, 1);
+		}
+		state.currentTileBeingEdited = {};
 	},
 	MOVE_TILE (state, { page, fromIndex, toIndex }) {
 		if (!page || !state.customTilePadData[page]) {
@@ -121,6 +141,9 @@ const actions = {
 	},
 	saveTileEdit: ({ commit }) => {
 		commit('SET_TILE_BEING_EDITED');
+	},
+	deleteCurrentTile: ({ commit }) => {
+		commit('DELETE_CURRENT_TILE');
 	},
 	createNewTile: ({ commit }, value) => {
 		commit('CREATE_NEW_TILE', value);

@@ -1,166 +1,82 @@
 <template>
 	<div
-		class="sentenceCardContainer grey lighten-5"
+		class="sentenceCardContainer"
 		role="region"
 		:aria-label="$t('sentence.title')"
 	>
 		<v-card
-			outlined
-			class="px-4 sentenceCard"
+			theme="light"
+			class="px-5 py-3 sentenceCard"
 		>
-			<v-card-title class="d-flex flex-wrap align-center gap-2">
-				<span>{{ $t('sentence.title') }}</span>
-				<v-spacer />
-				<v-btn
-					id="speakSentenceButton"
-					raised
-					tile
-					class="mx-1 my-1"
-					color="primary"
-					:disabled="tilePadToDisplay.length === 0"
-					:aria-label="$t('sentence.buttonSpeak')"
-					style="height: unset"
-					@click="$emit('speakSentence')"
-				>
-					<v-container justify="center">
-						<v-row
-							align="center"
-							justify="center"
-						>
-							<v-icon
-								class="pr-2"
-								aria-hidden="true"
-							>
-								record_voice_over
-							</v-icon>
-						</v-row>
-						<v-row>
-							<v-card-text
-								align="center"
-								justify="center"
-							>
-								<h3>{{ $t('sentence.buttonSpeak') }}</h3>
-							</v-card-text>
-						</v-row>
-					</v-container>
-				</v-btn>
+			<div class="d-flex flex-wrap align-center justify-space-between mb-2" style="gap: 10px;">
+				<h2 class="sentence-section-title">
+					{{ $t('sentence.title') }}
+				</h2>
+				<div class="d-flex flex-wrap align-center" style="gap: 8px;">
+					<v-btn
+						id="speakSentenceButton"
+						color="primary"
+						size="large"
+						class="text-none font-weight-bold px-4"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonSpeak')"
+						@click="$emit('speakSentence')"
+					>
+						<v-icon class="mr-2" aria-hidden="true">record_voice_over</v-icon>
+						{{ $t('sentence.buttonSpeak') }}
+					</v-btn>
 
-				<v-btn
-					id="copySentenceButton"
-					raised
-					tile
-					class="mx-1 my-1"
-					color="teal darken-1"
-					:disabled="tilePadToDisplay.length === 0"
-					:aria-label="$t('sentence.buttonCopy')"
-					style="height: unset; color: white;"
-					@click="copySentence"
-				>
-					<v-container justify="center">
-						<v-row
-							align="center"
-							justify="center"
-						>
-							<v-icon
-								class="pr-2"
-								aria-hidden="true"
-							>
-								content_copy
-							</v-icon>
-						</v-row>
-						<v-row>
-							<v-card-text
-								align="center"
-								justify="center"
-							>
-								<h3>{{ $t('sentence.buttonCopy') }}</h3>
-							</v-card-text>
-						</v-row>
-					</v-container>
-				</v-btn>
+					<v-btn
+						id="copySentenceButton"
+						color="secondary"
+						size="large"
+						class="text-none font-weight-bold px-4"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonCopy')"
+						@click="copySentence"
+					>
+						<v-icon class="mr-2" aria-hidden="true">content_copy</v-icon>
+						{{ $t('sentence.buttonCopy') }}
+					</v-btn>
 
-				<v-btn
-					v-if="isEmbedded"
-					id="insertSentenceButton"
-					raised
-					tile
-					class="mx-1 my-1"
-					color="indigo darken-1"
-					:disabled="tilePadToDisplay.length === 0"
-					:aria-label="$t('sentence.buttonInsert')"
-					style="height: unset; color: white;"
-					@click="insertSentenceInHost"
-				>
-					<v-container justify="center">
-						<v-row
-							align="center"
-							justify="center"
-						>
-							<v-icon
-								class="pr-2"
-								aria-hidden="true"
-							>
-								input
-							</v-icon>
-						</v-row>
-						<v-row>
-							<v-card-text
-								align="center"
-								justify="center"
-							>
-								<h3>{{ $t('sentence.buttonInsert') }}</h3>
-							</v-card-text>
-						</v-row>
-					</v-container>
-				</v-btn>
+					<v-btn
+						v-if="isEmbedded"
+						id="insertSentenceButton"
+						color="info"
+						size="large"
+						class="text-none font-weight-bold px-4"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonInsert')"
+						@click="insertSentenceInHost"
+					>
+						<v-icon class="mr-2" aria-hidden="true">input</v-icon>
+						{{ $t('sentence.buttonInsert') }}
+					</v-btn>
 
-				<v-divider
-					class="mx-2"
-					inset
-					vertical
-				/>
-				<v-btn
-					id="clearSentenceButton"
-					raised
-					tile
-					class="mx-1 my-1"
-					color="red darken-1"
-					:disabled="tilePadToDisplay.length === 0"
-					:aria-label="$t('sentence.buttonClear')"
-					style="height: unset; color: white;"
-					@click="$emit('clearSentence')"
-				>
-					<v-container justify="center">
-						<v-row
-							align="center"
-							justify="center"
-						>
-							<v-icon
-								class="pr-2"
-								aria-hidden="true"
-							>
-								clear
-							</v-icon>
-						</v-row>
-						<v-row>
-							<v-card-text
-								align="center"
-								justify="center"
-							>
-								<h3>{{ $t('sentence.buttonClear') }}</h3>
-							</v-card-text>
-						</v-row>
-					</v-container>
-				</v-btn>
-			</v-card-title>
+					<v-btn
+						id="clearSentenceButton"
+						color="error"
+						variant="tonal"
+						size="large"
+						class="text-none font-weight-bold px-4"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonClear')"
+						@click="$emit('clearSentence')"
+					>
+						<v-icon class="mr-2" aria-hidden="true">clear</v-icon>
+						{{ $t('sentence.buttonClear') }}
+					</v-btn>
+				</div>
+			</div>
+
 			<v-card-text
-				class="py-0"
+				class="pa-0"
 				aria-live="polite"
 			>
 				<div
 					v-if="constructedText"
 					id="sentenceTextOutput"
-					class="sentence-text-preview mb-3 px-3 py-2"
+					class="sentence-text-preview mb-3 px-4 py-2"
 				>
 					<span class="sentence-text-label">{{ $t('sentence.textPreviewLabel') }}</span>
 					<strong class="sentence-text-value">{{ constructedText }}</strong>
@@ -178,21 +94,21 @@
 
 				<p
 					v-if="tilePadToDisplay.length === 0"
-					class="body-2"
+					class="sentence-empty-hint mb-0"
 				>
 					{{ $t('sentence.instructions') }}
 				</p>
 				<v-row
 					v-else
 					dense
-					class="mb-4"
+					class="mt-1"
 				>
 					<v-col
 						v-for="(tile, tileIndex) in tilePadToDisplay"
 						:key="tileIndex"
-						cols="4"
+						cols="6"
 						sm="3"
-						md="1"
+						md="2"
 						class="d-flex child-flex"
 					>
 						<Tile
@@ -333,13 +249,33 @@ export default {
 	position: sticky;
 	top: 56px;
 	z-index: 100;
-	padding: 5px;
-	background-color: white;
+	padding: 10px 16px 4px;
+	background-color: #f1f5f9;
+}
+.sentenceCard {
+	max-width: 1380px;
+	margin: 0 auto;
+	background: #ffffff !important;
+	border: 2px solid #cbd5e1 !important;
+	border-radius: 14px !important;
+	box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+}
+.sentence-section-title {
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #0f172a;
+	margin: 0;
+}
+.sentence-empty-hint {
+	color: #475569;
+	font-size: 0.95rem;
+	padding: 6px 0;
 }
 .sentence-text-preview {
-	background-color: #f1f5f9;
-	border-left: 4px solid #0f766e;
-	border-radius: 4px;
+	background-color: #f0fdf4;
+	border: 1px solid #bbf7d0;
+	border-left: 5px solid #0f766e;
+	border-radius: 8px;
 	font-size: 1.05rem;
 	display: flex;
 	align-items: center;
@@ -347,17 +283,18 @@ export default {
 	gap: 8px;
 }
 .sentence-text-label {
-	color: #475569;
+	color: #334155;
 	font-size: 0.9rem;
+	font-weight: 600;
 }
 .sentence-text-value {
 	color: #0f172a;
-	font-size: 1.15rem;
+	font-size: 1.2rem;
 	user-select: all;
 }
 .sentence-feedback {
 	color: #0f766e;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 0.95rem;
 }
 </style>

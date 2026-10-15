@@ -4,6 +4,26 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.1.0] - 2026-10-15
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Rediseño Visual SAAC, Identificación de Colecciones y Editor con ARASAAC
+
+- **Identificación visual de Baldosas de Colección (`Tile.vue` y `TilePad.vue`)**:
+  - Cinta superior distintiva tipo carpeta (`📂 COLECCIÓN ▸` y `⬅ VOLVER`) y relieve de tarjetas apiladas para diferenciar inmediatamente las baldosas que abren colecciones de las baldosas que pronuncian palabras.
+  - Nueva **Barra de Colecciones de palabras (`#collectionsBar`)** en la parte superior del tablero con acceso rápido a *Principal*, *Sentir y Emociones*, *Números y Tiempo* y *Teclado ABC*, además del botón de retorno directo al tablero principal.
+  - Se pobló la colección **Sentir y Emociones** (`build.json`) con 12 baldosas trilingües (`es`, `en`, `de`) y se ocultan las celdas vacías cuando no se está en modo edición.
+- **Nuevo Editor de Baldosas (`EditTileDialog.vue`)**:
+  - **Vista Previa en Vivo** de la baldosa y botón **🔊 Probar voz** dentro del modal.
+  - **Buscador integrado de Pictogramas ARASAAC**, galería rápida de 18 pictogramas frecuentes y carga de imágenes desde el dispositivo.
+  - **Paleta visual de colores por categoría CAA (Clave Fitzgerald)** con selección accesible.
+  - Corrección en la edición y guardado de textos en el idioma activo (`es`/`sp`, `de`, `en`) y botón para eliminar baldosas.
+- **Tema Luminoso y Estilizado de Documentación (`About.vue`, `vuetify.js`, `README.md`)**:
+  - Tema claro de alto contraste, cuadrícula de 6 columnas amplias sin recortes de texto y bloques de código estilizados con botón **Copiar código** en `/about`.
+
+---
+
 ## [2.0.0] - 2026-10-15
 
 > Autor de modernización y evolución SAAC: **Diego Javier Mena Amado** (`@ingelectronicadj`)
