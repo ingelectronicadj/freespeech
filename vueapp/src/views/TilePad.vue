@@ -22,7 +22,8 @@
 					class="collection-back-btn"
 					@click="$router.push({ name: 'tilePad' })"
 				>
-					⬅ {{ backToMainLabel }}
+					<span class="nav-css-ico nav-ico-back" aria-hidden="true" />
+					<span>{{ backToMainLabel }}</span>
 				</button>
 
 				<span class="collections-title-label">{{ collectionsBarLabel }}</span>
@@ -37,7 +38,7 @@
 						:aria-current="currentTilePadPage === col.key ? 'page' : undefined"
 						@click="navigateToCollection(col.key)"
 					>
-						<span aria-hidden="true">{{ col.icon }}</span>
+						<span class="nav-css-ico" :class="col.iconClass" aria-hidden="true" />
 						<span>{{ col.label }}</span>
 					</button>
 				</div>
@@ -129,10 +130,10 @@ export default {
 		collectionTabs () {
 			const tr = (key, fallback) => (typeof this.$t === 'function' ? this.$t(key) : fallback);
 			return [
-				{ key: 'home', icon: '🏠', label: tr('collections.home', 'Principal') },
-				{ key: '1', icon: '😊', label: tr('collections.feelings', 'Sentir y Emociones') },
-				{ key: 'numbers', icon: '🔢', label: tr('collections.numbers', 'Números y Tiempo') },
-				{ key: 'keyboard', icon: '⌨️', label: tr('collections.keyboard', 'Teclado ABC') },
+				{ key: 'home', iconClass: 'nav-ico-grid', label: tr('collections.home', 'Principal') },
+				{ key: '1', iconClass: 'nav-ico-folder', label: tr('collections.feelings', 'Sentir y Emociones') },
+				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
+				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];
 		},
 		tilePadToDisplay () {
@@ -333,9 +334,54 @@ export default {
 	font-size: 0.88rem;
 	font-weight: 800;
 	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
 }
 .collection-back-btn:hover {
 	background: #115e59;
+}
+.nav-css-ico {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+.nav-ico-back {
+	width: 8px;
+	height: 8px;
+	border-left: 2.2px solid currentColor;
+	border-bottom: 2.2px solid currentColor;
+	transform: rotate(45deg);
+}
+.nav-ico-folder {
+	width: 14px;
+	height: 10px;
+	background: currentColor;
+	border-radius: 1px 2px 2px 2px;
+	opacity: 0.85;
+}
+.nav-ico-folder::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 6px;
+	height: 3px;
+	background: currentColor;
+	border-radius: 2px 2px 0 0;
+}
+.nav-ico-grid {
+	width: 12px;
+	height: 12px;
+	border: 2px solid currentColor;
+	border-radius: 2px;
+}
+.nav-ico-grid::before {
+	content: "";
+	position: absolute;
+	inset: 2px;
+	background: currentColor;
+	opacity: 0.4;
 }
 .collection-pill-btn:focus-visible,
 .collection-back-btn:focus-visible {

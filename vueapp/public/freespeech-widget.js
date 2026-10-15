@@ -351,7 +351,7 @@
 			launcherBtn.className = 'fs-saac-launcher';
 			launcherBtn.setAttribute('aria-expanded', 'false');
 			launcherBtn.setAttribute('aria-label', 'Abrir comunicador SAAC Free Speech');
-			launcherBtn.textContent = '💬 SAAC';
+			launcherBtn.textContent = 'SAAC';
 			launcherBtn.addEventListener('click', toggleWindow);
 			document.body.appendChild(launcherBtn);
 			state.elements.launcher = launcherBtn;

@@ -50,8 +50,15 @@
 				:class="{ 'is-back-ribbon': tileData.navigation === 'home' }"
 				aria-hidden="true"
 			>
-				<span v-if="tileData.navigation === 'home'">⬅ {{ backBadgeLabel }}</span>
-				<span v-else>📂 {{ folderBadgeLabel }} ▸</span>
+				<span v-if="tileData.navigation === 'home'" class="ribbon-content">
+					<span class="css-ico css-ico-back" />
+					<span>{{ backBadgeLabel }}</span>
+				</span>
+				<span v-else class="ribbon-content">
+					<span class="css-ico css-ico-folder" />
+					<span>{{ folderBadgeLabel }}</span>
+					<span class="css-ico css-ico-chevron" />
+				</span>
 			</div>
 
 			<span
@@ -328,6 +335,47 @@ export default {
 }
 .collection-folder-ribbon.is-back-ribbon {
 	background: #0f766e;
+}
+.ribbon-content {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.css-ico {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+.css-ico-folder {
+	width: 13px;
+	height: 10px;
+	background: #ffffff;
+	border-radius: 1px 2px 2px 2px;
+}
+.css-ico-folder::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 6px;
+	height: 3px;
+	background: #ffffff;
+	border-radius: 2px 2px 0 0;
+}
+.css-ico-chevron {
+	width: 6px;
+	height: 6px;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+	transform: rotate(45deg);
+}
+.css-ico-back {
+	width: 7px;
+	height: 7px;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #ffffff;
+	transform: rotate(45deg);
 }
 .tile-label {
 	font-size: 0.98rem;
