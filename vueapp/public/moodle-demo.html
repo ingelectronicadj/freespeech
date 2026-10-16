@@ -3,17 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Demo Moodle + Free Speech SAAC (Ventana Flotante & Custom Trigger)</title>
+	<title>Demo Universal: Free Speech SAAC (Custom Trigger + Botón Flotante en cualquier Web o LMS)</title>
 	<style>
+		:root {
+			--bg: #f4f4f5;
+			--card: #ffffff;
+			--text: #18181b;
+			--muted: #52525b;
+			--border: #e4e4e7;
+		}
+		* { box-sizing: border-box; }
 		body {
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
 			margin: 0;
-			background: #f1f5f9;
-			color: #0f172a;
+			background: var(--bg);
+			color: var(--text);
 			line-height: 1.5;
 		}
 		header {
-			background: #1e293b;
+			background: #18181b;
 			color: #ffffff;
 			padding: 14px 24px;
 			display: flex;
@@ -21,124 +29,274 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 			gap: 12px;
+			position: sticky;
+			top: 0;
+			z-index: 40;
 		}
 		.brand {
-			font-size: 1.2rem;
+			font-size: 1.05rem;
 			font-weight: 700;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.header-triggers {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 8px;
 		}
 		.custom-trigger-btn {
-			background: #f59e0b;
-			color: #0f172a;
-			border: 2px solid #ffffff;
+			background: #ffffff;
+			color: #18181b;
+			border: 1px solid #d4d4d8;
 			border-radius: 8px;
-			padding: 10px 18px;
-			font-size: 0.95rem;
+			padding: 8px 14px;
+			font-size: 0.86rem;
 			font-weight: 700;
 			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			transition: background 0.15s ease;
 		}
-		.custom-trigger-btn:focus-visible {
+		.custom-trigger-btn:hover { background: #e4e4e7; }
+		.custom-trigger-btn.secondary {
+			background: #27272a;
+			color: #ffffff;
+			border-color: #52525b;
+		}
+		.custom-trigger-btn:focus-visible, .field-saac-btn:focus-visible {
 			outline: 3px solid #38bdf8;
 			outline-offset: 2px;
 		}
+		.ico-chat {
+			width: 13px;
+			height: 11px;
+			border: 2px solid currentColor;
+			border-radius: 3px;
+			display: inline-block;
+			position: relative;
+		}
+		.ico-chat::after {
+			content: "";
+			position: absolute;
+			bottom: -4px;
+			left: 2px;
+			width: 4px;
+			height: 4px;
+			background: currentColor;
+			clip-path: polygon(0 0, 100% 0, 0 100%);
+		}
 		main {
-			max-width: 900px;
-			margin: 28px auto;
+			max-width: 980px;
+			margin: 24px auto 80px;
 			padding: 0 20px;
 		}
-		.card {
-			background: #ffffff;
-			border-radius: 10px;
-			padding: 24px;
-			margin-bottom: 20px;
-			box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+		.hero-intro {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 20px 24px;
+			margin-bottom: 18px;
 		}
-		label {
-			display: block;
-			font-weight: 600;
+		h1 { margin: 0 0 8px; font-size: 1.4rem; }
+		h2 { margin: 0 0 10px; font-size: 1.1rem; }
+		p { margin: 0 0 10px; color: var(--muted); font-size: 0.92rem; }
+		.scenarios-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 16px;
+			margin-bottom: 20px;
+		}
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 20px;
+		}
+		.field-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
 			margin-bottom: 8px;
 		}
-		input[type="search"], textarea {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 12px;
-			font-size: 1rem;
-			border: 2px solid #cbd5e1;
-			border-radius: 8px;
-			margin-bottom: 16px;
+		label, .field-label {
+			font-weight: 700;
+			font-size: 0.9rem;
 		}
-		input[type="search"]:focus, textarea:focus {
-			border-color: #0f766e;
-			outline: none;
+		.field-saac-btn {
+			background: #f4f4f5;
+			color: #18181b;
+			border: 1px solid #d4d4d8;
+			border-radius: 6px;
+			padding: 4px 10px;
+			font-size: 0.78rem;
+			font-weight: 700;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+		}
+		.field-saac-btn:hover { background: #e4e4e7; }
+		input[type="search"], input[type="text"], textarea, .rich-editor {
+			width: 100%;
+			padding: 10px 12px;
+			font-size: 0.95rem;
+			border: 1px solid #d4d4d8;
+			border-radius: 8px;
+			background: #fafafa;
+			color: var(--text);
+			font-family: inherit;
+		}
+		.rich-editor {
+			min-height: 110px;
+			background: #ffffff;
 		}
 		code {
-			background: #e2e8f0;
+			background: #f4f4f5;
 			padding: 2px 6px;
 			border-radius: 4px;
-			font-size: 0.9em;
+			font-size: 0.85em;
 		}
 		pre {
-			background: #0f172a;
-			color: #f8fafc;
+			background: #18181b;
+			color: #fafafa;
 			padding: 14px;
 			border-radius: 8px;
-			overflow-x: auto;
-			font-size: 0.88rem;
+			overflow-x: hidden;
+			white-space: pre-wrap;
+			word-break: break-word;
+			font-size: 0.82rem;
+			margin: 8px 0 0;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<div class="brand">Aula Virtual (Simulación Moodle LMS)</div>
-		<button
-			id="moodle-saac-trigger"
-			type="button"
-			class="custom-trigger-btn"
-		>
-			Abrir Comunicador SAAC (Custom Trigger)
-		</button>
+		<div class="brand">
+			<span class="ico-chat" aria-hidden="true"></span>
+			<span>Laboratorio de Integración SAAC (Cualquier Web / Portal / Moodle LMS)</span>
+		</div>
+		<div class="header-triggers">
+			<button
+				id="custom-header-trigger"
+				type="button"
+				class="custom-trigger-btn"
+			>
+				<span class="ico-chat" aria-hidden="true"></span>
+				Abrir Tablero SAAC (Custom Trigger)
+			</button>
+			<button
+				type="button"
+				class="custom-trigger-btn secondary"
+				onclick="window.FreeSpeechSAAC && window.FreeSpeechSAAC.toggle()"
+			>
+				API JS: FreeSpeechSAAC.toggle()
+			</button>
+		</div>
 	</header>
 
 	<main>
-		<section class="card">
-			<h1>Prueba de Comunicación Aumentativa y Alternativa (SAAC) en Moodle / Buscador</h1>
+		<section class="hero-intro">
+			<h1>Tablero SAAC incrustable por Custom Trigger o Botón Flotante en cualquier página</h1>
 			<p>
-				Haz clic en cualquiera de los campos de abajo y luego abre el comunicador usando el botón
-				<strong>"Abrir Comunicador SAAC (Custom Trigger)"</strong> de la barra superior (o el atajo
-				<code>Alt + Shift + S</code>).
+				Esta página demuestra cómo <code>freespeech-widget.js</code> permite abrir el comunicador aumentativo y alternativo en
+				<strong>cualquier sitio web</strong> (buscadores, portales de trámites, aplicaciones corporativas o aulas virtuales como Moodle)
+				usando:
 			</p>
-			<p>
-				Dentro del SAAC puedes construir tu frase con pictogramas y pulsar:
+			<p style="margin-bottom:0;">
+				1) Un <strong><code>customTrigger</code> global</strong> en la barra superior,
+				2) <strong>Botones contextuales <code>[data-saac-trigger]</code></strong> asociados a un campo específico con <code>data-saac-target</code>,
+				3) El <strong>botón flotante integrado</strong> en la esquina inferior derecha, o
+				4) El atajo de teclado <code>Alt + Shift + S</code>.
 			</p>
-			<ul>
-				<li><strong>Copiar texto</strong>: copia la frase en texto plano al portapapeles para pegarla en un buscador, Word o cualquier aplicación.</li>
-				<li><strong>Insertar en página</strong>: escribe automáticamente la frase construida en el campo activo de esta página.</li>
-			</ul>
+		</section>
 
-			<label for="buscador-web">1. Simulación de Buscador Web:</label>
-			<input
-				id="buscador-web"
-				type="search"
-				placeholder="Coloca el cursor aquí o pega el mensaje copiado del SAAC..."
-			>
+		<div class="scenarios-grid">
+			<section class="card">
+				<div class="field-header">
+					<label for="buscador-universal">1. Buscador Web / Portal Público</label>
+					<button
+						type="button"
+						class="field-saac-btn"
+						data-saac-trigger
+						data-saac-target="#buscador-universal"
+					>
+						<span class="ico-chat" aria-hidden="true"></span>
+						Escribir con SAAC
+					</button>
+				</div>
+				<p>Haz clic en el campo o pulsa "Escribir con SAAC" para redactar tu búsqueda mediante pictogramas.</p>
+				<input
+					id="buscador-universal"
+					type="search"
+					placeholder="Ej: Buscar información o trámites..."
+				>
+			</section>
 
-			<label for="foro-moodle">2. Respuesta en Foro / Tarea de Moodle:</label>
-			<textarea
-				id="foro-moodle"
-				rows="5"
-				placeholder="Escribe o inserta directamente desde la ventana flotante del SAAC..."
-			></textarea>
+			<section class="card">
+				<div class="field-header">
+					<label for="formulario-ciudadano">2. Formulario Web / Trámite o Cuestionario</label>
+					<button
+						type="button"
+						class="field-saac-btn"
+						data-saac-trigger
+						data-saac-target="#formulario-ciudadano"
+					>
+						<span class="ico-chat" aria-hidden="true"></span>
+						Escribir con SAAC
+					</button>
+				</div>
+				<p>Funciona con cualquier <code>&lt;input&gt;</code> o <code>&lt;textarea&gt;</code> estándar en portales web.</p>
+				<textarea
+					id="formulario-ciudadano"
+					rows="3"
+					placeholder="Respuesta o solicitud escrita desde el tablero SAAC..."
+				></textarea>
+			</section>
+		</div>
+
+		<section class="card" style="margin-bottom: 20px;">
+			<div class="field-header">
+				<span id="label-editor-rico" class="field-label">3. Editor de Texto Enriquecido (Webmail / CMS / Foro Moodle Atto &amp; TinyMCE)</span>
+				<button
+					type="button"
+					class="field-saac-btn"
+					data-saac-trigger
+					data-saac-target="#editor-enriquecido"
+				>
+					<span class="ico-chat" aria-hidden="true"></span>
+					Redactar en Editor con SAAC
+				</button>
+			</div>
+			<p>Soporta bloques <code>contenteditable="true"</code> y editores ricos en cualquier aplicación web.</p>
+			<div
+				id="editor-enriquecido"
+				class="rich-editor editor_atto_content"
+				contenteditable="true"
+				role="textbox"
+				aria-multiline="true"
+				aria-labelledby="label-editor-rico"
+			>Hola, necesito apoyo con esta actividad.</div>
 		</section>
 
 		<section class="card">
-			<h2>Cómo integrarlo en Moodle o cualquier sitio web</h2>
-			<pre><code>&lt;!-- 1. Tu propio botón (customTrigger) en la plantilla de Moodle --&gt;
-&lt;button id="moodle-saac-trigger" type="button"&gt;Abrir SAAC&lt;/button&gt;
+			<h2>Formas de integración en cualquier página web</h2>
+			<pre><code>&lt;!-- Opción A: Con tu propio botón (customTrigger) y/o el botón flotante integrado --&gt;
+&lt;button id="mi-boton-saac" type="button"&gt;Abrir Comunicador SAAC&lt;/button&gt;
 
-&lt;!-- 2. Cargar el widget flotante apuntando a tu instancia de Free Speech --&gt;
+&lt;!-- Opción B: Botón contextual que apunta a un campo específico --&gt;
+&lt;button type="button" data-saac-trigger data-saac-target="#buscador-universal"&gt;
+  Redactar con SAAC
+&lt;/button&gt;
+
+&lt;!-- Script universal del widget --&gt;
 &lt;script
   src="https://tu-dominio.com/freespeech-widget.js"
   data-saac-url="https://tu-dominio.com/"
-  data-custom-trigger="#moodle-saac-trigger"
+  data-custom-trigger="#mi-boton-saac"
   data-show-default-trigger="true"
 &gt;&lt;/script&gt;</code></pre>
 		</section>
@@ -147,7 +305,7 @@
 	<script
 		src="/freespeech-widget.js"
 		data-saac-url="/"
-		data-custom-trigger="#moodle-saac-trigger"
+		data-custom-trigger="#custom-header-trigger"
 		data-show-default-trigger="true"
 	></script>
 </body>

@@ -4,6 +4,7 @@
 		tile
 		class="mx-auto saac-tile-btn"
 		:class="{
+			'is-sentence-tile': inSentenceComponent,
 			'is-collection-tile': isNavigationTile && tileData.navigation !== 'home',
 			'is-back-home-tile': isNavigationTile && tileData.navigation === 'home'
 		}"
@@ -385,6 +386,47 @@ export default {
 	word-break: break-word;
 	white-space: normal;
 	margin: 0;
+}
+/* Ficha compacta cuando está dentro de la barra de frase */
+.saac-tile-btn.is-sentence-tile {
+	min-height: 76px !important;
+	border-radius: 10px !important;
+}
+.saac-tile-btn.is-sentence-tile .tile-pictogram-img {
+	width: 34px !important;
+	height: 34px !important;
+	max-width: 34px !important;
+	max-height: 34px !important;
+}
+.saac-tile-btn.is-sentence-tile .tile-label {
+	font-size: 0.82rem;
+}
+@media (max-width: 640px) {
+	.saac-tile-btn {
+		min-height: 98px !important;
+		border-radius: 11px !important;
+	}
+	.saac-tile-btn .tile-pictogram-img {
+		width: 40px !important;
+		height: 40px !important;
+		max-width: 40px !important;
+		max-height: 40px !important;
+	}
+	.tile-label {
+		font-size: 0.84rem;
+		line-height: 1.18;
+	}
+	.collection-folder-ribbon {
+		font-size: 0.62rem;
+		padding: 2px 5px;
+	}
+	.saac-tile-btn.is-sentence-tile {
+		min-height: 64px !important;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-pictogram-img {
+		width: 28px !important;
+		height: 28px !important;
+	}
 }
 .new-tile-icon-circle {
 	width: 48px;

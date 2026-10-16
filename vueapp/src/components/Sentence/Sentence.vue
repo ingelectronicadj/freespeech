@@ -6,65 +6,72 @@
 	>
 		<v-card
 			theme="light"
-			class="px-5 py-3 sentenceCard"
+			class="sentenceCard"
 		>
-			<div class="d-flex flex-wrap align-center justify-space-between mb-2" style="gap: 10px;">
-				<h2 class="sentence-section-title">
-					{{ $t('sentence.title') }}
-				</h2>
-				<div class="d-flex flex-wrap align-center" style="gap: 8px;">
+			<div class="sentence-top-bar">
+				<div class="sentence-header-left">
+					<h2 class="sentence-section-title">
+						{{ $t('sentence.title') }}
+					</h2>
+					<div
+						v-if="constructedText"
+						id="sentenceTextOutput"
+						class="sentence-text-preview"
+					>
+						<span class="sentence-text-label">{{ $t('sentence.textPreviewLabel') }}</span>
+						<strong class="sentence-text-value">{{ constructedText }}</strong>
+					</div>
+				</div>
+
+				<div class="sentence-actions-group">
 					<v-btn
 						id="speakSentenceButton"
 						color="primary"
-						size="large"
-						class="text-none font-weight-bold px-4"
+						class="text-none font-weight-bold sentence-action-btn"
 						:disabled="tilePadToDisplay.length === 0"
 						:aria-label="$t('sentence.buttonSpeak')"
 						@click="$emit('speakSentence')"
 					>
-						<v-icon class="mr-2" aria-hidden="true">record_voice_over</v-icon>
-						{{ $t('sentence.buttonSpeak') }}
-					</v-btn>
-
-					<v-btn
-						id="copySentenceButton"
-						color="secondary"
-						size="large"
-						class="text-none font-weight-bold px-4"
-						:disabled="tilePadToDisplay.length === 0"
-						:aria-label="$t('sentence.buttonCopy')"
-						@click="copySentence"
-					>
-						<v-icon class="mr-2" aria-hidden="true">content_copy</v-icon>
-						{{ $t('sentence.buttonCopy') }}
+						<v-icon class="mr-1" aria-hidden="true">record_voice_over</v-icon>
+						<span>{{ $t('sentence.buttonSpeak') }}</span>
 					</v-btn>
 
 					<v-btn
 						v-if="isEmbedded"
 						id="insertSentenceButton"
 						color="info"
-						size="large"
-						class="text-none font-weight-bold px-4"
+						class="text-none font-weight-bold sentence-action-btn"
 						:disabled="tilePadToDisplay.length === 0"
 						:aria-label="$t('sentence.buttonInsert')"
 						@click="insertSentenceInHost"
 					>
-						<v-icon class="mr-2" aria-hidden="true">input</v-icon>
-						{{ $t('sentence.buttonInsert') }}
+						<v-icon class="mr-1" aria-hidden="true">input</v-icon>
+						<span>{{ $t('sentence.buttonInsert') }}</span>
+					</v-btn>
+
+					<v-btn
+						id="copySentenceButton"
+						color="secondary"
+						class="text-none font-weight-bold sentence-action-btn"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonCopy')"
+						@click="copySentence"
+					>
+						<v-icon class="mr-1" aria-hidden="true">content_copy</v-icon>
+						<span>{{ $t('sentence.buttonCopy') }}</span>
 					</v-btn>
 
 					<v-btn
 						id="clearSentenceButton"
 						color="error"
 						variant="tonal"
-						size="large"
-						class="text-none font-weight-bold px-4"
+						class="text-none font-weight-bold sentence-action-btn"
 						:disabled="tilePadToDisplay.length === 0"
 						:aria-label="$t('sentence.buttonClear')"
 						@click="$emit('clearSentence')"
 					>
-						<v-icon class="mr-2" aria-hidden="true">clear</v-icon>
-						{{ $t('sentence.buttonClear') }}
+						<v-icon class="mr-1" aria-hidden="true">clear</v-icon>
+						<span>{{ $t('sentence.buttonClear') }}</span>
 					</v-btn>
 				</div>
 			</div>
@@ -73,21 +80,12 @@
 				class="pa-0"
 				aria-live="polite"
 			>
-				<div
-					v-if="constructedText"
-					id="sentenceTextOutput"
-					class="sentence-text-preview mb-3 px-4 py-2"
-				>
-					<span class="sentence-text-label">{{ $t('sentence.textPreviewLabel') }}</span>
-					<strong class="sentence-text-value">{{ constructedText }}</strong>
-				</div>
-
 				<p
 					v-if="feedbackMessage"
 					id="sentenceFeedbackMessage"
 					role="status"
 					aria-live="polite"
-					class="sentence-feedback mb-2"
+					class="sentence-feedback mb-1"
 				>
 					{{ feedbackMessage }}
 				</p>
@@ -98,18 +96,14 @@
 				>
 					{{ $t('sentence.instructions') }}
 				</p>
-				<v-row
+				<div
 					v-else
-					dense
-					class="mt-1"
+					class="sentence-tiles-strip mt-2"
 				>
-					<v-col
+					<div
 						v-for="(tile, tileIndex) in tilePadToDisplay"
 						:key="tileIndex"
-						cols="6"
-						sm="3"
-						md="2"
-						class="d-flex child-flex"
+						class="sentence-tile-item"
 					>
 						<Tile
 							:tile-data="tile"
@@ -117,8 +111,8 @@
 							:sentence-index="tileIndex"
 							@remove-from-sentence="$emit('removeFromSentence', $event)"
 						/>
-					</v-col>
-				</v-row>
+					</div>
+				</div>
 			</v-card-text>
 		</v-card>
 	</div>
@@ -249,52 +243,124 @@ export default {
 	position: sticky;
 	top: 56px;
 	z-index: 100;
-	padding: 10px 16px 4px;
+	padding: 8px 12px 4px;
 	background-color: #f1f5f9;
 }
 .sentenceCard {
 	max-width: 1380px;
 	margin: 0 auto;
+	padding: 10px 14px !important;
 	background: #ffffff !important;
 	border: 2px solid #cbd5e1 !important;
 	border-radius: 14px !important;
 	box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
 }
+.sentence-top-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+.sentence-header-left {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	flex: 1;
+	min-width: 180px;
+}
 .sentence-section-title {
-	font-size: 1.2rem;
+	font-size: 1.05rem;
 	font-weight: 800;
 	color: #0f172a;
 	margin: 0;
+	white-space: nowrap;
+}
+.sentence-actions-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+.sentence-action-btn {
+	min-height: 40px !important;
+	padding: 0 12px !important;
+	font-size: 0.86rem !important;
 }
 .sentence-empty-hint {
 	color: #475569;
-	font-size: 0.95rem;
-	padding: 6px 0;
+	font-size: 0.88rem;
+	padding: 4px 0 2px;
 }
 .sentence-text-preview {
 	background-color: #f0fdf4;
 	border: 1px solid #bbf7d0;
-	border-left: 5px solid #0f766e;
+	border-left: 4px solid #0f766e;
 	border-radius: 8px;
-	font-size: 1.05rem;
-	display: flex;
+	padding: 4px 10px;
+	font-size: 0.95rem;
+	display: inline-flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 6px;
+	max-width: 100%;
 }
 .sentence-text-label {
 	color: #334155;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	font-weight: 600;
 }
 .sentence-text-value {
 	color: #0f172a;
-	font-size: 1.2rem;
+	font-size: 1.02rem;
 	user-select: all;
+	word-break: break-word;
 }
 .sentence-feedback {
 	color: #0f766e;
 	font-weight: 700;
-	font-size: 0.95rem;
+	font-size: 0.86rem;
+}
+/* Tira horizontal compacta de pictogramas seleccionados (ideal para móviles y tablets) */
+.sentence-tiles-strip {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	gap: 8px;
+	padding-bottom: 4px;
+	-webkit-overflow-scrolling: touch;
+}
+.sentence-tile-item {
+	flex: 0 0 auto;
+	width: 112px;
+}
+@media (max-width: 640px) {
+	.sentenceCardContainer {
+		top: 48px;
+		padding: 6px 8px 2px;
+	}
+	.sentenceCard {
+		padding: 8px 10px !important;
+		border-radius: 10px !important;
+	}
+	.sentence-section-title {
+		font-size: 0.92rem;
+	}
+	.sentence-actions-group {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+		gap: 5px;
+	}
+	.sentence-action-btn {
+		min-height: 36px !important;
+		padding: 0 8px !important;
+		font-size: 0.78rem !important;
+		width: 100%;
+	}
+	.sentence-tile-item {
+		width: 94px;
+	}
 }
 </style>

@@ -1,4 +1,4 @@
-# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.1.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
+# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.2.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
 
 Free Speech is an open-source **Augmentative and Alternative Communication (AAC / SAAC)** web application designed to help non-verbal people communicate without cost, both as a standalone communicator and as an **embeddable floating window** over platforms such as **Moodle LMS**, search engines, or desktop editors.
 
@@ -24,39 +24,40 @@ See [CHANGELOG.md](./CHANGELOG.md) for full details on version **2.0.0**.
 * Next, run `npm i` and after that is complete you can run the Vue 3 + Vite app on your machine by running `npm run dev` (or `npm run serve`). You can run unit tests with `npm run test:unit` and build the application with `npm run build`.
 * Please be sure to also read our [contributing guide](https://github.com/Merkie/freespeech/blob/master/.github/CONTRIBUTING.md)!
 
-## SAAC Enhancements: Plain-Text Copy & Floating Window (Moodle / LMS Integration)
+## SAAC Enhancements: Universal `customTrigger`, Floating Window & Mobile/Tablet Ergonomics
 
-Free Speech includes capabilities designed so users do not have to rely solely on visual glyphs when communicating across external tools (search engines, Word, Moodle, email):
+Free Speech includes capabilities designed so users do not have to rely solely on visual glyphs when communicating across any web page, search engine, form, rich-text editor, or LMS (such as Moodle, Canvas, or Blackboard):
 
 1. **Plain-Text Sentence Preview & One-Click Copy (`Copy text`)**:
-   * As tiles are tapped, the Sentence bar shows the plain-text phrase being built (`#sentenceTextOutput`).
+   * As tiles are tapped, the Sentence bar shows the plain-text phrase being built (`#sentenceTextOutput`) alongside a compact horizontal strip of selected pictograms.
    * Clicking **Copy text** copies the constructed message directly to the clipboard so it can be pasted anywhere (Google, Word, chat, etc.).
-   * Clicking **Open in floating window** (`↗`) in the top bar pops out a compact standalone window to keep alongside desktop applications.
+   * Responsive **2 / 3 / 4 / 5 / 6-column progressive CSS grid** (`TilePad.vue`) and horizontal swipeable collection bar designed for phones, tablets, and desktops.
 
-2. **Floating Window Widget over Moodle or Any Web Platform (`freespeech-widget.js`)**:
-   * Load the floating SAAC widget over any LMS or website and bind it to your own **`customTrigger`** button (or use the `Alt + Shift + S` keyboard shortcut):
+2. **Universal Floating Widget for Any Web Page or LMS (`freespeech-widget.js`)**:
+   * Open the SAAC board on **any web page** via:
+     1. A global **`customTrigger`** selector (`data-custom-trigger="#open-saac-btn"`),
+     2. Declarative **`[data-saac-trigger]`** buttons targeting specific fields (`data-saac-target="#search-input"`),
+     3. The built-in **floating launcher button** (`data-show-default-trigger="true"`),
+     4. JavaScript API (`window.FreeSpeechSAAC.open('#field')`, `.toggle()`, `.close()`) or **`Alt + Shift + S`**.
    ```html
-   <!-- Custom trigger button in Moodle / LMS template -->
-   <button id="moodle-saac-trigger" type="button">Abrir Comunicador SAAC</button>
+   <!-- Option A: Global customTrigger button in any navbar or page -->
+   <button id="open-saac-btn" type="button">Abrir Comunicador SAAC</button>
 
-   <!-- Floating SAAC widget script -->
+   <!-- Option B: Contextual button targeting a specific input or rich-text editor -->
+   <button type="button" data-saac-trigger data-saac-target="#search-box">
+     Escribir con SAAC
+   </button>
+
+   <!-- Universal Floating SAAC widget script -->
    <script
      src="https://your-freespeech-host.example/freespeech-widget.js"
      data-saac-url="https://your-freespeech-host.example/"
-     data-custom-trigger="#moodle-saac-trigger"
+     data-custom-trigger="#open-saac-btn"
      data-show-default-trigger="true"
    ></script>
    ```
-   * Or initialize programmatically via JavaScript:
-   ```js
-   window.FreeSpeechSAAC.init({
-     url: 'https://your-freespeech-host.example/',
-     customTrigger: '#moodle-saac-trigger',
-     showDefaultTrigger: false
-   });
-   ```
-   * When embedded via `freespeech-widget.js`, the Sentence bar also displays an **Insert into page (`Insertar en página`)** button that writes the constructed sentence directly into the last focused `<input>`, `<textarea>`, or `contenteditable` editor in Moodle.
-   * Try the interactive simulation locally at `http://localhost:8080/moodle-demo.html`.
+   * Includes an **Interactive Target Field Selector (`Insertar en:`)** that auto-detects standard `<input>`, `<textarea>`, `[contenteditable="true"]`, and rich-text editors (`TinyMCE`, `Atto`, `CKEditor`, `Quill`), lateral **Dock Right** mode, touch dragging on tablets, and **Bottom Sheet (`78vh`)** presentation on mobile phones.
+   * Try the interactive multi-scenario lab locally at `http://localhost:8080/moodle-demo.html`.
 
 ## Authors
 

@@ -3,6 +3,7 @@
 		<v-app-bar
 			app
 			:color="taskbarColor"
+			:density="isEmbedded ? 'compact' : 'default'"
 			theme="dark"
 			elevation="2"
 		>
@@ -169,7 +170,19 @@ export default {
 	},
 	created () {
 		this.systemSaveBackupOfTilePad();
-		let activeLocale = this.locale;
+		let urlLang = null;
+		if (typeof window !== 'undefined') {
+			try {
+				const params = new URLSearchParams(window.location.search);
+				if (params.get('lang')) {
+					urlLang = normalizeLocaleCode(params.get('lang'));
+				}
+			} catch {
+				urlLang = null;
+			}
+		}
+
+		let activeLocale = urlLang || this.locale;
 		if (activeLocale === null) {
 			const defaultLanguage = (typeof navigator !== 'undefined' && navigator.languages && navigator.languages[0])
 				? navigator.languages[0]

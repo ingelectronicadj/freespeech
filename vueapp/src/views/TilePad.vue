@@ -47,35 +47,26 @@
 
 		<v-container
 			fluid
-			class="tilepad-grid-wrapper pb-10 pt-2 px-4"
+			class="tilepad-grid-wrapper pb-10 pt-2 px-3"
 		>
-			<v-row
+			<div
 				ref="tileGrid"
-				dense
-				class="tilePadContainer"
+				class="tilePadContainer saac-responsive-grid"
 			>
-				<v-col
+				<div
 					v-if="editMode"
 					id="newTile"
-					cols="6"
-					sm="4"
-					md="2"
-					class="d-flex child-flex"
-					style="padding: 6px"
+					class="d-flex child-flex tile-col"
 				>
 					<Tile
 						:new-tile="true"
 						:tile-page="currentTilePadPage"
 					/>
-				</v-col>
-				<v-col
+				</div>
+				<div
 					v-for="(tile, tileIndex) in visibleTiles"
 					:key="tile.id !== undefined ? tile.id : tileIndex"
-					cols="6"
-					sm="4"
-					md="2"
 					class="d-flex child-flex tile-col"
-					style="padding: 6px"
 				>
 					<Tile
 						:tile-data="tile"
@@ -83,8 +74,8 @@
 						@speak-text="speakText"
 						@add-to-sentence="sentenceTiles.push($event)"
 					/>
-				</v-col>
-			</v-row>
+				</div>
+			</div>
 		</v-container>
 	</div>
 </template>
@@ -277,6 +268,36 @@ export default {
 	max-width: 1400px;
 	margin: 0 auto;
 }
+/* Cuadrícula progresiva para teléfonos (2-3 col), tablets (4-5 col) y escritorio (6 col) */
+.saac-responsive-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 8px;
+}
+@media (min-width: 350px) {
+	.saac-responsive-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 8px;
+	}
+}
+@media (min-width: 600px) {
+	.saac-responsive-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 10px;
+	}
+}
+@media (min-width: 840px) {
+	.saac-responsive-grid {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 12px;
+	}
+}
+@media (min-width: 1120px) {
+	.saac-responsive-grid {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 12px;
+	}
+}
 .collections-nav-bar {
 	max-width: 1400px;
 	margin: 0 auto;
@@ -285,22 +306,46 @@ export default {
 	background: #ffffff;
 	border: 2px solid #cbd5e1;
 	border-radius: 12px;
-	padding: 10px 16px;
+	padding: 8px 14px;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 8px;
 	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 .collections-title-label {
-	font-size: 0.88rem;
+	font-size: 0.85rem;
 	font-weight: 800;
 	color: #334155;
 }
 .collections-pills {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 6px;
+}
+@media (max-width: 640px) {
+	.collections-nav-bar {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+		padding-top: 6px !important;
+	}
+	.collections-nav-inner {
+		padding: 6px 10px;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.collections-title-label {
+		display: none;
+	}
+	.collections-pills {
+		flex-wrap: nowrap;
+	}
+	.collection-pill-btn, .collection-back-btn {
+		white-space: nowrap;
+		padding: 5px 11px;
+		font-size: 0.8rem;
+	}
 }
 .collection-pill-btn {
 	background: #f1f5f9;

@@ -4,6 +4,23 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.2.0] - 2026-10-16
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### SDK Universal (`customTrigger` + Botón Flotante en cualquier Web) y Ergonomía Móvil / Tablet
+
+- **Widget Universal `freespeech-widget.js` para cualquier página web o LMS**:
+  - Soporte simultáneo para **`customTrigger`** global (`data-custom-trigger`), disparadores declarativos **`[data-saac-trigger]`** con destino específico (`data-saac-target="#campo"`), botón flotante integrado configurable por esquina (`bottom-right`, `bottom-left`, `top-right`, `top-left`) y API JavaScript (`FreeSpeechSAAC.open`, `.toggle`, `.close`, `.setTarget`).
+  - **Barra selectora de campo destino (`Insertar en:`)**: Escanea automáticamente cualquier `<input>`, `<textarea>`, `[contenteditable="true"]` y editores ricos (`TinyMCE`, `Atto`, `CKEditor`, `Quill`) de la página anfitriona, resaltando el campo activo.
+  - **Modo Acoplado Lateral (`Dock Right`)**, sincronización automática del idioma (`?embed=1&lang=...`) desde el `<html lang>` anfitrión e iconos geométricos 100 % en CSS (`aria-hidden="true"`).
+- **Optimización Responsiva para Teléfonos Móviles y Tablets (`Sentence.vue`, `TilePad.vue`, `Tile.vue`)**:
+  - **Barra de frase compacta con tira horizontal deslizable (`.sentence-tiles-strip`)**: Evita que los pictogramas seleccionados cubran la pantalla en teléfonos móviles y dentro de la ventana flotante.
+  - **Cuadrícula progresiva `.saac-responsive-grid` (`2 / 3 / 4 / 5 / 6` columnas)**: Ajusta automáticamente la densidad de pictogramas para teléfonos (`3` columnas), tablets en vertical (`4` columnas), tablets en horizontal (`5` columnas) y escritorio (`6` columnas).
+  - **Soporte táctil (`touchstart` / `touchmove`) en tablets y modo *Bottom Sheet* (`78vh`) en teléfonos móviles**.
+
+---
+
 ## [2.1.0] - 2026-10-15
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
