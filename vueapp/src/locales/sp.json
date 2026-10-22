@@ -48,7 +48,10 @@
     "home": "Principal",
     "feelings": "Sentir y Emociones",
     "numbers": "Números y Tiempo",
-    "keyboard": "Teclado ABC"
+    "keyboard": "Teclado ABC",
+    "searchPlaceholder": "Buscar palabra en el tablero...",
+    "searchClear": "Limpiar búsqueda",
+    "searchEmpty": "No se encontraron baldosas para esta búsqueda."
   },
   "editMode": {
     "title": "Estás en modo de edición!",

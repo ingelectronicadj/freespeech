@@ -9,15 +9,15 @@
 		/>
 		<edit-mode-header v-if="editMode" />
 
-		<!-- Barra de Colecciones de palabras y ubicación actual -->
+		<!-- Barra de Colecciones de palabras y buscador rápido -->
 		<nav
 			id="collectionsBar"
-			class="collections-nav-bar px-4 pt-3 pb-1"
+			class="collections-nav-bar px-3 pt-2 pb-1"
 			:aria-label="collectionsBarLabel"
 		>
 			<div class="collections-nav-inner">
 				<button
-					v-if="currentTilePadPage !== 'home'"
+					v-if="currentTilePadPage !== 'home' && !searchQuery"
 					type="button"
 					class="collection-back-btn"
 					@click="$router.push({ name: 'tilePad' })"
@@ -34,12 +34,36 @@
 						:key="col.key"
 						type="button"
 						class="collection-pill-btn"
-						:class="{ 'is-active': currentTilePadPage === col.key }"
-						:aria-current="currentTilePadPage === col.key ? 'page' : undefined"
-						@click="navigateToCollection(col.key)"
+						:class="{ 'is-active': !searchQuery && currentTilePadPage === col.key }"
+						:aria-current="!searchQuery && currentTilePadPage === col.key ? 'page' : undefined"
+						@click="selectCollectionTab(col.key)"
 					>
 						<span class="nav-css-ico" :class="col.iconClass" aria-hidden="true" />
 						<span>{{ col.label }}</span>
+					</button>
+				</div>
+
+				<div class="collections-search-wrap">
+					<svg class="search-svg-ico" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="11" cy="11" r="8" />
+						<line x1="21" y1="21" x2="16.65" y2="16.65" />
+					</svg>
+					<input
+						id="boardQuickSearchInput"
+						v-model.trim="searchQuery"
+						type="search"
+						class="collections-search-input"
+						:placeholder="searchPlaceholderLabel"
+						:aria-label="searchPlaceholderLabel"
+					>
+					<button
+						v-if="searchQuery"
+						type="button"
+						class="collections-search-clear"
+						:aria-label="searchClearLabel"
+						@click="searchQuery = ''"
+					>
+						&times;
 					</button>
 				</div>
 			</div>
@@ -49,12 +73,19 @@
 			fluid
 			class="tilepad-grid-wrapper pb-10 pt-2 px-3"
 		>
+			<p
+				v-if="visibleTiles.length === 0 && searchQuery"
+				class="search-empty-state"
+				role="status"
+			>
+				{{ searchEmptyLabel }}
+			</p>
 			<div
 				ref="tileGrid"
 				class="tilePadContainer saac-responsive-grid"
 			>
 				<div
-					v-if="editMode"
+					v-if="editMode && !searchQuery"
 					id="newTile"
 					class="d-flex child-flex tile-col"
 				>
@@ -65,7 +96,7 @@
 				</div>
 				<div
 					v-for="(tile, tileIndex) in visibleTiles"
-					:key="tile.id !== undefined ? tile.id : tileIndex"
+					:key="tile._searchKey || (tile.id !== undefined ? tile.id : tileIndex)"
 					class="d-flex child-flex tile-col"
 				>
 					<Tile
@@ -101,6 +132,7 @@ export default {
 			tileData: TileData,
 			sentenceTiles: [],
 			sortableInstance: null,
+			searchQuery: ''
 		};
 	},
 	computed: {
@@ -111,12 +143,22 @@ export default {
 			customTilePadOption: 'settings/customTilePad',
 			customTilePadData: 'tilePad/customTilePadData',
 			voices: 'settings/voices',
+			locale: 'settings/locale'
 		}),
 		collectionsBarLabel () {
 			return typeof this.$t === 'function' ? this.$t('collections.barLabel') : 'Word collections:';
 		},
 		backToMainLabel () {
 			return typeof this.$t === 'function' ? this.$t('collections.backToMain') : 'Back to main board';
+		},
+		searchPlaceholderLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.searchPlaceholder') : 'Search word across board...';
+		},
+		searchClearLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.searchClear') : 'Clear search';
+		},
+		searchEmptyLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.searchEmpty') : 'No matching tiles found.';
 		},
 		collectionTabs () {
 			const tr = (key, fallback) => (typeof this.$t === 'function' ? this.$t(key) : fallback);
@@ -127,7 +169,7 @@ export default {
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];
 		},
-		tilePadToDisplay () {
+		allBoardsDictionary () {
 			if (
 				!this.customTilePadData ||
 				(Object.entries(this.customTilePadData).length === 0 &&
@@ -141,15 +183,17 @@ export default {
 				this.customTilePadData['1'].tileData[1] &&
 				this.customTilePadData['1'].tileData[1].name === ''
 			) {
-				// Actualizar tablero '1' (Sentir) si tenía las 59 celdas en blanco heredadas en localStorage
 				const updated = JSON.parse(JSON.stringify(this.customTilePadData));
 				updated['1'] = JSON.parse(JSON.stringify(this.tileData['1']));
 				this.setCustomTilePadData(updated);
 			}
 
-			const tilePadTiles = (this.customTilePadOption && Object.keys(this.customTilePadData).length > 0)
+			return (this.customTilePadOption && Object.keys(this.customTilePadData).length > 0)
 				? this.customTilePadData
 				: this.tileData;
+		},
+		tilePadToDisplay () {
+			const tilePadTiles = this.allBoardsDictionary;
 			const routeParam = this.$route && this.$route.params ? this.$route.params.layout : undefined;
 			if (typeof routeParam === 'undefined' || !tilePadTiles[routeParam]) {
 				return tilePadTiles.home || { tileData: [] };
@@ -158,6 +202,35 @@ export default {
 			}
 		},
 		visibleTiles () {
+			const query = String(this.searchQuery || '').trim().toLowerCase();
+			if (query) {
+				const boards = this.allBoardsDictionary || {};
+				const results = [];
+				const seenNames = new Set();
+				Object.keys(boards).forEach(boardKey => {
+					const arr = (boards[boardKey] && Array.isArray(boards[boardKey].tileData)) ? boards[boardKey].tileData : [];
+					arr.forEach((tile, idx) => {
+						if (!tile || tile.navigation) return;
+						const nameEs = tile.messages && (tile.messages.es || tile.messages.sp) ? (tile.messages.es || tile.messages.sp).name || '' : '';
+						const nameDe = tile.messages && tile.messages.de ? tile.messages.de.name || '' : '';
+						const baseName = String(tile.name || '');
+						const baseText = String(tile.text || '');
+						const haystack = `${baseName} ${baseText} ${nameEs} ${nameDe}`.toLowerCase();
+						if (haystack.includes(query)) {
+							const dedupKey = `${baseName}-${nameEs}`.toLowerCase();
+							if (!seenNames.has(dedupKey)) {
+								seenNames.add(dedupKey);
+								results.push({
+									...tile,
+									_searchKey: `${boardKey}-${tile.id || idx}`
+								});
+							}
+						}
+					});
+				});
+				return results;
+			}
+
 			const list = (this.tilePadToDisplay && Array.isArray(this.tilePadToDisplay.tileData))
 				? this.tilePadToDisplay.tileData
 				: [];
@@ -191,11 +264,17 @@ export default {
 	},
 	mounted () {
 		this.initSortable();
+		if (typeof window !== 'undefined') {
+			window.addEventListener('message', this.handleHostCommand);
+		}
 	},
 	beforeUnmount () {
 		if (this.sortableInstance) {
 			this.sortableInstance.destroy();
 			this.sortableInstance = null;
+		}
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('message', this.handleHostCommand);
 		}
 	},
 	methods: {
@@ -204,6 +283,21 @@ export default {
 			moveTile: 'tilePad/moveTile',
 			logTileTap: 'tilePad/logTileTap',
 		}),
+		handleHostCommand (event) {
+			const data = event && event.data;
+			if (!data || data.type !== 'FREESPEECH_HOST_COMMAND') return;
+			if (data.command === 'clearSentence') {
+				this.sentenceTiles = [];
+			} else if (data.command === 'backspaceSentence' && this.sentenceTiles.length > 0) {
+				this.sentenceTiles.pop();
+			} else if (data.command === 'speakSentence' && this.sentenceTiles.length > 0) {
+				this.speakSentence();
+			}
+		},
+		selectCollectionTab (key) {
+			this.searchQuery = '';
+			this.navigateToCollection(key);
+		},
 		navigateToCollection (key) {
 			if (key === 'home') {
 				this.$router.push({ name: 'tilePad' });
@@ -261,14 +355,13 @@ export default {
 <style scoped>
 .tilepad-page {
 	background-color: #f1f5f9;
-	min-height: calc(100vh - 64px);
+	min-height: calc(100vh - 56px);
 }
 .tilepad-grid-wrapper {
 	text-align: center;
 	max-width: 1400px;
 	margin: 0 auto;
 }
-/* Cuadrícula progresiva para teléfonos (2-3 col), tablets (4-5 col) y escritorio (6 col) */
 .saac-responsive-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -306,7 +399,7 @@ export default {
 	background: #ffffff;
 	border: 2px solid #cbd5e1;
 	border-radius: 12px;
-	padding: 8px 14px;
+	padding: 8px 12px;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -314,7 +407,7 @@ export default {
 	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 .collections-title-label {
-	font-size: 0.85rem;
+	font-size: 0.84rem;
 	font-weight: 800;
 	color: #334155;
 }
@@ -322,6 +415,60 @@ export default {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 6px;
+}
+.collections-search-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	min-width: 180px;
+	flex: 1 1 180px;
+	max-width: 280px;
+}
+.search-svg-ico {
+	position: absolute;
+	left: 9px;
+	color: #64748b;
+	pointer-events: none;
+}
+.collections-search-input {
+	width: 100%;
+	padding: 5px 26px 5px 28px;
+	border: 1.5px solid #cbd5e1;
+	border-radius: 999px;
+	background: #f8fafc;
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: #0f172a;
+}
+.collections-search-input:focus {
+	outline: 2px solid #0284c7;
+	background: #ffffff;
+}
+.collections-search-clear {
+	position: absolute;
+	right: 7px;
+	background: #e2e8f0;
+	color: #0f172a;
+	border: 0;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	font-size: 13px;
+	line-height: 1;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.search-empty-state {
+	background: #ffffff;
+	border: 1px dashed #94a3b8;
+	border-radius: 10px;
+	padding: 16px;
+	color: #475569;
+	font-weight: 600;
+	margin-bottom: 12px;
 }
 @media (max-width: 640px) {
 	.collections-nav-bar {
@@ -331,20 +478,28 @@ export default {
 	}
 	.collections-nav-inner {
 		padding: 6px 10px;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
+		gap: 6px;
 	}
 	.collections-title-label {
 		display: none;
 	}
 	.collections-pills {
+		display: flex;
 		flex-wrap: nowrap;
+		overflow-x: auto;
+		width: 100%;
+		padding-bottom: 2px;
+		-webkit-overflow-scrolling: touch;
 	}
 	.collection-pill-btn, .collection-back-btn {
 		white-space: nowrap;
-		padding: 5px 11px;
-		font-size: 0.8rem;
+		padding: 5px 10px;
+		font-size: 0.78rem;
+	}
+	.collections-search-wrap {
+		max-width: 100%;
+		width: 100%;
+		flex: 1 1 100%;
 	}
 }
 .collection-pill-btn {
@@ -352,8 +507,8 @@ export default {
 	color: #0f172a;
 	border: 2px solid #cbd5e1;
 	border-radius: 999px;
-	padding: 6px 14px;
-	font-size: 0.88rem;
+	padding: 5px 12px;
+	font-size: 0.84rem;
 	font-weight: 700;
 	cursor: pointer;
 	display: inline-flex;
@@ -375,8 +530,8 @@ export default {
 	color: #ffffff;
 	border: 2px solid #0f766e;
 	border-radius: 8px;
-	padding: 6px 14px;
-	font-size: 0.88rem;
+	padding: 5px 12px;
+	font-size: 0.84rem;
 	font-weight: 800;
 	cursor: pointer;
 	display: inline-flex;

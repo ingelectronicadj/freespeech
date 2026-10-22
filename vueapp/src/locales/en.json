@@ -48,7 +48,10 @@
     "home": "Main Board",
     "feelings": "Feelings & Needs",
     "numbers": "Numbers & Time",
-    "keyboard": "ABC Keyboard"
+    "keyboard": "ABC Keyboard",
+    "searchPlaceholder": "Search word across board...",
+    "searchClear": "Clear search",
+    "searchEmpty": "No matching tiles found."
   },
   "editMode": {
     "title": "You're in edit mode!",

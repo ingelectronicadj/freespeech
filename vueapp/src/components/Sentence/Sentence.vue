@@ -1,6 +1,7 @@
 <template>
 	<div
 		class="sentenceCardContainer"
+		:class="{ 'is-embedded-sentence': isEmbedded }"
 		role="region"
 		:aria-label="$t('sentence.title')"
 	>
@@ -32,7 +33,11 @@
 						:aria-label="$t('sentence.buttonSpeak')"
 						@click="$emit('speakSentence')"
 					>
-						<v-icon class="mr-1" aria-hidden="true">record_voice_over</v-icon>
+						<svg class="btn-svg-ico" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+							<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+							<path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+							<path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+						</svg>
 						<span>{{ $t('sentence.buttonSpeak') }}</span>
 					</v-btn>
 
@@ -45,7 +50,11 @@
 						:aria-label="$t('sentence.buttonInsert')"
 						@click="insertSentenceInHost"
 					>
-						<v-icon class="mr-1" aria-hidden="true">input</v-icon>
+						<svg class="btn-svg-ico" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+							<polyline points="10 17 15 12 10 7" />
+							<line x1="15" y1="12" x2="3" y2="12" />
+						</svg>
 						<span>{{ $t('sentence.buttonInsert') }}</span>
 					</v-btn>
 
@@ -57,7 +66,10 @@
 						:aria-label="$t('sentence.buttonCopy')"
 						@click="copySentence"
 					>
-						<v-icon class="mr-1" aria-hidden="true">content_copy</v-icon>
+						<svg class="btn-svg-ico" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+						</svg>
 						<span>{{ $t('sentence.buttonCopy') }}</span>
 					</v-btn>
 
@@ -70,7 +82,10 @@
 						:aria-label="$t('sentence.buttonClear')"
 						@click="$emit('clearSentence')"
 					>
-						<v-icon class="mr-1" aria-hidden="true">clear</v-icon>
+						<svg class="btn-svg-ico" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="18" y1="6" x2="6" y2="18" />
+							<line x1="6" y1="6" x2="18" y2="18" />
+						</svg>
 						<span>{{ $t('sentence.buttonClear') }}</span>
 					</v-btn>
 				</div>
@@ -246,6 +261,10 @@ export default {
 	padding: 8px 12px 4px;
 	background-color: #f1f5f9;
 }
+.sentenceCardContainer.is-embedded-sentence {
+	top: 42px;
+	padding: 6px 8px 3px;
+}
 .sentenceCard {
 	max-width: 1380px;
 	margin: 0 auto;
@@ -268,10 +287,10 @@ export default {
 	align-items: center;
 	gap: 10px;
 	flex: 1;
-	min-width: 180px;
+	min-width: 140px;
 }
 .sentence-section-title {
-	font-size: 1.05rem;
+	font-size: 1.02rem;
 	font-weight: 800;
 	color: #0f172a;
 	margin: 0;
@@ -281,16 +300,20 @@ export default {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 6px;
+	gap: 5px;
 }
 .sentence-action-btn {
-	min-height: 40px !important;
-	padding: 0 12px !important;
-	font-size: 0.86rem !important;
+	min-height: 36px !important;
+	padding: 0 10px !important;
+	font-size: 0.82rem !important;
+}
+.btn-svg-ico {
+	margin-right: 5px;
+	flex-shrink: 0;
 }
 .sentence-empty-hint {
 	color: #475569;
-	font-size: 0.88rem;
+	font-size: 0.85rem;
 	padding: 4px 0 2px;
 }
 .sentence-text-preview {
@@ -299,7 +322,7 @@ export default {
 	border-left: 4px solid #0f766e;
 	border-radius: 8px;
 	padding: 4px 10px;
-	font-size: 0.95rem;
+	font-size: 0.92rem;
 	display: inline-flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -308,21 +331,20 @@ export default {
 }
 .sentence-text-label {
 	color: #334155;
-	font-size: 0.8rem;
+	font-size: 0.78rem;
 	font-weight: 600;
 }
 .sentence-text-value {
 	color: #0f172a;
-	font-size: 1.02rem;
+	font-size: 0.98rem;
 	user-select: all;
 	word-break: break-word;
 }
 .sentence-feedback {
 	color: #0f766e;
 	font-weight: 700;
-	font-size: 0.86rem;
+	font-size: 0.84rem;
 }
-/* Tira horizontal compacta de pictogramas seleccionados (ideal para móviles y tablets) */
 .sentence-tiles-strip {
 	display: flex;
 	flex-wrap: nowrap;
@@ -333,34 +355,34 @@ export default {
 }
 .sentence-tile-item {
 	flex: 0 0 auto;
-	width: 112px;
+	width: 106px;
 }
 @media (max-width: 640px) {
 	.sentenceCardContainer {
-		top: 48px;
-		padding: 6px 8px 2px;
+		top: 42px;
+		padding: 5px 8px 2px;
 	}
 	.sentenceCard {
 		padding: 8px 10px !important;
 		border-radius: 10px !important;
 	}
 	.sentence-section-title {
-		font-size: 0.92rem;
+		font-size: 0.9rem;
 	}
 	.sentence-actions-group {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-		gap: 5px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 6px;
 	}
 	.sentence-action-btn {
-		min-height: 36px !important;
-		padding: 0 8px !important;
-		font-size: 0.78rem !important;
+		min-height: 34px !important;
+		padding: 0 7px !important;
+		font-size: 0.76rem !important;
 		width: 100%;
 	}
 	.sentence-tile-item {
-		width: 94px;
+		width: 92px;
 	}
 }
 </style>

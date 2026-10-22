@@ -191,6 +191,15 @@
 			<button
 				type="button"
 				class="custom-trigger-btn secondary"
+				data-saac-trigger
+				data-saac-mode="bottom"
+				data-saac-direct="true"
+			>
+				Abrir como Teclado Inferior (Escritura Directa)
+			</button>
+			<button
+				type="button"
+				class="custom-trigger-btn secondary"
 				onclick="window.FreeSpeechSAAC && window.FreeSpeechSAAC.toggle()"
 			>
 				API JS: FreeSpeechSAAC.toggle()
@@ -287,9 +296,20 @@
 			<pre><code>&lt;!-- Opción A: Con tu propio botón (customTrigger) y/o el botón flotante integrado --&gt;
 &lt;button id="mi-boton-saac" type="button"&gt;Abrir Comunicador SAAC&lt;/button&gt;
 
-&lt;!-- Opción B: Botón contextual que apunta a un campo específico --&gt;
-&lt;button type="button" data-saac-trigger data-saac-target="#buscador-universal"&gt;
-  Redactar con SAAC
+&lt;!-- Opción B: Botón contextual que apunta a un campo específico y activa escritura directa --&gt;
+&lt;button
+  type="button"
+  data-saac-trigger
+  data-saac-target="#buscador-universal"
+  data-saac-mode="float"
+  data-saac-direct="true"
+&gt;
+  Redactar con SAAC (Directo al campo)
+&lt;/button&gt;
+
+&lt;!-- Opción C: Abrir como teclado acoplado en la parte inferior --&gt;
+&lt;button type="button" data-saac-trigger data-saac-mode="bottom"&gt;
+  Abrir Teclado Comunicador Inferior
 &lt;/button&gt;
 
 &lt;!-- Script universal del widget --&gt;

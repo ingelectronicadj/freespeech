@@ -1,35 +1,62 @@
 <template>
-	<v-app theme="light">
+	<v-app theme="light" :class="{ 'is-embedded-app': isEmbedded }">
 		<v-app-bar
 			app
 			:color="taskbarColor"
-			:density="isEmbedded ? 'compact' : 'default'"
+			:height="isEmbedded ? 42 : 56"
 			theme="dark"
 			elevation="2"
+			class="saac-app-bar"
 		>
 			<div class="d-flex align-center px-3">
-				<h1 class="text-h6 font-weight-bold mb-0">Freespeech</h1>
+				<h1 class="saac-brand-title mb-0">Freespeech</h1>
 			</div>
 
 			<v-spacer />
+
+			<!-- Selector rápido de idioma en barra superior -->
+			<div class="lang-quick-Group mr-1" role="group" aria-label="Idioma / Language">
+				<button
+					v-for="lng in ['es', 'en', 'de']"
+					:key="lng"
+					type="button"
+					class="lang-pill-btn"
+					:class="{ 'is-active': currentNormalizedLocale === lng }"
+					:aria-pressed="currentNormalizedLocale === lng"
+					@click="switchLanguage(lng)"
+				>
+					{{ lng.toUpperCase() }}
+				</button>
+			</div>
 
 			<v-btn
 				icon
 				to="/"
 				:aria-label="$t('app.navHome')"
+				class="saac-nav-icon-btn"
 			>
-				<v-icon aria-hidden="true">
-					home
-				</v-icon>
+				<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M3 10.5L12 3l9 7.5" />
+					<path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
+					<path d="M9 21v-6h6v6" />
+				</svg>
 			</v-btn>
 
 			<v-btn
 				v-if="passcode"
 				icon
 				:aria-label="locked ? $t('app.navUnlock') : $t('app.navLock')"
+				class="saac-nav-icon-btn"
 				@click="toggleLocked"
 			>
-				<v-icon aria-hidden="true">{{ locked ? 'lock_open' : 'lock' }}</v-icon>
+				<svg v-if="locked" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<rect x="4" y="11" width="16" height="10" rx="2" />
+					<path d="M8 11V7a4 4 0 0 1 7.8-1" />
+				</svg>
+				<svg v-else aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<rect x="4" y="11" width="16" height="10" rx="2" />
+					<path d="M8 11V7a4 4 0 0 1 8 0v4" />
+				</svg>
 			</v-btn>
 
 			<v-btn
@@ -38,9 +65,18 @@
 				:disabled="isLocked"
 				:aria-label="editMode ? $t('app.navSave') : $t('app.navEdit')"
 				:aria-pressed="editMode"
+				class="saac-nav-icon-btn"
 				@click="toggleEditMode"
 			>
-				<v-icon aria-hidden="true">{{ editMode ? 'save' : 'edit' }}</v-icon>
+				<svg v-if="editMode" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+					<polyline points="17 21 17 13 7 13 7 21" />
+					<polyline points="7 3 7 8 15 8" />
+				</svg>
+				<svg v-else aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M12 20h9" />
+					<path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+				</svg>
 			</v-btn>
 
 			<v-btn
@@ -48,11 +84,14 @@
 				to="/about"
 				:disabled="isLocked"
 				:aria-label="$t('app.navAbout')"
+				class="saac-nav-icon-btn"
 				@click="disableEditMode"
 			>
-				<v-icon aria-hidden="true">
-					info
-				</v-icon>
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="9" />
+					<line x1="12" y1="16" x2="12" y2="12" />
+					<line x1="12" y1="8" x2="12.01" y2="8" />
+				</svg>
 			</v-btn>
 
 			<v-btn
@@ -60,11 +99,13 @@
 				to="/settings"
 				:disabled="isLocked"
 				:aria-label="$t('app.navSettings')"
+				class="saac-nav-icon-btn"
 				@click="disableEditMode"
 			>
-				<v-icon aria-hidden="true">
-					settings
-				</v-icon>
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="3" />
+					<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1.02 1.41 1.09H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+				</svg>
 			</v-btn>
 
 			<v-btn
@@ -72,11 +113,14 @@
 				id="openFloatingWindowButton"
 				icon
 				:aria-label="$t('app.navFloatingWindow')"
+				class="saac-nav-icon-btn"
 				@click="openFloatingWindow"
 			>
-				<v-icon aria-hidden="true">
-					open_in_new
-				</v-icon>
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+					<polyline points="15 3 21 3 21 9" />
+					<line x1="10" y1="14" x2="21" y2="3" />
+				</svg>
 			</v-btn>
 		</v-app-bar>
 
@@ -141,6 +185,9 @@ export default {
 			passcode: 'settings/passcode',
 			selectedVoiceIndex: 'settings/selectedVoiceIndex'
 		}),
+		currentNormalizedLocale () {
+			return normalizeLocaleCode(this.locale);
+		},
 		isLocked () {
 			return this.passcode !== null && this.passcode.length > 0 && this.locked;
 		},
@@ -203,6 +250,10 @@ export default {
 			document.documentElement.setAttribute('lang', activeLocale);
 		}
 
+		if (typeof window !== 'undefined') {
+			window.addEventListener('message', this.handleHostMessage);
+		}
+
 		if (typeof window !== 'undefined' && window.speechSynthesis) {
 			const windowVoices = window.speechSynthesis.getVoices();
 			if (!windowVoices.length) {
@@ -212,6 +263,11 @@ export default {
 			} else {
 				this.populateVoiceData(windowVoices);
 			}
+		}
+	},
+	beforeUnmount () {
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('message', this.handleHostMessage);
 		}
 	},
 	methods: {
@@ -224,6 +280,23 @@ export default {
 			toggleEditMode: 'tilePad/toggleEditMode',
 			systemSaveBackupOfTilePad: 'tilePad/systemSaveBackupOfTilePad'
 		}),
+		switchLanguage (lng) {
+			const normalized = normalizeLocaleCode(lng);
+			this.setLocale(normalized);
+			if (this.$i18n) {
+				this.$i18n.locale = normalized;
+			}
+			if (typeof window !== 'undefined' && window.speechSynthesis) {
+				this.populateVoiceData(window.speechSynthesis.getVoices());
+			}
+		},
+		handleHostMessage (event) {
+			const data = event && event.data;
+			if (!data || data.type !== 'FREESPEECH_HOST_COMMAND') return;
+			if (data.command === 'setLang' && data.lang) {
+				this.switchLanguage(data.lang);
+			}
+		},
 		handlePasscodeInput (input) {
 			this.passcodeEntry = false;
 
@@ -272,3 +345,42 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+.saac-brand-title {
+	font-size: 1.05rem;
+	font-weight: 800;
+	letter-spacing: -0.01em;
+}
+.saac-nav-icon-btn {
+	width: 34px !important;
+	height: 34px !important;
+}
+.lang-quick-Group {
+	display: inline-flex;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.22);
+	border-radius: 6px;
+	padding: 2px;
+	gap: 2px;
+}
+.lang-pill-btn {
+	background: transparent;
+	color: rgba(255, 255, 255, 0.85);
+	border: 0;
+	border-radius: 4px;
+	padding: 2px 6px;
+	font-size: 0.7rem;
+	font-weight: 800;
+	cursor: pointer;
+	line-height: 1.3;
+}
+.lang-pill-btn:hover {
+	background: rgba(255, 255, 255, 0.16);
+	color: #ffffff;
+}
+.lang-pill-btn.is-active {
+	background: #ffffff;
+	color: #0f172a;
+}
+</style>

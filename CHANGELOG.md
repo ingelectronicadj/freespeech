@@ -4,6 +4,27 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.3.0] - 2026-10-22
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Mejoras de Ventana Flotante por `customTrigger`, Modo Escritura Directa y Buscador Transversal
+
+- **Posicionamiento inteligente anti-colisión y 4 modos de disposición (`public/freespeech-widget.js`)**:
+  - **Posicionamiento inteligente (`positionFloatingWindowSmart`)**: Cuando el tablero se abre desde un `customTrigger` vinculado a un campo (`data-saac-target="#campo"` o último campo con foco), calcula las coordenadas del campo activo y posiciona la ventana flotante en el lado libre (izquierda, derecha o debajo) para no tapar nunca el campo donde la persona usuaria está escribiendo.
+  - **4 modos de acoplamiento (`float`, `left`, `bottom`, `right`)**: Nuevos controles en cabecera y soporte declarativo mediante `data-saac-mode="float|left|right|bottom"`. El modo `bottom` transforma la ventana en un teclado asistivo inferior a ancho completo, ajustando el `padding-bottom` del documento y desplazando el campo activo a la vista (`scrollIntoView`).
+  - **Persistencia en `sessionStorage`** de las preferencias de acoplamiento y modo de inserción.
+- **Modo `Escritura directa` (`Directo al campo`) y botón `Borrar palabra` (`public/freespeech-widget.js`, `Tile.vue`)**:
+  - Interruptor **`Escritura directa`** (`data-saac-direct="true"` o botón en la barra de destino): permite insertar cada palabra o letra directamente en el `<input>`, `<textarea>` o editor rico a medida que se pulsa cada baldosa del tablero, con pulso visual de confirmación sobre el campo activo.
+  - Nuevo botón **`Borrar palabra`** (`FreeSpeechSAAC.deleteLastWord()`) para eliminar la última palabra escrita en el campo destino sin usar el teclado físico.
+- **Buscador rápido de palabras y mejoras visuales en modo embebido (`TilePad.vue`, `App.vue`, `Sentence.vue`, `Tile.vue`, `index.html`)**:
+  - **Buscador transversal (`#boardQuickSearchInput`)** en la barra de colecciones de `TilePad.vue` que filtra baldosas en tiempo real a través de todas las colecciones (`Principal`, `Sentir y Emociones`, `Números y Tiempo`, `Teclado ABC`) en español, inglés y alemán.
+  - **Iconos SVG nativos (`aria-hidden="true"`) y selector rápido `ES | EN | DE`**: Reemplazadas las ligaduras externas de `Material Icons` en `App.vue` y `Sentence.vue` (que se superponían al bloquearse `fonts.googleapis.com`) por iconos vectoriales SVG y eliminados los `<link>` externos bloqueantes de `index.html`.
+  - **Carga directa de los 115 pictogramas en `Tile.vue`** sin bloqueo por `loading="lazy"`, manteniendo emblemas de respaldo para las teclas alfabéticas.
+  - **Ciclo completo de accesibilidad WCAG 2.2 AA**: sincronización de `aria-expanded` y `aria-controls="fs-saac-floating-window"` en todos los `customTrigger`, anuncios en región `aria-live="polite"` y retorno automático del foco al cerrar con `Escape`.
+
+---
+
 ## [2.2.0] - 2026-10-16
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

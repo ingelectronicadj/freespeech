@@ -1,4 +1,4 @@
-# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.2.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
+# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.3.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
 
 Free Speech is an open-source **Augmentative and Alternative Communication (AAC / SAAC)** web application designed to help non-verbal people communicate without cost, both as a standalone communicator and as an **embeddable floating window** over platforms such as **Moodle LMS**, search engines, or desktop editors.
 

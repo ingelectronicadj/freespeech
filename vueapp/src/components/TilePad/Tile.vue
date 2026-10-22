@@ -72,18 +72,25 @@
 				justify="center"
 				:class="isNavigationTile ? 'mt-4 mb-1' : 'my-1'"
 			>
-				<v-img
-					v-if="resolvedImage"
-					height="52"
-					width="52"
-					max-height="52"
-					max-width="52"
-					aspect-ratio="1"
-					alt=""
-					aria-hidden="true"
-					class="tile-pictogram-img"
-					:src="resolvedImage"
-				/>
+				<div class="tile-visual-slot" aria-hidden="true">
+					<img
+						v-if="resolvedImage && !imgFailed"
+						height="48"
+						width="48"
+						alt=""
+						aria-hidden="true"
+						class="tile-pictogram-img"
+						:src="resolvedImage"
+						@error="imgFailed = true"
+					>
+					<div
+						v-else
+						class="tile-pictogram-fallback"
+						aria-hidden="true"
+					>
+						<span>{{ fallbackBadgeText }}</span>
+					</div>
+				</div>
 			</v-row>
 			<v-row justify="center">
 				<v-card-text
@@ -92,15 +99,26 @@
 					class="pa-1"
 				>
 					<h3 class="tile-label">{{ displayTileName }}</h3>
-					<img
+					<svg
 						v-if="editMode"
 						id="drag-handle"
 						class="drag-handle"
-						alt=""
 						aria-hidden="true"
-						src="https://img.icons8.com/officexs/16/000000/resize-four-directions.png"
-						style="padding-top: 6px; margin-bottom: -8px;"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.2"
+						style="margin-top: 6px; margin-bottom: -6px;"
 					>
+						<polyline points="5 9 2 12 5 15" />
+						<polyline points="9 5 12 2 15 5" />
+						<polyline points="15 19 12 22 9 19" />
+						<polyline points="19 9 22 12 19 15" />
+						<line x1="2" y1="12" x2="22" y2="12" />
+						<line x1="12" y1="2" x2="12" y2="22" />
+					</svg>
 				</v-card-text>
 			</v-row>
 		</v-container>
@@ -144,6 +162,12 @@ export default {
 		}
 	},
 	emits: ['removeFromSentence', 'speakText', 'addToSentence'],
+	data () {
+		return {
+			imgFailed: false,
+			imgLoaded: false
+		};
+	},
 	computed: {
 		...mapState('settings', ['sentenceMode']),
 		...mapGetters({
@@ -170,6 +194,12 @@ export default {
 				return (this.locale === 'es' || this.locale === 'sp') ? 'Inicio' : 'Home';
 			}
 			return rawName;
+		},
+		fallbackBadgeText () {
+			const label = String(this.displayTileName || '').trim();
+			if (!label) return 'AAC';
+			if (label.length <= 3) return label.toUpperCase();
+			return label.slice(0, 2).toUpperCase();
 		},
 		accessibleTileLabel () {
 			if (this.newTile) return this.newTileLabel;
@@ -237,6 +267,12 @@ export default {
 			return this.tileTapsCount[indexOfTile].taps;
 		},
 	},
+	watch: {
+		resolvedImage () {
+			this.imgFailed = false;
+			this.imgLoaded = false;
+		}
+	},
 	methods: {
 		...mapActions('tilePad', [
 			'toggleEditDialogVisibility',
@@ -244,6 +280,16 @@ export default {
 			'createNewTile',
 			'logTileTap'
 		]),
+		notifyParentTileTap (spokenText) {
+			if (typeof window !== 'undefined' && window.parent && window.parent !== window) {
+				window.parent.postMessage({
+					type: 'FREESPEECH_SAAC_MESSAGE',
+					action: 'tileTap',
+					text: String(spokenText || this.displayTileName || '').trim(),
+					name: this.displayTileName
+				}, '*');
+			}
+		},
 		tileClickedEvent () {
 			const keyboardTile = this.isNavigationTile;
 
@@ -268,6 +314,7 @@ export default {
 						...this.localeTileData,
 						image: this.resolvedImage
 					});
+					this.notifyParentTileTap(this.localeTileData.text);
 				}
 			} else if (keyboardTile) {
 				if (this.tileData.navigation === 'home') {
@@ -281,6 +328,7 @@ export default {
 			} else {
 				this.$emit('speakText', this.localeTileData.text);
 				this.logTileTap(this.localeTileData.id);
+				this.notifyParentTileTap(this.localeTileData.text);
 			}
 		},
 	},
@@ -291,7 +339,7 @@ export default {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	min-height: 126px !important;
+	min-height: 118px !important;
 	border-radius: 14px !important;
 	border: 2px solid rgba(15, 23, 42, 0.14) !important;
 	box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08) !important;
@@ -310,7 +358,6 @@ export default {
 	outline: 3px solid #f59e0b !important;
 	outline-offset: 2px !important;
 }
-/* Estilo distintivo tipo Carpeta / Colección de palabras */
 .saac-tile-btn.is-collection-tile {
 	border: 2.5px solid #0284c7 !important;
 	box-shadow: 4px 5px 0px #0284c7, 0 6px 14px rgba(2, 132, 199, 0.2) !important;
@@ -326,7 +373,7 @@ export default {
 	right: 0;
 	background: #0284c7;
 	color: #ffffff;
-	font-size: 0.72rem;
+	font-size: 0.7rem;
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
@@ -378,8 +425,34 @@ export default {
 	border-bottom: 2px solid #ffffff;
 	transform: rotate(45deg);
 }
+.tile-visual-slot {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+}
+.tile-pictogram-img {
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+	display: block;
+}
+.tile-pictogram-fallback {
+	width: 44px;
+	height: 44px;
+	border-radius: 11px;
+	background: rgba(15, 23, 42, 0.07);
+	border: 1.5px solid rgba(15, 23, 42, 0.16);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.92rem;
+	font-weight: 800;
+	color: #0f172a;
+	letter-spacing: 0.02em;
+}
 .tile-label {
-	font-size: 0.98rem;
+	font-size: 0.96rem;
 	font-weight: 700;
 	line-height: 1.25;
 	color: #0f172a;
@@ -387,30 +460,41 @@ export default {
 	white-space: normal;
 	margin: 0;
 }
-/* Ficha compacta cuando está dentro de la barra de frase */
 .saac-tile-btn.is-sentence-tile {
-	min-height: 76px !important;
+	min-height: 72px !important;
 	border-radius: 10px !important;
 }
+.saac-tile-btn.is-sentence-tile .tile-visual-slot {
+	height: 32px;
+}
 .saac-tile-btn.is-sentence-tile .tile-pictogram-img {
-	width: 34px !important;
-	height: 34px !important;
-	max-width: 34px !important;
-	max-height: 34px !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+.saac-tile-btn.is-sentence-tile .tile-pictogram-fallback {
+	width: 30px;
+	height: 30px;
+	font-size: 0.72rem;
 }
 .saac-tile-btn.is-sentence-tile .tile-label {
-	font-size: 0.82rem;
+	font-size: 0.8rem;
 }
 @media (max-width: 640px) {
 	.saac-tile-btn {
-		min-height: 98px !important;
+		min-height: 94px !important;
 		border-radius: 11px !important;
 	}
+	.tile-visual-slot {
+		height: 38px;
+	}
 	.saac-tile-btn .tile-pictogram-img {
-		width: 40px !important;
-		height: 40px !important;
-		max-width: 40px !important;
-		max-height: 40px !important;
+		width: 38px !important;
+		height: 38px !important;
+	}
+	.saac-tile-btn .tile-pictogram-fallback {
+		width: 36px;
+		height: 36px;
+		font-size: 0.8rem;
 	}
 	.tile-label {
 		font-size: 0.84rem;
@@ -421,11 +505,7 @@ export default {
 		padding: 2px 5px;
 	}
 	.saac-tile-btn.is-sentence-tile {
-		min-height: 64px !important;
-	}
-	.saac-tile-btn.is-sentence-tile .tile-pictogram-img {
-		width: 28px !important;
-		height: 28px !important;
+		min-height: 62px !important;
 	}
 }
 .new-tile-icon-circle {

@@ -48,7 +48,10 @@
 		"home": "Haupttafel",
 		"feelings": "Gefühle & Bedürfnisse",
 		"numbers": "Zahlen & Zeit",
-		"keyboard": "ABC-Tastatur"
+		"keyboard": "ABC-Tastatur",
+		"searchPlaceholder": "Wort auf der Tafel suchen...",
+		"searchClear": "Suche löschen",
+		"searchEmpty": "Keine passenden Kacheln gefunden."
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",
