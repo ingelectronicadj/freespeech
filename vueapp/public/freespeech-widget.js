@@ -836,9 +836,6 @@
 		if (state.elements.dockLeftBtn) {
 			state.elements.dockLeftBtn.setAttribute('aria-pressed', String(nextMode === 'left'));
 		}
-		if (state.elements.dockBottomBtn) {
-			state.elements.dockBottomBtn.setAttribute('aria-pressed', String(nextMode === 'bottom'));
-		}
 		if (state.elements.dockRightBtn) {
 			state.elements.dockRightBtn.setAttribute('aria-pressed', String(nextMode === 'right'));
 		}
@@ -920,16 +917,6 @@
 		);
 		dockLeftBtn.setAttribute('aria-pressed', 'false');
 
-		var dockBottomBtn = createIconButton(
-			'Acoplar tablero SAAC en la parte inferior como teclado',
-			'Modo teclado inferior / Ventana flotante',
-			'fs-ico-dock-bottom',
-			function () {
-				setDockMode(state.dockMode === 'bottom' ? 'float' : 'bottom');
-			}
-		);
-		dockBottomBtn.setAttribute('aria-pressed', 'false');
-
 		var dockRightBtn = createIconButton(
 			'Acoplar tablero SAAC al lateral derecho',
 			'Acoplar a la derecha / Ventana flotante',
@@ -940,41 +927,6 @@
 		);
 		dockRightBtn.setAttribute('aria-pressed', 'false');
 
-		var popoutBtn = createIconButton(
-			'Abrir SAAC en ventana independiente',
-			'Abrir en ventana independiente (para Word / escritorio)',
-			'fs-ico-popout',
-			function () {
-				window.open(
-					resolveEmbedUrl(state.options.url),
-					'FreeSpeechSAACPopup',
-					'width=520,height=680,menubar=no,toolbar=no,location=no,status=no,resizable=yes,scrollbars=yes'
-				);
-			}
-		);
-
-		var minBtn = createIconButton(
-			'Minimizar o restaurar ventana SAAC',
-			'Minimizar / Restaurar',
-			'fs-ico-min',
-			function () {
-				state.isMinimized = !state.isMinimized;
-				winEl.classList.toggle('is-minimized', state.isMinimized);
-			}
-		);
-
-		var maxBtn = createIconButton(
-			'Ampliar o reducir ventana SAAC',
-			'Ampliar / Reducir',
-			'fs-ico-max',
-			function () {
-				var nextMax = !state.isMaximized;
-				setDockMode('float');
-				state.isMaximized = nextMax;
-				winEl.classList.toggle('is-maximized', state.isMaximized);
-			}
-		);
-
 		var closeBtn = createIconButton(
 			'Cerrar ventana SAAC',
 			'Cerrar (Esc)',
@@ -983,11 +935,7 @@
 		);
 
 		controlsEl.appendChild(dockLeftBtn);
-		controlsEl.appendChild(dockBottomBtn);
 		controlsEl.appendChild(dockRightBtn);
-		controlsEl.appendChild(popoutBtn);
-		controlsEl.appendChild(minBtn);
-		controlsEl.appendChild(maxBtn);
 		controlsEl.appendChild(closeBtn);
 
 		headerEl.appendChild(titleEl);
@@ -1079,7 +1027,6 @@
 		state.elements.iframe = iframeEl;
 		state.elements.targetSelect = targetSelectEl;
 		state.elements.dockLeftBtn = dockLeftBtn;
-		state.elements.dockBottomBtn = dockBottomBtn;
 		state.elements.dockRightBtn = dockRightBtn;
 		state.elements.directBtn = directBtn;
 		state.elements.closeBtn = closeBtn;
