@@ -4,6 +4,30 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.4.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Pictogramas ARASAAC en todo el tablero, nuevas colecciones y barra simplificada
+
+- **Sustitución integral de pictogramas por ARASAAC (`build.json`)**:
+  - Reemplazados los enlaces a imágenes de terceros (icons8) por pictogramas oficiales **ARASAAC** (`static.arasaac.org/{id}/{id}_300.png`), coherentes con la simbología AAC y con el buscador ARASAAC del diálogo de edición.
+  - Corregidos mapeos semánticamente incorrectos (p. ej. "Was"→avispa, "All"→cocodrilo, "You"→logo de YouTube, "Come"→cometa, "Have"→hospital).
+- **Nuevas colecciones de palabras (`build.json`, `TilePad.vue`, locales)**:
+  - **`Estudio` (página 2, 19 baldosas)**: escuela, tareas, estudiar, leer, escribir, dibujar, pintar, lápiz, cuaderno, libro, computadora, clase, maestra, examen, aprender, pensar, pregunta, respuesta, recreo.
+  - **`Aseo personal` (página 3, 20 baldosas)**: ducha, baño, dientes, cepillo, manos, jabón, champú, toalla, cara, peine, secador, desodorante, uñas, papel higiénico, inodoro, vestirse, limpiar, ordenar, cama, basura.
+  - Ampliada **`Sentir y Emociones`** (11→22): aburrido, sorprendido, confundido, avergonzado, orgulloso, preocupado, emocionado, enfermo, frío, calor, amor.
+  - Pestañas de colecciones en `TilePad.vue` y claves `collections.study`/`collections.hygiene` en `sp`, `en`, `de`.
+  - Migración por versión de datos (`_v: 3`): el tablero almacenado del usuario se actualiza al nuevo catálogo en la primera carga.
+- **Barra superior simplificada para usuarios con discapacidad cognitiva (`App.vue`)**:
+  - Eliminados los botones rápidos `ES | EN | DE` (el idioma se cambia en Ajustes → Idioma).
+  - `title` nativo en todos los botones de navegación para mostrar descripción al pasar el puntero.
+- **Iconos de interfaz autocontenidos (`vuetify.js`, `package.json`)**:
+  - Font **Material Icons empaquetado localmente** (`material-design-icons-iconfont`, woff2 ~125 KB) en lugar de Google Fonts: los iconos ya no aparecen como texto cuando la CDN externa falla, incluido dentro de iframes embebidos.
+- **Imagen BBC rota en /about (`README.md`, `About.vue`, `public/img/logos/bbc.svg`)**: logo servido localmente; el compilado de markdown reescribe rutas `vueapp/public/...` para que funcionen igual en GitHub y en la app.
+
+---
+
 ## [2.3.0] - 2026-10-22
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

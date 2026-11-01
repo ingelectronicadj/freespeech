@@ -51,7 +51,9 @@
 		"keyboard": "ABC-Tastatur",
 		"searchPlaceholder": "Wort auf der Tafel suchen...",
 		"searchClear": "Suche löschen",
-		"searchEmpty": "Keine passenden Kacheln gefunden."
+		"searchEmpty": "Keine passenden Kacheln gefunden.",
+		"study": "Lernen",
+		"hygiene": "Körperpflege"
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",

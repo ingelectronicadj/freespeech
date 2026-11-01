@@ -14,25 +14,11 @@
 
 			<v-spacer />
 
-			<!-- Selector rápido de idioma en barra superior -->
-			<div class="lang-quick-Group mr-1" role="group" aria-label="Idioma / Language">
-				<button
-					v-for="lng in ['es', 'en', 'de']"
-					:key="lng"
-					type="button"
-					class="lang-pill-btn"
-					:class="{ 'is-active': currentNormalizedLocale === lng }"
-					:aria-pressed="currentNormalizedLocale === lng"
-					@click="switchLanguage(lng)"
-				>
-					{{ lng.toUpperCase() }}
-				</button>
-			</div>
-
 			<v-btn
 				icon
 				to="/"
 				:aria-label="$t('app.navHome')"
+				:title="$t('app.navHome')"
 				class="saac-nav-icon-btn"
 			>
 				<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -46,6 +32,7 @@
 				v-if="passcode"
 				icon
 				:aria-label="locked ? $t('app.navUnlock') : $t('app.navLock')"
+				:title="locked ? $t('app.navUnlock') : $t('app.navLock')"
 				class="saac-nav-icon-btn"
 				@click="toggleLocked"
 			>
@@ -64,6 +51,7 @@
 				icon
 				:disabled="isLocked"
 				:aria-label="editMode ? $t('app.navSave') : $t('app.navEdit')"
+				:title="editMode ? $t('app.navSave') : $t('app.navEdit')"
 				:aria-pressed="editMode"
 				class="saac-nav-icon-btn"
 				@click="toggleEditMode"
@@ -84,6 +72,7 @@
 				to="/about"
 				:disabled="isLocked"
 				:aria-label="$t('app.navAbout')"
+				:title="$t('app.navAbout')"
 				class="saac-nav-icon-btn"
 				@click="disableEditMode"
 			>
@@ -99,6 +88,7 @@
 				to="/settings"
 				:disabled="isLocked"
 				:aria-label="$t('app.navSettings')"
+				:title="$t('app.navSettings')"
 				class="saac-nav-icon-btn"
 				@click="disableEditMode"
 			>
@@ -113,6 +103,7 @@
 				id="openFloatingWindowButton"
 				icon
 				:aria-label="$t('app.navFloatingWindow')"
+				:title="$t('app.navFloatingWindow')"
 				class="saac-nav-icon-btn"
 				@click="openFloatingWindow"
 			>
@@ -185,9 +176,6 @@ export default {
 			passcode: 'settings/passcode',
 			selectedVoiceIndex: 'settings/selectedVoiceIndex'
 		}),
-		currentNormalizedLocale () {
-			return normalizeLocaleCode(this.locale);
-		},
 		isLocked () {
 			return this.passcode !== null && this.passcode.length > 0 && this.locked;
 		},
@@ -355,32 +343,5 @@ export default {
 .saac-nav-icon-btn {
 	width: 34px !important;
 	height: 34px !important;
-}
-.lang-quick-Group {
-	display: inline-flex;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.22);
-	border-radius: 6px;
-	padding: 2px;
-	gap: 2px;
-}
-.lang-pill-btn {
-	background: transparent;
-	color: rgba(255, 255, 255, 0.85);
-	border: 0;
-	border-radius: 4px;
-	padding: 2px 6px;
-	font-size: 0.7rem;
-	font-weight: 800;
-	cursor: pointer;
-	line-height: 1.3;
-}
-.lang-pill-btn:hover {
-	background: rgba(255, 255, 255, 0.16);
-	color: #ffffff;
-}
-.lang-pill-btn.is-active {
-	background: #ffffff;
-	color: #0f172a;
 }
 </style>

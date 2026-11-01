@@ -84,7 +84,7 @@ Thanks to Icons8 for providing all icons and graphics for the Free Speech AAC pr
 Thanks to CNN for covering Free Speech AAC!
 
 
-<a href="https://www.bbc.com/news/av/disability-57515272"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/2560px-BBC_Logo_2021.svg.png" width=200px></a>
+<a href="https://www.bbc.com/news/av/disability-57515272"><img src="vueapp/public/img/logos/bbc.svg" width=200px></a>
 Thanks to the BBC for covering Free Speech AAC!
 
 ### License

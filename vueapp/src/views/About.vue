@@ -27,7 +27,9 @@ export default {
 	computed: {
 		compiledMarkdown () {
 			const htmlFromMarkDown = marked.parse(this.readMeAboutMarkDownText);
-			return DOMPurify.sanitize(htmlFromMarkDown);
+			// README usa rutas relativas al repo (vueapp/public/...) que en la app se sirven desde la raíz
+			const withFixedImages = htmlFromMarkDown.replace(/src="(vueapp\/)?public\//g, 'src="/');
+			return DOMPurify.sanitize(withFixedImages);
 		}
 	},
 	mounted () {

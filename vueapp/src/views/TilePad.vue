@@ -165,6 +165,8 @@ export default {
 			return [
 				{ key: 'home', iconClass: 'nav-ico-grid', label: tr('collections.home', 'Principal') },
 				{ key: '1', iconClass: 'nav-ico-folder', label: tr('collections.feelings', 'Sentir y Emociones') },
+				{ key: '2', iconClass: 'nav-ico-folder', label: tr('collections.study', 'Estudio') },
+				{ key: '3', iconClass: 'nav-ico-folder', label: tr('collections.hygiene', 'Aseo personal') },
 				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];
@@ -173,7 +175,8 @@ export default {
 			if (
 				!this.customTilePadData ||
 				(Object.entries(this.customTilePadData).length === 0 &&
-					this.customTilePadData.constructor === Object)
+					this.customTilePadData.constructor === Object) ||
+				this.customTilePadData._v !== this.tileData._v
 			) {
 				this.setCustomTilePadData(JSON.parse(JSON.stringify(this.tileData)));
 			} else if (
