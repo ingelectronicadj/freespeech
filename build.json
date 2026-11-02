@@ -1135,6 +1135,78 @@
 					}
 				},
 				"navigation": "10"
+			},
+			{
+				"name": "Transport",
+				"text": "transport",
+				"accent": "mint",
+				"image": "/img/pictograms/2262.png",
+				"id": 67,
+				"messages": {
+					"de": {
+						"name": "Verkehr",
+						"text": "Verkehr"
+					},
+					"sp": {
+						"name": "Transportes",
+						"text": "Transportes"
+					}
+				},
+				"navigation": "11"
+			},
+			{
+				"name": "Clothes",
+				"text": "clothes",
+				"accent": "mint",
+				"image": "/img/pictograms/2613.png",
+				"id": 68,
+				"messages": {
+					"de": {
+						"name": "Kleidung",
+						"text": "Kleidung"
+					},
+					"sp": {
+						"name": "Ropa",
+						"text": "Ropa"
+					}
+				},
+				"navigation": "12"
+			},
+			{
+				"name": "Music",
+				"text": "music",
+				"accent": "mint",
+				"image": "/img/pictograms/24791.png",
+				"id": 69,
+				"messages": {
+					"de": {
+						"name": "Musik",
+						"text": "Musik"
+					},
+					"sp": {
+						"name": "Música",
+						"text": "Música"
+					}
+				},
+				"navigation": "13"
+			},
+			{
+				"name": "Time",
+				"text": "time",
+				"accent": "mint",
+				"image": "/img/pictograms/7131.png",
+				"id": 70,
+				"messages": {
+					"de": {
+						"name": "Zeit",
+						"text": "Zeit"
+					},
+					"sp": {
+						"name": "Tiempo",
+						"text": "Tiempo"
+					}
+				},
+				"navigation": "14"
 			}
 		]
 	},
@@ -4134,7 +4206,7 @@
 			}
 		]
 	},
-	"_v": 5,
+	"_v": 6,
 	"6": {
 		"tileData": [
 			{
@@ -5959,6 +6031,1046 @@
 						"text": "codo"
 					}
 				}
+			}
+		]
+	},
+	"11": {
+		"tileData": [
+			{
+				"name": "Car",
+				"text": "car",
+				"accent": "peach",
+				"image": "/img/pictograms/2339.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "Auto",
+						"text": "Auto"
+					},
+					"sp": {
+						"name": "Coche",
+						"text": "coche"
+					}
+				}
+			},
+			{
+				"name": "Bus",
+				"text": "bus",
+				"accent": "peach",
+				"image": "/img/pictograms/2262.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Bus",
+						"text": "Bus"
+					},
+					"sp": {
+						"name": "Autobús",
+						"text": "autobús"
+					}
+				}
+			},
+			{
+				"name": "Bicycle",
+				"text": "bicycle",
+				"accent": "peach",
+				"image": "/img/pictograms/6935.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Fahrrad",
+						"text": "Fahrrad"
+					},
+					"sp": {
+						"name": "Bicicleta",
+						"text": "bicicleta"
+					}
+				}
+			},
+			{
+				"name": "Motorbike",
+				"text": "motorbike",
+				"accent": "peach",
+				"image": "/img/pictograms/7166.png",
+				"id": 3,
+				"messages": {
+					"de": {
+						"name": "Motorrad",
+						"text": "Motorrad"
+					},
+					"sp": {
+						"name": "Moto",
+						"text": "moto"
+					}
+				}
+			},
+			{
+				"name": "Train",
+				"text": "train",
+				"accent": "peach",
+				"image": "/img/pictograms/21399.png",
+				"id": 4,
+				"messages": {
+					"de": {
+						"name": "Zug",
+						"text": "Zug"
+					},
+					"sp": {
+						"name": "Tren",
+						"text": "tren"
+					}
+				}
+			},
+			{
+				"name": "Plane",
+				"text": "plane",
+				"accent": "peach",
+				"image": "/img/pictograms/2264.png",
+				"id": 5,
+				"messages": {
+					"de": {
+						"name": "Flugzeug",
+						"text": "Flugzeug"
+					},
+					"sp": {
+						"name": "Avión",
+						"text": "avión"
+					}
+				}
+			},
+			{
+				"name": "Boat",
+				"text": "boat",
+				"accent": "peach",
+				"image": "/img/pictograms/6932.png",
+				"id": 6,
+				"messages": {
+					"de": {
+						"name": "Boot",
+						"text": "Boot"
+					},
+					"sp": {
+						"name": "Barco",
+						"text": "barco"
+					}
+				}
+			},
+			{
+				"name": "Taxi",
+				"text": "taxi",
+				"accent": "peach",
+				"image": "/img/pictograms/2580.png",
+				"id": 7,
+				"messages": {
+					"de": {
+						"name": "Taxi",
+						"text": "Taxi"
+					},
+					"sp": {
+						"name": "Taxi",
+						"text": "taxi"
+					}
+				}
+			},
+			{
+				"name": "Truck",
+				"text": "truck",
+				"accent": "peach",
+				"image": "/img/pictograms/6956.png",
+				"id": 8,
+				"messages": {
+					"de": {
+						"name": "Lastwagen",
+						"text": "Lastwagen"
+					},
+					"sp": {
+						"name": "Camión",
+						"text": "camión"
+					}
+				}
+			},
+			{
+				"name": "Ambulance",
+				"text": "ambulance",
+				"accent": "peach",
+				"image": "/img/pictograms/6899.png",
+				"id": 9,
+				"messages": {
+					"de": {
+						"name": "Krankenwagen",
+						"text": "Krankenwagen"
+					},
+					"sp": {
+						"name": "Ambulancia",
+						"text": "ambulancia"
+					}
+				}
+			},
+			{
+				"name": "Metro",
+				"text": "metro",
+				"accent": "peach",
+				"image": "/img/pictograms/26925.png",
+				"id": 10,
+				"messages": {
+					"de": {
+						"name": "U-Bahn",
+						"text": "U-Bahn"
+					},
+					"sp": {
+						"name": "Metro",
+						"text": "metro"
+					}
+				}
+			},
+			{
+				"name": "Wheelchair",
+				"text": "wheelchair",
+				"accent": "peach",
+				"image": "/img/pictograms/25471.png",
+				"id": 11,
+				"messages": {
+					"de": {
+						"name": "Rollstuhl",
+						"text": "Rollstuhl"
+					},
+					"sp": {
+						"name": "Silla de ruedas",
+						"text": "silla de ruedas"
+					}
+				}
+			},
+			{
+				"name": "Walk",
+				"text": "walk",
+				"accent": "peach",
+				"image": "/img/pictograms/6044.png",
+				"id": 12,
+				"messages": {
+					"de": {
+						"name": "Zu Fuß",
+						"text": "zu Fuß"
+					},
+					"sp": {
+						"name": "A pie",
+						"text": "a pie"
+					}
+				}
+			},
+			{
+				"name": "Home",
+				"text": "Home",
+				"accent": "mint",
+				"image": "/img/pictograms/6964.png",
+				"id": 13,
+				"messages": {
+					"de": {
+						"name": "Startseite",
+						"text": "Startseite"
+					},
+					"sp": {
+						"name": "Inicio",
+						"text": "Inicio"
+					}
+				},
+				"navigation": "home"
+			}
+		]
+	},
+	"12": {
+		"tileData": [
+			{
+				"name": "T-shirt",
+				"text": "t-shirt",
+				"accent": "peach",
+				"image": "/img/pictograms/2309.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "T-Shirt",
+						"text": "T-Shirt"
+					},
+					"sp": {
+						"name": "Camiseta",
+						"text": "camiseta"
+					}
+				}
+			},
+			{
+				"name": "Pants",
+				"text": "pants",
+				"accent": "peach",
+				"image": "/img/pictograms/2565.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Hose",
+						"text": "Hose"
+					},
+					"sp": {
+						"name": "Pantalón",
+						"text": "pantalón"
+					}
+				}
+			},
+			{
+				"name": "Dress",
+				"text": "dress",
+				"accent": "peach",
+				"image": "/img/pictograms/2613.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Kleid",
+						"text": "Kleid"
+					},
+					"sp": {
+						"name": "Vestido",
+						"text": "vestido"
+					}
+				}
+			},
+			{
+				"name": "Shoes",
+				"text": "shoes",
+				"accent": "peach",
+				"image": "/img/pictograms/2775.png",
+				"id": 3,
+				"messages": {
+					"de": {
+						"name": "Schuhe",
+						"text": "Schuhe"
+					},
+					"sp": {
+						"name": "Zapatos",
+						"text": "zapatos"
+					}
+				}
+			},
+			{
+				"name": "Socks",
+				"text": "socks",
+				"accent": "peach",
+				"image": "/img/pictograms/2298.png",
+				"id": 4,
+				"messages": {
+					"de": {
+						"name": "Socken",
+						"text": "Socken"
+					},
+					"sp": {
+						"name": "Calcetines",
+						"text": "calcetines"
+					}
+				}
+			},
+			{
+				"name": "Coat",
+				"text": "coat",
+				"accent": "peach",
+				"image": "/img/pictograms/8122.png",
+				"id": 5,
+				"messages": {
+					"de": {
+						"name": "Mantel",
+						"text": "Mantel"
+					},
+					"sp": {
+						"name": "Abrigo",
+						"text": "abrigo"
+					}
+				}
+			},
+			{
+				"name": "Jacket",
+				"text": "jacket",
+				"accent": "peach",
+				"image": "/img/pictograms/4872.png",
+				"id": 6,
+				"messages": {
+					"de": {
+						"name": "Jacke",
+						"text": "Jacke"
+					},
+					"sp": {
+						"name": "Chaqueta",
+						"text": "chaqueta"
+					}
+				}
+			},
+			{
+				"name": "Cap",
+				"text": "cap",
+				"accent": "peach",
+				"image": "/img/pictograms/2411.png",
+				"id": 7,
+				"messages": {
+					"de": {
+						"name": "Mütze",
+						"text": "Mütze"
+					},
+					"sp": {
+						"name": "Gorra",
+						"text": "gorra"
+					}
+				}
+			},
+			{
+				"name": "Scarf",
+				"text": "scarf",
+				"accent": "peach",
+				"image": "/img/pictograms/2290.png",
+				"id": 8,
+				"messages": {
+					"de": {
+						"name": "Schal",
+						"text": "Schal"
+					},
+					"sp": {
+						"name": "Bufanda",
+						"text": "bufanda"
+					}
+				}
+			},
+			{
+				"name": "Gloves",
+				"text": "gloves",
+				"accent": "peach",
+				"image": "/img/pictograms/2415.png",
+				"id": 9,
+				"messages": {
+					"de": {
+						"name": "Handschuhe",
+						"text": "Handschuhe"
+					},
+					"sp": {
+						"name": "Guantes",
+						"text": "guantes"
+					}
+				}
+			},
+			{
+				"name": "Pajamas",
+				"text": "pajamas",
+				"accent": "peach",
+				"image": "/img/pictograms/2522.png",
+				"id": 10,
+				"messages": {
+					"de": {
+						"name": "Schlafanzug",
+						"text": "Schlafanzug"
+					},
+					"sp": {
+						"name": "Pijama",
+						"text": "pijama"
+					}
+				}
+			},
+			{
+				"name": "Underwear",
+				"text": "underwear",
+				"accent": "peach",
+				"image": "/img/pictograms/25680.png",
+				"id": 11,
+				"messages": {
+					"de": {
+						"name": "Unterwäsche",
+						"text": "Unterwäsche"
+					},
+					"sp": {
+						"name": "Ropa interior",
+						"text": "ropa interior"
+					}
+				}
+			},
+			{
+				"name": "Skirt",
+				"text": "skirt",
+				"accent": "peach",
+				"image": "/img/pictograms/2391.png",
+				"id": 12,
+				"messages": {
+					"de": {
+						"name": "Rock",
+						"text": "Rock"
+					},
+					"sp": {
+						"name": "Falda",
+						"text": "falda"
+					}
+				}
+			},
+			{
+				"name": "Sweater",
+				"text": "sweater",
+				"accent": "peach",
+				"image": "/img/pictograms/2436.png",
+				"id": 13,
+				"messages": {
+					"de": {
+						"name": "Pullover",
+						"text": "Pullover"
+					},
+					"sp": {
+						"name": "Jersey",
+						"text": "jersey"
+					}
+				}
+			},
+			{
+				"name": "Hat",
+				"text": "hat",
+				"accent": "peach",
+				"image": "/img/pictograms/2572.png",
+				"id": 14,
+				"messages": {
+					"de": {
+						"name": "Hut",
+						"text": "Hut"
+					},
+					"sp": {
+						"name": "Sombrero",
+						"text": "sombrero"
+					}
+				}
+			},
+			{
+				"name": "Glasses",
+				"text": "glasses",
+				"accent": "peach",
+				"image": "/img/pictograms/3329.png",
+				"id": 15,
+				"messages": {
+					"de": {
+						"name": "Brille",
+						"text": "Brille"
+					},
+					"sp": {
+						"name": "Gafas",
+						"text": "gafas"
+					}
+				}
+			},
+			{
+				"name": "Home",
+				"text": "Home",
+				"accent": "mint",
+				"image": "/img/pictograms/6964.png",
+				"id": 16,
+				"messages": {
+					"de": {
+						"name": "Startseite",
+						"text": "Startseite"
+					},
+					"sp": {
+						"name": "Inicio",
+						"text": "Inicio"
+					}
+				},
+				"navigation": "home"
+			}
+		]
+	},
+	"13": {
+		"tileData": [
+			{
+				"name": "Music",
+				"text": "music",
+				"accent": "peach",
+				"image": "/img/pictograms/24791.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "Musik",
+						"text": "Musik"
+					},
+					"sp": {
+						"name": "Música",
+						"text": "música"
+					}
+				}
+			},
+			{
+				"name": "Sing",
+				"text": "sing",
+				"accent": "peach",
+				"image": "/img/pictograms/6960.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Singen",
+						"text": "singen"
+					},
+					"sp": {
+						"name": "Cantar",
+						"text": "cantar"
+					}
+				}
+			},
+			{
+				"name": "Dance",
+				"text": "dance",
+				"accent": "peach",
+				"image": "/img/pictograms/35747.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Tanzen",
+						"text": "tanzen"
+					},
+					"sp": {
+						"name": "Bailar",
+						"text": "bailar"
+					}
+				}
+			},
+			{
+				"name": "Guitar",
+				"text": "guitar",
+				"accent": "peach",
+				"image": "/img/pictograms/2417.png",
+				"id": 3,
+				"messages": {
+					"de": {
+						"name": "Gitarre",
+						"text": "Gitarre"
+					},
+					"sp": {
+						"name": "Guitarra",
+						"text": "guitarra"
+					}
+				}
+			},
+			{
+				"name": "Piano",
+				"text": "piano",
+				"accent": "peach",
+				"image": "/img/pictograms/2521.png",
+				"id": 4,
+				"messages": {
+					"de": {
+						"name": "Klavier",
+						"text": "Klavier"
+					},
+					"sp": {
+						"name": "Piano",
+						"text": "piano"
+					}
+				}
+			},
+			{
+				"name": "Drum",
+				"text": "drum",
+				"accent": "peach",
+				"image": "/img/pictograms/2578.png",
+				"id": 5,
+				"messages": {
+					"de": {
+						"name": "Trommel",
+						"text": "Trommel"
+					},
+					"sp": {
+						"name": "Tambor",
+						"text": "tambor"
+					}
+				}
+			},
+			{
+				"name": "Flute",
+				"text": "flute",
+				"accent": "peach",
+				"image": "/img/pictograms/2396.png",
+				"id": 6,
+				"messages": {
+					"de": {
+						"name": "Flöte",
+						"text": "Flöte"
+					},
+					"sp": {
+						"name": "Flauta",
+						"text": "flauta"
+					}
+				}
+			},
+			{
+				"name": "Violin",
+				"text": "violin",
+				"accent": "peach",
+				"image": "/img/pictograms/2615.png",
+				"id": 7,
+				"messages": {
+					"de": {
+						"name": "Geige",
+						"text": "Geige"
+					},
+					"sp": {
+						"name": "Violín",
+						"text": "violín"
+					}
+				}
+			},
+			{
+				"name": "Headphones",
+				"text": "headphones",
+				"accent": "peach",
+				"image": "/img/pictograms/5915.png",
+				"id": 8,
+				"messages": {
+					"de": {
+						"name": "Kopfhörer",
+						"text": "Kopfhörer"
+					},
+					"sp": {
+						"name": "Auriculares",
+						"text": "auriculares"
+					}
+				}
+			},
+			{
+				"name": "Home",
+				"text": "Home",
+				"accent": "mint",
+				"image": "/img/pictograms/6964.png",
+				"id": 9,
+				"messages": {
+					"de": {
+						"name": "Startseite",
+						"text": "Startseite"
+					},
+					"sp": {
+						"name": "Inicio",
+						"text": "Inicio"
+					}
+				},
+				"navigation": "home"
+			}
+		]
+	},
+	"14": {
+		"tileData": [
+			{
+				"name": "Monday",
+				"text": "Monday",
+				"accent": "peach",
+				"image": "/img/pictograms/37723.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "Montag",
+						"text": "Montag"
+					},
+					"sp": {
+						"name": "Lunes",
+						"text": "lunes"
+					}
+				}
+			},
+			{
+				"name": "Tuesday",
+				"text": "Tuesday",
+				"accent": "peach",
+				"image": "/img/pictograms/37730.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Dienstag",
+						"text": "Dienstag"
+					},
+					"sp": {
+						"name": "Martes",
+						"text": "martes"
+					}
+				}
+			},
+			{
+				"name": "Wednesday",
+				"text": "Wednesday",
+				"accent": "peach",
+				"image": "/img/pictograms/37729.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Mittwoch",
+						"text": "Mittwoch"
+					},
+					"sp": {
+						"name": "Miércoles",
+						"text": "miércoles"
+					}
+				}
+			},
+			{
+				"name": "Thursday",
+				"text": "Thursday",
+				"accent": "peach",
+				"image": "/img/pictograms/37728.png",
+				"id": 3,
+				"messages": {
+					"de": {
+						"name": "Donnerstag",
+						"text": "Donnerstag"
+					},
+					"sp": {
+						"name": "Jueves",
+						"text": "jueves"
+					}
+				}
+			},
+			{
+				"name": "Friday",
+				"text": "Friday",
+				"accent": "peach",
+				"image": "/img/pictograms/37727.png",
+				"id": 4,
+				"messages": {
+					"de": {
+						"name": "Freitag",
+						"text": "Freitag"
+					},
+					"sp": {
+						"name": "Viernes",
+						"text": "viernes"
+					}
+				}
+			},
+			{
+				"name": "Saturday",
+				"text": "Saturday",
+				"accent": "peach",
+				"image": "/img/pictograms/37726.png",
+				"id": 5,
+				"messages": {
+					"de": {
+						"name": "Samstag",
+						"text": "Samstag"
+					},
+					"sp": {
+						"name": "Sábado",
+						"text": "sábado"
+					}
+				}
+			},
+			{
+				"name": "Sunday",
+				"text": "Sunday",
+				"accent": "peach",
+				"image": "/img/pictograms/37725.png",
+				"id": 6,
+				"messages": {
+					"de": {
+						"name": "Sonntag",
+						"text": "Sonntag"
+					},
+					"sp": {
+						"name": "Domingo",
+						"text": "domingo"
+					}
+				}
+			},
+			{
+				"name": "Today",
+				"text": "today",
+				"accent": "peach",
+				"image": "/img/pictograms/7131.png",
+				"id": 7,
+				"messages": {
+					"de": {
+						"name": "Heute",
+						"text": "heute"
+					},
+					"sp": {
+						"name": "Hoy",
+						"text": "hoy"
+					}
+				}
+			},
+			{
+				"name": "Tomorrow",
+				"text": "tomorrow",
+				"accent": "peach",
+				"image": "/img/pictograms/38278.png",
+				"id": 8,
+				"messages": {
+					"de": {
+						"name": "Morgen",
+						"text": "morgen"
+					},
+					"sp": {
+						"name": "Mañana",
+						"text": "mañana"
+					}
+				}
+			},
+			{
+				"name": "Yesterday",
+				"text": "yesterday",
+				"accent": "peach",
+				"image": "/img/pictograms/38279.png",
+				"id": 9,
+				"messages": {
+					"de": {
+						"name": "Gestern",
+						"text": "gestern"
+					},
+					"sp": {
+						"name": "Ayer",
+						"text": "ayer"
+					}
+				}
+			},
+			{
+				"name": "Week",
+				"text": "week",
+				"accent": "peach",
+				"image": "/img/pictograms/37732.png",
+				"id": 10,
+				"messages": {
+					"de": {
+						"name": "Woche",
+						"text": "Woche"
+					},
+					"sp": {
+						"name": "Semana",
+						"text": "semana"
+					}
+				}
+			},
+			{
+				"name": "Month",
+				"text": "month",
+				"accent": "peach",
+				"image": "/img/pictograms/37724.png",
+				"id": 11,
+				"messages": {
+					"de": {
+						"name": "Monat",
+						"text": "Monat"
+					},
+					"sp": {
+						"name": "Mes",
+						"text": "mes"
+					}
+				}
+			},
+			{
+				"name": "Hour",
+				"text": "hour",
+				"accent": "peach",
+				"image": "/img/pictograms/7129.png",
+				"id": 12,
+				"messages": {
+					"de": {
+						"name": "Stunde",
+						"text": "Stunde"
+					},
+					"sp": {
+						"name": "Hora",
+						"text": "hora"
+					}
+				}
+			},
+			{
+				"name": "Clock",
+				"text": "clock",
+				"accent": "peach",
+				"image": "/img/pictograms/2549.png",
+				"id": 13,
+				"messages": {
+					"de": {
+						"name": "Uhr",
+						"text": "Uhr"
+					},
+					"sp": {
+						"name": "Reloj",
+						"text": "reloj"
+					}
+				}
+			},
+			{
+				"name": "Calendar",
+				"text": "calendar",
+				"accent": "peach",
+				"image": "/img/pictograms/32488.png",
+				"id": 14,
+				"messages": {
+					"de": {
+						"name": "Kalender",
+						"text": "Kalender"
+					},
+					"sp": {
+						"name": "Calendario",
+						"text": "calendario"
+					}
+				}
+			},
+			{
+				"name": "Morning",
+				"text": "morning",
+				"accent": "peach",
+				"image": "/img/pictograms/38277.png",
+				"id": 15,
+				"messages": {
+					"de": {
+						"name": "Am Morgen",
+						"text": "am Morgen"
+					},
+					"sp": {
+						"name": "Por la mañana",
+						"text": "por la mañana"
+					}
+				}
+			},
+			{
+				"name": "Afternoon",
+				"text": "afternoon",
+				"accent": "peach",
+				"image": "/img/pictograms/7268.png",
+				"id": 16,
+				"messages": {
+					"de": {
+						"name": "Nachmittag",
+						"text": "Nachmittag"
+					},
+					"sp": {
+						"name": "Tarde",
+						"text": "tarde"
+					}
+				}
+			},
+			{
+				"name": "Night",
+				"text": "night",
+				"accent": "peach",
+				"image": "/img/pictograms/26997.png",
+				"id": 17,
+				"messages": {
+					"de": {
+						"name": "Nacht",
+						"text": "Nacht"
+					},
+					"sp": {
+						"name": "Noche",
+						"text": "noche"
+					}
+				}
+			},
+			{
+				"name": "Home",
+				"text": "Home",
+				"accent": "mint",
+				"image": "/img/pictograms/6964.png",
+				"id": 18,
+				"messages": {
+					"de": {
+						"name": "Startseite",
+						"text": "Startseite"
+					},
+					"sp": {
+						"name": "Inicio",
+						"text": "Inicio"
+					}
+				},
+				"navigation": "home"
 			}
 		]
 	}

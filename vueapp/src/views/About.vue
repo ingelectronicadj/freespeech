@@ -8,12 +8,23 @@
 					v-html="compiledMarkdown"
 				/>
 			</v-card>
-			<v-card theme="light" class="about-card px-6 py-4 mt-4">
-				<h2 class="text-h6 mb-2">{{ $t('about.attributionTitle') }}</h2>
-				<p class="about-legal mb-3" v-html="$t('about.attributionArasaac')" />
-				<h2 class="text-h6 mb-2 mt-4">{{ $t('about.privacyTitle') }}</h2>
-				<p class="about-legal mb-0">{{ $t('about.privacyBody') }}</p>
-			</v-card>
+			<v-expansion-panels class="mt-4" multiple>
+				<v-expansion-panel :title="$t('about.guideTitle')">
+					<v-expansion-panel-text>
+						<div class="about-legal" v-html="$t('about.guideBody')" />
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+				<v-expansion-panel :title="$t('about.attributionTitle')">
+					<v-expansion-panel-text>
+						<p class="about-legal mb-0" v-html="$t('about.attributionArasaac')" />
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+				<v-expansion-panel :title="$t('about.privacyTitle')">
+					<v-expansion-panel-text>
+						<p class="about-legal mb-0">{{ $t('about.privacyBody') }}</p>
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+			</v-expansion-panels>
 		</v-container>
 	</div>
 </template>

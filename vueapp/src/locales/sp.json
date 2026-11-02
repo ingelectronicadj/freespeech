@@ -33,7 +33,14 @@
 			"medium": "Normal",
 			"large": "Grande",
 			"xlarge": "Extra grande"
-		}
+		},
+		"optionBoardTileSize": "Tamaño de las baldosas",
+		"boardTileSize": {
+			"auto": "Automático",
+			"large": "Grande",
+			"xlarge": "Extra grande"
+		},
+		"optionHighContrast": "Alto contraste"
 	},
 	"sentence": {
 		"title": "Oración",
@@ -66,7 +73,12 @@
 		"animals": "Animales",
 		"places": "Lugares",
 		"colors": "Colores",
-		"body": "Cuerpo"
+		"body": "Cuerpo",
+		"frequent": "Frecuentes:",
+		"transport": "Transportes",
+		"clothes": "Ropa",
+		"music": "Música",
+		"time": "Tiempo"
 	},
 	"editMode": {
 		"title": "Estás en modo de edición!",
@@ -107,6 +119,8 @@
 		"attributionTitle": "Pictogramas",
 		"attributionArasaac": "Los pictogramas son obra de <strong>ARASAAC</strong> — Gobierno de Aragón, creados por Sergio Palao. Distribuidos bajo licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a>.",
 		"privacyTitle": "Privacidad",
-		"privacyBody": "Free Speech funciona en tu dispositivo: tu tablero, configuración y uso se guardan únicamente en el navegador (almacenamiento local). No enviamos datos a ningún servidor, no usamos cookies de seguimiento ni analíticas de terceros."
+		"privacyBody": "Free Speech funciona en tu dispositivo: tu tablero, configuración y uso se guardan únicamente en el navegador (almacenamiento local). No enviamos datos a ningún servidor, no usamos cookies de seguimiento ni analíticas de terceros.",
+		"guideTitle": "Guía para terapeutas",
+		"guideBody": "<ol class=\"guide-list\">\n<li><strong>Conceptos</strong>: cada botón es un <em>pictograma</em>; agrupados en <em>colecciones</em> (emociones, comida, acciones...). La barra superior arma la <em>frase</em> que se lee en voz alta.</li>\n<li><strong>Editar el tablero</strong>: pulsa el lápiz de la barra para entrar en modo edición. Desde ahí puedes añadir pictogramas nuevos (buscador ARASAAC o imagen propia), editar texto y color, y arrastrar para reordenar.</li>\n<li><strong>Proteger con código</strong>: en Ajustes activa <em>Código de acceso</em> — el niño no podrá editar ni cambiar ajustes sin el PIN. Guarda el código: no hay recuperación.</li>\n<li><strong>Voces</strong>: en Ajustes → <em>Voz</em> elige entre todas las voces instaladas en el dispositivo. Prueba cada una; las voces en español varían según el equipo (en tablets sin voz española, instala una desde ajustes del sistema).</li>\n<li><strong>Tamaño y contraste</strong>: Ajustes → <em>Tamaño de los pictogramas</em>, <em>Tamaño de las baldosas</em> y <em>Alto contraste</em> para adaptar a baja visión o motricidad reducida.</li>\n<li><strong>Copias de seguridad</strong>: el tablero vive en el navegador del dispositivo. Usa <em>Exportar</em> en Ajustes regularmente; con <em>Importar</em> puedes copiar el mismo tablero en otro dispositivo.</li>\n<li><strong>Sin internet</strong>: tras la primera carga la app funciona offline (pictogramas incluidos). Ideal para aulas sin wifi estable.</li>\n<li><strong>Escritura directa</strong>: en webs integradas con el widget A11Y PRO, cada pictograma puede insertar texto directamente en formularios.</li>\n</ol>"
 	}
 }

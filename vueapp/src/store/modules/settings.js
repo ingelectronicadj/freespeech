@@ -9,6 +9,8 @@ const state = {
 	voiceOptions: [], 
 	displayTapCount: false,
 	tileImageSize: 'medium',
+	gridDensity: 'auto',
+	highContrast: false,
 };
 
 const mutations = {
@@ -41,6 +43,12 @@ const mutations = {
 	},
 	SET_TILE_IMAGE_SIZE: (state, value) => {
 		state.tileImageSize = value;
+	},
+	SET_GRID_DENSITY: (state, value) => {
+		state.gridDensity = value;
+	},
+	SET_HIGH_CONTRAST: (state, value) => {
+		state.highContrast = value;
 	}
 };
 
@@ -81,6 +89,12 @@ const actions = {
 	setTileImageSize: ({ commit }, value) => {
 		commit('SET_TILE_IMAGE_SIZE', value);
 	},
+	setGridDensity: ({ commit }, value) => {
+		commit('SET_GRID_DENSITY', value);
+	},
+	setHighContrast: ({ commit }, value) => {
+		commit('SET_HIGH_CONTRAST', value);
+	},
 	setDisplayTapCount: ({ commit }, value) => {
 		commit('SET_DISPLAY_TAP_COUNT', value);
 	}
@@ -96,6 +110,8 @@ const getters = {
 	voiceOptions: (state) => state.voiceOptions,
 	displayTapCount: (state) => state.displayTapCount,
 	tileImageSize: (state) => state.tileImageSize,
+	gridDensity: (state) => state.gridDensity,
+	highContrast: (state) => state.highContrast,
 };
 
 export default {

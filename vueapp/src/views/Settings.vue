@@ -28,6 +28,20 @@
 			:label="$t('settings.optionPictogramSize')"
 		/>
 
+		<v-select
+			v-model="gridDensity"
+			:items="gridDensityOptions"
+			item-title="text"
+			item-value="value"
+			:label="$t('settings.optionBoardTileSize')"
+		/>
+
+		<v-switch
+			v-model="highContrast"
+			color="primary"
+			:label="$t('settings.optionHighContrast')"
+		/>
+
 		<v-switch
 			v-model="customTilePad"
 			color="primary"
@@ -234,6 +248,28 @@ export default {
 				value: v,
 				text: this.$t('settings.pictogramSize.' + v)
 			}));
+		},
+		gridDensity: {
+			get () {
+				return this.$store.state.settings.gridDensity || 'auto';
+			},
+			set (value) {
+				this.setGridDensity(value);
+			}
+		},
+		gridDensityOptions () {
+			return ['auto', 'large', 'xlarge'].map(v => ({
+				value: v,
+				text: this.$t('settings.boardTileSize.' + v)
+			}));
+		},
+		highContrast: {
+			get () {
+				return !!this.$store.state.settings.highContrast;
+			},
+			set (value) {
+				this.setHighContrast(value);
+			}
 		}
 	},
 	methods: {
@@ -247,6 +283,8 @@ export default {
 			toggleSentenceMode: 'settings/toggleSentenceMode',
 			setDisplayTapCount: 'settings/setDisplayTapCount',
 			setTileImageSize: 'settings/setTileImageSize',
+			setGridDensity: 'settings/setGridDensity',
+			setHighContrast: 'settings/setHighContrast',
 		}),
 		exportSettings () {
 			const json = JSON.stringify({

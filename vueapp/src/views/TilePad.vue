@@ -1,5 +1,12 @@
 <template>
-	<div class="tilepad-page">
+	<div
+		class="tilepad-page"
+		:class="{
+			'density-large': gridDensity === 'large',
+			'density-xlarge': gridDensity === 'xlarge',
+			'high-contrast': highContrast
+		}"
+	>
 		<Sentence
 			v-if="sentenceMode && !editMode"
 			:tile-pad-to-display="sentenceTiles"
@@ -69,6 +76,30 @@
 			</div>
 		</nav>
 
+		<div
+			v-if="frequentTiles.length && !editMode && !searchQuery"
+			class="frequent-strip px-3 pt-2"
+		>
+			<span class="frequent-label">{{ frequentLabel }}</span>
+			<button
+				v-for="tile in frequentTiles"
+				:key="'freq-' + tile.id"
+				type="button"
+				class="frequent-btn"
+				@click="sentenceTiles.push(tile)"
+			>
+				<img
+					v-if="tile.image"
+					:src="tile.image"
+					alt=""
+					aria-hidden="true"
+					width="22"
+					height="22"
+				>
+				<span>{{ tile.name }}</span>
+			</button>
+		</div>
+
 		<v-container
 			fluid
 			class="tilepad-grid-wrapper pb-10 pt-2 px-3"
@@ -136,7 +167,26 @@ export default {
 		};
 	},
 	computed: {
-		...mapState('settings', ['sentenceMode']),
+		...mapState('settings', ['sentenceMode', 'gridDensity', 'highContrast']),
+		...mapState('tilePad', ['tileTapsCount']),
+		frequentLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.frequent') : 'Frecuentes:';
+		},
+		frequentTiles () {
+			if (!this.sentenceMode || !Array.isArray(this.tileTapsCount)) return [];
+			const boards = this.allBoardsDictionary || {};
+			const byId = {};
+			Object.keys(boards).forEach(k => {
+				(boards[k] && boards[k].tileData || []).forEach(t => {
+					if (t && t.id !== undefined && !t.navigation && byId[t.id] === undefined) byId[t.id] = t;
+				});
+			});
+			return this.tileTapsCount
+				.filter(tc => tc && tc.taps > 0 && byId[tc.id])
+				.sort((a, b) => b.taps - a.taps)
+				.slice(0, 5)
+				.map(tc => byId[tc.id]);
+		},
 		...mapState('tilePad', ['editMode']),
 		...mapGetters({
 			selectedVoiceIndex: 'settings/selectedVoiceIndex',
@@ -174,6 +224,10 @@ export default {
 				{ key: '8', iconClass: 'nav-ico-folder', label: tr('collections.places', 'Lugares') },
 				{ key: '9', iconClass: 'nav-ico-folder', label: tr('collections.colors', 'Colores') },
 				{ key: '10', iconClass: 'nav-ico-folder', label: tr('collections.body', 'Cuerpo') },
+				{ key: '11', iconClass: 'nav-ico-folder', label: tr('collections.transport', 'Transportes') },
+				{ key: '12', iconClass: 'nav-ico-folder', label: tr('collections.clothes', 'Ropa') },
+				{ key: '13', iconClass: 'nav-ico-folder', label: tr('collections.music', 'Música') },
+				{ key: '14', iconClass: 'nav-ico-folder', label: tr('collections.time', 'Tiempo') },
 				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];
@@ -597,5 +651,70 @@ export default {
 .collection-back-btn:focus-visible {
 	outline: 3px solid #f59e0b;
 	outline-offset: 2px;
+}
+
+.frequent-strip {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+.frequent-label {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #475569;
+}
+.frequent-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: #fff;
+	border: 1.5px solid #cbd5e1;
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: #0f172a;
+	cursor: pointer;
+}
+.frequent-btn:hover { border-color: #0f766e; background: #f0fdfa; }
+.frequent-btn:focus-visible { outline: 3px solid #0f766e; outline-offset: 1px; }
+
+/* Densidad del tablero: menos columnas = baldosas más grandes */
+.density-large .saac-responsive-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+.density-xlarge .saac-responsive-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+@media (min-width: 600px) {
+	.density-large .saac-responsive-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+@media (min-width: 840px) {
+	.density-large .saac-responsive-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+	.density-xlarge .saac-responsive-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+/* Alto contraste */
+.high-contrast .saac-tile-btn {
+	border: 3px solid #000 !important;
+}
+.high-contrast .tile-label {
+	color: #000;
+	font-weight: 800;
+}
+.high-contrast .collections-pill-btn,
+.high-contrast .frequent-btn {
+	border: 2px solid #000;
+	font-weight: 800;
+}
+.high-contrast .tile-pictogram-img {
+	filter: contrast(1.15) saturate(1.15);
 }
 </style>

@@ -4,6 +4,23 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Predicción, accesibilidad visual, guía terapeutas y 4 colecciones más
+
+- **Predicción de uso (`TilePad.vue`)**: nueva tira **Frecuentes** bajo la barra de colecciones con los 5 pictogramas más usados por el usuario (basada en `tileTapsCount`) — acceso rápido sin alterar las posiciones fijas del tablero.
+- **Ajustes de visualización (`Settings.vue`, `settings.js`, `TilePad.vue`)**:
+  - `Tamaño de las baldosas`: Automático/Grande/Extra grande (menos columnas, objetivos táctiles mayores para motricidad reducida).
+  - `Alto contraste`: bordes negros gruesos, etiquetas más pesadas y pictogramas con más contraste/saturación (baja visión).
+- **Acerca de (`About.vue`, locales)**: contenido reorganizado en paneles colapsables + nueva **Guía para terapeutas** (es/en/de): editar tablero, código de acceso, voces, tamaño/contraste, exportar/importar backups, uso offline y escritura directa.
+- **Nuevas colecciones (`build.json`, locales)** — total 335 pictogramas ARASAAC locales, 15 tableros:
+  - `Transportes` (13), `Ropa` (16), `Música` (9), `Tiempo` (18: días, hoy/mañana/ayer, partes del día, calendario).
+- Versión de datos `_v: 6`.
+
+---
+
 ## [2.6.1] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

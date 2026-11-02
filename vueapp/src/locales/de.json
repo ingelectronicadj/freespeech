@@ -33,7 +33,14 @@
 			"medium": "Normal",
 			"large": "Groß",
 			"xlarge": "Extra groß"
-		}
+		},
+		"optionBoardTileSize": "Piktogramm-Feldgröße",
+		"boardTileSize": {
+			"auto": "Automatisch",
+			"large": "Groß",
+			"xlarge": "Extra groß"
+		},
+		"optionHighContrast": "Hoher Kontrast"
 	},
 	"sentence": {
 		"title": "Satz",
@@ -66,7 +73,12 @@
 		"animals": "Tiere",
 		"places": "Orte",
 		"colors": "Farben",
-		"body": "Körper"
+		"body": "Körper",
+		"frequent": "Häufig:",
+		"transport": "Verkehr",
+		"clothes": "Kleidung",
+		"music": "Musik",
+		"time": "Zeit"
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",
@@ -106,6 +118,8 @@
 		"attributionTitle": "Piktogramme",
 		"attributionArasaac": "Piktogramme von <strong>ARASAAC</strong> — Regierung von Aragón, erstellt von Sergio Palao. Lizenziert unter <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a>.",
 		"privacyTitle": "Datenschutz",
-		"privacyBody": "Free Speech läuft auf Ihrem Gerät: Ihr Board, Ihre Einstellungen und Nutzungsdaten werden nur in diesem Browser gespeichert (lokaler Speicher). Keine Datenübertragung an Server, keine Tracking-Cookies, keine Analytik."
+		"privacyBody": "Free Speech läuft auf Ihrem Gerät: Ihr Board, Ihre Einstellungen und Nutzungsdaten werden nur in diesem Browser gespeichert (lokaler Speicher). Keine Datenübertragung an Server, keine Tracking-Cookies, keine Analytik.",
+		"guideTitle": "Therapeuten-Leitfaden",
+		"guideBody": "<ol class=\"guide-list\">\n<li><strong>Grundlagen</strong>: jede Schaltfläche ist ein <em>Piktogramm</em>; gruppiert in <em>Kollektionen</em>. Die obere Leiste bildet den gesprochenen <em>Satz</em>.</li>\n<li><strong>Board bearbeiten</strong>: Stift-Symbol = Bearbeitungsmodus — Piktogramme hinzufügen (ARASAAC-Suche oder eigenes Bild), Text/Farbe ändern, per Drag-and-Drop sortieren.</li>\n<li><strong>Zugangscode</strong>: in den Einstellungen aktivieren, damit Kinder nichts versehentlich ändern. PIN gut aufbewahren — keine Wiederherstellung.</li>\n<li><strong>Stimmen</strong>: Einstellungen → <em>Stimme</em> listet alle Gerätestimmen — jede testen.</li>\n<li><strong>Größe und Kontrast</strong>: Piktogrammgröße, Feldgröße und hoher Kontrast für Seh- und Motorikeinschränkungen.</li>\n<li><strong>Backups</strong>: Board liegt im Browser. Regelmäßig <em>exportieren</em>; <em>importieren</em> kopiert es auf ein anderes Gerät.</li>\n<li><strong>Offline</strong>: nach dem ersten Laden komplett offline nutzbar.</li>\n<li><strong>Direkteingabe</strong>: auf Seiten mit dem A11Y-PRO-Widget schreiben Piktogramme direkt in Formulare.</li>\n</ol>"
 	}
 }
