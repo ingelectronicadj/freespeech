@@ -18,20 +18,26 @@
 	"settings": {
 		"title": "Configuraciones",
 		"optionVoice": "Voz",
-		"optionCustomTilePad": "Bloc de mosaicos personalizados",
+		"optionCustomTilePad": "Bloc de pictogramas personalizados",
 		"optionCreateSentences": "Crear oraciones",
 		"optionLanguage": "Idioma",
 		"optionPasscodeEnabled": "Código de acceso habilitado",
 		"buttonClose": "Cerrar",
 		"titleSetPasscode": "Establecer código de acceso",
-		"buttonReset": "Restablecer todas las Configuraciones & Mosaicos",
-		"buttonExport": "Exportar Configuraciones & Mosaicos",
-		"buttonImport": "Importar Configuraciones & Mosaicos",
-		"displayTapCounter": "Mostrar uso de los mosaicos"
+		"buttonReset": "Restablecer todas las Configuraciones & Pictogramas",
+		"buttonExport": "Exportar Configuraciones & Pictogramas",
+		"buttonImport": "Importar Configuraciones & Pictogramas",
+		"displayTapCounter": "Mostrar uso de los pictogramas",
+		"optionPictogramSize": "Tamaño de los pictogramas",
+		"pictogramSize": {
+			"medium": "Normal",
+			"large": "Grande",
+			"xlarge": "Extra grande"
+		}
 	},
 	"sentence": {
 		"title": "Oración",
-		"instructions": "Agregar mosaicos a esta oración simplemente pulsando sobre los mismos.",
+		"instructions": "Agregar pictogramas a esta oración simplemente pulsando sobre los mismos.",
 		"textPreviewLabel": "Mensaje construido:",
 		"buttonSpeak": "Hablar",
 		"buttonCopy": "Copiar texto",
@@ -51,19 +57,21 @@
 		"keyboard": "Teclado ABC",
 		"searchPlaceholder": "Buscar palabra en el tablero...",
 		"searchClear": "Limpiar búsqueda",
-		"searchEmpty": "No se encontraron baldosas para esta búsqueda.",
+		"searchEmpty": "No se encontraron pictogramas para esta búsqueda.",
 		"study": "Estudio",
-		"hygiene": "Aseo personal"
+		"hygiene": "Aseo personal",
+		"food": "Comida",
+		"actions": "Acciones"
 	},
 	"editMode": {
 		"title": "Estás en modo de edición!",
 		"buttonSave": "Guardar cambios",
-		"instructions": "Puedes editar los mosaicos haciendo clic sobre ellos. También puedes arrastrarlos para reordenarlos. Haz clic en el botón de arriba para guardar tus cambios.",
+		"instructions": "Puedes editar los pictogramas haciendo clic sobre ellos. También puedes arrastrarlos para reordenarlos. Haz clic en el botón de arriba para guardar tus cambios.",
 		"tile": {
-			"addNew": "Agregar baldosa",
-			"title": "Editar baldosa",
-			"preview": "Vista previa de la baldosa",
-			"name": "Etiqueta visible en la baldosa",
+			"addNew": "Agregar pictograma",
+			"title": "Editar pictograma",
+			"preview": "Vista previa de la pictograma",
+			"name": "Etiqueta visible en la pictograma",
 			"imageUrl": "URL del pictograma o imagen",
 			"iconCatalog": "Elegir pictograma rápido o buscar en ARASAAC",
 			"searchArasaac": "Buscar pictograma en ARASAAC (ej. comer, casa, feliz)...",
@@ -72,8 +80,8 @@
 			"textToSpeak": "Texto o frase a pronunciar",
 			"testSpeak": "Probar voz",
 			"accentColor": "Color de categoría (Clave CAA)",
-			"buttonSave": "Guardar baldosa",
-			"butonSave": "Guardar baldosa",
+			"buttonSave": "Guardar pictograma",
+			"butonSave": "Guardar pictograma",
 			"buttonDelete": "Eliminar",
 			"buttonClose": "Cancelar",
 			"navigationLabel": "Tablero de destino (opcional, ej. numbers o keyboard)",
@@ -89,5 +97,11 @@
 				"sunny": "Amarillo (Personas / Pronombres)"
 			}
 		}
+	},
+	"about": {
+		"attributionTitle": "Pictogramas",
+		"attributionArasaac": "Los pictogramas son obra de <strong>ARASAAC</strong> — Gobierno de Aragón, creados por Sergio Palao. Distribuidos bajo licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a>.",
+		"privacyTitle": "Privacidad",
+		"privacyBody": "Free Speech funciona en tu dispositivo: tu tablero, configuración y uso se guardan únicamente en el navegador (almacenamiento local). No enviamos datos a ningún servidor, no usamos cookies de seguimiento ni analíticas de terceros."
 	}
 }

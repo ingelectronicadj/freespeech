@@ -8,6 +8,7 @@ const state = {
 	voices: [],
 	voiceOptions: [], 
 	displayTapCount: false,
+	tileImageSize: 'medium',
 };
 
 const mutations = {
@@ -37,6 +38,9 @@ const mutations = {
 	},
 	SET_DISPLAY_TAP_COUNT: (state, value) => {
 		state.displayTapCount = value;
+	},
+	SET_TILE_IMAGE_SIZE: (state, value) => {
+		state.tileImageSize = value;
 	}
 };
 
@@ -74,6 +78,9 @@ const actions = {
 	toggleSentenceMode: ({ commit, state }) => {
 		commit('SET_SENTENCE_MODE', !state.sentenceMode);
 	},
+	setTileImageSize: ({ commit }, value) => {
+		commit('SET_TILE_IMAGE_SIZE', value);
+	},
 	setDisplayTapCount: ({ commit }, value) => {
 		commit('SET_DISPLAY_TAP_COUNT', value);
 	}
@@ -88,6 +95,7 @@ const getters = {
 	voices: (state) => state.voices,
 	voiceOptions: (state) => state.voiceOptions,
 	displayTapCount: (state) => state.displayTapCount,
+	tileImageSize: (state) => state.tileImageSize,
 };
 
 export default {

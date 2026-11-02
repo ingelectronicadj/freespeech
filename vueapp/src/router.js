@@ -16,15 +16,17 @@ export const routes = [
 		component: TilePad
 	},
 	{
-		path: '/about',
+		path: '/acerca-de',
 		name: 'about',
 		component: About
 	},
+	{ path: '/about', redirect: '/acerca-de' },
 	{
-		path: '/settings',
+		path: '/ajustes',
 		name: 'settings',
 		component: Settings
-	}
+	},
+	{ path: '/settings', redirect: '/ajustes' }
 ];
 
 export function createAppRouter (history = createWebHistory()) {

@@ -4,6 +4,26 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.5.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Offline real, más colecciones, pictogramas locales y ajuste de tamaño
+
+- **Pictogramas autocontenidos (`build.json`, `public/img/pictograms/`)**: los 175 pictogramas ARASAAC se sirven desde `/img/pictograms/` en lugar de `static.arasaac.org` — el tablero funciona en redes filtradas o sin internet.
+- **Nuevas colecciones (`build.json`, `TilePad.vue`, locales)**:
+  - **`Comida` (página 4, 27 baldosas)**: comer, beber, desayuno/almuerzo/cena, alimentos básicos, frutas, verduras, agua/leche/jugo, hambre, sed.
+  - **`Acciones` (página 5, 29 baldosas)**: correr, caminar, dormir, abrir/cerrar, dar/tomar, escuchar, mirar, hablar, llorar, reír, cantar, bailar, esperar, empezar, terminar...
+  - Página `Números`: dígitos 0–1000 también migrados a ARASAAC; retiradas baldosas de unidades sin pictograma fiel (Degrees, Pounds, Feet, Miles).
+  - Versión de datos `_v: 4` para migración de tableros almacenados.
+- **Offline-first (`public/service-worker.js`)**: Service Worker con caché en tiempo de ejecución (app shell + pictogramas + fallback SPA). Antes registraba un archivo inexistente — el modo offline no funcionaba.
+- **Ajustes → `Tamaño de los pictogramas`**: selector Normal/Grande/Extra grande (48/64/80 px) persistido por usuario, con alturas de baldosa y escalado móvil adaptados.
+- **Rutas en español (`router.js`)**: `/acerca-de` y `/ajustes` como URLs canónicas; `/about` y `/settings` redirigen.
+- **Terminología AAC consistente (locales)**: "mosaicos"/"baldosas"/"Kacheln"/"tiles" unificados a **pictograma / pictogram / Piktogramm**.
+- **Acerca de (`About.vue`)**: sección legal visible — atribución **ARASAAC (CC BY-NC-SA 4.0, Sergio Palao, Gobierno de Aragón)** y nota de privacidad (todo se guarda en el navegador, sin servidores ni seguimiento).
+
+---
+
 ## [2.4.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

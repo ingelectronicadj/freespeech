@@ -167,6 +167,8 @@ export default {
 				{ key: '1', iconClass: 'nav-ico-folder', label: tr('collections.feelings', 'Sentir y Emociones') },
 				{ key: '2', iconClass: 'nav-ico-folder', label: tr('collections.study', 'Estudio') },
 				{ key: '3', iconClass: 'nav-ico-folder', label: tr('collections.hygiene', 'Aseo personal') },
+				{ key: '4', iconClass: 'nav-ico-folder', label: tr('collections.food', 'Comida') },
+				{ key: '5', iconClass: 'nav-ico-folder', label: tr('collections.actions', 'Acciones') },
 				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];

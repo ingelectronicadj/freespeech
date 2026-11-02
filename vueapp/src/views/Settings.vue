@@ -20,6 +20,14 @@
 			:label="$t('settings.optionVoice')"
 		/>
 
+		<v-select
+			v-model="tileImageSize"
+			:items="tileImageSizeOptions"
+			item-title="text"
+			item-value="value"
+			:label="$t('settings.optionPictogramSize')"
+		/>
+
 		<v-switch
 			v-model="customTilePad"
 			color="primary"
@@ -212,6 +220,20 @@ export default {
 			set (value) {
 				this.setDisplayTapCount(value);
 			}
+		},
+		tileImageSize: {
+			get () {
+				return this.$store.state.settings.tileImageSize || 'medium';
+			},
+			set (value) {
+				this.setTileImageSize(value);
+			}
+		},
+		tileImageSizeOptions () {
+			return ['medium', 'large', 'xlarge'].map(v => ({
+				value: v,
+				text: this.$t('settings.pictogramSize.' + v)
+			}));
 		}
 	},
 	methods: {
@@ -224,6 +246,7 @@ export default {
 			toggleCustomTilePad: 'settings/toggleCustomTilePad',
 			toggleSentenceMode: 'settings/toggleSentenceMode',
 			setDisplayTapCount: 'settings/setDisplayTapCount',
+			setTileImageSize: 'settings/setTileImageSize',
 		}),
 		exportSettings () {
 			const json = JSON.stringify({
@@ -250,7 +273,7 @@ export default {
 			}
 		},
 		fullReset () {
-			if (!confirm('Are you sure you want to reset all settings and custom tiles?')) {
+			if (!confirm('Are you sure you want to reset all settings and custom pictograms?')) {
 				return false;
 			}
 

@@ -6,7 +6,8 @@
 		:class="{
 			'is-sentence-tile': inSentenceComponent,
 			'is-collection-tile': isNavigationTile && tileData.navigation !== 'home',
-			'is-back-home-tile': isNavigationTile && tileData.navigation === 'home'
+			'is-back-home-tile': isNavigationTile && tileData.navigation === 'home',
+			['tile-img-' + (tileImageSize || 'medium')]: true
 		}"
 		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFF' : cardColor"
 		:aria-label="accessibleTileLabel"
@@ -75,8 +76,8 @@
 				<div class="tile-visual-slot" aria-hidden="true">
 					<img
 						v-if="resolvedImage && !imgFailed"
-						height="48"
-						width="48"
+						:height="pictogramPx"
+						:width="pictogramPx"
 						alt=""
 						aria-hidden="true"
 						class="tile-pictogram-img"
@@ -169,13 +170,19 @@ export default {
 		};
 	},
 	computed: {
-		...mapState('settings', ['sentenceMode']),
+		...mapState('settings', ['sentenceMode', 'tileImageSize']),
 		...mapGetters({
 			editMode: 'tilePad/editMode',
 			locale: 'settings/locale',
 			displayTapCount: 'settings/displayTapCount',
 			tileTapsCount: 'tilePad/tileTapsCount',
 		}),
+		pictogramPx () {
+			const size = this.tileImageSize || 'medium';
+			if (size === 'large') return 64;
+			if (size === 'xlarge') return 80;
+			return 48;
+		},
 		isNavigationTile () {
 			return typeof this.tileData.navigation !== 'undefined' && this.tileData.navigation !== '';
 		},
@@ -533,5 +540,28 @@ export default {
 	padding: 1px 6px;
 	font-size: 0.72rem;
 	font-weight: 700;
+}
+
+.saac-tile-btn.tile-img-large {
+	min-height: 140px !important;
+}
+.saac-tile-btn.tile-img-xlarge {
+	min-height: 164px !important;
+}
+.saac-tile-btn.tile-img-large .tile-label {
+	font-size: 1.02rem;
+}
+.saac-tile-btn.tile-img-xlarge .tile-label {
+	font-size: 1.1rem;
+}
+@media (max-width: 640px) {
+	.saac-tile-btn.tile-img-large .tile-pictogram-img {
+		width: 48px !important;
+		height: 48px !important;
+	}
+	.saac-tile-btn.tile-img-xlarge .tile-pictogram-img {
+		width: 56px !important;
+		height: 56px !important;
+	}
 }
 </style>

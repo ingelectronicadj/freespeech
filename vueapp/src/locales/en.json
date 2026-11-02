@@ -18,20 +18,26 @@
 	"settings": {
 		"title": "Settings",
 		"optionVoice": "Voice",
-		"optionCustomTilePad": "Custom Tile Pad",
+		"optionCustomPictogramPad": "Custom Pictogram Pad",
 		"optionCreateSentences": "Create Sentences",
 		"optionLanguage": "Language",
 		"optionPasscodeEnabled": "Passcode Enabled",
 		"buttonClose": "Close",
 		"titleSetPasscode": "Set Passcode",
-		"buttonReset": "Reset All Settings & Tiles",
-		"buttonExport": "Export Settings & Tiles",
-		"buttonImport": "Import Settings & Tiles",
-		"displayTapCounter": "Display Tap Counter"
+		"buttonReset": "Reset All Settings & Pictograms",
+		"buttonExport": "Export Settings & Pictograms",
+		"buttonImport": "Import Settings & Pictograms",
+		"displayTapCounter": "Display Tap Counter",
+		"optionPictogramSize": "Pictogram size",
+		"pictogramSize": {
+			"medium": "Normal",
+			"large": "Large",
+			"xlarge": "Extra large"
+		}
 	},
 	"sentence": {
 		"title": "Sentence",
-		"instructions": "Add tiles to this sentence by tapping on them below.",
+		"instructions": "Add pictograms to this sentence by tapping on them below.",
 		"textPreviewLabel": "Constructed message:",
 		"buttonSpeak": "Speak",
 		"buttonCopy": "Copy text",
@@ -51,20 +57,22 @@
 		"keyboard": "ABC Keyboard",
 		"searchPlaceholder": "Search word across board...",
 		"searchClear": "Clear search",
-		"searchEmpty": "No matching tiles found.",
+		"searchEmpty": "No matching pictograms found.",
 		"study": "Study",
-		"hygiene": "Personal care"
+		"hygiene": "Personal care",
+		"food": "Food",
+		"actions": "Actions"
 	},
 	"editMode": {
 		"title": "You're in edit mode!",
 		"buttonSave": "Save Changes",
-		"instructions": "You can edit tiles while in edit mode by clicking on them to edit them or clicking and dragging them to move them around. Press the save icon or the button above to save your changes.",
-		"tile": {
-			"addNew": "Add a New Tile",
+		"instructions": "You can edit pictograms while in edit mode by clicking on them to edit them or clicking and dragging them to move them around. Press the save icon or the button above to save your changes.",
+		"pictogram": {
+			"addNew": "Add a New Pictogram",
 			"navigation": "Navigation to another board",
-			"title": "Edit Tile",
-			"preview": "Live tile preview",
-			"name": "Visible tile label",
+			"title": "Edit Pictogram",
+			"preview": "Live pictogram preview",
+			"name": "Visible pictogram label",
 			"imageUrl": "Pictogram or image URL",
 			"iconCatalog": "Choose a quick pictogram or search ARASAAC",
 			"searchArasaac": "Search ARASAAC pictograms (e.g. eat, home, happy)...",
@@ -73,7 +81,7 @@
 			"textToSpeak": "Text or phrase to speak",
 			"testSpeak": "Test voice",
 			"accentColor": "Category color (AAC Key)",
-			"buttonSave": "Save Tile",
+			"buttonSave": "Save Pictogram",
 			"buttonDelete": "Delete",
 			"buttonClose": "Cancel",
 			"navigationLabel": "Target board name (optional, e.g. numbers or keyboard)",
@@ -88,5 +96,11 @@
 				"sunny": "Yellow (People / Pronouns)"
 			}
 		}
+	},
+	"about": {
+		"attributionTitle": "Pictograms",
+		"attributionArasaac": "Pictograms by <strong>ARASAAC</strong> — Government of Aragón, created by Sergio Palao. Distributed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a> license.",
+		"privacyTitle": "Privacy",
+		"privacyBody": "Free Speech runs on your device: your board, settings and usage are stored only in this browser (local storage). No data is sent to any server, no tracking cookies, no third-party analytics."
 	}
 }

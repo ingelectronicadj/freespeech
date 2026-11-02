@@ -69,7 +69,7 @@
 
 			<v-btn
 				icon
-				to="/about"
+				to="/acerca-de"
 				:disabled="isLocked"
 				:aria-label="$t('app.navAbout')"
 				:title="$t('app.navAbout')"
@@ -85,7 +85,7 @@
 
 			<v-btn
 				icon
-				to="/settings"
+				to="/ajustes"
 				:disabled="isLocked"
 				:aria-label="$t('app.navSettings')"
 				:title="$t('app.navSettings')"

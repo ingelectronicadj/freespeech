@@ -18,20 +18,26 @@
 	"settings": {
 		"title": "Einstellungen",
 		"optionVoice": "Stimme",
-		"optionCustomTilePad": "Angepasst Kachelsatz",
+		"optionCustomTilePad": "Angepasst Piktogrammsatz",
 		"optionCreateSentences": "Sätze erstellen",
 		"optionLanguage": "Sprache",
 		"optionPasscodeEnabled": "Passcode aktiviert",
 		"buttonClose": "Schließen",
-		"buttonReset": "Alle Einstellungen und Kacheln zurücksetzen",
-		"buttonExport": "Einstellungen & Kacheln exportieren",
-		"buttonImport": "Einstellungen & Kacheln importieren",
+		"buttonReset": "Alle Einstellungen und Piktogramme zurücksetzen",
+		"buttonExport": "Einstellungen & Piktogramme exportieren",
+		"buttonImport": "Einstellungen & Piktogramme importieren",
 		"titleSetPasscode": "Passcode einstellen",
-		"displayTapCounter": "Kachelzähler anzeigen"
+		"displayTapCounter": "Piktogrammzähler anzeigen",
+		"optionPictogramSize": "Piktogramm-Größe",
+		"pictogramSize": {
+			"medium": "Normal",
+			"large": "Groß",
+			"xlarge": "Extra groß"
+		}
 	},
 	"sentence": {
 		"title": "Satz",
-		"instructions": "Fügen Sie diesem Satz Kacheln hinzu, indem Sie unten darauf tippen.",
+		"instructions": "Fügen Sie diesem Satz Piktogramme hinzu, indem Sie unten darauf tippen.",
 		"textPreviewLabel": "Erstellte Nachricht:",
 		"buttonSpeak": "Sprechen",
 		"buttonCopy": "Text kopieren",
@@ -51,19 +57,21 @@
 		"keyboard": "ABC-Tastatur",
 		"searchPlaceholder": "Wort auf der Tafel suchen...",
 		"searchClear": "Suche löschen",
-		"searchEmpty": "Keine passenden Kacheln gefunden.",
+		"searchEmpty": "Keine passenden Piktogramme gefunden.",
 		"study": "Lernen",
-		"hygiene": "Körperpflege"
+		"hygiene": "Körperpflege",
+		"food": "Essen",
+		"actions": "Aktionen"
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",
 		"buttonSave": "Änderungen speichern",
-		"instructions": "Sie können Kacheln im Bearbeitungsmodus anklicken, um sie zu bearbeiten, oder ziehen, um sie neu anzuordnen.",
+		"instructions": "Sie können Piktogramme im Bearbeitungsmodus anklicken, um sie zu bearbeiten, oder ziehen, um sie neu anzuordnen.",
 		"tile": {
-			"addNew": "Neue Kachel hinzufügen",
+			"addNew": "Neue Piktogramm hinzufügen",
 			"navigation": "Navigation zu einem anderen Board",
-			"title": "Kachel bearbeiten",
-			"preview": "Kachel-Vorschau",
+			"title": "Piktogramm bearbeiten",
+			"preview": "Piktogramm-Vorschau",
 			"name": "Sichtbare Beschriftung",
 			"imageUrl": "Piktogramm- oder Bild-URL",
 			"iconCatalog": "Schnelles Piktogramm wählen oder ARASAAC durchsuchen",
@@ -88,5 +96,11 @@
 				"sunny": "Gelb (Personen / Pronomen)"
 			}
 		}
+	},
+	"about": {
+		"attributionTitle": "Piktogramme",
+		"attributionArasaac": "Piktogramme von <strong>ARASAAC</strong> — Regierung von Aragón, erstellt von Sergio Palao. Lizenziert unter <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a>.",
+		"privacyTitle": "Datenschutz",
+		"privacyBody": "Free Speech läuft auf Ihrem Gerät: Ihr Board, Ihre Einstellungen und Nutzungsdaten werden nur in diesem Browser gespeichert (lokaler Speicher). Keine Datenübertragung an Server, keine Tracking-Cookies, keine Analytik."
 	}
 }

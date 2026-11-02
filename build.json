@@ -5,7 +5,7 @@
 				"name": "No",
 				"text": "No",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/5526/5526_300.png",
+				"image": "/img/pictograms/5526.png",
 				"id": 0,
 				"messages": {
 					"de": {
@@ -21,7 +21,7 @@
 			{
 				"name": "Little",
 				"text": "Little",
-				"image": "https://static.arasaac.org/pictograms/25839/25839_300.png",
+				"image": "/img/pictograms/25839.png",
 				"id": 1,
 				"accent": "white",
 				"messages": {
@@ -38,7 +38,7 @@
 			{
 				"name": "Off",
 				"text": "Off",
-				"image": "https://static.arasaac.org/pictograms/11739/11739_300.png",
+				"image": "/img/pictograms/11739.png",
 				"id": 2,
 				"accent": "white",
 				"messages": {
@@ -55,7 +55,7 @@
 			{
 				"name": "Good",
 				"text": "Good",
-				"image": "https://static.arasaac.org/pictograms/4581/4581_300.png",
+				"image": "/img/pictograms/4581.png",
 				"id": 3,
 				"accent": "white",
 				"messages": {
@@ -72,7 +72,7 @@
 			{
 				"name": "Some",
 				"text": "Some",
-				"image": "https://static.arasaac.org/pictograms/5374/5374_300.png",
+				"image": "/img/pictograms/5374.png",
 				"id": 4,
 				"accent": "white",
 				"messages": {
@@ -89,7 +89,7 @@
 			{
 				"name": "Finished",
 				"text": "Finished",
-				"image": "https://static.arasaac.org/pictograms/28429/28429_300.png",
+				"image": "/img/pictograms/28429.png",
 				"id": 5,
 				"accent": "white",
 				"messages": {
@@ -106,7 +106,7 @@
 			{
 				"name": "Bad",
 				"text": "Bad",
-				"image": "https://static.arasaac.org/pictograms/5504/5504_300.png",
+				"image": "/img/pictograms/5504.png",
 				"id": 6,
 				"accent": "white",
 				"messages": {
@@ -123,7 +123,7 @@
 			{
 				"name": "Out",
 				"text": "Out",
-				"image": "https://static.arasaac.org/pictograms/2806/2806_300.png",
+				"image": "/img/pictograms/2806.png",
 				"id": 7,
 				"accent": "white",
 				"messages": {
@@ -140,7 +140,7 @@
 			{
 				"name": "Mine",
 				"text": "Mine",
-				"image": "https://static.arasaac.org/pictograms/12264/12264_300.png",
+				"image": "/img/pictograms/12264.png",
 				"id": 8,
 				"accent": "white",
 				"messages": {
@@ -157,7 +157,7 @@
 			{
 				"name": "Down",
 				"text": "Down",
-				"image": "https://static.arasaac.org/pictograms/5355/5355_300.png",
+				"image": "/img/pictograms/5355.png",
 				"id": 9,
 				"accent": "white",
 				"messages": {
@@ -175,7 +175,7 @@
 				"name": "Up",
 				"text": "Up",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/5388/5388_300.png",
+				"image": "/img/pictograms/5388.png",
 				"id": 10,
 				"messages": {
 					"de": {
@@ -192,7 +192,7 @@
 				"name": "Keyboard",
 				"text": " ",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/2793/2793_300.png",
+				"image": "/img/pictograms/2793.png",
 				"navigation": "keyboard",
 				"id": 11,
 				"messages": {
@@ -211,7 +211,7 @@
 				"text": "Feel",
 				"accent": "peach",
 				"navigation": "1",
-				"image": "https://static.arasaac.org/pictograms/12359/12359_300.png",
+				"image": "/img/pictograms/12359.png",
 				"id": 12,
 				"messages": {
 					"de": {
@@ -228,7 +228,7 @@
 				"name": "Work",
 				"text": "Work",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/16087/16087_300.png",
+				"image": "/img/pictograms/16087.png",
 				"id": 13,
 				"messages": {
 					"de": {
@@ -244,7 +244,7 @@
 			{
 				"name": "New",
 				"text": "New",
-				"image": "https://static.arasaac.org/pictograms/11316/11316_300.png",
+				"image": "/img/pictograms/11316.png",
 				"id": 14,
 				"accent": "white",
 				"messages": {
@@ -261,7 +261,7 @@
 			{
 				"name": "Play",
 				"text": "Play",
-				"image": "https://static.arasaac.org/pictograms/23392/23392_300.png",
+				"image": "/img/pictograms/23392.png",
 				"id": 15,
 				"accent": "white",
 				"messages": {
@@ -278,7 +278,7 @@
 			{
 				"name": "Have",
 				"text": "Have",
-				"image": "https://static.arasaac.org/pictograms/32761/32761_300.png",
+				"image": "/img/pictograms/32761.png",
 				"id": 16,
 				"accent": "white",
 				"messages": {
@@ -295,7 +295,7 @@
 			{
 				"name": "Stop",
 				"text": "Stop",
-				"image": "https://static.arasaac.org/pictograms/7196/7196_300.png",
+				"image": "/img/pictograms/7196.png",
 				"id": 17,
 				"accent": "white",
 				"messages": {
@@ -312,7 +312,7 @@
 			{
 				"name": "Read",
 				"text": "Read",
-				"image": "https://static.arasaac.org/pictograms/7141/7141_300.png",
+				"image": "/img/pictograms/7141.png",
 				"id": 18,
 				"accent": "white",
 				"messages": {
@@ -329,7 +329,7 @@
 			{
 				"name": "Fast",
 				"text": "Fast",
-				"image": "https://static.arasaac.org/pictograms/5306/5306_300.png",
+				"image": "/img/pictograms/5306.png",
 				"id": 19,
 				"accent": "white",
 				"messages": {
@@ -346,7 +346,7 @@
 			{
 				"name": "You",
 				"text": "You",
-				"image": "https://static.arasaac.org/pictograms/6625/6625_300.png",
+				"image": "/img/pictograms/6625.png",
 				"id": 20,
 				"accent": "white",
 				"messages": {
@@ -363,7 +363,7 @@
 			{
 				"name": "Like",
 				"text": "Like",
-				"image": "https://static.arasaac.org/pictograms/37826/37826_300.png",
+				"image": "/img/pictograms/37826.png",
 				"id": 21,
 				"accent": "white",
 				"messages": {
@@ -380,7 +380,7 @@
 			{
 				"name": "More",
 				"text": "More",
-				"image": "https://static.arasaac.org/pictograms/5508/5508_300.png",
+				"image": "/img/pictograms/5508.png",
 				"id": 22,
 				"accent": "white",
 				"messages": {
@@ -398,7 +398,7 @@
 				"name": "They",
 				"text": "They",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/7032/7032_300.png",
+				"image": "/img/pictograms/7032.png",
 				"id": 23,
 				"messages": {
 					"de": {
@@ -415,7 +415,7 @@
 				"name": "Time",
 				"text": "Time",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/22631/22631_300.png",
+				"image": "/img/pictograms/22631.png",
 				"id": 24,
 				"messages": {
 					"de": {
@@ -432,7 +432,7 @@
 				"name": "Big",
 				"text": "Big",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/4658/4658_300.png",
+				"image": "/img/pictograms/4658.png",
 				"id": 25,
 				"messages": {
 					"de": {
@@ -448,7 +448,7 @@
 			{
 				"name": "Go",
 				"text": "Go",
-				"image": "https://static.arasaac.org/pictograms/8142/8142_300.png",
+				"image": "/img/pictograms/8142.png",
 				"id": 26,
 				"accent": "white",
 				"messages": {
@@ -465,7 +465,7 @@
 			{
 				"name": "Want",
 				"text": "Want",
-				"image": "https://static.arasaac.org/pictograms/5441/5441_300.png",
+				"image": "/img/pictograms/5441.png",
 				"id": 27,
 				"accent": "white",
 				"messages": {
@@ -482,7 +482,7 @@
 			{
 				"name": "Help",
 				"text": "Help",
-				"image": "https://static.arasaac.org/pictograms/32648/32648_300.png",
+				"image": "/img/pictograms/32648.png",
 				"id": 28,
 				"accent": "white",
 				"messages": {
@@ -499,7 +499,7 @@
 			{
 				"name": "It",
 				"text": "It",
-				"image": "https://static.arasaac.org/pictograms/31670/31670_300.png",
+				"image": "/img/pictograms/31670.png",
 				"id": 29,
 				"accent": "white",
 				"messages": {
@@ -516,7 +516,7 @@
 			{
 				"name": "Do",
 				"text": "Do",
-				"image": "https://static.arasaac.org/pictograms/32751/32751_300.png",
+				"image": "/img/pictograms/32751.png",
 				"id": 30,
 				"accent": "white",
 				"messages": {
@@ -533,7 +533,7 @@
 			{
 				"name": "Come",
 				"text": "Come",
-				"image": "https://static.arasaac.org/pictograms/32669/32669_300.png",
+				"image": "/img/pictograms/32669.png",
 				"id": 31,
 				"accent": "white",
 				"messages": {
@@ -550,7 +550,7 @@
 			{
 				"name": "All",
 				"text": "All",
-				"image": "https://static.arasaac.org/pictograms/5596/5596_300.png",
+				"image": "/img/pictograms/5596.png",
 				"id": 32,
 				"accent": "white",
 				"messages": {
@@ -567,7 +567,7 @@
 			{
 				"name": "He",
 				"text": "He",
-				"image": "https://static.arasaac.org/pictograms/6480/6480_300.png",
+				"image": "/img/pictograms/6480.png",
 				"id": 33,
 				"accent": "white",
 				"messages": {
@@ -584,7 +584,7 @@
 			{
 				"name": "Get",
 				"text": "Get",
-				"image": "https://static.arasaac.org/pictograms/24208/24208_300.png",
+				"image": "/img/pictograms/24208.png",
 				"id": 34,
 				"accent": "white",
 				"messages": {
@@ -602,7 +602,7 @@
 				"name": "Color",
 				"text": "Color",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/5968/5968_300.png",
+				"image": "/img/pictograms/5968.png",
 				"id": 35,
 				"messages": {
 					"de": {
@@ -619,7 +619,7 @@
 				"name": "My",
 				"text": "My",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/12264/12264_300.png",
+				"image": "/img/pictograms/12264.png",
 				"id": 36,
 				"messages": {
 					"de": {
@@ -636,7 +636,7 @@
 				"name": "Me",
 				"text": "Me",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/6632/6632_300.png",
+				"image": "/img/pictograms/6632.png",
 				"id": 37,
 				"messages": {
 					"de": {
@@ -652,7 +652,7 @@
 			{
 				"name": "And",
 				"text": "And",
-				"image": "https://static.arasaac.org/pictograms/11399/11399_300.png",
+				"image": "/img/pictograms/11399.png",
 				"id": 38,
 				"accent": "white",
 				"messages": {
@@ -669,7 +669,7 @@
 			{
 				"name": "Wear",
 				"text": "Wear",
-				"image": "https://static.arasaac.org/pictograms/6627/6627_300.png",
+				"image": "/img/pictograms/6627.png",
 				"id": 39,
 				"accent": "white",
 				"messages": {
@@ -686,7 +686,7 @@
 			{
 				"name": "That",
 				"text": "That",
-				"image": "https://static.arasaac.org/pictograms/6906/6906_300.png",
+				"image": "/img/pictograms/6906.png",
 				"id": 40,
 				"accent": "white",
 				"messages": {
@@ -703,7 +703,7 @@
 			{
 				"name": "Am",
 				"text": "Am",
-				"image": "https://static.arasaac.org/pictograms/36480/36480_300.png",
+				"image": "/img/pictograms/36480.png",
 				"id": 41,
 				"accent": "white",
 				"messages": {
@@ -720,7 +720,7 @@
 			{
 				"name": "Please",
 				"text": "Please",
-				"image": "https://static.arasaac.org/pictograms/8195/8195_300.png",
+				"image": "/img/pictograms/8195.png",
 				"id": 42,
 				"accent": "white",
 				"messages": {
@@ -737,7 +737,7 @@
 			{
 				"name": "What",
 				"text": "What",
-				"image": "https://static.arasaac.org/pictograms/22620/22620_300.png",
+				"image": "/img/pictograms/22620.png",
 				"id": 43,
 				"accent": "white",
 				"messages": {
@@ -754,14 +754,14 @@
 			{
 				"name": "+s",
 				"text": "Needs to be added",
-				"image": "https://static.arasaac.org/pictograms/11100/11100_300.png",
+				"image": "/img/pictograms/11100.png",
 				"id": 44,
 				"accent": "white"
 			},
 			{
 				"name": "There",
 				"text": "There",
-				"image": "https://static.arasaac.org/pictograms/5375/5375_300.png",
+				"image": "/img/pictograms/5375.png",
 				"id": 45,
 				"accent": "white",
 				"messages": {
@@ -778,7 +778,7 @@
 			{
 				"name": "In",
 				"text": "In",
-				"image": "https://static.arasaac.org/pictograms/7034/7034_300.png",
+				"image": "/img/pictograms/7034.png",
 				"id": 46,
 				"accent": "white",
 				"messages": {
@@ -796,7 +796,7 @@
 				"name": "A",
 				"text": "Uh",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/3021/3021_300.png",
+				"image": "/img/pictograms/3021.png",
 				"id": 47,
 				"messages": {
 					"de": {
@@ -813,7 +813,7 @@
 				"name": "Were",
 				"text": "Were",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/36392/36392_300.png",
+				"image": "/img/pictograms/36392.png",
 				"id": 48,
 				"messages": {
 					"de": {
@@ -830,7 +830,7 @@
 				"name": "On",
 				"text": "On",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/7814/7814_300.png",
+				"image": "/img/pictograms/7814.png",
 				"id": 49,
 				"messages": {
 					"de": {
@@ -846,7 +846,7 @@
 			{
 				"name": "Was",
 				"text": "Was",
-				"image": "https://static.arasaac.org/pictograms/36392/36392_300.png",
+				"image": "/img/pictograms/36392.png",
 				"id": 50,
 				"accent": "white",
 				"messages": {
@@ -863,7 +863,7 @@
 			{
 				"name": "I",
 				"text": "Eye",
-				"image": "https://static.arasaac.org/pictograms/6632/6632_300.png",
+				"image": "/img/pictograms/6632.png",
 				"id": 51,
 				"accent": "white",
 				"messages": {
@@ -881,7 +881,7 @@
 				"name": "End",
 				"text": "End",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/32814/32814_300.png",
+				"image": "/img/pictograms/32814.png",
 				"id": 52,
 				"messages": {
 					"de": {
@@ -898,7 +898,7 @@
 				"name": "Is",
 				"text": "Is",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/36480/36480_300.png",
+				"image": "/img/pictograms/36480.png",
 				"id": 53,
 				"messages": {
 					"de": {
@@ -915,7 +915,7 @@
 				"name": "To",
 				"text": "To",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/7041/7041_300.png",
+				"image": "/img/pictograms/7041.png",
 				"id": 54,
 				"messages": {
 					"de": {
@@ -932,7 +932,7 @@
 				"name": "We",
 				"text": "We",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/7185/7185_300.png",
+				"image": "/img/pictograms/7185.png",
 				"id": 55,
 				"messages": {
 					"de": {
@@ -949,7 +949,7 @@
 				"name": "Numbers",
 				"text": " ",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/2879/2879_300.png",
+				"image": "/img/pictograms/2879.png",
 				"navigation": "numbers",
 				"id": 56,
 				"messages": {
@@ -963,7 +963,7 @@
 				"name": "Are",
 				"text": "Are",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/36480/36480_300.png",
+				"image": "/img/pictograms/36480.png",
 				"id": 57,
 				"messages": {
 					"de": {
@@ -980,7 +980,7 @@
 				"name": "The",
 				"text": "The",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/8477/8477_300.png",
+				"image": "/img/pictograms/8477.png",
 				"id": 58,
 				"messages": {
 					"de": {
@@ -997,7 +997,7 @@
 				"name": "An",
 				"text": "An",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/8474/8474_300.png",
+				"image": "/img/pictograms/8474.png",
 				"id": 59,
 				"messages": {
 					"de": {
@@ -1014,7 +1014,7 @@
 				"name": "Study",
 				"text": "Study",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6495/6495_300.png",
+				"image": "/img/pictograms/6495.png",
 				"id": 60,
 				"messages": {
 					"de": {
@@ -1032,7 +1032,7 @@
 				"name": "Wash",
 				"text": "Wash",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6912/6912_300.png",
+				"image": "/img/pictograms/6912.png",
 				"id": 61,
 				"messages": {
 					"de": {
@@ -1184,7 +1184,7 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6964/6964_300.png",
+				"image": "/img/pictograms/6964.png",
 				"navigation": "home",
 				"id": 26,
 				"messages": {
@@ -1205,7 +1205,7 @@
 			{
 				"name": "And",
 				"text": "And",
-				"image": "https://static.arasaac.org/pictograms/11399/11399_300.png",
+				"image": "/img/pictograms/11399.png",
 				"id": 0,
 				"accent": "peach",
 				"messages": {
@@ -1222,7 +1222,7 @@
 			{
 				"name": "Zero",
 				"text": "0",
-				"image": "https://img.icons8.com/color/48/000000/0-c.png",
+				"image": "/img/pictograms/2626.png",
 				"id": 1,
 				"messages": {
 					"de": {
@@ -1238,7 +1238,7 @@
 			{
 				"name": "One",
 				"text": "1",
-				"image": "https://img.icons8.com/color/48/000000/1-c.png",
+				"image": "/img/pictograms/2627.png",
 				"id": 2,
 				"messages": {
 					"de": {
@@ -1254,7 +1254,7 @@
 			{
 				"name": "Two",
 				"text": "2",
-				"image": "https://img.icons8.com/color/48/000000/2-c.png",
+				"image": "/img/pictograms/2628.png",
 				"id": 3,
 				"messages": {
 					"de": {
@@ -1270,7 +1270,7 @@
 			{
 				"name": "Three",
 				"text": "3",
-				"image": "https://img.icons8.com/color/48/000000/3-c.png",
+				"image": "/img/pictograms/2629.png",
 				"id": 4,
 				"messages": {
 					"de": {
@@ -1286,7 +1286,7 @@
 			{
 				"name": "Four",
 				"text": "4",
-				"image": "https://img.icons8.com/color/48/000000/4-c.png",
+				"image": "/img/pictograms/2630.png",
 				"id": 5,
 				"messages": {
 					"de": {
@@ -1302,7 +1302,7 @@
 			{
 				"name": "Five",
 				"text": "5",
-				"image": "https://img.icons8.com/color/48/000000/5-c.png",
+				"image": "/img/pictograms/2631.png",
 				"id": 6,
 				"messages": {
 					"de": {
@@ -1318,7 +1318,7 @@
 			{
 				"name": "Six",
 				"text": "6",
-				"image": "https://img.icons8.com/color/48/000000/6-c.png",
+				"image": "/img/pictograms/2632.png",
 				"id": 7,
 				"messages": {
 					"de": {
@@ -1334,7 +1334,7 @@
 			{
 				"name": "Seven",
 				"text": "7",
-				"image": "https://img.icons8.com/color/48/000000/7-c.png",
+				"image": "/img/pictograms/2633.png",
 				"id": 8,
 				"messages": {
 					"de": {
@@ -1350,7 +1350,7 @@
 			{
 				"name": "Eight",
 				"text": "8",
-				"image": "https://img.icons8.com/color/48/000000/8-c.png",
+				"image": "/img/pictograms/2634.png",
 				"id": 9,
 				"messages": {
 					"de": {
@@ -1366,7 +1366,7 @@
 			{
 				"name": "Nine",
 				"text": "9",
-				"image": "https://img.icons8.com/color/48/000000/9-c.png",
+				"image": "/img/pictograms/2635.png",
 				"id": 10,
 				"messages": {
 					"de": {
@@ -1383,7 +1383,7 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/6964/6964_300.png",
+				"image": "/img/pictograms/6964.png",
 				"navigation": "home",
 				"id": 11,
 				"messages": {
@@ -1400,7 +1400,7 @@
 			{
 				"name": "Point",
 				"text": "Point",
-				"image": "https://static.arasaac.org/pictograms/3218/3218_300.png",
+				"image": "/img/pictograms/3218.png",
 				"id": 12,
 				"accent": "peach",
 				"messages": {
@@ -1417,7 +1417,7 @@
 			{
 				"name": "Ten",
 				"text": "10",
-				"image": "https://img.icons8.com/color/48/000000/10.png",
+				"image": "/img/pictograms/7025.png",
 				"id": 13,
 				"messages": {
 					"de": {
@@ -1433,7 +1433,7 @@
 			{
 				"name": "eleven",
 				"text": "11",
-				"image": "https://img.icons8.com/color/48/000000/11.png",
+				"image": "/img/pictograms/29260.png",
 				"id": 14,
 				"messages": {
 					"de": {
@@ -1449,7 +1449,7 @@
 			{
 				"name": "Twelve",
 				"text": "12",
-				"image": "https://img.icons8.com/color/48/000000/12.png",
+				"image": "/img/pictograms/29262.png",
 				"id": 15,
 				"messages": {
 					"de": {
@@ -1465,7 +1465,7 @@
 			{
 				"name": "Thirteen",
 				"text": "13",
-				"image": "https://img.icons8.com/color/48/000000/13.png",
+				"image": "/img/pictograms/29264.png",
 				"id": 16,
 				"messages": {
 					"de": {
@@ -1481,7 +1481,7 @@
 			{
 				"name": "Fourteen",
 				"text": "14",
-				"image": "https://img.icons8.com/color/48/000000/14.png",
+				"image": "/img/pictograms/29266.png",
 				"id": 17,
 				"messages": {
 					"de": {
@@ -1497,7 +1497,7 @@
 			{
 				"name": "fifteen",
 				"text": "15",
-				"image": "https://img.icons8.com/color/48/000000/15.png",
+				"image": "/img/pictograms/29268.png",
 				"id": 18,
 				"messages": {
 					"de": {
@@ -1513,7 +1513,7 @@
 			{
 				"name": "Sixteen",
 				"text": "16",
-				"image": "https://img.icons8.com/color/48/000000/16.png",
+				"image": "/img/pictograms/29270.png",
 				"id": 19,
 				"messages": {
 					"de": {
@@ -1529,7 +1529,7 @@
 			{
 				"name": "Seventeen",
 				"text": "17",
-				"image": "https://img.icons8.com/color/48/000000/17.png",
+				"image": "/img/pictograms/29272.png",
 				"id": 20,
 				"messages": {
 					"de": {
@@ -1545,7 +1545,7 @@
 			{
 				"name": "Eighteen",
 				"text": "18",
-				"image": "https://img.icons8.com/color/48/000000/18.png",
+				"image": "/img/pictograms/29274.png",
 				"id": 21,
 				"messages": {
 					"de": {
@@ -1561,7 +1561,7 @@
 			{
 				"name": "Nineteen",
 				"text": "19",
-				"image": "https://img.icons8.com/color/48/000000/19.png",
+				"image": "/img/pictograms/29276.png",
 				"id": 22,
 				"messages": {
 					"de": {
@@ -1577,7 +1577,7 @@
 			{
 				"name": "Minutes",
 				"text": "Minutes",
-				"image": "https://static.arasaac.org/pictograms/37374/37374_300.png",
+				"image": "/img/pictograms/37374.png",
 				"id": 23,
 				"accent": "mint",
 				"messages": {
@@ -1594,7 +1594,7 @@
 			{
 				"name": "Thousand",
 				"text": "thousand",
-				"image": "https://img.icons8.com/color/96/000000/1000-tons.png",
+				"image": "/img/pictograms/29258.png",
 				"id": 24,
 				"accent": "mint",
 				"messages": {
@@ -1611,7 +1611,7 @@
 			{
 				"name": "Twenty",
 				"text": "20",
-				"image": "https://img.icons8.com/color/48/000000/20.png",
+				"image": "/img/pictograms/29550.png",
 				"id": 25,
 				"messages": {
 					"de": {
@@ -1627,7 +1627,7 @@
 			{
 				"name": "Thirty",
 				"text": "30",
-				"image": "https://img.icons8.com/color/48/000000/30.png",
+				"image": "/img/pictograms/29298.png",
 				"id": 26,
 				"messages": {
 					"de": {
@@ -1643,7 +1643,7 @@
 			{
 				"name": "Fourty",
 				"text": "40",
-				"image": "https://img.icons8.com/color/48/000000/40.png",
+				"image": "/img/pictograms/29320.png",
 				"id": 27,
 				"messages": {
 					"de": {
@@ -1659,7 +1659,7 @@
 			{
 				"name": "Fifty",
 				"text": "50",
-				"image": "https://img.icons8.com/color/48/000000/50.png",
+				"image": "/img/pictograms/29342.png",
 				"id": 28,
 				"messages": {
 					"de": {
@@ -1675,7 +1675,7 @@
 			{
 				"name": "Sixty",
 				"text": "60",
-				"image": "https://img.icons8.com/color/48/000000/60.png",
+				"image": "/img/pictograms/29364.png",
 				"id": 29,
 				"messages": {
 					"de": {
@@ -1691,7 +1691,7 @@
 			{
 				"name": "Seventy",
 				"text": "70",
-				"image": "https://img.icons8.com/color/48/000000/70.png",
+				"image": "/img/pictograms/29388.png",
 				"id": 30,
 				"messages": {
 					"de": {
@@ -1707,7 +1707,7 @@
 			{
 				"name": "Eighty",
 				"text": "80",
-				"image": "https://img.icons8.com/color/48/000000/80.png",
+				"image": "/img/pictograms/29410.png",
 				"id": 31,
 				"messages": {
 					"de": {
@@ -1723,7 +1723,7 @@
 			{
 				"name": "Ninety",
 				"text": "90",
-				"image": "https://img.icons8.com/color/48/000000/90.png",
+				"image": "/img/pictograms/29430.png",
 				"id": 32,
 				"messages": {
 					"de": {
@@ -1740,7 +1740,7 @@
 				"name": "Hundred",
 				"text": "Hundred",
 				"accent": "mint",
-				"image": "https://img.icons8.com/color/48/000000/100.png",
+				"image": "/img/pictograms/29256.png",
 				"id": 33,
 				"messages": {
 					"de": {
@@ -1754,43 +1754,9 @@
 				}
 			},
 			{
-				"name": "Degrees",
-				"text": "Degrees",
-				"image": "https://img.icons8.com/color/48/000000/thermometer.png",
-				"id": 34,
-				"accent": "mint",
-				"messages": {
-					"de": {
-						"name": "Grad",
-						"text": "Grad"
-					},
-					"sp": {
-						"name": "Grados",
-						"text": "Grados"
-					}
-				}
-			},
-			{
-				"name": "Pounds",
-				"text": "Pounds",
-				"image": "https://img.icons8.com/color/96/000000/scale.png",
-				"id": 35,
-				"accent": "mint",
-				"messages": {
-					"de": {
-						"name": "Pfund",
-						"text": "Pfund"
-					},
-					"sp": {
-						"name": "Libra",
-						"text": "Libra"
-					}
-				}
-			},
-			{
 				"name": "Dollars",
 				"text": "Dollars",
-				"image": "https://static.arasaac.org/pictograms/5091/5091_300.png",
+				"image": "/img/pictograms/5091.png",
 				"id": 36,
 				"accent": "mint",
 				"messages": {
@@ -1808,7 +1774,7 @@
 				"name": "To",
 				"text": "To",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/7041/7041_300.png",
+				"image": "/img/pictograms/7041.png",
 				"id": 37,
 				"messages": {
 					"de": {
@@ -1824,7 +1790,7 @@
 			{
 				"name": "In",
 				"text": "In",
-				"image": "https://static.arasaac.org/pictograms/7034/7034_300.png",
+				"image": "/img/pictograms/7034.png",
 				"id": 38,
 				"accent": "mint",
 				"messages": {
@@ -1841,7 +1807,7 @@
 			{
 				"name": "Days",
 				"text": "Days",
-				"image": "https://static.arasaac.org/pictograms/37731/37731_300.png",
+				"image": "/img/pictograms/37731.png",
 				"id": 39,
 				"accent": "mint",
 				"messages": {
@@ -1858,7 +1824,7 @@
 			{
 				"name": "Percent",
 				"text": "Percent",
-				"image": "https://static.arasaac.org/pictograms/5093/5093_300.png",
+				"image": "/img/pictograms/5093.png",
 				"id": 40,
 				"accent": "mint",
 				"messages": {
@@ -1875,7 +1841,7 @@
 			{
 				"name": "Times",
 				"text": "Times",
-				"image": "https://static.arasaac.org/pictograms/22631/22631_300.png",
+				"image": "/img/pictograms/22631.png",
 				"id": 41,
 				"accent": "mint",
 				"messages": {
@@ -1892,7 +1858,7 @@
 			{
 				"name": "Hours",
 				"text": "Hours",
-				"image": "https://static.arasaac.org/pictograms/7129/7129_300.png",
+				"image": "/img/pictograms/7129.png",
 				"id": 42,
 				"accent": "mint",
 				"messages": {
@@ -1909,7 +1875,7 @@
 			{
 				"name": "Months",
 				"text": "Months",
-				"image": "https://static.arasaac.org/pictograms/37724/37724_300.png",
+				"image": "/img/pictograms/37724.png",
 				"id": 43,
 				"accent": "mint",
 				"messages": {
@@ -1926,7 +1892,7 @@
 			{
 				"name": "Years",
 				"text": "Years",
-				"image": "https://static.arasaac.org/pictograms/6903/6903_300.png",
+				"image": "/img/pictograms/6903.png",
 				"id": 44,
 				"accent": "mint",
 				"messages": {
@@ -1943,7 +1909,7 @@
 			{
 				"name": "Half",
 				"text": "Half",
-				"image": "https://static.arasaac.org/pictograms/19570/19570_300.png",
+				"image": "/img/pictograms/19570.png",
 				"id": 45,
 				"accent": "mint",
 				"messages": {
@@ -1956,40 +1922,6 @@
 						"text": "Medio"
 					}
 				}
-			},
-			{
-				"name": "Feet",
-				"text": "Feet",
-				"image": "https://img.icons8.com/cotton/64/000000/tape-measure-sewing--v2.png",
-				"id": 46,
-				"accent": "mint",
-				"messages": {
-					"de": {
-						"name": "Meters",
-						"text": "Meters"
-					},
-					"sp": {
-						"name": "Metros",
-						"text": "Metros"
-					}
-				}
-			},
-			{
-				"name": "Miles",
-				"text": "Miles",
-				"image": "https://img.icons8.com/cute-clipart/64/000000/maximum-speed.png",
-				"id": 47,
-				"accent": "mint",
-				"messages": {
-					"de": {
-						"name": "Kilometer",
-						"text": "Kilometer"
-					},
-					"sp": {
-						"name": "Kilómetros",
-						"text": "Kilómetros"
-					}
-				}
 			}
 		]
 	},
@@ -2000,7 +1932,7 @@
 				"name": "Happy",
 				"text": "I feel happy",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/35533/35533_300.png",
+				"image": "/img/pictograms/35533.png",
 				"messages": {
 					"sp": {
 						"name": "Feliz",
@@ -2017,7 +1949,7 @@
 				"name": "Sad",
 				"text": "I feel sad",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/35545/35545_300.png",
+				"image": "/img/pictograms/35545.png",
 				"messages": {
 					"sp": {
 						"name": "Triste",
@@ -2034,7 +1966,7 @@
 				"name": "Angry",
 				"text": "I feel angry",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/35539/35539_300.png",
+				"image": "/img/pictograms/35539.png",
 				"messages": {
 					"sp": {
 						"name": "Enojado",
@@ -2051,7 +1983,7 @@
 				"name": "Tired",
 				"text": "I am tired",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/35537/35537_300.png",
+				"image": "/img/pictograms/35537.png",
 				"messages": {
 					"sp": {
 						"name": "Cansado",
@@ -2068,7 +2000,7 @@
 				"name": "Scared",
 				"text": "I am scared",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/35535/35535_300.png",
+				"image": "/img/pictograms/35535.png",
 				"messages": {
 					"sp": {
 						"name": "Asustado",
@@ -2085,7 +2017,7 @@
 				"name": "Calm",
 				"text": "I feel calm",
 				"accent": "pear",
-				"image": "https://static.arasaac.org/pictograms/31310/31310_300.png",
+				"image": "/img/pictograms/31310.png",
 				"messages": {
 					"sp": {
 						"name": "Tranquilo",
@@ -2102,7 +2034,7 @@
 				"name": "Hungry",
 				"text": "I am hungry",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/4962/4962_300.png",
+				"image": "/img/pictograms/4962.png",
 				"messages": {
 					"sp": {
 						"name": "Hambre",
@@ -2119,7 +2051,7 @@
 				"name": "Thirsty",
 				"text": "I am thirsty",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/4963/4963_300.png",
+				"image": "/img/pictograms/4963.png",
 				"messages": {
 					"sp": {
 						"name": "Sed",
@@ -2136,7 +2068,7 @@
 				"name": "Pain",
 				"text": "It hurts",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/2367/2367_300.png",
+				"image": "/img/pictograms/2367.png",
 				"messages": {
 					"sp": {
 						"name": "Dolor",
@@ -2153,7 +2085,7 @@
 				"name": "Help",
 				"text": "I need help",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/32648/32648_300.png",
+				"image": "/img/pictograms/32648.png",
 				"messages": {
 					"sp": {
 						"name": "Ayuda",
@@ -2170,7 +2102,7 @@
 				"name": "Bathroom",
 				"text": "I need the bathroom",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/5921/5921_300.png",
+				"image": "/img/pictograms/5921.png",
 				"messages": {
 					"sp": {
 						"name": "Baño",
@@ -2186,7 +2118,7 @@
 				"name": "Bored",
 				"text": "bored",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/35531/35531_300.png",
+				"image": "/img/pictograms/35531.png",
 				"id": 11,
 				"messages": {
 					"de": {
@@ -2203,7 +2135,7 @@
 				"name": "Surprised",
 				"text": "surprised",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/35529/35529_300.png",
+				"image": "/img/pictograms/35529.png",
 				"id": 12,
 				"messages": {
 					"de": {
@@ -2220,7 +2152,7 @@
 				"name": "Confused",
 				"text": "confused",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/2352/2352_300.png",
+				"image": "/img/pictograms/2352.png",
 				"id": 13,
 				"messages": {
 					"de": {
@@ -2237,7 +2169,7 @@
 				"name": "Embarrassed",
 				"text": "embarrassed",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/6922/6922_300.png",
+				"image": "/img/pictograms/6922.png",
 				"id": 14,
 				"messages": {
 					"de": {
@@ -2254,7 +2186,7 @@
 				"name": "Proud",
 				"text": "proud",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/31408/31408_300.png",
+				"image": "/img/pictograms/31408.png",
 				"id": 15,
 				"messages": {
 					"de": {
@@ -2271,7 +2203,7 @@
 				"name": "Worried",
 				"text": "worried",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/26985/26985_300.png",
+				"image": "/img/pictograms/26985.png",
 				"id": 16,
 				"messages": {
 					"de": {
@@ -2288,7 +2220,7 @@
 				"name": "Excited",
 				"text": "excited",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/39090/39090_300.png",
+				"image": "/img/pictograms/39090.png",
 				"id": 17,
 				"messages": {
 					"de": {
@@ -2305,7 +2237,7 @@
 				"name": "Sick",
 				"text": "sick",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/7040/7040_300.png",
+				"image": "/img/pictograms/7040.png",
 				"id": 18,
 				"messages": {
 					"de": {
@@ -2322,7 +2254,7 @@
 				"name": "Cold",
 				"text": "cold",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/4652/4652_300.png",
+				"image": "/img/pictograms/4652.png",
 				"id": 19,
 				"messages": {
 					"de": {
@@ -2339,7 +2271,7 @@
 				"name": "Hot",
 				"text": "hot",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/2300/2300_300.png",
+				"image": "/img/pictograms/2300.png",
 				"id": 20,
 				"messages": {
 					"de": {
@@ -2356,7 +2288,7 @@
 				"name": "Love",
 				"text": "love",
 				"accent": "violet",
-				"image": "https://static.arasaac.org/pictograms/37721/37721_300.png",
+				"image": "/img/pictograms/37721.png",
 				"id": 21,
 				"messages": {
 					"de": {
@@ -2375,7 +2307,7 @@
 				"text": "Home",
 				"accent": "mint",
 				"navigation": "home",
-				"image": "https://static.arasaac.org/pictograms/6964/6964_300.png",
+				"image": "/img/pictograms/6964.png",
 				"messages": {
 					"sp": {
 						"name": "Inicio",
@@ -2395,7 +2327,7 @@
 				"name": "School",
 				"text": "school",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/32446/32446_300.png",
+				"image": "/img/pictograms/32446.png",
 				"id": 0,
 				"messages": {
 					"de": {
@@ -2412,7 +2344,7 @@
 				"name": "Homework",
 				"text": "homework",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/11228/11228_300.png",
+				"image": "/img/pictograms/11228.png",
 				"id": 1,
 				"messages": {
 					"de": {
@@ -2429,7 +2361,7 @@
 				"name": "Study",
 				"text": "study",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/6495/6495_300.png",
+				"image": "/img/pictograms/6495.png",
 				"id": 2,
 				"messages": {
 					"de": {
@@ -2446,7 +2378,7 @@
 				"name": "Read",
 				"text": "read",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/7141/7141_300.png",
+				"image": "/img/pictograms/7141.png",
 				"id": 3,
 				"messages": {
 					"de": {
@@ -2463,7 +2395,7 @@
 				"name": "Write",
 				"text": "write",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/2380/2380_300.png",
+				"image": "/img/pictograms/2380.png",
 				"id": 4,
 				"messages": {
 					"de": {
@@ -2480,7 +2412,7 @@
 				"name": "Draw",
 				"text": "draw",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/8088/8088_300.png",
+				"image": "/img/pictograms/8088.png",
 				"id": 5,
 				"messages": {
 					"de": {
@@ -2497,7 +2429,7 @@
 				"name": "Paint",
 				"text": "paint",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/2348/2348_300.png",
+				"image": "/img/pictograms/2348.png",
 				"id": 6,
 				"messages": {
 					"de": {
@@ -2514,7 +2446,7 @@
 				"name": "Pencil",
 				"text": "pencil",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2440/2440_300.png",
+				"image": "/img/pictograms/2440.png",
 				"id": 7,
 				"messages": {
 					"de": {
@@ -2531,7 +2463,7 @@
 				"name": "Notebook",
 				"text": "notebook",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2359/2359_300.png",
+				"image": "/img/pictograms/2359.png",
 				"id": 8,
 				"messages": {
 					"de": {
@@ -2548,7 +2480,7 @@
 				"name": "Book",
 				"text": "book",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/25191/25191_300.png",
+				"image": "/img/pictograms/25191.png",
 				"id": 9,
 				"messages": {
 					"de": {
@@ -2565,7 +2497,7 @@
 				"name": "Computer",
 				"text": "computer",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/7190/7190_300.png",
+				"image": "/img/pictograms/7190.png",
 				"id": 10,
 				"messages": {
 					"de": {
@@ -2582,7 +2514,7 @@
 				"name": "Class",
 				"text": "class",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/9815/9815_300.png",
+				"image": "/img/pictograms/9815.png",
 				"id": 11,
 				"messages": {
 					"de": {
@@ -2599,7 +2531,7 @@
 				"name": "Teacher",
 				"text": "teacher",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6556/6556_300.png",
+				"image": "/img/pictograms/6556.png",
 				"id": 12,
 				"messages": {
 					"de": {
@@ -2616,7 +2548,7 @@
 				"name": "Exam",
 				"text": "exam",
 				"accent": "peach",
-				"image": "https://static.arasaac.org/pictograms/38462/38462_300.png",
+				"image": "/img/pictograms/38462.png",
 				"id": 13,
 				"messages": {
 					"de": {
@@ -2633,7 +2565,7 @@
 				"name": "Learn",
 				"text": "learn",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/37810/37810_300.png",
+				"image": "/img/pictograms/37810.png",
 				"id": 14,
 				"messages": {
 					"de": {
@@ -2650,7 +2582,7 @@
 				"name": "Think",
 				"text": "think",
 				"accent": "sunny",
-				"image": "https://static.arasaac.org/pictograms/38796/38796_300.png",
+				"image": "/img/pictograms/38796.png",
 				"id": 15,
 				"messages": {
 					"de": {
@@ -2667,7 +2599,7 @@
 				"name": "Question",
 				"text": "question",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/9847/9847_300.png",
+				"image": "/img/pictograms/9847.png",
 				"id": 16,
 				"messages": {
 					"de": {
@@ -2684,7 +2616,7 @@
 				"name": "Answer",
 				"text": "answer",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/9031/9031_300.png",
+				"image": "/img/pictograms/9031.png",
 				"id": 17,
 				"messages": {
 					"de": {
@@ -2701,7 +2633,7 @@
 				"name": "Recess",
 				"text": "recess",
 				"accent": "pear",
-				"image": "https://static.arasaac.org/pictograms/27339/27339_300.png",
+				"image": "/img/pictograms/27339.png",
 				"id": 18,
 				"messages": {
 					"de": {
@@ -2718,7 +2650,7 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6964/6964_300.png",
+				"image": "/img/pictograms/6964.png",
 				"id": 19,
 				"messages": {
 					"de": {
@@ -2740,7 +2672,7 @@
 				"name": "Shower",
 				"text": "shower",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/32426/32426_300.png",
+				"image": "/img/pictograms/32426.png",
 				"id": 0,
 				"messages": {
 					"de": {
@@ -2757,7 +2689,7 @@
 				"name": "Bath",
 				"text": "bath",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/2272/2272_300.png",
+				"image": "/img/pictograms/2272.png",
 				"id": 1,
 				"messages": {
 					"de": {
@@ -2774,7 +2706,7 @@
 				"name": "Teeth",
 				"text": "brush teeth",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2326/2326_300.png",
+				"image": "/img/pictograms/2326.png",
 				"id": 2,
 				"messages": {
 					"de": {
@@ -2791,7 +2723,7 @@
 				"name": "Toothbrush",
 				"text": "toothbrush",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2694/2694_300.png",
+				"image": "/img/pictograms/2694.png",
 				"id": 3,
 				"messages": {
 					"de": {
@@ -2808,7 +2740,7 @@
 				"name": "Hands",
 				"text": "wash hands",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/34826/34826_300.png",
+				"image": "/img/pictograms/34826.png",
 				"id": 4,
 				"messages": {
 					"de": {
@@ -2825,7 +2757,7 @@
 				"name": "Soap",
 				"text": "soap",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/34846/34846_300.png",
+				"image": "/img/pictograms/34846.png",
 				"id": 5,
 				"messages": {
 					"de": {
@@ -2842,7 +2774,7 @@
 				"name": "Shampoo",
 				"text": "shampoo",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2699/2699_300.png",
+				"image": "/img/pictograms/2699.png",
 				"id": 6,
 				"messages": {
 					"de": {
@@ -2859,7 +2791,7 @@
 				"name": "Towel",
 				"text": "towel",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2593/2593_300.png",
+				"image": "/img/pictograms/2593.png",
 				"id": 7,
 				"messages": {
 					"de": {
@@ -2876,7 +2808,7 @@
 				"name": "Face",
 				"text": "wash face",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/38230/38230_300.png",
+				"image": "/img/pictograms/38230.png",
 				"id": 8,
 				"messages": {
 					"de": {
@@ -2893,7 +2825,7 @@
 				"name": "Comb",
 				"text": "comb",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/26947/26947_300.png",
+				"image": "/img/pictograms/26947.png",
 				"id": 9,
 				"messages": {
 					"de": {
@@ -2910,7 +2842,7 @@
 				"name": "Hairdryer",
 				"text": "hairdryer",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2560/2560_300.png",
+				"image": "/img/pictograms/2560.png",
 				"id": 10,
 				"messages": {
 					"de": {
@@ -2927,7 +2859,7 @@
 				"name": "Deodorant",
 				"text": "deodorant",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2735/2735_300.png",
+				"image": "/img/pictograms/2735.png",
 				"id": 11,
 				"messages": {
 					"de": {
@@ -2944,7 +2876,7 @@
 				"name": "Nails",
 				"text": "nails",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2706/2706_300.png",
+				"image": "/img/pictograms/2706.png",
 				"id": 12,
 				"messages": {
 					"de": {
@@ -2961,7 +2893,7 @@
 				"name": "Toilet paper",
 				"text": "toilet paper",
 				"accent": "white",
-				"image": "https://static.arasaac.org/pictograms/2862/2862_300.png",
+				"image": "/img/pictograms/2862.png",
 				"id": 13,
 				"messages": {
 					"de": {
@@ -2978,7 +2910,7 @@
 				"name": "Toilet",
 				"text": "toilet",
 				"accent": "sky",
-				"image": "https://static.arasaac.org/pictograms/5921/5921_300.png",
+				"image": "/img/pictograms/5921.png",
 				"id": 14,
 				"messages": {
 					"de": {
@@ -2995,7 +2927,7 @@
 				"name": "Dress",
 				"text": "get dressed",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6627/6627_300.png",
+				"image": "/img/pictograms/6627.png",
 				"id": 15,
 				"messages": {
 					"de": {
@@ -3012,7 +2944,7 @@
 				"name": "Clean",
 				"text": "clean",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/3351/3351_300.png",
+				"image": "/img/pictograms/3351.png",
 				"id": 16,
 				"messages": {
 					"de": {
@@ -3029,7 +2961,7 @@
 				"name": "Tidy",
 				"text": "tidy up",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/8680/8680_300.png",
+				"image": "/img/pictograms/8680.png",
 				"id": 17,
 				"messages": {
 					"de": {
@@ -3046,7 +2978,7 @@
 				"name": "Bed",
 				"text": "make the bed",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/5481/5481_300.png",
+				"image": "/img/pictograms/5481.png",
 				"id": 18,
 				"messages": {
 					"de": {
@@ -3063,7 +2995,7 @@
 				"name": "Trash",
 				"text": "trash",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/8499/8499_300.png",
+				"image": "/img/pictograms/8499.png",
 				"id": 19,
 				"messages": {
 					"de": {
@@ -3080,7 +3012,7 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "mint",
-				"image": "https://static.arasaac.org/pictograms/6964/6964_300.png",
+				"image": "/img/pictograms/6964.png",
 				"id": 20,
 				"messages": {
 					"de": {
@@ -3099,993 +3031,444 @@
 	"4": {
 		"tileData": [
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Eat",
+				"text": "eat",
+				"accent": "sunny",
+				"image": "/img/pictograms/6456.png",
 				"id": 0,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Essen",
+						"text": "essen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Comer",
+						"text": "comer"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Drink",
+				"text": "drink",
+				"accent": "sunny",
+				"image": "/img/pictograms/6061.png",
 				"id": 1,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Trinken",
+						"text": "trinken"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Beber",
+						"text": "beber"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Breakfast",
+				"text": "breakfast",
+				"accent": "white",
+				"image": "/img/pictograms/4626.png",
 				"id": 2,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Frühstück",
+						"text": "Frühstück"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Desayuno",
+						"text": "desayuno"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Lunch",
+				"text": "lunch",
+				"accent": "white",
+				"image": "/img/pictograms/28207.png",
 				"id": 3,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Mittagessen",
+						"text": "Mittagessen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Almuerzo",
+						"text": "almuerzo"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Dinner",
+				"text": "dinner",
+				"accent": "white",
+				"image": "/img/pictograms/4592.png",
 				"id": 4,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Abendessen",
+						"text": "Abendessen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Cena",
+						"text": "cena"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Bread",
+				"text": "bread",
+				"accent": "white",
+				"image": "/img/pictograms/2494.png",
 				"id": 5,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Brot",
+						"text": "Brot"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Pan",
+						"text": "pan"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Rice",
+				"text": "rice",
+				"accent": "white",
+				"image": "/img/pictograms/6911.png",
 				"id": 6,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Reis",
+						"text": "Reis"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Arroz",
+						"text": "arroz"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Pasta",
+				"text": "pasta",
+				"accent": "white",
+				"image": "/img/pictograms/8652.png",
 				"id": 7,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Nudeln",
+						"text": "Nudeln"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Pasta",
+						"text": "pasta"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Meat",
+				"text": "meat",
+				"accent": "white",
+				"image": "/img/pictograms/2316.png",
 				"id": 8,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Fleisch",
+						"text": "Fleisch"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Carne",
+						"text": "carne"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Chicken",
+				"text": "chicken",
+				"accent": "white",
+				"image": "/img/pictograms/4952.png",
 				"id": 9,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Hähnchen",
+						"text": "Hähnchen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Pollo",
+						"text": "pollo"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
+				"name": "Fish",
+				"text": "fish",
 				"accent": "white",
-				"image": "",
+				"image": "/img/pictograms/2519.png",
 				"id": 10,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Fisch",
+						"text": "Fisch"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Pescado",
+						"text": "pescado"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
+				"name": "Egg",
+				"text": "egg",
 				"accent": "white",
-				"image": "",
-				"navigation": "",
+				"image": "/img/pictograms/2427.png",
 				"id": 11,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Ei",
+						"text": "Ei"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Huevo",
+						"text": "huevo"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
+				"name": "Cheese",
+				"text": "cheese",
 				"accent": "white",
-				"image": "",
+				"image": "/img/pictograms/2541.png",
 				"id": 12,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Käse",
+						"text": "Käse"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Queso",
+						"text": "queso"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Milk",
+				"text": "milk",
+				"accent": "sky",
+				"image": "/img/pictograms/2445.png",
 				"id": 13,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Milch",
+						"text": "Milch"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Leche",
+						"text": "leche"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Water",
+				"text": "water",
+				"accent": "sky",
+				"image": "/img/pictograms/32464.png",
 				"id": 14,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Wasser",
+						"text": "Wasser"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Agua",
+						"text": "agua"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Juice",
+				"text": "juice",
+				"accent": "sky",
+				"image": "/img/pictograms/11461.png",
 				"id": 15,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Saft",
+						"text": "Saft"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Jugo",
+						"text": "jugo"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Fruit",
+				"text": "fruit",
+				"accent": "pear",
+				"image": "/img/pictograms/28339.png",
 				"id": 16,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Obst",
+						"text": "Obst"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Fruta",
+						"text": "fruta"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Apple",
+				"text": "apple",
+				"accent": "pear",
+				"image": "/img/pictograms/2462.png",
 				"id": 17,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Apfel",
+						"text": "Apfel"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Manzana",
+						"text": "manzana"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Banana",
+				"text": "banana",
+				"accent": "pear",
+				"image": "/img/pictograms/10218.png",
 				"id": 18,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Banane",
+						"text": "Banane"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Banano",
+						"text": "banano"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Vegetables",
+				"text": "vegetables",
+				"accent": "pear",
+				"image": "/img/pictograms/29131.png",
 				"id": 19,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Gemüse",
+						"text": "Gemüse"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Verduras",
+						"text": "verduras"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Soup",
+				"text": "soup",
+				"accent": "white",
+				"image": "/img/pictograms/2573.png",
 				"id": 20,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Suppe",
+						"text": "Suppe"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Sopa",
+						"text": "sopa"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Cookie",
+				"text": "cookie",
+				"accent": "white",
+				"image": "/img/pictograms/8312.png",
 				"id": 21,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Keks",
+						"text": "Keks"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Galleta",
+						"text": "galleta"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Dessert",
+				"text": "dessert",
+				"accent": "white",
+				"image": "/img/pictograms/7216.png",
 				"id": 22,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Nachtisch",
+						"text": "Nachtisch"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Postre",
+						"text": "postre"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
+				"name": "Ice cream",
+				"text": "ice cream",
 				"accent": "white",
-				"image": "",
+				"image": "/img/pictograms/35209.png",
 				"id": 23,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Eis",
+						"text": "Eis"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Helado",
+						"text": "helado"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Hungry",
+				"text": "hungry",
+				"accent": "peach",
+				"image": "/img/pictograms/35559.png",
 				"id": 24,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Hungrig",
+						"text": "hungrig"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Hambre",
+						"text": "tengo hambre"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Thirsty",
+				"text": "thirsty",
+				"accent": "peach",
+				"image": "/img/pictograms/7273.png",
 				"id": 25,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Durstig",
+						"text": "durstig"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 26,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 27,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 28,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 29,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 30,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 31,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 32,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 33,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 34,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 35,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 36,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 37,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 38,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 39,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 40,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 41,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 42,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 43,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 44,
-				"accent": "white"
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 45,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 46,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 47,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 48,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 49,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 50,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 51,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 52,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 53,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 54,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 55,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"navigation": "",
-				"id": 56,
-				"messages": {
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 57,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 58,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Sed",
+						"text": "tengo sed"
 					}
 				}
 			},
@@ -4093,9 +3476,8 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "mint",
-				"image": "https://img.icons8.com/dusk/64/000000/medium-icons.png",
-				"navigation": "home",
-				"id": 59,
+				"image": "/img/pictograms/6964.png",
+				"id": 26,
 				"messages": {
 					"de": {
 						"name": "Startseite",
@@ -4105,1000 +3487,486 @@
 						"name": "Inicio",
 						"text": "Inicio"
 					}
-				}
+				},
+				"navigation": "home"
 			}
 		]
 	},
 	"5": {
 		"tileData": [
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Run",
+				"text": "run",
+				"accent": "mint",
+				"image": "/img/pictograms/6465.png",
 				"id": 0,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Rennen",
+						"text": "rennen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Correr",
+						"text": "correr"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Walk",
+				"text": "walk",
+				"accent": "mint",
+				"image": "/img/pictograms/6044.png",
 				"id": 1,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Gehen",
+						"text": "gehen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Caminar",
+						"text": "caminar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Jump",
+				"text": "jump",
+				"accent": "mint",
+				"image": "/img/pictograms/39052.png",
 				"id": 2,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Springen",
+						"text": "springen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Saltar",
+						"text": "saltar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Sit",
+				"text": "sit down",
+				"accent": "mint",
+				"image": "/img/pictograms/27268.png",
 				"id": 3,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Sitzen",
+						"text": "sitzen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Sentarme",
+						"text": "sentarme"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Sleep",
+				"text": "sleep",
+				"accent": "mint",
+				"image": "/img/pictograms/6479.png",
 				"id": 4,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schlafen",
+						"text": "schlafen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Dormir",
+						"text": "dormir"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Wake up",
+				"text": "wake up",
+				"accent": "mint",
+				"image": "/img/pictograms/8989.png",
 				"id": 5,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Aufwachen",
+						"text": "aufwachen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Despertar",
+						"text": "despertar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Dress",
+				"text": "get dressed",
+				"accent": "mint",
+				"image": "/img/pictograms/6627.png",
 				"id": 6,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Anziehen",
+						"text": "anziehen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Vestirme",
+						"text": "vestirme"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Undress",
+				"text": "undress",
+				"accent": "mint",
+				"image": "/img/pictograms/11233.png",
 				"id": 7,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Ausziehen",
+						"text": "ausziehen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Desvestirme",
+						"text": "desvestirme"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Open",
+				"text": "open",
+				"accent": "mint",
+				"image": "/img/pictograms/24825.png",
 				"id": 8,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Öffnen",
+						"text": "öffnen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Abrir",
+						"text": "abrir"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Close",
+				"text": "close",
+				"accent": "mint",
+				"image": "/img/pictograms/24976.png",
 				"id": 9,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schließen",
+						"text": "schließen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Cerrar",
+						"text": "cerrar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Give",
+				"text": "give",
+				"accent": "mint",
+				"image": "/img/pictograms/28431.png",
 				"id": 10,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Geben",
+						"text": "geben"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Dar",
+						"text": "dar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"navigation": "",
+				"name": "Take",
+				"text": "take",
+				"accent": "mint",
+				"image": "/img/pictograms/10148.png",
 				"id": 11,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Nehmen",
+						"text": "nehmen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Tomar",
+						"text": "tomar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Put",
+				"text": "put",
+				"accent": "mint",
+				"image": "/img/pictograms/32757.png",
 				"id": 12,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Legen",
+						"text": "legen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Poner",
+						"text": "poner"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Remove",
+				"text": "remove",
+				"accent": "mint",
+				"image": "/img/pictograms/11751.png",
 				"id": 13,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Entfernen",
+						"text": "entfernen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Quitar",
+						"text": "quitar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Push",
+				"text": "push",
+				"accent": "mint",
+				"image": "/img/pictograms/6485.png",
 				"id": 14,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schieben",
+						"text": "schieben"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Empujar",
+						"text": "empujar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Throw",
+				"text": "throw",
+				"accent": "mint",
+				"image": "/img/pictograms/36673.png",
 				"id": 15,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Werfen",
+						"text": "werfen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Tirar",
+						"text": "tirar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Cut",
+				"text": "cut",
+				"accent": "mint",
+				"image": "/img/pictograms/5975.png",
 				"id": 16,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schneiden",
+						"text": "schneiden"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Cortar",
+						"text": "cortar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Listen",
+				"text": "listen",
+				"accent": "mint",
+				"image": "/img/pictograms/6572.png",
 				"id": 17,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Zuhören",
+						"text": "zuhören"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Escuchar",
+						"text": "escuchar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Look",
+				"text": "look",
+				"accent": "mint",
+				"image": "/img/pictograms/6564.png",
 				"id": 18,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schauen",
+						"text": "schauen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Mirar",
+						"text": "mirar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Talk",
+				"text": "talk",
+				"accent": "mint",
+				"image": "/img/pictograms/6517.png",
 				"id": 19,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Sprechen",
+						"text": "sprechen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Hablar",
+						"text": "hablar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Cry",
+				"text": "cry",
+				"accent": "mint",
+				"image": "/img/pictograms/7147.png",
 				"id": 20,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Weinen",
+						"text": "weinen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Llorar",
+						"text": "llorar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Laugh",
+				"text": "laugh",
+				"accent": "mint",
+				"image": "/img/pictograms/13354.png",
 				"id": 21,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Lachen",
+						"text": "lachen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Reír",
+						"text": "reír"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Sing",
+				"text": "sing",
+				"accent": "mint",
+				"image": "/img/pictograms/6960.png",
 				"id": 22,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Singen",
+						"text": "singen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Cantar",
+						"text": "cantar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Dance",
+				"text": "dance",
+				"accent": "mint",
+				"image": "/img/pictograms/35747.png",
 				"id": 23,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Tanzen",
+						"text": "tanzen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Bailar",
+						"text": "bailar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Swim",
+				"text": "swim",
+				"accent": "mint",
+				"image": "/img/pictograms/6568.png",
 				"id": 24,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Schwimmen",
+						"text": "schwimmen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Nadar",
+						"text": "nadar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
+				"name": "Wait",
+				"text": "wait",
+				"accent": "mint",
+				"image": "/img/pictograms/36914.png",
 				"id": 25,
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Warten",
+						"text": "warten"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Esperar",
+						"text": "esperar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Start",
+				"text": "start",
+				"accent": "mint",
+				"image": "/img/pictograms/5431.png",
 				"id": 26,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Anfangen",
+						"text": "anfangen"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Empezar",
+						"text": "empezar"
 					}
 				}
 			},
 			{
-				"name": "",
-				"text": "",
-				"image": "",
+				"name": "Finish",
+				"text": "finish",
+				"accent": "mint",
+				"image": "/img/pictograms/28429.png",
 				"id": 27,
-				"accent": "white",
 				"messages": {
 					"de": {
-						"name": "",
-						"text": ""
+						"name": "Beenden",
+						"text": "beenden"
 					},
 					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 28,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 29,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 30,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 31,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 32,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 33,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 34,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 35,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 36,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 37,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 38,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 39,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 40,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 41,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 42,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 43,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 44,
-				"accent": "white"
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 45,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 46,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 47,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 48,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 49,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 50,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"image": "",
-				"id": 51,
-				"accent": "white",
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 52,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 53,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 54,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 55,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"navigation": "",
-				"id": 56,
-				"messages": {
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 57,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
-					}
-				}
-			},
-			{
-				"name": "",
-				"text": "",
-				"accent": "white",
-				"image": "",
-				"id": 58,
-				"messages": {
-					"de": {
-						"name": "",
-						"text": ""
-					},
-					"sp": {
-						"name": "",
-						"text": ""
+						"name": "Terminar",
+						"text": "terminar"
 					}
 				}
 			},
@@ -5106,9 +3974,8 @@
 				"name": "Home",
 				"text": "Home",
 				"accent": "mint",
-				"image": "https://img.icons8.com/dusk/64/000000/medium-icons.png",
-				"navigation": "home",
-				"id": 59,
+				"image": "/img/pictograms/6964.png",
+				"id": 28,
 				"messages": {
 					"de": {
 						"name": "Startseite",
@@ -5118,9 +3985,10 @@
 						"name": "Inicio",
 						"text": "Inicio"
 					}
-				}
+				},
+				"navigation": "home"
 			}
 		]
 	},
-	"_v": 3
+	"_v": 4
 }
