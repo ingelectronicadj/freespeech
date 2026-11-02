@@ -4,7 +4,7 @@
 			{
 				"name": "No",
 				"text": "No",
-				"accent": "peach",
+				"accent": "sky",
 				"image": "/img/pictograms/5526.png",
 				"id": 0,
 				"messages": {
@@ -23,7 +23,7 @@
 				"text": "Little",
 				"image": "/img/pictograms/25839.png",
 				"id": 1,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Klein",
@@ -40,7 +40,7 @@
 				"text": "Off",
 				"image": "/img/pictograms/11739.png",
 				"id": 2,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Aus",
@@ -57,7 +57,7 @@
 				"text": "Good",
 				"image": "/img/pictograms/4581.png",
 				"id": 3,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Gut",
@@ -74,7 +74,7 @@
 				"text": "Some",
 				"image": "/img/pictograms/5374.png",
 				"id": 4,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Etwas",
@@ -91,7 +91,7 @@
 				"text": "Finished",
 				"image": "/img/pictograms/28429.png",
 				"id": 5,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Fertig",
@@ -108,7 +108,7 @@
 				"text": "Bad",
 				"image": "/img/pictograms/5504.png",
 				"id": 6,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Schlecht",
@@ -125,7 +125,7 @@
 				"text": "Out",
 				"image": "/img/pictograms/2806.png",
 				"id": 7,
-				"accent": "white",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Raus",
@@ -142,7 +142,7 @@
 				"text": "Mine",
 				"image": "/img/pictograms/12264.png",
 				"id": 8,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Mein",
@@ -159,7 +159,7 @@
 				"text": "Down",
 				"image": "/img/pictograms/5355.png",
 				"id": 9,
-				"accent": "white",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Ab",
@@ -174,7 +174,7 @@
 			{
 				"name": "Up",
 				"text": "Up",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/5388.png",
 				"id": 10,
 				"messages": {
@@ -246,7 +246,7 @@
 				"text": "New",
 				"image": "/img/pictograms/11316.png",
 				"id": 14,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Neu",
@@ -263,7 +263,7 @@
 				"text": "Play",
 				"image": "/img/pictograms/23392.png",
 				"id": 15,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Spiele",
@@ -280,7 +280,7 @@
 				"text": "Have",
 				"image": "/img/pictograms/32761.png",
 				"id": 16,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Habe",
@@ -297,7 +297,7 @@
 				"text": "Stop",
 				"image": "/img/pictograms/7196.png",
 				"id": 17,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Halt",
@@ -314,7 +314,7 @@
 				"text": "Read",
 				"image": "/img/pictograms/7141.png",
 				"id": 18,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Lesen",
@@ -331,7 +331,7 @@
 				"text": "Fast",
 				"image": "/img/pictograms/5306.png",
 				"id": 19,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Schnell",
@@ -348,7 +348,7 @@
 				"text": "You",
 				"image": "/img/pictograms/6625.png",
 				"id": 20,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Du",
@@ -365,7 +365,7 @@
 				"text": "Like",
 				"image": "/img/pictograms/37826.png",
 				"id": 21,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Mag",
@@ -382,7 +382,7 @@
 				"text": "More",
 				"image": "/img/pictograms/5508.png",
 				"id": 22,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Mehr",
@@ -397,7 +397,7 @@
 			{
 				"name": "They",
 				"text": "They",
-				"accent": "mint",
+				"accent": "sunny",
 				"image": "/img/pictograms/7032.png",
 				"id": 23,
 				"messages": {
@@ -431,7 +431,7 @@
 			{
 				"name": "Big",
 				"text": "Big",
-				"accent": "peach",
+				"accent": "sky",
 				"image": "/img/pictograms/4658.png",
 				"id": 25,
 				"messages": {
@@ -450,7 +450,7 @@
 				"text": "Go",
 				"image": "/img/pictograms/8142.png",
 				"id": 26,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Gehen",
@@ -467,7 +467,7 @@
 				"text": "Want",
 				"image": "/img/pictograms/5441.png",
 				"id": 27,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Will",
@@ -484,7 +484,7 @@
 				"text": "Help",
 				"image": "/img/pictograms/32648.png",
 				"id": 28,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Hilfe",
@@ -501,7 +501,7 @@
 				"text": "It",
 				"image": "/img/pictograms/31670.png",
 				"id": 29,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Es",
@@ -518,7 +518,7 @@
 				"text": "Do",
 				"image": "/img/pictograms/32751.png",
 				"id": 30,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Machen",
@@ -535,7 +535,7 @@
 				"text": "Come",
 				"image": "/img/pictograms/32669.png",
 				"id": 31,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Komme",
@@ -552,7 +552,7 @@
 				"text": "All",
 				"image": "/img/pictograms/5596.png",
 				"id": 32,
-				"accent": "white",
+				"accent": "sky",
 				"messages": {
 					"de": {
 						"name": "Alle",
@@ -569,7 +569,7 @@
 				"text": "He",
 				"image": "/img/pictograms/6480.png",
 				"id": 33,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Er",
@@ -586,7 +586,7 @@
 				"text": "Get",
 				"image": "/img/pictograms/24208.png",
 				"id": 34,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Holen",
@@ -601,7 +601,7 @@
 			{
 				"name": "Color",
 				"text": "Color",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/5968.png",
 				"id": 35,
 				"messages": {
@@ -618,7 +618,7 @@
 			{
 				"name": "My",
 				"text": "My",
-				"accent": "peach",
+				"accent": "sunny",
 				"image": "/img/pictograms/12264.png",
 				"id": 36,
 				"messages": {
@@ -635,7 +635,7 @@
 			{
 				"name": "Me",
 				"text": "Me",
-				"accent": "peach",
+				"accent": "sunny",
 				"image": "/img/pictograms/6632.png",
 				"id": 37,
 				"messages": {
@@ -654,7 +654,7 @@
 				"text": "And",
 				"image": "/img/pictograms/11399.png",
 				"id": 38,
-				"accent": "white",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Und",
@@ -671,7 +671,7 @@
 				"text": "Wear",
 				"image": "/img/pictograms/6627.png",
 				"id": 39,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Tragen",
@@ -688,7 +688,7 @@
 				"text": "That",
 				"image": "/img/pictograms/6906.png",
 				"id": 40,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Das",
@@ -705,7 +705,7 @@
 				"text": "Am",
 				"image": "/img/pictograms/36480.png",
 				"id": 41,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "Bin",
@@ -722,7 +722,7 @@
 				"text": "Please",
 				"image": "/img/pictograms/8195.png",
 				"id": 42,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Bitte",
@@ -739,7 +739,7 @@
 				"text": "What",
 				"image": "/img/pictograms/22620.png",
 				"id": 43,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Was",
@@ -756,14 +756,14 @@
 				"text": "Needs to be added",
 				"image": "/img/pictograms/11100.png",
 				"id": 44,
-				"accent": "white"
+				"accent": "peach"
 			},
 			{
 				"name": "There",
 				"text": "There",
 				"image": "/img/pictograms/5375.png",
 				"id": 45,
-				"accent": "white",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Da",
@@ -780,7 +780,7 @@
 				"text": "In",
 				"image": "/img/pictograms/7034.png",
 				"id": 46,
-				"accent": "white",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Im",
@@ -795,7 +795,7 @@
 			{
 				"name": "A",
 				"text": "Uh",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/3021.png",
 				"id": 47,
 				"messages": {
@@ -812,7 +812,7 @@
 			{
 				"name": "Were",
 				"text": "Were",
-				"accent": "peach",
+				"accent": "mint",
 				"image": "/img/pictograms/36392.png",
 				"id": 48,
 				"messages": {
@@ -848,7 +848,7 @@
 				"text": "Was",
 				"image": "/img/pictograms/36392.png",
 				"id": 50,
-				"accent": "white",
+				"accent": "mint",
 				"messages": {
 					"de": {
 						"name": "War",
@@ -865,7 +865,7 @@
 				"text": "Eye",
 				"image": "/img/pictograms/6632.png",
 				"id": 51,
-				"accent": "white",
+				"accent": "sunny",
 				"messages": {
 					"de": {
 						"name": "Ich",
@@ -880,7 +880,7 @@
 			{
 				"name": "End",
 				"text": "End",
-				"accent": "violet",
+				"accent": "mint",
 				"image": "/img/pictograms/32814.png",
 				"id": 52,
 				"messages": {
@@ -897,7 +897,7 @@
 			{
 				"name": "Is",
 				"text": "Is",
-				"accent": "violet",
+				"accent": "mint",
 				"image": "/img/pictograms/36480.png",
 				"id": 53,
 				"messages": {
@@ -914,7 +914,7 @@
 			{
 				"name": "To",
 				"text": "To",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/7041.png",
 				"id": 54,
 				"messages": {
@@ -931,7 +931,7 @@
 			{
 				"name": "We",
 				"text": "We",
-				"accent": "violet",
+				"accent": "sunny",
 				"image": "/img/pictograms/7185.png",
 				"id": 55,
 				"messages": {
@@ -948,7 +948,7 @@
 			{
 				"name": "Numbers",
 				"text": " ",
-				"accent": "violet",
+				"accent": "mint",
 				"image": "/img/pictograms/2879.png",
 				"navigation": "numbers",
 				"id": 56,
@@ -962,7 +962,7 @@
 			{
 				"name": "Are",
 				"text": "Are",
-				"accent": "violet",
+				"accent": "mint",
 				"image": "/img/pictograms/36480.png",
 				"id": 57,
 				"messages": {
@@ -979,7 +979,7 @@
 			{
 				"name": "The",
 				"text": "The",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/8477.png",
 				"id": 58,
 				"messages": {
@@ -996,7 +996,7 @@
 			{
 				"name": "An",
 				"text": "An",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/8474.png",
 				"id": 59,
 				"messages": {
@@ -1161,132 +1161,158 @@
 			{
 				"name": "A",
 				"text": "A",
-				"id": 1
+				"id": 1,
+				"accent": "white"
 			},
 			{
 				"name": "B",
 				"text": "B",
-				"id": 2
+				"id": 2,
+				"accent": "white"
 			},
 			{
 				"name": "C",
 				"text": "C",
-				"id": 3
+				"id": 3,
+				"accent": "white"
 			},
 			{
 				"name": "D",
 				"text": "D",
-				"id": 4
+				"id": 4,
+				"accent": "white"
 			},
 			{
 				"name": "E",
 				"text": "E",
-				"id": 5
+				"id": 5,
+				"accent": "white"
 			},
 			{
 				"name": "F",
 				"text": "F",
-				"id": 6
+				"id": 6,
+				"accent": "white"
 			},
 			{
 				"name": "G",
 				"text": "G",
-				"id": 7
+				"id": 7,
+				"accent": "white"
 			},
 			{
 				"name": "H",
 				"text": "H",
-				"id": 8
+				"id": 8,
+				"accent": "white"
 			},
 			{
 				"name": "I",
 				"text": "I",
-				"id": 9
+				"id": 9,
+				"accent": "white"
 			},
 			{
 				"name": "J",
 				"text": "J",
-				"id": 10
+				"id": 10,
+				"accent": "white"
 			},
 			{
 				"name": "K",
 				"text": "K",
-				"id": 11
+				"id": 11,
+				"accent": "white"
 			},
 			{
 				"name": "L",
 				"text": "L",
-				"id": 12
+				"id": 12,
+				"accent": "white"
 			},
 			{
 				"name": "M",
 				"text": "M",
-				"id": 13
+				"id": 13,
+				"accent": "white"
 			},
 			{
 				"name": "N",
 				"text": "N",
-				"id": 14
+				"id": 14,
+				"accent": "white"
 			},
 			{
 				"name": "O",
 				"text": "O",
-				"id": 15
+				"id": 15,
+				"accent": "white"
 			},
 			{
 				"name": "P",
 				"text": "P",
-				"id": 16
+				"id": 16,
+				"accent": "white"
 			},
 			{
 				"name": "Q",
 				"text": "Q",
-				"id": 17
+				"id": 17,
+				"accent": "white"
 			},
 			{
 				"name": "R",
 				"text": "R",
-				"id": 18
+				"id": 18,
+				"accent": "white"
 			},
 			{
 				"name": "S",
 				"text": "S",
-				"id": 19
+				"id": 19,
+				"accent": "white"
 			},
 			{
 				"name": "T",
 				"text": "T",
-				"id": 20
+				"id": 20,
+				"accent": "white"
 			},
 			{
 				"name": "U",
 				"text": "U",
-				"id": 21
+				"id": 21,
+				"accent": "white"
 			},
 			{
 				"name": "V",
 				"text": "V",
-				"id": 22
+				"id": 22,
+				"accent": "white"
 			},
 			{
 				"name": "W",
 				"text": "W",
-				"id": 23
+				"id": 23,
+				"accent": "white"
 			},
 			{
 				"name": "X",
 				"text": "X",
-				"id": 24
+				"id": 24,
+				"accent": "white"
 			},
 			{
 				"name": "Y",
 				"text": "Y",
-				"id": 25
+				"id": 25,
+				"accent": "white"
 			},
 			{
 				"name": "Z",
 				"text": "Z",
-				"id": 26
+				"id": 26,
+				"accent": "white"
 			}
 		]
 	},
@@ -1341,7 +1367,8 @@
 						"name": "Cero",
 						"text": "Cero"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "One",
@@ -1357,7 +1384,8 @@
 						"name": "Uno",
 						"text": "Uno"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Two",
@@ -1373,7 +1401,8 @@
 						"name": "Dos",
 						"text": "Dos"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Three",
@@ -1389,7 +1418,8 @@
 						"name": "Tres",
 						"text": "Tres"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Four",
@@ -1405,7 +1435,8 @@
 						"name": "Cuatro",
 						"text": "Cuatro"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Five",
@@ -1421,7 +1452,8 @@
 						"name": "Cinco",
 						"text": "Cinco"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Six",
@@ -1437,7 +1469,8 @@
 						"name": "Seis",
 						"text": "Seis"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Seven",
@@ -1453,7 +1486,8 @@
 						"name": "Siete",
 						"text": "Siete"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Eight",
@@ -1469,7 +1503,8 @@
 						"name": "Ocho",
 						"text": "Ocho"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Nine",
@@ -1485,7 +1520,8 @@
 						"name": "Nueve",
 						"text": "Nueve"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Point",
@@ -1518,7 +1554,8 @@
 						"name": "Diez",
 						"text": "Diez"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "eleven",
@@ -1534,7 +1571,8 @@
 						"name": "Once",
 						"text": "Once"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Twelve",
@@ -1550,7 +1588,8 @@
 						"name": "Doce",
 						"text": "Doce"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Thirteen",
@@ -1566,7 +1605,8 @@
 						"name": "Trece",
 						"text": "Trece"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Fourteen",
@@ -1582,7 +1622,8 @@
 						"name": "Catorce",
 						"text": "Catorce"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "fifteen",
@@ -1598,7 +1639,8 @@
 						"name": "Quince",
 						"text": "Quince"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Sixteen",
@@ -1614,7 +1656,8 @@
 						"name": "Dieciséis",
 						"text": "Dieciséis"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Seventeen",
@@ -1630,7 +1673,8 @@
 						"name": "Diecisiete",
 						"text": "Diecisiete"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Eighteen",
@@ -1646,7 +1690,8 @@
 						"name": "Dieciocho",
 						"text": "Dieciocho"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Nineteen",
@@ -1662,14 +1707,15 @@
 						"name": "Diecinueve",
 						"text": "Diecinueve"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Minutes",
 				"text": "Minutes",
 				"image": "/img/pictograms/37374.png",
 				"id": 23,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Minuten",
@@ -1686,7 +1732,7 @@
 				"text": "thousand",
 				"image": "/img/pictograms/29258.png",
 				"id": 24,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Tausend",
@@ -1712,7 +1758,8 @@
 						"name": "Veinte",
 						"text": "Veinte"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Thirty",
@@ -1728,7 +1775,8 @@
 						"name": "Treinta",
 						"text": "Treinta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Fourty",
@@ -1744,7 +1792,8 @@
 						"name": "Cuarenta",
 						"text": "Cuarenta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Fifty",
@@ -1760,7 +1809,8 @@
 						"name": "Cincuenta",
 						"text": "Cincuenta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Sixty",
@@ -1776,7 +1826,8 @@
 						"name": "Sesenta",
 						"text": "Sesenta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Seventy",
@@ -1792,7 +1843,8 @@
 						"name": "Setenta",
 						"text": "Setenta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Eighty",
@@ -1808,7 +1860,8 @@
 						"name": "Ochenta",
 						"text": "Ochenta"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Ninety",
@@ -1824,12 +1877,13 @@
 						"name": "Noventa",
 						"text": "Noventa"
 					}
-				}
+				},
+				"accent": "peach"
 			},
 			{
 				"name": "Hundred",
 				"text": "Hundred",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/29256.png",
 				"id": 33,
 				"messages": {
@@ -1848,7 +1902,7 @@
 				"text": "Dollars",
 				"image": "/img/pictograms/5091.png",
 				"id": 34,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Dollars",
@@ -1863,7 +1917,7 @@
 			{
 				"name": "To",
 				"text": "To",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/7041.png",
 				"id": 35,
 				"messages": {
@@ -1882,7 +1936,7 @@
 				"text": "In",
 				"image": "/img/pictograms/7034.png",
 				"id": 36,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Im",
@@ -1899,7 +1953,7 @@
 				"text": "Days",
 				"image": "/img/pictograms/37731.png",
 				"id": 37,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Tage",
@@ -1916,7 +1970,7 @@
 				"text": "Percent",
 				"image": "/img/pictograms/5093.png",
 				"id": 38,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Prozent",
@@ -1933,7 +1987,7 @@
 				"text": "Times",
 				"image": "/img/pictograms/22631.png",
 				"id": 39,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Mal",
@@ -1950,7 +2004,7 @@
 				"text": "Hours",
 				"image": "/img/pictograms/7129.png",
 				"id": 40,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Dienststunden",
@@ -1967,7 +2021,7 @@
 				"text": "Months",
 				"image": "/img/pictograms/37724.png",
 				"id": 41,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Monate",
@@ -1984,7 +2038,7 @@
 				"text": "Years",
 				"image": "/img/pictograms/6903.png",
 				"id": 42,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Jahren",
@@ -2001,7 +2055,7 @@
 				"text": "Half",
 				"image": "/img/pictograms/19570.png",
 				"id": 43,
-				"accent": "mint",
+				"accent": "peach",
 				"messages": {
 					"de": {
 						"name": "Halb",
@@ -2039,7 +2093,7 @@
 				"id": 1,
 				"name": "Happy",
 				"text": "I feel happy",
-				"accent": "sunny",
+				"accent": "sky",
 				"image": "/img/pictograms/35533.png",
 				"messages": {
 					"sp": {
@@ -2073,7 +2127,7 @@
 				"id": 3,
 				"name": "Angry",
 				"text": "I feel angry",
-				"accent": "peach",
+				"accent": "sky",
 				"image": "/img/pictograms/35539.png",
 				"messages": {
 					"sp": {
@@ -2090,7 +2144,7 @@
 				"id": 4,
 				"name": "Tired",
 				"text": "I am tired",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/35537.png",
 				"messages": {
 					"sp": {
@@ -2107,7 +2161,7 @@
 				"id": 5,
 				"name": "Scared",
 				"text": "I am scared",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/35535.png",
 				"messages": {
 					"sp": {
@@ -2124,7 +2178,7 @@
 				"id": 6,
 				"name": "Calm",
 				"text": "I feel calm",
-				"accent": "pear",
+				"accent": "sky",
 				"image": "/img/pictograms/31310.png",
 				"messages": {
 					"sp": {
@@ -2141,7 +2195,7 @@
 				"id": 7,
 				"name": "Hungry",
 				"text": "I am hungry",
-				"accent": "sunny",
+				"accent": "sky",
 				"image": "/img/pictograms/4962.png",
 				"messages": {
 					"sp": {
@@ -2192,7 +2246,7 @@
 				"id": 10,
 				"name": "Help",
 				"text": "I need help",
-				"accent": "peach",
+				"accent": "mint",
 				"image": "/img/pictograms/32648.png",
 				"messages": {
 					"sp": {
@@ -2209,7 +2263,7 @@
 				"id": 11,
 				"name": "Bathroom",
 				"text": "I need the bathroom",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/5921.png",
 				"messages": {
 					"sp": {
@@ -2225,7 +2279,7 @@
 			{
 				"name": "Bored",
 				"text": "bored",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/35531.png",
 				"id": 12,
 				"messages": {
@@ -2242,7 +2296,7 @@
 			{
 				"name": "Surprised",
 				"text": "surprised",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/35529.png",
 				"id": 13,
 				"messages": {
@@ -2259,7 +2313,7 @@
 			{
 				"name": "Confused",
 				"text": "confused",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/2352.png",
 				"id": 14,
 				"messages": {
@@ -2276,7 +2330,7 @@
 			{
 				"name": "Embarrassed",
 				"text": "embarrassed",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/6922.png",
 				"id": 15,
 				"messages": {
@@ -2293,7 +2347,7 @@
 			{
 				"name": "Proud",
 				"text": "proud",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/31408.png",
 				"id": 16,
 				"messages": {
@@ -2310,7 +2364,7 @@
 			{
 				"name": "Worried",
 				"text": "worried",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/26985.png",
 				"id": 17,
 				"messages": {
@@ -2327,7 +2381,7 @@
 			{
 				"name": "Excited",
 				"text": "excited",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/39090.png",
 				"id": 18,
 				"messages": {
@@ -2344,7 +2398,7 @@
 			{
 				"name": "Sick",
 				"text": "sick",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/7040.png",
 				"id": 19,
 				"messages": {
@@ -2361,7 +2415,7 @@
 			{
 				"name": "Cold",
 				"text": "cold",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/4652.png",
 				"id": 20,
 				"messages": {
@@ -2378,7 +2432,7 @@
 			{
 				"name": "Hot",
 				"text": "hot",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/2300.png",
 				"id": 21,
 				"messages": {
@@ -2395,7 +2449,7 @@
 			{
 				"name": "Love",
 				"text": "love",
-				"accent": "violet",
+				"accent": "sky",
 				"image": "/img/pictograms/37721.png",
 				"id": 22,
 				"messages": {
@@ -2434,7 +2488,7 @@
 			{
 				"name": "School",
 				"text": "school",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/32446.png",
 				"id": 1,
 				"messages": {
@@ -2451,7 +2505,7 @@
 			{
 				"name": "Homework",
 				"text": "homework",
-				"accent": "sunny",
+				"accent": "peach",
 				"image": "/img/pictograms/11228.png",
 				"id": 2,
 				"messages": {
@@ -2468,7 +2522,7 @@
 			{
 				"name": "Study",
 				"text": "study",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/6495.png",
 				"id": 3,
 				"messages": {
@@ -2485,7 +2539,7 @@
 			{
 				"name": "Read",
 				"text": "read",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/7141.png",
 				"id": 4,
 				"messages": {
@@ -2502,7 +2556,7 @@
 			{
 				"name": "Write",
 				"text": "write",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/2380.png",
 				"id": 5,
 				"messages": {
@@ -2519,7 +2573,7 @@
 			{
 				"name": "Draw",
 				"text": "draw",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/8088.png",
 				"id": 6,
 				"messages": {
@@ -2536,7 +2590,7 @@
 			{
 				"name": "Paint",
 				"text": "paint",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/2348.png",
 				"id": 7,
 				"messages": {
@@ -2553,7 +2607,7 @@
 			{
 				"name": "Pencil",
 				"text": "pencil",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2440.png",
 				"id": 8,
 				"messages": {
@@ -2570,7 +2624,7 @@
 			{
 				"name": "Notebook",
 				"text": "notebook",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2359.png",
 				"id": 9,
 				"messages": {
@@ -2587,7 +2641,7 @@
 			{
 				"name": "Book",
 				"text": "book",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/25191.png",
 				"id": 10,
 				"messages": {
@@ -2604,7 +2658,7 @@
 			{
 				"name": "Computer",
 				"text": "computer",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/7190.png",
 				"id": 11,
 				"messages": {
@@ -2621,7 +2675,7 @@
 			{
 				"name": "Class",
 				"text": "class",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/9815.png",
 				"id": 12,
 				"messages": {
@@ -2638,7 +2692,7 @@
 			{
 				"name": "Teacher",
 				"text": "teacher",
-				"accent": "mint",
+				"accent": "sunny",
 				"image": "/img/pictograms/6556.png",
 				"id": 13,
 				"messages": {
@@ -2672,7 +2726,7 @@
 			{
 				"name": "Learn",
 				"text": "learn",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/37810.png",
 				"id": 15,
 				"messages": {
@@ -2689,7 +2743,7 @@
 			{
 				"name": "Think",
 				"text": "think",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/38796.png",
 				"id": 16,
 				"messages": {
@@ -2706,7 +2760,7 @@
 			{
 				"name": "Question",
 				"text": "question",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/9847.png",
 				"id": 17,
 				"messages": {
@@ -2723,7 +2777,7 @@
 			{
 				"name": "Answer",
 				"text": "answer",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/9031.png",
 				"id": 18,
 				"messages": {
@@ -2740,7 +2794,7 @@
 			{
 				"name": "Recess",
 				"text": "recess",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/27339.png",
 				"id": 19,
 				"messages": {
@@ -2779,7 +2833,7 @@
 			{
 				"name": "Shower",
 				"text": "shower",
-				"accent": "sky",
+				"accent": "mint",
 				"image": "/img/pictograms/32426.png",
 				"id": 1,
 				"messages": {
@@ -2796,7 +2850,7 @@
 			{
 				"name": "Bath",
 				"text": "bath",
-				"accent": "sky",
+				"accent": "mint",
 				"image": "/img/pictograms/2272.png",
 				"id": 2,
 				"messages": {
@@ -2813,7 +2867,7 @@
 			{
 				"name": "Teeth",
 				"text": "brush teeth",
-				"accent": "white",
+				"accent": "mint",
 				"image": "/img/pictograms/2326.png",
 				"id": 3,
 				"messages": {
@@ -2830,7 +2884,7 @@
 			{
 				"name": "Toothbrush",
 				"text": "toothbrush",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2694.png",
 				"id": 4,
 				"messages": {
@@ -2847,7 +2901,7 @@
 			{
 				"name": "Hands",
 				"text": "wash hands",
-				"accent": "white",
+				"accent": "mint",
 				"image": "/img/pictograms/34826.png",
 				"id": 5,
 				"messages": {
@@ -2864,7 +2918,7 @@
 			{
 				"name": "Soap",
 				"text": "soap",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/34846.png",
 				"id": 6,
 				"messages": {
@@ -2881,7 +2935,7 @@
 			{
 				"name": "Shampoo",
 				"text": "shampoo",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2699.png",
 				"id": 7,
 				"messages": {
@@ -2898,7 +2952,7 @@
 			{
 				"name": "Towel",
 				"text": "towel",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2593.png",
 				"id": 8,
 				"messages": {
@@ -2915,7 +2969,7 @@
 			{
 				"name": "Face",
 				"text": "wash face",
-				"accent": "white",
+				"accent": "mint",
 				"image": "/img/pictograms/38230.png",
 				"id": 9,
 				"messages": {
@@ -2932,7 +2986,7 @@
 			{
 				"name": "Comb",
 				"text": "comb",
-				"accent": "white",
+				"accent": "mint",
 				"image": "/img/pictograms/26947.png",
 				"id": 10,
 				"messages": {
@@ -2949,7 +3003,7 @@
 			{
 				"name": "Hairdryer",
 				"text": "hairdryer",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2560.png",
 				"id": 11,
 				"messages": {
@@ -2966,7 +3020,7 @@
 			{
 				"name": "Deodorant",
 				"text": "deodorant",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2735.png",
 				"id": 12,
 				"messages": {
@@ -2983,7 +3037,7 @@
 			{
 				"name": "Nails",
 				"text": "nails",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2706.png",
 				"id": 13,
 				"messages": {
@@ -3000,7 +3054,7 @@
 			{
 				"name": "Toilet paper",
 				"text": "toilet paper",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2862.png",
 				"id": 14,
 				"messages": {
@@ -3017,7 +3071,7 @@
 			{
 				"name": "Toilet",
 				"text": "toilet",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/5921.png",
 				"id": 15,
 				"messages": {
@@ -3085,7 +3139,7 @@
 			{
 				"name": "Bed",
 				"text": "make the bed",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/5481.png",
 				"id": 19,
 				"messages": {
@@ -3102,7 +3156,7 @@
 			{
 				"name": "Trash",
 				"text": "trash",
-				"accent": "mint",
+				"accent": "peach",
 				"image": "/img/pictograms/8499.png",
 				"id": 20,
 				"messages": {
@@ -3141,7 +3195,7 @@
 			{
 				"name": "Eat",
 				"text": "eat",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/6456.png",
 				"id": 1,
 				"messages": {
@@ -3158,7 +3212,7 @@
 			{
 				"name": "Drink",
 				"text": "drink",
-				"accent": "sunny",
+				"accent": "mint",
 				"image": "/img/pictograms/6061.png",
 				"id": 2,
 				"messages": {
@@ -3175,7 +3229,7 @@
 			{
 				"name": "Breakfast",
 				"text": "breakfast",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/4626.png",
 				"id": 3,
 				"messages": {
@@ -3192,7 +3246,7 @@
 			{
 				"name": "Lunch",
 				"text": "lunch",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/28207.png",
 				"id": 4,
 				"messages": {
@@ -3209,7 +3263,7 @@
 			{
 				"name": "Dinner",
 				"text": "dinner",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/4592.png",
 				"id": 5,
 				"messages": {
@@ -3226,7 +3280,7 @@
 			{
 				"name": "Bread",
 				"text": "bread",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2494.png",
 				"id": 6,
 				"messages": {
@@ -3243,7 +3297,7 @@
 			{
 				"name": "Rice",
 				"text": "rice",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/6911.png",
 				"id": 7,
 				"messages": {
@@ -3260,7 +3314,7 @@
 			{
 				"name": "Pasta",
 				"text": "pasta",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/8652.png",
 				"id": 8,
 				"messages": {
@@ -3277,7 +3331,7 @@
 			{
 				"name": "Meat",
 				"text": "meat",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2316.png",
 				"id": 9,
 				"messages": {
@@ -3294,7 +3348,7 @@
 			{
 				"name": "Chicken",
 				"text": "chicken",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/4952.png",
 				"id": 10,
 				"messages": {
@@ -3311,7 +3365,7 @@
 			{
 				"name": "Fish",
 				"text": "fish",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2519.png",
 				"id": 11,
 				"messages": {
@@ -3328,7 +3382,7 @@
 			{
 				"name": "Egg",
 				"text": "egg",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2427.png",
 				"id": 12,
 				"messages": {
@@ -3345,7 +3399,7 @@
 			{
 				"name": "Cheese",
 				"text": "cheese",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2541.png",
 				"id": 13,
 				"messages": {
@@ -3362,7 +3416,7 @@
 			{
 				"name": "Milk",
 				"text": "milk",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/2445.png",
 				"id": 14,
 				"messages": {
@@ -3379,7 +3433,7 @@
 			{
 				"name": "Water",
 				"text": "water",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/32464.png",
 				"id": 15,
 				"messages": {
@@ -3396,7 +3450,7 @@
 			{
 				"name": "Juice",
 				"text": "juice",
-				"accent": "sky",
+				"accent": "peach",
 				"image": "/img/pictograms/11461.png",
 				"id": 16,
 				"messages": {
@@ -3413,7 +3467,7 @@
 			{
 				"name": "Fruit",
 				"text": "fruit",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/28339.png",
 				"id": 17,
 				"messages": {
@@ -3430,7 +3484,7 @@
 			{
 				"name": "Apple",
 				"text": "apple",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2462.png",
 				"id": 18,
 				"messages": {
@@ -3447,7 +3501,7 @@
 			{
 				"name": "Banana",
 				"text": "banana",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/10218.png",
 				"id": 19,
 				"messages": {
@@ -3464,7 +3518,7 @@
 			{
 				"name": "Vegetables",
 				"text": "vegetables",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/29131.png",
 				"id": 20,
 				"messages": {
@@ -3481,7 +3535,7 @@
 			{
 				"name": "Soup",
 				"text": "soup",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/2573.png",
 				"id": 21,
 				"messages": {
@@ -3498,7 +3552,7 @@
 			{
 				"name": "Cookie",
 				"text": "cookie",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/8312.png",
 				"id": 22,
 				"messages": {
@@ -3515,7 +3569,7 @@
 			{
 				"name": "Dessert",
 				"text": "dessert",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/7216.png",
 				"id": 23,
 				"messages": {
@@ -3532,7 +3586,7 @@
 			{
 				"name": "Ice cream",
 				"text": "ice cream",
-				"accent": "white",
+				"accent": "peach",
 				"image": "/img/pictograms/35209.png",
 				"id": 24,
 				"messages": {
@@ -3549,7 +3603,7 @@
 			{
 				"name": "Hungry",
 				"text": "hungry",
-				"accent": "peach",
+				"accent": "sky",
 				"image": "/img/pictograms/35559.png",
 				"id": 25,
 				"messages": {
@@ -3566,7 +3620,7 @@
 			{
 				"name": "Thirsty",
 				"text": "thirsty",
-				"accent": "peach",
+				"accent": "sky",
 				"image": "/img/pictograms/7273.png",
 				"id": 26,
 				"messages": {
@@ -4551,7 +4605,7 @@
 			{
 				"name": "Dog",
 				"text": "dog",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/7202.png",
 				"id": 1,
 				"messages": {
@@ -4568,7 +4622,7 @@
 			{
 				"name": "Cat",
 				"text": "cat",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/7114.png",
 				"id": 2,
 				"messages": {
@@ -4585,7 +4639,7 @@
 			{
 				"name": "Bird",
 				"text": "bird",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2490.png",
 				"id": 3,
 				"messages": {
@@ -4602,7 +4656,7 @@
 			{
 				"name": "Fish",
 				"text": "fish",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2520.png",
 				"id": 4,
 				"messages": {
@@ -4619,7 +4673,7 @@
 			{
 				"name": "Horse",
 				"text": "horse",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2294.png",
 				"id": 5,
 				"messages": {
@@ -4636,7 +4690,7 @@
 			{
 				"name": "Cow",
 				"text": "cow",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2609.png",
 				"id": 6,
 				"messages": {
@@ -4653,7 +4707,7 @@
 			{
 				"name": "Pig",
 				"text": "pig",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/24972.png",
 				"id": 7,
 				"messages": {
@@ -4670,7 +4724,7 @@
 			{
 				"name": "Hen",
 				"text": "hen",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2403.png",
 				"id": 8,
 				"messages": {
@@ -4687,7 +4741,7 @@
 			{
 				"name": "Duck",
 				"text": "duck",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/28479.png",
 				"id": 9,
 				"messages": {
@@ -4704,7 +4758,7 @@
 			{
 				"name": "Rabbit",
 				"text": "rabbit",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2351.png",
 				"id": 10,
 				"messages": {
@@ -4721,7 +4775,7 @@
 			{
 				"name": "Mouse",
 				"text": "mouse",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2546.png",
 				"id": 11,
 				"messages": {
@@ -4738,7 +4792,7 @@
 			{
 				"name": "Turtle",
 				"text": "turtle",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/26503.png",
 				"id": 12,
 				"messages": {
@@ -4755,7 +4809,7 @@
 			{
 				"name": "Lion",
 				"text": "lion",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/25187.png",
 				"id": 13,
 				"messages": {
@@ -4772,7 +4826,7 @@
 			{
 				"name": "Tiger",
 				"text": "tiger",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2590.png",
 				"id": 14,
 				"messages": {
@@ -4789,7 +4843,7 @@
 			{
 				"name": "Monkey",
 				"text": "monkey",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2477.png",
 				"id": 15,
 				"messages": {
@@ -4806,7 +4860,7 @@
 			{
 				"name": "Elephant",
 				"text": "elephant",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2372.png",
 				"id": 16,
 				"messages": {
@@ -4823,7 +4877,7 @@
 			{
 				"name": "Giraffe",
 				"text": "giraffe",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2437.png",
 				"id": 17,
 				"messages": {
@@ -4840,7 +4894,7 @@
 			{
 				"name": "Bear",
 				"text": "bear",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2488.png",
 				"id": 18,
 				"messages": {
@@ -4857,7 +4911,7 @@
 			{
 				"name": "Snake",
 				"text": "snake",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2568.png",
 				"id": 19,
 				"messages": {
@@ -4874,7 +4928,7 @@
 			{
 				"name": "Spider",
 				"text": "spider",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/38275.png",
 				"id": 20,
 				"messages": {
@@ -4891,7 +4945,7 @@
 			{
 				"name": "Butterfly",
 				"text": "butterfly",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/26200.png",
 				"id": 21,
 				"messages": {
@@ -4908,7 +4962,7 @@
 			{
 				"name": "Bee",
 				"text": "bee",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/24823.png",
 				"id": 22,
 				"messages": {
@@ -4925,7 +4979,7 @@
 			{
 				"name": "Ant",
 				"text": "ant",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/2425.png",
 				"id": 23,
 				"messages": {
@@ -4942,7 +4996,7 @@
 			{
 				"name": "Frog",
 				"text": "frog",
-				"accent": "pear",
+				"accent": "peach",
 				"image": "/img/pictograms/28473.png",
 				"id": 24,
 				"messages": {
@@ -5343,7 +5397,7 @@
 			{
 				"name": "Red",
 				"text": "red",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2808.png",
 				"id": 1,
 				"messages": {
@@ -5360,7 +5414,7 @@
 			{
 				"name": "Blue",
 				"text": "blue",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/4869.png",
 				"id": 2,
 				"messages": {
@@ -5377,7 +5431,7 @@
 			{
 				"name": "Green",
 				"text": "green",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/4887.png",
 				"id": 3,
 				"messages": {
@@ -5394,7 +5448,7 @@
 			{
 				"name": "Yellow",
 				"text": "yellow",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2648.png",
 				"id": 4,
 				"messages": {
@@ -5411,7 +5465,7 @@
 			{
 				"name": "Orange",
 				"text": "orange",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2888.png",
 				"id": 5,
 				"messages": {
@@ -5428,7 +5482,7 @@
 			{
 				"name": "Purple",
 				"text": "purple",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2907.png",
 				"id": 6,
 				"messages": {
@@ -5445,7 +5499,7 @@
 			{
 				"name": "Pink",
 				"text": "pink",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/3151.png",
 				"id": 7,
 				"messages": {
@@ -5462,7 +5516,7 @@
 			{
 				"name": "Black",
 				"text": "black",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2886.png",
 				"id": 8,
 				"messages": {
@@ -5479,7 +5533,7 @@
 			{
 				"name": "White",
 				"text": "white",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/8043.png",
 				"id": 9,
 				"messages": {
@@ -5496,7 +5550,7 @@
 			{
 				"name": "Gray",
 				"text": "gray",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/3340.png",
 				"id": 10,
 				"messages": {
@@ -5513,7 +5567,7 @@
 			{
 				"name": "Brown",
 				"text": "brown",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/2923.png",
 				"id": 11,
 				"messages": {
@@ -5530,7 +5584,7 @@
 			{
 				"name": "Color",
 				"text": "color",
-				"accent": "white",
+				"accent": "sky",
 				"image": "/img/pictograms/7075.png",
 				"id": 12,
 				"messages": {
@@ -5569,7 +5623,7 @@
 			{
 				"name": "Head",
 				"text": "head",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2673.png",
 				"id": 1,
 				"messages": {
@@ -5586,7 +5640,7 @@
 			{
 				"name": "Face",
 				"text": "face",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2684.png",
 				"id": 2,
 				"messages": {
@@ -5603,7 +5657,7 @@
 			{
 				"name": "Eye",
 				"text": "eye",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/6573.png",
 				"id": 3,
 				"messages": {
@@ -5620,7 +5674,7 @@
 			{
 				"name": "Ear",
 				"text": "ear",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2871.png",
 				"id": 4,
 				"messages": {
@@ -5637,7 +5691,7 @@
 			{
 				"name": "Nose",
 				"text": "nose",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2887.png",
 				"id": 5,
 				"messages": {
@@ -5654,7 +5708,7 @@
 			{
 				"name": "Mouth",
 				"text": "mouth",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2663.png",
 				"id": 6,
 				"messages": {
@@ -5671,7 +5725,7 @@
 			{
 				"name": "Teeth",
 				"text": "teeth",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2737.png",
 				"id": 7,
 				"messages": {
@@ -5688,7 +5742,7 @@
 			{
 				"name": "Hair",
 				"text": "hair",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2851.png",
 				"id": 8,
 				"messages": {
@@ -5705,7 +5759,7 @@
 			{
 				"name": "Hand",
 				"text": "hand",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2928.png",
 				"id": 9,
 				"messages": {
@@ -5722,7 +5776,7 @@
 			{
 				"name": "Fingers",
 				"text": "fingers",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/3298.png",
 				"id": 10,
 				"messages": {
@@ -5739,7 +5793,7 @@
 			{
 				"name": "Arm",
 				"text": "arm",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2669.png",
 				"id": 11,
 				"messages": {
@@ -5756,7 +5810,7 @@
 			{
 				"name": "Leg",
 				"text": "leg",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/8666.png",
 				"id": 12,
 				"messages": {
@@ -5773,7 +5827,7 @@
 			{
 				"name": "Foot",
 				"text": "foot",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/25327.png",
 				"id": 13,
 				"messages": {
@@ -5790,7 +5844,7 @@
 			{
 				"name": "Stomach",
 				"text": "stomach",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/3309.png",
 				"id": 14,
 				"messages": {
@@ -5807,7 +5861,7 @@
 			{
 				"name": "Back",
 				"text": "back",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2748.png",
 				"id": 15,
 				"messages": {
@@ -5824,7 +5878,7 @@
 			{
 				"name": "Heart",
 				"text": "heart",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/4613.png",
 				"id": 16,
 				"messages": {
@@ -5841,7 +5895,7 @@
 			{
 				"name": "Neck",
 				"text": "neck",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2727.png",
 				"id": 17,
 				"messages": {
@@ -5858,7 +5912,7 @@
 			{
 				"name": "Shoulder",
 				"text": "shoulder",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2977.png",
 				"id": 18,
 				"messages": {
@@ -5875,7 +5929,7 @@
 			{
 				"name": "Knee",
 				"text": "knee",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2810.png",
 				"id": 19,
 				"messages": {
@@ -5892,7 +5946,7 @@
 			{
 				"name": "Elbow",
 				"text": "elbow",
-				"accent": "violet",
+				"accent": "peach",
 				"image": "/img/pictograms/2707.png",
 				"id": 20,
 				"messages": {

@@ -4,6 +4,23 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.6.1] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Codificación cromática Fitzgerald (estándar AAC)
+
+- **Retinte completo del tablero según clave Fitzgerald** (`build.json`): las baldosas ahora codifican categoría gramatical por color, estándar en sistemas AAC (AsTeRICS Grid, Proloquo2Go):
+  - **Amarillo (`sunny`)**: personas, pronombres y palabras sociales (You, They, I, Please, What, frases hechas...)
+  - **Verde (`mint`)**: verbos y acciones (Go, Come, Eat, Run, Clean, leer, escribir...)
+  - **Azul (`sky`)**: adjetivos y descriptivos (emociones, colores, tamaños, estados)
+  - **Naranja (`peach`)**: sustantivos comunes (alimentos, animales, lugares, partes del cuerpo, objetos)
+  - **Blanco**: misceláneos (letras del teclado)
+  - Las baldosas de navegación entre colecciones conservan el verde `mint` distintivo.
+  - Facilita aprendizaje de la posición y categoría de cada pictograma para personas con discapacidad cognitiva.
+
+---
+
 ## [2.6.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
