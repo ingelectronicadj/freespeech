@@ -173,7 +173,7 @@ export default {
 		};
 	},
 	computed: {
-		...mapState('settings', ['sentenceMode', 'gridDensity', 'highContrast']),
+		...mapState('settings', ['sentenceMode', 'gridDensity', 'highContrast', 'voiceRate', 'voicePitch']),
 		...mapState('tilePad', ['tileTapsCount']),
 		frequentLabel () {
 			return typeof this.$t === 'function' ? this.$t('collections.frequent') : 'Frecuentes:';
@@ -245,6 +245,7 @@ export default {
 				{ key: '12', iconClass: 'nav-ico-folder', label: tr('collections.clothes', 'Ropa') },
 				{ key: '13', iconClass: 'nav-ico-folder', label: tr('collections.music', 'Música') },
 				{ key: '14', iconClass: 'nav-ico-folder', label: tr('collections.time', 'Tiempo') },
+				{ key: '15', iconClass: 'nav-ico-folder', label: tr('collections.routines', 'Rutinas') },
 				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];
@@ -418,6 +419,8 @@ export default {
 			if (this.voices && this.selectedVoiceIndex !== null && this.voices[this.selectedVoiceIndex]) {
 				speechSynthesisUtterance.voice = this.voices[this.selectedVoiceIndex];
 			}
+			if (this.voiceRate && this.voiceRate !== 1) speechSynthesisUtterance.rate = this.voiceRate;
+			if (this.voicePitch && this.voicePitch !== 1) speechSynthesisUtterance.pitch = this.voicePitch;
 			window.speechSynthesis.speak(speechSynthesisUtterance);
 		},
 		speakSentence () {

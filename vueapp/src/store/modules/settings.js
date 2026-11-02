@@ -11,6 +11,9 @@ const state = {
 	tileImageSize: 'medium',
 	gridDensity: 'auto',
 	highContrast: false,
+	voiceRate: 1,
+	voicePitch: 1,
+	activationDelay: 0,
 };
 
 const mutations = {
@@ -49,6 +52,15 @@ const mutations = {
 	},
 	SET_HIGH_CONTRAST: (state, value) => {
 		state.highContrast = value;
+	},
+	SET_VOICE_RATE: (state, value) => {
+		state.voiceRate = value;
+	},
+	SET_VOICE_PITCH: (state, value) => {
+		state.voicePitch = value;
+	},
+	SET_ACTIVATION_DELAY: (state, value) => {
+		state.activationDelay = value;
 	}
 };
 
@@ -95,6 +107,15 @@ const actions = {
 	setHighContrast: ({ commit }, value) => {
 		commit('SET_HIGH_CONTRAST', value);
 	},
+	setVoiceRate: ({ commit }, value) => {
+		commit('SET_VOICE_RATE', value);
+	},
+	setVoicePitch: ({ commit }, value) => {
+		commit('SET_VOICE_PITCH', value);
+	},
+	setActivationDelay: ({ commit }, value) => {
+		commit('SET_ACTIVATION_DELAY', value);
+	},
 	setDisplayTapCount: ({ commit }, value) => {
 		commit('SET_DISPLAY_TAP_COUNT', value);
 	}
@@ -112,6 +133,9 @@ const getters = {
 	tileImageSize: (state) => state.tileImageSize,
 	gridDensity: (state) => state.gridDensity,
 	highContrast: (state) => state.highContrast,
+	voiceRate: (state) => state.voiceRate,
+	voicePitch: (state) => state.voicePitch,
+	activationDelay: (state) => state.activationDelay,
 };
 
 export default {

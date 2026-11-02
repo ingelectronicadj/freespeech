@@ -42,7 +42,17 @@
 		},
 		"optionHighContrast": "Alto contraste",
 		"previewLabel": "Vista previa en vivo:",
-		"previewAria": "Vista previa de una baldosa con los ajustes actuales"
+		"previewAria": "Vista previa de una baldosa con los ajustes actuales",
+		"optionVoiceRate": "Velocidad de la voz",
+		"hintVoiceRate": "Más lento ayuda a entender cada palabra; ajusta según el perfil del usuario.",
+		"optionVoicePitch": "Tono de la voz",
+		"hintVoicePitch": "Un tono más agudo puede sonar más amigable para niños.",
+		"optionActivationDelay": "Retraso de activación",
+		"hintActivationDelay": "Si el niño toca accidentalmente las baldosas, exige mantener el dedo presionado un instante para activar. Desactivado por defecto.",
+		"delayOff": "Desactivado (toque inmediato)",
+		"hintPictogramSize": "Más grandes = más visibles para baja visión; más pequeños = más palabras por pantalla.",
+		"hintBoardTileSize": "Baldosas más grandes = objetivos táctiles más fáciles para dificultades motrices.",
+		"hintHighContrast": "Bordes gruesos y etiquetas más oscuras para usuarios con baja visión."
 	},
 	"sentence": {
 		"title": "Oración",
@@ -80,7 +90,8 @@
 		"transport": "Transportes",
 		"clothes": "Ropa",
 		"music": "Música",
-		"time": "Tiempo"
+		"time": "Tiempo",
+		"routines": "Rutinas"
 	},
 	"editMode": {
 		"title": "Estás en modo de edición!",

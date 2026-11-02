@@ -21,12 +21,38 @@
 			item-value="value"
 			:label="$t('settings.optionVoice')"
 		/>
+
+		<v-slider
+			v-model="voiceRate"
+			:min="0.5"
+			:max="1.5"
+			:step="0.1"
+			thumb-label
+			:label="$t('settings.optionVoiceRate')"
+			:hint="$t('settings.hintVoiceRate')"
+			persistent-hint
+			class="mb-3"
+		/>
+
+		<v-slider
+			v-model="voicePitch"
+			:min="0.5"
+			:max="2"
+			:step="0.1"
+			thumb-label
+			:label="$t('settings.optionVoicePitch')"
+			:hint="$t('settings.hintVoicePitch')"
+			persistent-hint
+			class="mb-3"
+		/>
 		<v-select
 			v-model="tileImageSize"
 			:items="tileImageSizeOptions"
 			item-title="text"
 			item-value="value"
 			:label="$t('settings.optionPictogramSize')"
+			:hint="$t('settings.hintPictogramSize')"
+			persistent-hint
 		/>
 
 		<v-select
@@ -35,12 +61,26 @@
 			item-title="text"
 			item-value="value"
 			:label="$t('settings.optionBoardTileSize')"
+			:hint="$t('settings.hintBoardTileSize')"
+			persistent-hint
 		/>
 
 		<v-switch
 			v-model="highContrast"
 			color="primary"
 			:label="$t('settings.optionHighContrast')"
+			:hint="$t('settings.hintHighContrast')"
+			persistent-hint
+		/>
+
+		<v-select
+			v-model="activationDelay"
+			:items="activationDelayOptions"
+			item-title="text"
+			item-value="value"
+			:label="$t('settings.optionActivationDelay')"
+			:hint="$t('settings.hintActivationDelay')"
+			persistent-hint
 		/>
 
 			</div>
@@ -289,6 +329,21 @@ export default {
 				text: this.$t('settings.boardTileSize.' + v)
 			}));
 		},
+		voiceRate: {
+			get () { return this.$store.state.settings.voiceRate || 1; },
+			set (v) { this.setVoiceRate(v); }
+		},
+		voicePitch: {
+			get () { return this.$store.state.settings.voicePitch || 1; },
+			set (v) { this.setVoicePitch(v); }
+		},
+		activationDelay: {
+			get () { return this.$store.state.settings.activationDelay || 0; },
+			set (v) { this.setActivationDelay(v); }
+		},
+		activationDelayOptions () {
+			return [0, 300, 500, 800].map(v => ({ value: v, text: v === 0 ? this.$t('settings.delayOff') : v + ' ms' }));
+		},
 		highContrast: {
 			get () {
 				return !!this.$store.state.settings.highContrast;
@@ -311,6 +366,9 @@ export default {
 			setTileImageSize: 'settings/setTileImageSize',
 			setGridDensity: 'settings/setGridDensity',
 			setHighContrast: 'settings/setHighContrast',
+			setVoiceRate: 'settings/setVoiceRate',
+			setVoicePitch: 'settings/setVoicePitch',
+			setActivationDelay: 'settings/setActivationDelay',
 		}),
 		exportSettings () {
 			const json = JSON.stringify({

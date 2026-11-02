@@ -42,7 +42,17 @@
 		},
 		"optionHighContrast": "High contrast",
 		"previewLabel": "Live preview:",
-		"previewAria": "Preview of a tile with current settings"
+		"previewAria": "Preview of a tile with current settings",
+		"optionVoiceRate": "Voice speed",
+		"hintVoiceRate": "Slower helps understand each word; tune to the user profile.",
+		"optionVoicePitch": "Voice pitch",
+		"hintVoicePitch": "A higher pitch can sound friendlier for children.",
+		"optionActivationDelay": "Activation delay",
+		"hintActivationDelay": "If the child taps tiles accidentally, require holding the finger a moment to activate. Off by default.",
+		"delayOff": "Off (instant tap)",
+		"hintPictogramSize": "Bigger = more visible for low vision; smaller = more words per screen.",
+		"hintBoardTileSize": "Bigger tiles = easier touch targets for motor difficulties.",
+		"hintHighContrast": "Thick borders and darker labels for low vision users."
 	},
 	"sentence": {
 		"title": "Sentence",
@@ -80,7 +90,8 @@
 		"transport": "Transport",
 		"clothes": "Clothes",
 		"music": "Music",
-		"time": "Time"
+		"time": "Time",
+		"routines": "Routines"
 	},
 	"editMode": {
 		"title": "You're in edit mode!",

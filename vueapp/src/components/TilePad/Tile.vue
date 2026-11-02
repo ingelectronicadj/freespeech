@@ -12,7 +12,9 @@
 		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFF' : cardColor"
 		:aria-label="accessibleTileLabel"
 		style="height: unset"
-		@click="tileClickedEvent"
+		@pointerdown="tilePressStart"
+		@pointerup="tilePressEnd"
+		@pointerleave="tilePressEnd"
 	>
 		<v-container
 			v-if="newTile"
@@ -296,6 +298,20 @@ export default {
 					text: String(spokenText || this.displayTileName || '').trim(),
 					name: this.displayTileName
 				}, '*');
+			}
+		},
+		tilePressStart () {
+			const delay = this.$store.state.settings.activationDelay || 0;
+			if (delay > 0) {
+				this._pressTimer = setTimeout(() => this.tileClickedEvent(), delay);
+			} else {
+				this.tileClickedEvent();
+			}
+		},
+		tilePressEnd () {
+			if (this._pressTimer) {
+				clearTimeout(this._pressTimer);
+				this._pressTimer = null;
 			}
 		},
 		tileClickedEvent () {

@@ -2,10 +2,61 @@
 	"home": {
 		"tileData": [
 			{
+				"name": "Another",
+				"text": "another",
+				"accent": 17054,
+				"image": "/img/pictograms/sunny.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "Ein anderer",
+						"text": "ein anderer"
+					},
+					"sp": {
+						"name": "Otro",
+						"text": "otro"
+					}
+				}
+			},
+			{
+				"name": "Because",
+				"text": "because",
+				"accent": 36719,
+				"image": "/img/pictograms/white.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Weil",
+						"text": "weil"
+					},
+					"sp": {
+						"name": "Porque",
+						"text": "porque"
+					}
+				}
+			},
+			{
+				"name": "But",
+				"text": "but",
+				"accent": 11377,
+				"image": "/img/pictograms/white.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Aber",
+						"text": "aber"
+					},
+					"sp": {
+						"name": "Pero",
+						"text": "pero"
+					}
+				}
+			},
+			{
 				"name": "Mine",
 				"text": "Mine",
 				"image": "/img/pictograms/12264.png",
-				"id": 0,
+				"id": 3,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -22,7 +73,7 @@
 				"name": "You",
 				"text": "You",
 				"image": "/img/pictograms/6625.png",
-				"id": 1,
+				"id": 4,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -40,7 +91,7 @@
 				"text": "They",
 				"accent": "sunny",
 				"image": "/img/pictograms/7032.png",
-				"id": 2,
+				"id": 5,
 				"messages": {
 					"de": {
 						"name": "Sie",
@@ -56,7 +107,7 @@
 				"name": "It",
 				"text": "It",
 				"image": "/img/pictograms/31670.png",
-				"id": 3,
+				"id": 6,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -73,7 +124,7 @@
 				"name": "He",
 				"text": "He",
 				"image": "/img/pictograms/6480.png",
-				"id": 4,
+				"id": 7,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -91,7 +142,7 @@
 				"text": "My",
 				"accent": "sunny",
 				"image": "/img/pictograms/12264.png",
-				"id": 5,
+				"id": 8,
 				"messages": {
 					"de": {
 						"name": "Mein",
@@ -108,7 +159,7 @@
 				"text": "Me",
 				"accent": "sunny",
 				"image": "/img/pictograms/6632.png",
-				"id": 6,
+				"id": 9,
 				"messages": {
 					"de": {
 						"name": "Mir",
@@ -124,7 +175,7 @@
 				"name": "That",
 				"text": "That",
 				"image": "/img/pictograms/6906.png",
-				"id": 7,
+				"id": 10,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -141,7 +192,7 @@
 				"name": "Please",
 				"text": "Please",
 				"image": "/img/pictograms/8195.png",
-				"id": 8,
+				"id": 11,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -158,7 +209,7 @@
 				"name": "What",
 				"text": "What",
 				"image": "/img/pictograms/22620.png",
-				"id": 9,
+				"id": 12,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -175,7 +226,7 @@
 				"name": "I",
 				"text": "Eye",
 				"image": "/img/pictograms/6632.png",
-				"id": 10,
+				"id": 13,
 				"accent": "sunny",
 				"messages": {
 					"de": {
@@ -193,7 +244,7 @@
 				"text": "We",
 				"accent": "sunny",
 				"image": "/img/pictograms/7185.png",
-				"id": 11,
+				"id": 14,
 				"messages": {
 					"de": {
 						"name": "Wir",
@@ -209,7 +260,7 @@
 				"name": "Off",
 				"text": "Off",
 				"image": "/img/pictograms/11739.png",
-				"id": 12,
+				"id": 15,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -226,7 +277,7 @@
 				"name": "Finished",
 				"text": "Finished",
 				"image": "/img/pictograms/28429.png",
-				"id": 13,
+				"id": 16,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -243,7 +294,7 @@
 				"name": "Play",
 				"text": "Play",
 				"image": "/img/pictograms/23392.png",
-				"id": 14,
+				"id": 17,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -260,7 +311,7 @@
 				"name": "Have",
 				"text": "Have",
 				"image": "/img/pictograms/32761.png",
-				"id": 15,
+				"id": 18,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -277,7 +328,7 @@
 				"name": "Stop",
 				"text": "Stop",
 				"image": "/img/pictograms/7196.png",
-				"id": 16,
+				"id": 19,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -294,7 +345,7 @@
 				"name": "Read",
 				"text": "Read",
 				"image": "/img/pictograms/7141.png",
-				"id": 17,
+				"id": 20,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -311,7 +362,7 @@
 				"name": "Like",
 				"text": "Like",
 				"image": "/img/pictograms/37826.png",
-				"id": 18,
+				"id": 21,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -328,7 +379,7 @@
 				"name": "Go",
 				"text": "Go",
 				"image": "/img/pictograms/8142.png",
-				"id": 19,
+				"id": 22,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -345,7 +396,7 @@
 				"name": "Want",
 				"text": "Want",
 				"image": "/img/pictograms/5441.png",
-				"id": 20,
+				"id": 23,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -362,7 +413,7 @@
 				"name": "Help",
 				"text": "Help",
 				"image": "/img/pictograms/32648.png",
-				"id": 21,
+				"id": 24,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -379,7 +430,7 @@
 				"name": "Do",
 				"text": "Do",
 				"image": "/img/pictograms/32751.png",
-				"id": 22,
+				"id": 25,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -396,7 +447,7 @@
 				"name": "Come",
 				"text": "Come",
 				"image": "/img/pictograms/32669.png",
-				"id": 23,
+				"id": 26,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -413,7 +464,7 @@
 				"name": "Get",
 				"text": "Get",
 				"image": "/img/pictograms/24208.png",
-				"id": 24,
+				"id": 27,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -430,7 +481,7 @@
 				"name": "Wear",
 				"text": "Wear",
 				"image": "/img/pictograms/6627.png",
-				"id": 25,
+				"id": 28,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -447,7 +498,7 @@
 				"name": "Am",
 				"text": "Am",
 				"image": "/img/pictograms/36480.png",
-				"id": 26,
+				"id": 29,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -465,7 +516,7 @@
 				"text": "Were",
 				"accent": "mint",
 				"image": "/img/pictograms/36392.png",
-				"id": 27,
+				"id": 30,
 				"messages": {
 					"de": {
 						"name": "Warst",
@@ -481,7 +532,7 @@
 				"name": "Was",
 				"text": "Was",
 				"image": "/img/pictograms/36392.png",
-				"id": 28,
+				"id": 31,
 				"accent": "mint",
 				"messages": {
 					"de": {
@@ -499,7 +550,7 @@
 				"text": "End",
 				"accent": "mint",
 				"image": "/img/pictograms/32814.png",
-				"id": 29,
+				"id": 32,
 				"messages": {
 					"de": {
 						"name": "Ende",
@@ -516,7 +567,7 @@
 				"text": "Is",
 				"accent": "mint",
 				"image": "/img/pictograms/36480.png",
-				"id": 30,
+				"id": 33,
 				"messages": {
 					"de": {
 						"name": "Ist",
@@ -533,7 +584,7 @@
 				"text": "Are",
 				"accent": "mint",
 				"image": "/img/pictograms/36480.png",
-				"id": 31,
+				"id": 34,
 				"messages": {
 					"de": {
 						"name": "Sind",
@@ -550,7 +601,7 @@
 				"text": "No",
 				"accent": "sky",
 				"image": "/img/pictograms/5526.png",
-				"id": 32,
+				"id": 35,
 				"messages": {
 					"de": {
 						"name": "Nein",
@@ -566,7 +617,7 @@
 				"name": "Little",
 				"text": "Little",
 				"image": "/img/pictograms/25839.png",
-				"id": 33,
+				"id": 36,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -583,7 +634,7 @@
 				"name": "Good",
 				"text": "Good",
 				"image": "/img/pictograms/4581.png",
-				"id": 34,
+				"id": 37,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -600,7 +651,7 @@
 				"name": "Some",
 				"text": "Some",
 				"image": "/img/pictograms/5374.png",
-				"id": 35,
+				"id": 38,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -617,7 +668,7 @@
 				"name": "Bad",
 				"text": "Bad",
 				"image": "/img/pictograms/5504.png",
-				"id": 36,
+				"id": 39,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -634,7 +685,7 @@
 				"name": "New",
 				"text": "New",
 				"image": "/img/pictograms/11316.png",
-				"id": 37,
+				"id": 40,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -651,7 +702,7 @@
 				"name": "Fast",
 				"text": "Fast",
 				"image": "/img/pictograms/5306.png",
-				"id": 38,
+				"id": 41,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -668,7 +719,7 @@
 				"name": "More",
 				"text": "More",
 				"image": "/img/pictograms/5508.png",
-				"id": 39,
+				"id": 42,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -686,7 +737,7 @@
 				"text": "Big",
 				"accent": "sky",
 				"image": "/img/pictograms/4658.png",
-				"id": 40,
+				"id": 43,
 				"messages": {
 					"de": {
 						"name": "Groß",
@@ -702,7 +753,7 @@
 				"name": "All",
 				"text": "All",
 				"image": "/img/pictograms/5596.png",
-				"id": 41,
+				"id": 44,
 				"accent": "sky",
 				"messages": {
 					"de": {
@@ -719,7 +770,7 @@
 				"name": "Out",
 				"text": "Out",
 				"image": "/img/pictograms/2806.png",
-				"id": 42,
+				"id": 45,
 				"accent": "peach",
 				"messages": {
 					"de": {
@@ -736,7 +787,7 @@
 				"name": "Down",
 				"text": "Down",
 				"image": "/img/pictograms/5355.png",
-				"id": 43,
+				"id": 46,
 				"accent": "peach",
 				"messages": {
 					"de": {
@@ -754,7 +805,7 @@
 				"text": "Up",
 				"accent": "peach",
 				"image": "/img/pictograms/5388.png",
-				"id": 44,
+				"id": 47,
 				"messages": {
 					"de": {
 						"name": "Auf",
@@ -771,7 +822,7 @@
 				"text": "Work",
 				"accent": "peach",
 				"image": "/img/pictograms/16087.png",
-				"id": 45,
+				"id": 48,
 				"messages": {
 					"de": {
 						"name": "Arbeit",
@@ -788,7 +839,7 @@
 				"text": "Time",
 				"accent": "peach",
 				"image": "/img/pictograms/22631.png",
-				"id": 46,
+				"id": 49,
 				"messages": {
 					"de": {
 						"name": "Zeit",
@@ -805,7 +856,7 @@
 				"text": "Color",
 				"accent": "peach",
 				"image": "/img/pictograms/5968.png",
-				"id": 47,
+				"id": 50,
 				"messages": {
 					"de": {
 						"name": "Farbe",
@@ -821,7 +872,7 @@
 				"name": "And",
 				"text": "And",
 				"image": "/img/pictograms/11399.png",
-				"id": 48,
+				"id": 51,
 				"accent": "peach",
 				"messages": {
 					"de": {
@@ -838,14 +889,14 @@
 				"name": "+s",
 				"text": "Needs to be added",
 				"image": "/img/pictograms/11100.png",
-				"id": 49,
+				"id": 52,
 				"accent": "peach"
 			},
 			{
 				"name": "There",
 				"text": "There",
 				"image": "/img/pictograms/5375.png",
-				"id": 50,
+				"id": 53,
 				"accent": "peach",
 				"messages": {
 					"de": {
@@ -862,7 +913,7 @@
 				"name": "In",
 				"text": "In",
 				"image": "/img/pictograms/7034.png",
-				"id": 51,
+				"id": 54,
 				"accent": "peach",
 				"messages": {
 					"de": {
@@ -880,7 +931,7 @@
 				"text": "Uh",
 				"accent": "peach",
 				"image": "/img/pictograms/3021.png",
-				"id": 52,
+				"id": 55,
 				"messages": {
 					"de": {
 						"name": "Ein",
@@ -897,7 +948,7 @@
 				"text": "On",
 				"accent": "peach",
 				"image": "/img/pictograms/7814.png",
-				"id": 53,
+				"id": 56,
 				"messages": {
 					"de": {
 						"name": "Auf",
@@ -914,7 +965,7 @@
 				"text": "To",
 				"accent": "peach",
 				"image": "/img/pictograms/7041.png",
-				"id": 54,
+				"id": 57,
 				"messages": {
 					"de": {
 						"name": "Zu",
@@ -931,7 +982,7 @@
 				"text": "The",
 				"accent": "peach",
 				"image": "/img/pictograms/8477.png",
-				"id": 55,
+				"id": 58,
 				"messages": {
 					"de": {
 						"name": "Der",
@@ -948,7 +999,7 @@
 				"text": "An",
 				"accent": "peach",
 				"image": "/img/pictograms/8474.png",
-				"id": 56,
+				"id": 59,
 				"messages": {
 					"de": {
 						"name": "Eine",
@@ -959,6 +1010,24 @@
 						"text": "Una"
 					}
 				}
+			},
+			{
+				"name": "Routines",
+				"text": "routines",
+				"accent": "mint",
+				"image": "/img/pictograms/33064.png",
+				"id": 60,
+				"messages": {
+					"de": {
+						"name": "Routinen",
+						"text": "Routinen"
+					},
+					"sp": {
+						"name": "Rutinas",
+						"text": "Rutinas"
+					}
+				},
+				"navigation": "15"
 			}
 		]
 	},
@@ -3958,7 +4027,7 @@
 			}
 		]
 	},
-	"_v": 8,
+	"_v": 9,
 	"6": {
 		"tileData": [
 			{
@@ -6812,6 +6881,283 @@
 				"accent": "mint",
 				"image": "/img/pictograms/6964.png",
 				"id": 18,
+				"messages": {
+					"de": {
+						"name": "Startseite",
+						"text": "Startseite"
+					},
+					"sp": {
+						"name": "Inicio",
+						"text": "Inicio"
+					}
+				},
+				"navigation": "home"
+			}
+		]
+	},
+	"15": {
+		"tileData": [
+			{
+				"name": "Wake up",
+				"text": "despertarme",
+				"accent": "sunny",
+				"image": "/img/pictograms/28665.png",
+				"id": 0,
+				"messages": {
+					"de": {
+						"name": "Aufwachen",
+						"text": "aufwachen"
+					},
+					"sp": {
+						"name": "Despertar",
+						"text": "despertar"
+					}
+				}
+			},
+			{
+				"name": "Breakfast",
+				"text": "desayunar",
+				"accent": "sunny",
+				"image": "/img/pictograms/4626.png",
+				"id": 1,
+				"messages": {
+					"de": {
+						"name": "Frühstück",
+						"text": "Frühstück"
+					},
+					"sp": {
+						"name": "Desayuno",
+						"text": "desayunar"
+					}
+				}
+			},
+			{
+				"name": "Recess",
+				"text": "recreo",
+				"accent": "sunny",
+				"image": "/img/pictograms/33064.png",
+				"id": 2,
+				"messages": {
+					"de": {
+						"name": "Pause",
+						"text": "Pause"
+					},
+					"sp": {
+						"name": "Recreo",
+						"text": "recreo"
+					}
+				}
+			},
+			{
+				"name": "Rest",
+				"text": "descansar",
+				"accent": "sunny",
+				"image": "/img/pictograms/16643.png",
+				"id": 3,
+				"messages": {
+					"de": {
+						"name": "Ruhen",
+						"text": "ruhen"
+					},
+					"sp": {
+						"name": "Descansar",
+						"text": "descansar"
+					}
+				}
+			},
+			{
+				"name": "Nap",
+				"text": "siesta",
+				"accent": "sunny",
+				"image": "/img/pictograms/28426.png",
+				"id": 4,
+				"messages": {
+					"de": {
+						"name": "Nickerchen",
+						"text": "Nickerchen"
+					},
+					"sp": {
+						"name": "Siesta",
+						"text": "siesta"
+					}
+				}
+			},
+			{
+				"name": "Call someone",
+				"text": "llamar a alguien",
+				"accent": "sunny",
+				"image": "/img/pictograms/26479.png",
+				"id": 5,
+				"messages": {
+					"de": {
+						"name": "Anrufen",
+						"text": "anrufen"
+					},
+					"sp": {
+						"name": "Llamar",
+						"text": "llamar a alguien"
+					}
+				}
+			},
+			{
+				"name": "I feel dizzy",
+				"text": "me siento mareado",
+				"accent": "sunny",
+				"image": "/img/pictograms/2464.png",
+				"id": 6,
+				"messages": {
+					"de": {
+						"name": "Schwindelig",
+						"text": "ich fühle mich schwindelig"
+					},
+					"sp": {
+						"name": "Mareado",
+						"text": "me siento mareado"
+					}
+				}
+			},
+			{
+				"name": "I need a doctor",
+				"text": "necesito médico",
+				"accent": "sunny",
+				"image": "/img/pictograms/6561.png",
+				"id": 7,
+				"messages": {
+					"de": {
+						"name": "Arzt",
+						"text": "ich brauche einen Arzt"
+					},
+					"sp": {
+						"name": "Médico",
+						"text": "necesito un médico"
+					}
+				}
+			},
+			{
+				"name": "Nurse",
+				"text": "enfermera",
+				"accent": "sunny",
+				"image": "/img/pictograms/6050.png",
+				"id": 8,
+				"messages": {
+					"de": {
+						"name": "Krankenschwester",
+						"text": "Krankenschwester"
+					},
+					"sp": {
+						"name": "Enfermera",
+						"text": "necesito la enfermera"
+					}
+				}
+			},
+			{
+				"name": "Medicine",
+				"text": "medicina",
+				"accent": "sunny",
+				"image": "/img/pictograms/8163.png",
+				"id": 9,
+				"messages": {
+					"de": {
+						"name": "Medikament",
+						"text": "Medikament"
+					},
+					"sp": {
+						"name": "Medicina",
+						"text": "necesito mi medicina"
+					}
+				}
+			},
+			{
+				"name": "Emergency",
+				"text": "urgencias",
+				"accent": "sunny",
+				"image": "/img/pictograms/38082.png",
+				"id": 10,
+				"messages": {
+					"de": {
+						"name": "Notfall",
+						"text": "Notfall"
+					},
+					"sp": {
+						"name": "Urgencias",
+						"text": "urgencias"
+					}
+				}
+			},
+			{
+				"name": "Chair",
+				"text": "silla",
+				"accent": "sunny",
+				"image": "/img/pictograms/3155.png",
+				"id": 11,
+				"messages": {
+					"de": {
+						"name": "Stuhl",
+						"text": "Stuhl"
+					},
+					"sp": {
+						"name": "Silla",
+						"text": "silla"
+					}
+				}
+			},
+			{
+				"name": "Go home",
+				"text": "ir a casa",
+				"accent": "sunny",
+				"image": "/img/pictograms/6964.png",
+				"id": 12,
+				"messages": {
+					"de": {
+						"name": "Nach Hause",
+						"text": "nach Hause"
+					},
+					"sp": {
+						"name": "Ir a casa",
+						"text": "quiero ir a casa"
+					}
+				}
+			},
+			{
+				"name": "But",
+				"text": "pero",
+				"accent": "sunny",
+				"image": "/img/pictograms/11377.png",
+				"id": 13,
+				"messages": {
+					"de": {
+						"name": "Aber",
+						"text": "aber"
+					},
+					"sp": {
+						"name": "Pero",
+						"text": "pero"
+					}
+				}
+			},
+			{
+				"name": "Because",
+				"text": "porque",
+				"accent": "sunny",
+				"image": "/img/pictograms/36719.png",
+				"id": 14,
+				"messages": {
+					"de": {
+						"name": "Weil",
+						"text": "weil"
+					},
+					"sp": {
+						"name": "Porque",
+						"text": "porque"
+					}
+				}
+			},
+			{
+				"name": "Home",
+				"text": "Home",
+				"accent": "mint",
+				"image": "/img/pictograms/6964.png",
+				"id": 15,
 				"messages": {
 					"de": {
 						"name": "Startseite",

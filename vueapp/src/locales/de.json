@@ -42,7 +42,17 @@
 		},
 		"optionHighContrast": "Hoher Kontrast",
 		"previewLabel": "Live-Vorschau:",
-		"previewAria": "Vorschau eines Felds mit aktuellen Einstellungen"
+		"previewAria": "Vorschau eines Felds mit aktuellen Einstellungen",
+		"optionVoiceRate": "Sprechtempo",
+		"hintVoiceRate": "Langsamer hilft, jedes Wort zu verstehen.",
+		"optionVoicePitch": "Stimmlage",
+		"hintVoicePitch": "Eine höhere Stimme kann kinderfreundlicher klingen.",
+		"optionActivationDelay": "Aktivierungsverzögerung",
+		"hintActivationDelay": "Bei versehentlichen Berührungen: kurz gedrückt halten zum Aktivieren. Standard: aus.",
+		"delayOff": "Aus (sofort)",
+		"hintPictogramSize": "Größer = besser sichtbar; kleiner = mehr Wörter pro Bildschirm.",
+		"hintBoardTileSize": "Größere Felder = leichtere Touch-Ziele bei motorischen Einschränkungen.",
+		"hintHighContrast": "Dicke Ränder und dunklere Labels für Sehschwäche."
 	},
 	"sentence": {
 		"title": "Satz",
@@ -80,7 +90,8 @@
 		"transport": "Verkehr",
 		"clothes": "Kleidung",
 		"music": "Musik",
-		"time": "Zeit"
+		"time": "Zeit",
+		"routines": "Routinen"
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",

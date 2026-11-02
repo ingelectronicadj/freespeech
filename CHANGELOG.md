@@ -4,6 +4,21 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.9.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Mejoras clínicas terapeuta: voz, motor, núcleo y rutinas
+
+- **Ajustes de voz (`settings.js`, `Settings.vue`, `TilePad.vue`)**: sliders `Velocidad de la voz` (0.5–1.5) y `Tono de la voz` (0.5–2) aplicados a cada `SpeechSynthesisUtterance` — voces infantiles lentas para comprensión.
+- **Retraso de activación (`Tile.vue`)**: mantener el dedo presionado 300/500/800 ms para activar la baldosa — reduce toques accidentales por dispraxia. Desactivado por defecto.
+- **Hints de orientación en Ajustes**: cada control visual explica cuándo usarlo (baja visión, motricidad, dedos grandes) — es/en/de.
+- **Núcleo ampliado**: `Pero`, `Porque`, `Otro` en el tablero principal.
+- **Colección Rutinas (15)**: despertar, desayuno, recreo, descansar, siesta, llamar, mareado, médico, enfermera, medicina, urgencias, ir a casa, pero, porque — contextos de la jornada + emergencias.
+- 345 pictogramas locales, `_v: 9`.
+
+---
+
 ## [2.8.2] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
