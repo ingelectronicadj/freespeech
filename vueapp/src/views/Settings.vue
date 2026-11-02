@@ -42,6 +42,22 @@
 			:label="$t('settings.optionHighContrast')"
 		/>
 
+		<div
+			class="settings-live-preview"
+			:class="{ 'preview-contrast': highContrast }"
+			role="img"
+			:aria-label="$t('settings.previewAria')"
+		>
+			<span class="preview-caption">{{ $t('settings.previewLabel') }}</span>
+			<div
+				class="preview-tile"
+				:class="'preview-' + (tileImageSize || 'medium')"
+			>
+				<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
+				<span>{{ previewWord }}</span>
+			</div>
+		</div>
+
 		<v-switch
 			v-model="customTilePad"
 			color="primary"
@@ -242,6 +258,10 @@ export default {
 			set (value) {
 				this.setTileImageSize(value);
 			}
+		},
+		previewWord () {
+			const loc = (this.locale || 'sp').toLowerCase();
+			return loc.startsWith('de') ? 'Essen' : (loc.startsWith('en') ? 'Eat' : 'Comer');
 		},
 		tileImageSizeOptions () {
 			return ['medium', 'large', 'xlarge'].map(v => ({

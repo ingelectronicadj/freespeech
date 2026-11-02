@@ -183,4 +183,12 @@ export default {
 	overflow-x: auto;
 	white-space: pre;
 }
+
+.key-swatches { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.key-chip { padding: 4px 12px; border-radius: 999px; font-size: .75rem; font-weight: 700; border: 1.5px solid rgba(0,0,0,.15); color: #0f172a; }
+.chip-sunny { background: #fef08a; }
+.chip-mint { background: #d1fae5; }
+.chip-sky { background: #bae6fd; }
+.chip-peach { background: #fed7aa; }
+.chip-white { background: #fff; }
 </style>

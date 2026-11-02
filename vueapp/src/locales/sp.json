@@ -40,7 +40,9 @@
 			"large": "Grande",
 			"xlarge": "Extra grande"
 		},
-		"optionHighContrast": "Alto contraste"
+		"optionHighContrast": "Alto contraste",
+		"previewLabel": "Vista previa en vivo:",
+		"previewAria": "Vista previa de una baldosa con los ajustes actuales"
 	},
 	"sentence": {
 		"title": "Oración",
