@@ -96,7 +96,7 @@
 					width="22"
 					height="22"
 				>
-				<span>{{ tile.name }}</span>
+				<span>{{ localizedTileName(tile) }}</span>
 			</button>
 		</div>
 
@@ -186,6 +186,17 @@ export default {
 				.sort((a, b) => b.taps - a.taps)
 				.slice(0, 5)
 				.map(tc => byId[tc.id]);
+		},
+		currentLocaleCode () {
+			const l = (this.locale || 'sp').toLowerCase();
+			return l.startsWith('es') ? 'sp' : (l.startsWith('de') ? 'de' : 'en');
+		},
+		localizedTileName () {
+			return (tile) => {
+				if (!tile) return '';
+				const msg = tile.messages && tile.messages[this.currentLocaleCode];
+				return (msg && msg.name) || tile.name || '';
+			};
 		},
 		...mapState('tilePad', ['editMode']),
 		...mapGetters({

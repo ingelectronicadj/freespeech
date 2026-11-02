@@ -4,6 +4,15 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.5] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **Frecuentes localizadas**: la tira de pictogramas frecuentes muestra el nombre en el idioma de la UI (antes siempre en inglés).
+- **Home reordenado por categoría Fitzgerald**: pronombres/sociales → verbos → adjetivos → sustantivos → misceláneos → accesos a colecciones al final (layout de palabras núcleo AAC; `_v: 7`).
+
+---
+
 ## [2.7.4] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
