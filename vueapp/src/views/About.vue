@@ -38,59 +38,8 @@
 </template>
 
 <script>
-
 export default {
-	name: 'About',
-	data () {
-		return {
-			readMeAboutMarkDownText
-		};
-	},
-	computed: {
-		compiledMarkdown () {
-			const htmlFromMarkDown = marked.parse(this.readMeAboutMarkDownText);
-			// README usa rutas relativas al repo (vueapp/public/...) que en la app se sirven desde la raíz
-			const withFixedImages = htmlFromMarkDown.replace(/src="(vueapp\/)?public\//g, 'src="/');
-			return DOMPurify.sanitize(withFixedImages);
-		}
-	},
-	mounted () {
-		this.enhanceCodeBlocks();
-	},
-	updated () {
-		this.enhanceCodeBlocks();
-	},
-	methods: {
-		enhanceCodeBlocks () {
-			const root = this.$refs.markdownRoot;
-			if (!root || typeof document === 'undefined') return;
-			const preBlocks = root.querySelectorAll('pre');
-			preBlocks.forEach((pre) => {
-				if (pre.dataset.enhanced === 'true') return;
-				pre.dataset.enhanced = 'true';
-
-				const btn = document.createElement('button');
-				btn.type = 'button';
-				btn.className = 'copy-snippet-btn';
-				btn.textContent = 'Copiar código';
-				btn.setAttribute('aria-label', 'Copiar fragmento de código');
-
-				btn.addEventListener('click', () => {
-					const codeEl = pre.querySelector('code');
-					const text = codeEl ? codeEl.innerText : pre.innerText;
-					if (navigator.clipboard && navigator.clipboard.writeText) {
-						navigator.clipboard.writeText(text).catch(() => {});
-					}
-					btn.textContent = '¡Copiado!';
-					setTimeout(() => {
-						btn.textContent = 'Copiar código';
-					}, 2000);
-				});
-
-				pre.appendChild(btn);
-			});
-		}
-	}
+	name: 'About'
 };
 </script>
 
