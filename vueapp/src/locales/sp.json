@@ -61,7 +61,12 @@
 		"study": "Estudio",
 		"hygiene": "Aseo personal",
 		"food": "Comida",
-		"actions": "Acciones"
+		"actions": "Acciones",
+		"phrases": "Frases hechas",
+		"animals": "Animales",
+		"places": "Lugares",
+		"colors": "Colores",
+		"body": "Cuerpo"
 	},
 	"editMode": {
 		"title": "Estás en modo de edición!",

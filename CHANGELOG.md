@@ -4,6 +4,25 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.6.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### 5 colecciones nuevas inspiradas en AsTeRICS Grid + navegación global
+
+- **Nuevas colecciones (`build.json`, `TilePad.vue`, locales)**:
+  - **`Frases hechas` (página 6, 25)**: frases completas de un toque — quiero comer/beber, necesito baño, me duele, no entiendo, ayúdame, sí/no, por favor/gracias, me gusta/no me gusta, otra vez, ya está... Comunicación instantánea sin construir sintaxis.
+  - **`Animales` (página 7, 24)**: mascotas, granja, salvajes e insectos.
+  - **`Lugares` (página 8, 20)**: casa, colegio, parque, hospital, tienda, playa, cocina, baño, dormitorio...
+  - **`Colores` (página 9, 12)**: los 11 colores básicos + pictograma "color".
+  - **`Cuerpo` (página 10, 20)**: cabeza, cara, sentidos, extremidades, corazón...
+  - Total: **284 pictogramas ARASAAC autocontenidos** en `/img/pictograms/`.
+- **Navegación global (estilo tablero global de AsTeRICS)**: la baldosa `Inicio` ahora ocupa siempre la **primera posición** en todas las sub-colecciones — regreso al tablero principal accesible en punto fijo, sin depender del orden del tablero.
+- **Nav tiles en home**: accesos directos a las 5 nuevas colecciones desde el tablero principal.
+- Versión de datos `_v: 5` para migración.
+
+---
+
 ## [2.5.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

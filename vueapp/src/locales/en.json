@@ -61,7 +61,12 @@
 		"study": "Study",
 		"hygiene": "Personal care",
 		"food": "Food",
-		"actions": "Actions"
+		"actions": "Actions",
+		"phrases": "Quick phrases",
+		"animals": "Animals",
+		"places": "Places",
+		"colors": "Colors",
+		"body": "Body"
 	},
 	"editMode": {
 		"title": "You're in edit mode!",

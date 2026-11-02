@@ -169,6 +169,11 @@ export default {
 				{ key: '3', iconClass: 'nav-ico-folder', label: tr('collections.hygiene', 'Aseo personal') },
 				{ key: '4', iconClass: 'nav-ico-folder', label: tr('collections.food', 'Comida') },
 				{ key: '5', iconClass: 'nav-ico-folder', label: tr('collections.actions', 'Acciones') },
+				{ key: '6', iconClass: 'nav-ico-folder', label: tr('collections.phrases', 'Frases hechas') },
+				{ key: '7', iconClass: 'nav-ico-folder', label: tr('collections.animals', 'Animales') },
+				{ key: '8', iconClass: 'nav-ico-folder', label: tr('collections.places', 'Lugares') },
+				{ key: '9', iconClass: 'nav-ico-folder', label: tr('collections.colors', 'Colores') },
+				{ key: '10', iconClass: 'nav-ico-folder', label: tr('collections.body', 'Cuerpo') },
 				{ key: 'numbers', iconClass: 'nav-ico-folder', label: tr('collections.numbers', 'Números y Tiempo') },
 				{ key: 'keyboard', iconClass: 'nav-ico-folder', label: tr('collections.keyboard', 'Teclado ABC') },
 			];

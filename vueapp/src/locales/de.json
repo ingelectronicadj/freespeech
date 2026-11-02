@@ -61,7 +61,12 @@
 		"study": "Lernen",
 		"hygiene": "Körperpflege",
 		"food": "Essen",
-		"actions": "Aktionen"
+		"actions": "Aktionen",
+		"phrases": "Fertige Sätze",
+		"animals": "Tiere",
+		"places": "Orte",
+		"colors": "Farben",
+		"body": "Körper"
 	},
 	"editMode": {
 		"title": "Sie befinden sich im Bearbeitungsmodus!",
