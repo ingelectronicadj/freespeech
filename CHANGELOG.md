@@ -4,6 +4,14 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.8.1] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **Guía para terapeutas completa** (es/en/de): clave de colores Fitzgerald explicada, palabras núcleo, frases hechas, tira Frecuentes, gestión del dispositivo y estrategia de enseñanza AAC (modelado, núcleo gradual, respeto a toda comunicación, personalización).
+
+---
+
 ## [2.8.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
