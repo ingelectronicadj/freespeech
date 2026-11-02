@@ -57,10 +57,12 @@
 			>
 				<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
 				<span>{{ previewWord }}</span>
+				<span v-if="tapCount" class="preview-taps">7</span>
 			</div>
 		</div>
 		</div>
 
+		<div class="switches-grid">
 		<v-switch
 			v-model="customTilePad"
 			color="primary"
@@ -84,6 +86,7 @@
 			color="primary"
 			:label="$t('settings.displayTapCounter')"
 		/>
+		</div>
 
 		<v-dialog
 			v-model="passcodeEntry"
@@ -412,4 +415,25 @@ export default {
 .preview-tile.preview-xlarge { font-size: 1.1rem; }
 .preview-contrast .preview-tile { border: 3px solid #000; }
 .preview-contrast .preview-tile img { filter: contrast(1.15) saturate(1.15); }
+
+.preview-tile { position: relative; }
+.preview-taps {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	background: #0f766e;
+	color: #fff;
+	font-size: .62rem;
+	font-weight: 800;
+	padding: 1px 6px;
+	border-radius: 999px;
+}
+.switches-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0 24px;
+}
+@media (min-width: 720px) {
+	.switches-grid { grid-template-columns: 1fr 1fr; }
+}
 </style>
