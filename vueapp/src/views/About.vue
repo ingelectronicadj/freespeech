@@ -1,14 +1,17 @@
 <template>
 	<div class="about-page py-6 px-4">
 		<v-container class="about-container">
-			<v-card theme="light" class="about-card px-6 py-6">
-				<div
-					ref="markdownRoot"
-					class="markdown-body"
-					v-html="compiledMarkdown"
-				/>
+			<v-card theme="light" class="about-card px-6 py-6 about-hero">
+				<h1 class="about-hero-title mb-3">{{ $t('about.heroTitle') }}</h1>
+				<p class="about-legal mb-3" v-html="$t('about.heroBody')" />
+				<p class="about-legal mb-0" v-html="$t('about.inviteBody')" />
 			</v-card>
 			<v-expansion-panels class="mt-4" multiple>
+				<v-expansion-panel :title="$t('about.creditsTitle')">
+					<v-expansion-panel-text>
+						<div class="about-legal" v-html="$t('about.creditsBody')" />
+					</v-expansion-panel-text>
+				</v-expansion-panel>
 				<v-expansion-panel :title="$t('about.guideTitle')">
 					<v-expansion-panel-text>
 						<div class="about-legal" v-html="$t('about.guideBody')" />
@@ -22,6 +25,15 @@
 				<v-expansion-panel :title="$t('about.privacyTitle')">
 					<v-expansion-panel-text>
 						<p class="about-legal mb-0">{{ $t('about.privacyBody') }}</p>
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+				<v-expansion-panel :title="$t('about.docsTitle')">
+					<v-expansion-panel-text>
+						<div
+							ref="markdownRoot"
+							class="markdown-body"
+							v-html="compiledMarkdown"
+						/>
 					</v-expansion-panel-text>
 				</v-expansion-panel>
 			</v-expansion-panels>
@@ -90,6 +102,12 @@ export default {
 </script>
 
 <style>
+.about-hero-title {
+	font-size: 1.35rem;
+	font-weight: 800;
+	color: #0f172a;
+}
+
 .about-page {
 	background-color: #f1f5f9;
 	min-height: calc(100vh - 64px);

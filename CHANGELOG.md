@@ -4,6 +4,17 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.1] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Página Acerca de reestructurada
+
+- `/acerca-de` ahora abre con una descripción de **A11Y PRO SAS** y Free Speech: invitación explícita a fundaciones e instituciones educativas para usarlo gratis pidiendo solo atribución con enlace a `freespeech.a11ypro.tech`.
+- Sección unificada **Reconocimientos y agradecimientos** (autor, proyecto original MIT, ARASAAC, BBC/CNN, sponsors) y el README técnico pasa a panel colapsable.
+
+---
+
 ## [2.7.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
