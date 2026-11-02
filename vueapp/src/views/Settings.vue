@@ -20,6 +20,8 @@
 			:label="$t('settings.optionVoice')"
 		/>
 
+		<div class="settings-grid">
+			<div>
 		<v-select
 			v-model="tileImageSize"
 			:items="tileImageSizeOptions"
@@ -42,7 +44,8 @@
 			:label="$t('settings.optionHighContrast')"
 		/>
 
-		<div
+			</div>
+			<div
 			class="settings-live-preview"
 			:class="{ 'preview-contrast': highContrast }"
 			role="img"
@@ -56,6 +59,7 @@
 				<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
 				<span>{{ previewWord }}</span>
 			</div>
+		</div>
 		</div>
 
 		<v-switch
