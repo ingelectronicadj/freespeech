@@ -4,6 +4,14 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.6] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **Acerca de con identidad A11Y PRO**: logo + marca en el hero; Reconocimientos recupera avatares de contribuidores (contributors-img) y logos de Optum, Icons8, CNN y BBC servidos localmente.
+
+---
+
 ## [2.7.5] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

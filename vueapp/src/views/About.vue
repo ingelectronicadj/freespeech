@@ -2,6 +2,7 @@
 	<div class="about-page py-6 px-4">
 		<v-container class="about-container">
 			<v-card theme="light" class="about-card px-6 py-6 about-hero">
+				<div class="about-hero-brand mb-3"><img src="/img/logos/a11ypro.webp" alt="A11Y PRO" class="about-hero-logo"></div>
 				<h1 class="about-hero-title mb-3">{{ $t('about.heroTitle') }}</h1>
 				<p class="about-legal mb-3" v-html="$t('about.heroBody')" />
 				<p class="about-legal mb-0" v-html="$t('about.inviteBody')" />
@@ -44,7 +45,10 @@ export default {
 </script>
 
 <style>
+.about-hero-logo { height: 34px; }
+.about-hero-brand { border-bottom: 3px solid #0F766E; display: inline-block; padding-bottom: 6px; }
 .about-hero-title {
+	color: #0F766E;
 	font-size: 1.35rem;
 	font-weight: 800;
 	color: #0f172a;
