@@ -173,4 +173,14 @@ export default {
 	height: auto;
 	vertical-align: middle;
 }
+
+.code-snippet {
+	background: #0f172a;
+	color: #e2e8f0;
+	padding: 12px 16px;
+	border-radius: 8px;
+	font-size: .8rem;
+	overflow-x: auto;
+	white-space: pre;
+}
 </style>

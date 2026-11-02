@@ -4,6 +4,14 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.8.2] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **Docs técnicas completas**: sección de embebido con `customTrigger`, script tag de ejemplo, API `FreeSpeechSAAC`, botones por campo (`data-saac-target`) y mención a `moodle-demo.html` — en es/en/de con bloque de código estilizado.
+
+---
+
 ## [2.8.1] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
