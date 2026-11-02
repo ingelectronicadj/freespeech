@@ -1,4 +1,4 @@
-# [Free Speech SAAC](http://freespeechaac.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.3.0-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
+# [Free Speech SAAC](https://freespeech.a11ypro.tech/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![Version](https://img.shields.io/badge/version-2.7.1-0f766e.svg) ![Vue 3](https://img.shields.io/badge/Vue-3.5-4FC08D.svg) ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg) ![WCAG 2.2 AA](https://img.shields.io/badge/WCAG-2.2_AA-005A9C.svg)
 
 Free Speech is an open-source **Augmentative and Alternative Communication (AAC / SAAC)** web application designed to help non-verbal people communicate without cost, both as a standalone communicator and as an **embeddable floating window** over platforms such as **Moodle LMS**, search engines, or desktop editors.
 
@@ -13,10 +13,10 @@ See [CHANGELOG.md](./CHANGELOG.md) for full details on version **2.0.0**.
 
 ### For regular users:
 
-* Navigate to [http://app.freespeechaac.com/](http://app.freespeechaac.com/) on the device you wish to use the software on.
+* Navigate to [https://freespeech.a11ypro.tech/](https://freespeech.a11ypro.tech/) on the device you wish to use the software on.
 * If you are using a computer, bookmark that tab in the browser to come back to it, your changes will save in the browser.
-* If you're using iOS, open [Free Speech](http://app.freespeechaac.com/) in Safari, then click middle share button on the bottom row of buttons. Then, scroll down on the share pop-up and click on "Add to Home Screen". This will add Free Speech as an app on the iOS home screen. Your changes will save in the app.
-* If you're using Android, open [Free Speech](http://app.freespeechaac.com/) in Chrome, then tap on the three dots on the top right. Navigate to "Add to Home Screen" on the pop up and select that item, name the app "Free Speech" and add the app to your home screen. Your changes will save in the app.
+* If you're using iOS, open [Free Speech](https://freespeech.a11ypro.tech/) in Safari, then click middle share button on the bottom row of buttons. Then, scroll down on the share pop-up and click on "Add to Home Screen". This will add Free Speech as an app on the iOS home screen. Your changes will save in the app.
+* If you're using Android, open [Free Speech](https://freespeech.a11ypro.tech/) in Chrome, then tap on the three dots on the top right. Navigate to "Add to Home Screen" on the pop up and select that item, name the app "Free Speech" and add the app to your home screen. Your changes will save in the app.
 
 ### For Developers:
 * First make sure you have your Node and NPM installed and updated. If you need to install Node, [visit this website](https://nodejs.org/en/download/).

@@ -4,6 +4,14 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.2] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **README actualizado**: versión `2.7.x`, enlaces antiguos `freespeechaac.com`/`app.freespeechaac.com` sustituidos por `freespeech.a11ypro.tech` (instalación como app móvil, badge de versión).
+
+---
+
 ## [2.7.1] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
