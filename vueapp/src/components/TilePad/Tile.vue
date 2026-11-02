@@ -267,8 +267,9 @@ export default {
 			return img;
 		},
 		taps () {
+			const key = this.tilePage + ':' + this.tileData.id;
 			const indexOfTile = this.tileTapsCount.findIndex(
-				(obj) => obj.id == this.tileData.id
+				(obj) => obj.id == key
 			);
 			if (indexOfTile == -1) return 0;
 			return this.tileTapsCount[indexOfTile].taps;
@@ -334,7 +335,7 @@ export default {
 				}
 			} else {
 				this.$emit('speakText', this.localeTileData.text);
-				this.logTileTap(this.localeTileData.id);
+				this.logTileTap(this.tilePage + ':' + this.localeTileData.id);
 				this.notifyParentTileTap(this.localeTileData.text);
 			}
 		},

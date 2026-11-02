@@ -181,17 +181,17 @@ export default {
 		frequentTiles () {
 			if (!this.sentenceMode || !Array.isArray(this.tileTapsCount)) return [];
 			const boards = this.allBoardsDictionary || {};
-			const byId = {};
+			const byKey = {};
 			Object.keys(boards).forEach(k => {
 				(boards[k] && boards[k].tileData || []).forEach(t => {
-					if (t && t.id !== undefined && !t.navigation && byId[t.id] === undefined) byId[t.id] = t;
+					if (t && t.id !== undefined && !t.navigation) byKey[k + ':' + t.id] = t;
 				});
 			});
 			return this.tileTapsCount
-				.filter(tc => tc && tc.taps > 0 && byId[tc.id])
+				.filter(tc => tc && tc.taps > 0 && byKey[tc.id])
 				.sort((a, b) => b.taps - a.taps)
 				.slice(0, 5)
-				.map(tc => byId[tc.id]);
+				.map(tc => byKey[tc.id]);
 		},
 		currentLocaleCode () {
 			const l = (this.locale || 'sp').toLowerCase();
@@ -427,7 +427,7 @@ export default {
 		},
 		logTaps () {
 			this.sentenceTiles.forEach(tile => {
-				this.logTileTap(tile.id);
+				this.logTileTap(this.currentTilePadPage + ':' + tile.id);
 			});
 		}
 	}
