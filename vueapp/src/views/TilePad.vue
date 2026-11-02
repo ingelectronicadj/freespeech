@@ -141,7 +141,7 @@
 		</v-container>
 		<footer class="brand-footer">
 			<a href="https://a11ypro.tech/" target="_blank" rel="noopener" aria-label="A11Y PRO — sitio web">
-				<img src="/img/logos/a11ypro.webp" alt="A11Y PRO" height="16" style="vertical-align:middle">
+				<img src="/img/logos/a11ypro-dark.webp" alt="A11Y PRO" height="16" style="vertical-align:middle">
 			</a>
 			<span>A11Y PRO SAS · Pictogramas ARASAAC · CC BY-NC-SA</span>
 		</footer>
@@ -678,6 +678,9 @@ export default {
 	align-items: center;
 	gap: 8px;
 	flex-wrap: wrap;
+	max-width: 1400px;
+	margin: 0 auto;
+	min-height: 32px;
 }
 .frequent-label {
 	font-size: 0.8rem;

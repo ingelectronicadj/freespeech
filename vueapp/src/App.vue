@@ -9,7 +9,7 @@
 			class="saac-app-bar"
 		>
 			<div class="d-flex align-center px-3">
-				<img src="/img/logos/a11ypro.webp" alt="" height="18" style="margin-right:8px;vertical-align:middle"><h1 class="saac-brand-title mb-0">Freespeech</h1>
+				<img src="/img/logos/a11ypro.webp" alt="" height="22" style="margin-right:8px;vertical-align:middle;filter:brightness(0) invert(1)"><h1 class="saac-brand-title mb-0">Freespeech</h1>
 			</div>
 
 			<v-spacer />
