@@ -4,6 +4,8 @@
 			{{ $t('settings.title') }}
 		</h1>
 
+		<div class="settings-grid">
+			<div>
 		<v-select
 			v-model="selectedLanguage"
 			:items="languageOptions"
@@ -19,9 +21,6 @@
 			item-value="value"
 			:label="$t('settings.optionVoice')"
 		/>
-
-		<div class="settings-grid">
-			<div>
 		<v-select
 			v-model="tileImageSize"
 			:items="tileImageSizeOptions"
@@ -54,7 +53,7 @@
 			<span class="preview-caption">{{ $t('settings.previewLabel') }}</span>
 			<div
 				class="preview-tile"
-				:class="'preview-' + (tileImageSize || 'medium')"
+				:class="['preview-' + (tileImageSize || 'medium'), 'dens-' + (gridDensity || 'auto')]"
 			>
 				<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
 				<span>{{ previewWord }}</span>
@@ -403,6 +402,8 @@ export default {
 	transition: all .15s ease;
 }
 .preview-tile img { width: 48px; height: 48px; object-fit: contain; }
+.preview-tile.dens-large { width: 160px; }
+.preview-tile.dens-xlarge { width: 200px; }
 .preview-tile.preview-large { min-height: 140px; }
 .preview-tile.preview-large img { width: 64px; height: 64px; }
 .preview-tile.preview-large { font-size: 1.02rem; }
