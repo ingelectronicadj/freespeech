@@ -564,4 +564,12 @@ export default {
 		height: 56px !important;
 	}
 }
+
+.saac-tile-btn:active {
+	transform: scale(.93);
+	transition: transform .08s ease;
+}
+.saac-tile-btn {
+	transition: transform .15s ease;
+}
 </style>

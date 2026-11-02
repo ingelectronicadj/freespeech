@@ -4,6 +4,20 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.8.0] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Mejoras UI/UX expertas
+
+- **Home = solo palabras núcleo**: accesos a colecciones fuera del grid (la barra de pills ya las cubre) — menos ruido visual, búsqueda de palabras más rápida.
+- **Botón Hablar prominente**: mayor tamaño/peso en la barra de frase — acción principal visible.
+- **Feedback táctil**: las baldosas hacen scale-down al pulsar (confirmación física del toque).
+- **Pills de colecciones** con scroll horizontal en pantallas pequeñas; buscador más grande.
+- **Marca**: logo A11Y PRO en cabecera + footer con atribución ARASAAC visible siempre.
+
+---
+
 ## [2.7.6] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

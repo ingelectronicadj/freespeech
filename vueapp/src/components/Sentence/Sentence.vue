@@ -28,7 +28,7 @@
 					<v-btn
 						id="speakSentenceButton"
 						color="primary"
-						class="text-none font-weight-bold sentence-action-btn"
+						class="text-none font-weight-bold sentence-action-btn speak-big"
 						:disabled="tilePadToDisplay.length === 0"
 						:aria-label="$t('sentence.buttonSpeak')"
 						@click="$emit('speakSentence')"
@@ -384,5 +384,13 @@ export default {
 	.sentence-tile-item {
 		width: 92px;
 	}
+}
+
+.sentence-action-btn.speak-big {
+	min-height: 52px !important;
+	font-size: 1.05rem !important;
+	padding: 0 26px !important;
+	border-radius: 12px !important;
+	box-shadow: 0 3px 8px rgba(15,118,110,.35);
 }
 </style>

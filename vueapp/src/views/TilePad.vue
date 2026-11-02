@@ -139,6 +139,10 @@
 				</div>
 			</div>
 		</v-container>
+		<footer class="brand-footer" aria-hidden="true">
+			<img src="/img/logos/a11ypro.webp" alt="" height="14">
+			<span>A11Y PRO SAS · Pictogramas ARASAAC · CC BY-NC-SA</span>
+		</footer>
 	</div>
 </template>
 
@@ -487,6 +491,9 @@ export default {
 	color: #334155;
 }
 .collections-pills {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+	scrollbar-width: thin;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 6px;
@@ -727,5 +734,20 @@ export default {
 }
 .high-contrast .tile-pictogram-img {
 	filter: contrast(1.15) saturate(1.15);
+}
+
+.brand-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 10px 0 16px;
+	font-size: .72rem;
+	color: #64748b;
+	opacity: .85;
+}
+.collections-search-input {
+	min-height: 34px;
+	font-size: .95rem;
 }
 </style>
