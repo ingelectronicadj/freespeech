@@ -4,6 +4,14 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.4] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **Reconocimientos completos**: autores del proyecto original (Archer Calder, Bailey Townsend), comunidad de contribuidores, Optum, Icons8, BBC, CNN y ARASAAC en el panel de Acerca de.
+
+---
+
 ## [2.7.3] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
