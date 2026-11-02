@@ -4,6 +4,15 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.7.3] - 2026-11-01
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+- **`Acerca de → Documentación técnica` ahora va en el idioma de la UI** (`docsBody` es/en/de) en lugar del README en inglés; se eliminó el pipeline markdown (marked+dompurify+badges, −77 KB de bundle).
+- `FUNDING.yml` → `ingelectronicadj`.
+
+---
+
 ## [2.7.2] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

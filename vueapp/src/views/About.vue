@@ -29,11 +29,7 @@
 				</v-expansion-panel>
 				<v-expansion-panel :title="$t('about.docsTitle')">
 					<v-expansion-panel-text>
-						<div
-							ref="markdownRoot"
-							class="markdown-body"
-							v-html="compiledMarkdown"
-						/>
+						<div class="about-legal" v-html="$t('about.docsBody')" />
 					</v-expansion-panel-text>
 				</v-expansion-panel>
 			</v-expansion-panels>
@@ -42,9 +38,6 @@
 </template>
 
 <script>
-import readMeAboutMarkDownText from '../../../README.md?raw';
-import DOMPurify from 'dompurify';
-import { marked } from 'marked';
 
 export default {
 	name: 'About',
