@@ -139,8 +139,10 @@
 				</div>
 			</div>
 		</v-container>
-		<footer class="brand-footer" aria-hidden="true">
-			<img src="/img/logos/a11ypro.webp" alt="" height="14">
+		<footer class="brand-footer">
+			<a href="https://a11ypro.tech/" target="_blank" rel="noopener" aria-label="A11Y PRO — sitio web">
+				<img src="/img/logos/a11ypro.webp" alt="A11Y PRO" height="16" style="vertical-align:middle">
+			</a>
 			<span>A11Y PRO SAS · Pictogramas ARASAAC · CC BY-NC-SA</span>
 		</footer>
 	</div>
