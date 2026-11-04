@@ -339,13 +339,17 @@ export default {
 	},
 	watch: {
 		editMode (enabled) {
-			if (this.sortableInstance) {
+			if (enabled && !this.sortableInstance) {
+				this.initSortable();
+			} else if (this.sortableInstance) {
 				this.sortableInstance.option('disabled', !enabled);
 			}
 		}
 	},
 	mounted () {
-		this.initSortable();
+		if (this.editMode) {
+			this.initSortable();
+		}
 		if (typeof window !== 'undefined') {
 			window.addEventListener('message', this.handleHostCommand);
 		}
@@ -388,6 +392,9 @@ export default {
 					name: 'tilePadWithRoute',
 					params: { layout: key }
 				});
+			}
+			if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
 			}
 		},
 		initSortable () {
@@ -449,12 +456,13 @@ export default {
 .saac-responsive-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 8px;
+	gap: 10px;
+	touch-action: pan-y;
 }
 @media (min-width: 350px) {
 	.saac-responsive-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 8px;
+		gap: 10px;
 	}
 }
 @media (min-width: 600px) {
@@ -500,8 +508,11 @@ export default {
 	flex-wrap: nowrap;
 	scrollbar-width: thin;
 	display: flex;
-	flex-wrap: wrap;
 	gap: 6px;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-x;
+	padding-bottom: 2px;
+	max-width: 100%;
 }
 .collections-search-wrap {
 	position: relative;
@@ -561,11 +572,14 @@ export default {
 	.collections-nav-bar {
 		padding-left: 8px !important;
 		padding-right: 8px !important;
-		padding-top: 6px !important;
+		padding-top: 4px !important;
+		padding-bottom: 2px !important;
 	}
 	.collections-nav-inner {
-		padding: 6px 10px;
-		gap: 6px;
+		padding: 5px 8px;
+		gap: 5px;
+		border-width: 1.5px;
+		border-radius: 10px;
 	}
 	.collections-title-label {
 		display: none;
@@ -580,13 +594,48 @@ export default {
 	}
 	.collection-pill-btn, .collection-back-btn {
 		white-space: nowrap;
-		padding: 5px 10px;
-		font-size: 0.78rem;
+		padding: 4px 9px;
+		font-size: 0.76rem;
+		border-width: 1.5px;
+		flex-shrink: 0;
 	}
 	.collections-search-wrap {
 		max-width: 100%;
 		width: 100%;
 		flex: 1 1 100%;
+	}
+	.collections-search-input {
+		min-height: 30px !important;
+		padding: 3px 24px 3px 26px;
+		font-size: 0.82rem !important;
+	}
+	.frequent-strip {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-x;
+		padding-top: 4px !important;
+		padding-bottom: 2px;
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+		gap: 6px;
+		min-height: 28px;
+	}
+	.frequent-label {
+		font-size: 0.74rem;
+		flex-shrink: 0;
+	}
+	.frequent-btn {
+		padding: 3px 8px;
+		font-size: 0.76rem;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+	.tilepad-grid-wrapper {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+		padding-top: 6px !important;
+		padding-bottom: 48px !important;
 	}
 }
 .collection-pill-btn {

@@ -684,6 +684,7 @@
 			'  width: 100%;',
 			'  border: 0;',
 			'  background: #f8fafc;',
+			'  overscroll-behavior: contain;',
 			'}',
 			'@media (max-width: 640px) {',
 			'  .fs-saac-window {',
@@ -693,14 +694,55 @@
 			'    top: auto !important;',
 			'    width: 100vw !important;',
 			'    max-width: 100vw !important;',
-			'    height: 78vh !important;',
-			'    max-height: 85vh !important;',
-			'    border-radius: 16px 16px 0 0 !important;',
+			'    height: 86vh !important;',
+			'    height: 86dvh !important;',
+			'    max-height: 92vh !important;',
+			'    max-height: 92dvh !important;',
+			'    border-radius: 14px 14px 0 0 !important;',
 			'    resize: none;',
+			'    overscroll-behavior: contain;',
 			'  }',
 			'  .fs-saac-window.is-maximized {',
 			'    height: 94vh !important;',
 			'    max-height: 96vh !important;',
+			'  }',
+			'  .fs-saac-header {',
+			'    padding: 6px 10px;',
+			'  }',
+			'  .fs-saac-title {',
+			'    font-size: 12.5px;',
+			'  }',
+			'  .fs-saac-dock-btn {',
+			'    display: none !important;',
+			'  }',
+			'  .fs-saac-targetbar {',
+			'    padding: 4px 8px;',
+			'    gap: 4px;',
+			'    flex-wrap: nowrap;',
+			'    overflow-x: auto;',
+			'  }',
+			'  .fs-saac-target-label {',
+			'    display: none;',
+			'  }',
+			'  .fs-saac-target-group {',
+			'    flex: 1 1 100px;',
+			'    min-width: 85px;',
+			'  }',
+			'  .fs-saac-target-select {',
+			'    padding: 3px 5px;',
+			'    font-size: 11px;',
+			'  }',
+			'  .fs-saac-target-actions {',
+			'    flex-wrap: nowrap;',
+			'    gap: 4px;',
+			'    flex-shrink: 0;',
+			'  }',
+			'  .fs-saac-tool-btn {',
+			'    padding: 3px 6px;',
+			'    font-size: 10.5px;',
+			'  }',
+			'  .fs-saac-refresh-btn {',
+			'    display: none !important;',
 			'  }',
 			'}'
 		].join('\n');
@@ -915,6 +957,7 @@
 				setDockMode(state.dockMode === 'left' ? 'float' : 'left');
 			}
 		);
+		dockLeftBtn.classList.add('fs-saac-dock-btn');
 		dockLeftBtn.setAttribute('aria-pressed', 'false');
 
 		var dockRightBtn = createIconButton(
@@ -925,6 +968,7 @@
 				setDockMode(state.dockMode === 'right' ? 'float' : 'right');
 			}
 		);
+		dockRightBtn.classList.add('fs-saac-dock-btn');
 		dockRightBtn.setAttribute('aria-pressed', 'false');
 
 		var closeBtn = createIconButton(
@@ -999,7 +1043,7 @@
 
 		var refreshBtn = document.createElement('button');
 		refreshBtn.type = 'button';
-		refreshBtn.className = 'fs-saac-tool-btn';
+		refreshBtn.className = 'fs-saac-tool-btn fs-saac-refresh-btn';
 		refreshBtn.textContent = 'Detectar campos';
 		refreshBtn.setAttribute('aria-label', 'Volver a detectar campos de texto en la página');
 		refreshBtn.addEventListener('click', scanPageEditableTargets);

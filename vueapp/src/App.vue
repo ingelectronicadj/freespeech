@@ -3,7 +3,7 @@
 		<v-app-bar
 			app
 			:color="taskbarColor"
-			:height="isEmbedded ? 42 : 56"
+			:height="isEmbedded ? 38 : 56"
 			theme="dark"
 			elevation="2"
 			class="saac-app-bar"
@@ -334,6 +334,13 @@ export default {
 };
 </script>
 
+<style>
+html, body {
+	overscroll-behavior-y: contain;
+	-webkit-overflow-scrolling: touch;
+}
+</style>
+
 <style scoped>
 .saac-brand-title {
 	font-size: 1.05rem;
@@ -343,5 +350,14 @@ export default {
 .saac-nav-icon-btn {
 	width: 34px !important;
 	height: 34px !important;
+}
+@media (max-width: 640px) {
+	.is-embedded-app .saac-brand-title {
+		font-size: 0.92rem;
+	}
+	.is-embedded-app .saac-nav-icon-btn {
+		width: 30px !important;
+		height: 30px !important;
+	}
 }
 </style>

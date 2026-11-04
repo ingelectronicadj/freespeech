@@ -13,8 +13,11 @@
 		:aria-label="accessibleTileLabel"
 		style="height: unset"
 		@pointerdown="tilePressStart"
+		@pointermove="tilePressMove"
 		@pointerup="tilePressEnd"
 		@pointerleave="tilePressEnd"
+		@pointercancel="tilePressCancel"
+		@click="handleTileClick"
 	>
 		<v-container
 			v-if="newTile"
@@ -283,6 +286,9 @@ export default {
 			this.imgLoaded = false;
 		}
 	},
+	beforeUnmount () {
+		this.clearPressTimer();
+	},
 	methods: {
 		...mapActions('tilePad', [
 			'toggleEditDialogVisibility',
@@ -300,19 +306,66 @@ export default {
 				}, '*');
 			}
 		},
-		tilePressStart () {
-			const delay = this.$store.state.settings.activationDelay || 0;
+		tilePressStart (e) {
+			this.clearPressTimer();
+			this._pressStartX = e && typeof e.clientX === 'number' ? e.clientX : null;
+			this._pressStartY = e && typeof e.clientY === 'number' ? e.clientY : null;
+			this._pointerMoved = false;
+			this._holdTriggered = false;
+			const delay = (this.$store && this.$store.state && this.$store.state.settings && this.$store.state.settings.activationDelay) || 0;
 			if (delay > 0) {
-				this._pressTimer = setTimeout(() => this.tileClickedEvent(), delay);
-			} else {
-				this.tileClickedEvent();
+				this._pressTimer = setTimeout(() => {
+					if (!this._pointerMoved) {
+						this._holdTriggered = true;
+						this.tileClickedEvent();
+					}
+				}, delay);
+			}
+		},
+		tilePressMove (e) {
+			if (this._pointerMoved || this._pressStartX === null || !e || typeof e.clientX !== 'number') {
+				return;
+			}
+			const dx = Math.abs(e.clientX - this._pressStartX);
+			const dy = Math.abs(e.clientY - this._pressStartY);
+			if (dx > 8 || dy > 8) {
+				this._pointerMoved = true;
+				this.clearPressTimer();
 			}
 		},
 		tilePressEnd () {
+			this.clearPressTimer();
+		},
+		tilePressCancel () {
+			this._pointerMoved = true;
+			this.clearPressTimer();
+		},
+		clearPressTimer () {
 			if (this._pressTimer) {
 				clearTimeout(this._pressTimer);
 				this._pressTimer = null;
 			}
+		},
+		handleTileClick (e) {
+			this.clearPressTimer();
+			const isKeyboardClick = Boolean(e && e.detail === 0);
+			if (isKeyboardClick) {
+				this._pointerMoved = false;
+				this._holdTriggered = false;
+				this.tileClickedEvent();
+				return;
+			}
+			if (this._pointerMoved) {
+				this._pointerMoved = false;
+				this._holdTriggered = false;
+				return;
+			}
+			const delay = (this.$store && this.$store.state && this.$store.state.settings && this.$store.state.settings.activationDelay) || 0;
+			if (delay > 0) {
+				this._holdTriggered = false;
+				return;
+			}
+			this.tileClickedEvent();
 		},
 		tileClickedEvent () {
 			const keyboardTile = this.isNavigationTile;
@@ -372,11 +425,16 @@ export default {
 	white-space: normal !important;
 	transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease !important;
 	color: #0f172a !important;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
 }
-.saac-tile-btn:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15) !important;
-	border-color: #0f766e !important;
+@media (hover: hover) {
+	.saac-tile-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15) !important;
+		border-color: #0f766e !important;
+	}
 }
 .saac-tile-btn:focus-visible {
 	outline: 3px solid #f59e0b !important;
@@ -460,6 +518,9 @@ export default {
 	height: 48px;
 	object-fit: contain;
 	display: block;
+	pointer-events: none;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 .tile-pictogram-fallback {
 	width: 44px;
@@ -505,31 +566,51 @@ export default {
 }
 @media (max-width: 640px) {
 	.saac-tile-btn {
-		min-height: 94px !important;
+		min-height: 86px !important;
 		border-radius: 11px !important;
 	}
 	.tile-visual-slot {
-		height: 38px;
+		height: 36px;
 	}
 	.saac-tile-btn .tile-pictogram-img {
-		width: 38px !important;
-		height: 38px !important;
+		width: 36px !important;
+		height: 36px !important;
 	}
 	.saac-tile-btn .tile-pictogram-fallback {
-		width: 36px;
-		height: 36px;
-		font-size: 0.8rem;
+		width: 34px;
+		height: 34px;
+		font-size: 0.78rem;
 	}
 	.tile-label {
-		font-size: 0.84rem;
-		line-height: 1.18;
+		font-size: 0.82rem;
+		line-height: 1.16;
 	}
 	.collection-folder-ribbon {
-		font-size: 0.62rem;
+		font-size: 0.6rem;
 		padding: 2px 5px;
 	}
 	.saac-tile-btn.is-sentence-tile {
-		min-height: 62px !important;
+		min-height: 46px !important;
+		border-radius: 8px !important;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-inner-container {
+		padding: 3px 4px !important;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-visual-slot {
+		height: 22px;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-pictogram-img {
+		width: 22px !important;
+		height: 22px !important;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-pictogram-fallback {
+		width: 20px;
+		height: 20px;
+		font-size: 0.62rem;
+	}
+	.saac-tile-btn.is-sentence-tile .tile-label {
+		font-size: 0.7rem;
+		line-height: 1.1;
 	}
 }
 .new-tile-icon-circle {

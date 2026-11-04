@@ -4,6 +4,18 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.9.1] - 2026-11-04
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Ergonomía móvil en `customTrigger`, prevención de toques accidentales al scrollear y compactación de barras
+
+- **Prevención de selección accidental al hacer scroll en móvil (`Tile.vue`)**: corregida la activación en `@pointerdown` para que el contacto inicial del dedo al desplazar la pantalla no seleccione ni pronuncie pictogramas; se cancela ante arrastres mayores a `8px` (`@pointermove` / `@pointercancel`) y solo se activa en `@click` tras un toque limpio (conservando el retraso de activación prolongada y el soporte de teclado `Enter`/`Space`).
+- **Barra de oración compacta en móvil (`Sentence.vue`, `Tile.vue`)**: cuando la frase está vacía (`is-empty-sentence`), la caja deja de ser `sticky` en móvil (`position: static`) y oculta la botonera deshabilitada, liberando el área de pictogramas; cuando hay palabras seleccionadas, los botones de acción se disponen en una sola fila compacta (`30px`) y las mini-baldosas se reducen a `46px`.
+- **Scroll fluido entre baldosas y compactación en modo embebido (`TilePad.vue`, `App.vue`, `public/freespeech-widget.js`)**: `SortableJS` se instancia únicamente en modo edición; `.collections-pills` y `.frequent-strip` se mantienen en una sola tira horizontal deslizable (`touch-action: pan-x`); la ventana móvil de `freespeech-widget.js` amplía su alto a `86dvh`, compacta la barra `Insertar en:` en una sola línea y aplica `overscroll-behavior: contain`.
+
+---
+
 ## [2.9.0] - 2026-11-01
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

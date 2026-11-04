@@ -108,6 +108,30 @@ describe('Tile.vue', () => {
 	it('drag handle is not visible', async () => {
 		expect(wrapper.find('#drag-handle').exists()).toBe(false);
 	});
+
+	it('does not select tile on pointerdown alone or when scrolling (pointermove > 8px)', async () => {
+		wrapper.vm.tilePressStart({ clientX: 100, clientY: 100 });
+		await wrapper.vm.$nextTick();
+		expect(wrapper.emitted('speakText')).toBeFalsy();
+
+		wrapper.vm.tilePressMove({ clientX: 100, clientY: 130 });
+		wrapper.vm.tilePressEnd();
+		wrapper.vm.handleTileClick({ detail: 1 });
+		await wrapper.vm.$nextTick();
+		expect(wrapper.emitted('speakText')).toBeFalsy();
+	});
+
+	it('selects tile on clean tap (pointerdown + pointerup + click without scroll)', async () => {
+		wrapper.vm.tilePressStart({ clientX: 100, clientY: 100 });
+		wrapper.vm.tilePressMove({ clientX: 102, clientY: 103 });
+		wrapper.vm.tilePressEnd();
+		wrapper.vm.handleTileClick({ detail: 1 });
+		await wrapper.vm.$nextTick();
+		const emitted = wrapper.emitted('speakText');
+		expect(emitted).toBeTruthy();
+		expect(emitted.length).toBe(1);
+		expect(emitted[0][0]).toBe('Test Tile');
+	});
 });
 
 describe('Tile.vue (edit mode)', () => {
