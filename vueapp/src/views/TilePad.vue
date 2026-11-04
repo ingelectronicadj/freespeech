@@ -11,6 +11,7 @@
 			v-if="sentenceMode && !editMode"
 			:tile-pad-to-display="sentenceTiles"
 			@clear-sentence="sentenceTiles = []"
+			@backspace-sentence="sentenceTiles.pop()"
 			@speak-sentence="speakSentence"
 			@remove-from-sentence="sentenceTiles.splice($event, 1)"
 		/>
@@ -73,8 +74,29 @@
 						&times;
 					</button>
 				</div>
+
+				<button
+					id="printBoardButton"
+					type="button"
+					class="collection-print-btn"
+					:aria-label="printBoardLabel"
+					:title="printBoardLabel"
+					@click="printCurrentBoard"
+				>
+					<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="6 9 6 2 18 2 18 9" />
+						<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+						<rect x="6" y="14" width="12" height="8" />
+					</svg>
+					<span class="print-btn-text">{{ printBoardLabel }}</span>
+				</button>
 			</div>
 		</nav>
+
+		<div class="print-only-header" aria-hidden="true">
+			<strong>Free Speech SAAC - {{ activeCollectionTitle }}</strong>
+			<span>A11Y PRO SAS · Pictogramas ARASAAC (CC BY-NC-SA 4.0)</span>
+		</div>
 
 		<div
 			v-if="frequentTiles.length && !editMode && !searchQuery"
@@ -228,6 +250,13 @@ export default {
 		},
 		searchEmptyLabel () {
 			return typeof this.$t === 'function' ? this.$t('collections.searchEmpty') : 'No matching tiles found.';
+		},
+		printBoardLabel () {
+			return typeof this.$t === 'function' ? this.$t('collections.printBoard') : 'Print board';
+		},
+		activeCollectionTitle () {
+			const found = this.collectionTabs.find(c => c.key === this.currentTilePadPage);
+			return found ? found.label : 'Principal';
 		},
 		collectionTabs () {
 			const tr = (key, fallback) => (typeof this.$t === 'function' ? this.$t(key) : fallback);
@@ -405,6 +434,11 @@ export default {
 		selectCollectionTab (key) {
 			this.searchQuery = '';
 			this.navigateToCollection(key);
+		},
+		printCurrentBoard () {
+			if (typeof window !== 'undefined' && typeof window.print === 'function') {
+				window.print();
+			}
 		},
 		navigateToCollection (key) {
 			if (key === 'home') {
@@ -828,5 +862,64 @@ export default {
 .collections-search-input {
 	min-height: 34px;
 	font-size: .95rem;
+}
+.collection-print-btn {
+	background: #f8fafc;
+	color: #0f766e;
+	border: 1.5px solid #0f766e;
+	border-radius: 999px;
+	padding: 5px 12px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	white-space: nowrap;
+	transition: background 0.15s ease;
+}
+.collection-print-btn:hover {
+	background: #ccfbf1;
+}
+.collection-print-btn:focus-visible {
+	outline: 3px solid #f59e0b;
+	outline-offset: 2px;
+}
+@media (max-width: 640px) {
+	.collection-print-btn {
+		display: none;
+	}
+}
+.print-only-header {
+	display: none;
+}
+@media print {
+	.collections-nav-bar,
+	.frequent-strip,
+	.brand-footer {
+		display: none !important;
+	}
+	.tilepad-page {
+		background: #ffffff !important;
+		min-height: auto !important;
+	}
+	.print-only-header {
+		display: flex !important;
+		align-items: center;
+		justify-content: space-between;
+		padding: 6px 12px 10px;
+		margin-bottom: 8px;
+		border-bottom: 2px solid #0f172a;
+		font-size: 0.9rem;
+		color: #0f172a;
+	}
+	.saac-responsive-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: 10px !important;
+	}
+	.tile-col {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
 }
 </style>

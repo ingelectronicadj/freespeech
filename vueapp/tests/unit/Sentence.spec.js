@@ -103,4 +103,11 @@ describe('Sentence.vue', () => {
 		expect(emitted[0][0]).toBe('No Little Off');
 		expect(wrapper.vm.feedbackMessage).toBe('Message inserted into active field!');
 	});
+
+	it('emits backspaceSentence when backspace button is clicked', async () => {
+		const backspaceBtn = wrapper.find('#backspaceSentenceButton');
+		expect(backspaceBtn.exists()).toBe(true);
+		await backspaceBtn.trigger('click');
+		expect(wrapper.emitted('backspaceSentence')).toBeTruthy();
+	});
 });

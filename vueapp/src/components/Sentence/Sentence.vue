@@ -77,6 +77,23 @@
 					</v-btn>
 
 					<v-btn
+						id="backspaceSentenceButton"
+						color="warning"
+						variant="tonal"
+						class="text-none font-weight-bold sentence-action-btn"
+						:disabled="tilePadToDisplay.length === 0"
+						:aria-label="$t('sentence.buttonBackspace')"
+						@click="$emit('backspaceSentence')"
+					>
+						<svg class="btn-svg-ico" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+							<line x1="18" y1="9" x2="12" y2="15" />
+							<line x1="12" y1="9" x2="18" y2="15" />
+						</svg>
+						<span>{{ $t('sentence.buttonBackspace') }}</span>
+					</v-btn>
+
+					<v-btn
 						id="clearSentenceButton"
 						color="error"
 						variant="tonal"
@@ -171,7 +188,7 @@ export default {
 			}
 		}
 	},
-	emits: ['speakSentence', 'clearSentence', 'removeFromSentence', 'copySentence', 'insertSentence'],
+	emits: ['speakSentence', 'clearSentence', 'backspaceSentence', 'removeFromSentence', 'copySentence', 'insertSentence'],
 	data () {
 		return {
 			feedbackMessage: '',

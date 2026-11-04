@@ -4,6 +4,22 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.9.3] - 2026-11-04
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Guía clínica ampliada para terapeutas y familias, botón Borrar última palabra y tablero imprimible de baja tecnología
+
+- **Guía clínica ampliada para terapeutas y familias (`sp.json`, `en.json`, `de.json`)**:
+  - Pastillas visuales (`.key-swatches`) y ejemplo sintáctico por color (`Yo + quiero + agua`) en los tres idiomas.
+  - Nueva sección **Perfiles clínicos de configuración** con recetas listas para: *Perfil motor (parálisis cerebral, dispraxia, temblor)*, *Perfil baja visión / CVI*, *Perfil comunicador emergente (atención temprana / TEA inicial)* y *Perfil escolar y alfabetización (Moodle / LMS)*.
+  - Protocolo clínico de enseñanza CAA: *Modelado (Estimulación del Lenguaje Asistido)*, *Pausa expectante (regla de los 5 a 10 segundos)*, *Estabilidad espacial y planificación motora (principio LAMP)* y *Respeto corporal (nunca guiar "mano sobre mano")*.
+- **Unificación de la Clave Fitzgerald en el editor (`sp.json`, `en.json`, `de.json`)**: corregidas las etiquetas de colores en el modal de edición de pictogramas para coincidir exactamente con la clave gramatical Fitzgerald del tablero y resuelta la clave `editMode.tile` en inglés.
+- **Botón `Borrar última` en la barra de oración (`Sentence.vue`, `TilePad.vue`, `Sentence.spec.js`)**: nuevo control `#backspaceSentenceButton` junto a `Borrar todo` que elimina únicamente el último pictograma añadido sin perder toda la frase construida.
+- **Impresión de tablero físico de baja tecnología (`TilePad.vue`, `App.vue`)**: botón `Imprimir tablero` (`#printBoardButton`) y hoja de estilos `@media print` con preservación exacta de color Fitzgerald (`print-color-adjust: exact`), cuadrícula de 4 columnas sin cortes y cabecera con atribución ARASAAC lista para plastificar como respaldo en papel.
+
+---
+
 ## [2.9.2] - 2026-11-04
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)

@@ -339,6 +339,20 @@ html, body {
 	overscroll-behavior-y: contain;
 	-webkit-overflow-scrolling: touch;
 }
+@media print {
+	.saac-app-bar,
+	.sentenceCardContainer,
+	.edit-mode-banner {
+		display: none !important;
+	}
+	.v-main {
+		padding-top: 0 !important;
+	}
+	* {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+}
 </style>
 
 <style scoped>
