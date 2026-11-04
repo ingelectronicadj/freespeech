@@ -358,7 +358,7 @@ export default {
 }
 .sentence-tile-item {
 	flex: 0 0 auto;
-	width: 106px;
+	width: auto;
 }
 .sentence-action-btn.speak-big {
 	min-height: 52px !important;
@@ -380,7 +380,7 @@ export default {
 		position: static;
 	}
 	.sentenceCard {
-		padding: 6px 8px !important;
+		padding: 6px 10px !important;
 		border-radius: 10px !important;
 		border-width: 1.5px !important;
 	}
@@ -395,18 +395,18 @@ export default {
 		display: none;
 	}
 	.sentenceCardContainer.is-empty-sentence .sentence-empty-hint {
-		font-size: 0.76rem;
+		font-size: 0.78rem;
 		padding: 0;
-		line-height: 1.2;
+		line-height: 1.25;
 	}
 	.sentenceCardContainer:not(.is-empty-sentence) .sentence-section-title {
 		display: none;
 	}
 	.sentence-section-title {
-		font-size: 0.82rem;
+		font-size: 0.84rem;
 	}
 	.sentence-top-bar {
-		gap: 4px;
+		gap: 6px;
 	}
 	.sentence-header-left {
 		gap: 6px;
@@ -414,47 +414,49 @@ export default {
 		width: 100%;
 	}
 	.sentence-text-preview {
-		padding: 2px 8px;
-		font-size: 0.8rem;
-		gap: 4px;
+		padding: 6px 10px;
+		font-size: 0.86rem;
+		line-height: 1.4;
+		gap: 6px;
 		width: 100%;
 	}
 	.sentence-text-label {
-		font-size: 0.72rem;
+		font-size: 0.78rem;
 	}
 	.sentence-text-value {
-		font-size: 0.84rem;
+		font-size: 0.92rem;
+		line-height: 1.4;
+		letter-spacing: 0.01em;
 	}
 	.sentence-actions-group {
 		width: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
-		gap: 4px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 6px;
 	}
 	.sentence-action-btn,
 	.sentence-action-btn.speak-big {
-		min-height: 30px !important;
-		height: 30px !important;
-		padding: 0 6px !important;
-		font-size: 0.72rem !important;
-		border-radius: 7px !important;
-		flex: 1 1 0;
-		min-width: 0;
+		min-height: 34px !important;
+		height: 34px !important;
+		padding: 0 10px !important;
+		font-size: 0.78rem !important;
+		border-radius: 8px !important;
+		width: 100%;
 		box-shadow: none !important;
 	}
 	.btn-svg-ico {
-		width: 13px;
-		height: 13px;
-		margin-right: 3px;
+		width: 14px;
+		height: 14px;
+		margin-right: 5px;
 	}
 	.sentence-tiles-strip {
-		margin-top: 4px !important;
-		gap: 5px;
-		padding-bottom: 2px;
+		margin-top: 8px !important;
+		gap: 8px;
+		padding-bottom: 4px;
 	}
 	.sentence-tile-item {
-		width: 68px;
+		width: auto;
+		min-width: 88px;
 	}
 }
 </style>

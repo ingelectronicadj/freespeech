@@ -430,6 +430,7 @@ export default {
 	overflow: hidden;
 	width: 100%;
 	min-height: 118px !important;
+	padding: 6px 6px !important;
 	border-radius: 14px !important;
 	border: 2px solid rgba(15, 23, 42, 0.14) !important;
 	box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08) !important;
@@ -441,6 +442,13 @@ export default {
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
+}
+.saac-tile-btn .v-btn__content {
+	width: 100%;
+	white-space: normal;
+}
+.saac-tile-btn .tile-inner-container .v-row {
+	margin: 0 !important;
 }
 @media (hover: hover) {
 	.saac-tile-btn:hover {
@@ -559,8 +567,14 @@ export default {
 	margin: 0;
 }
 .saac-tile-btn.is-sentence-tile {
-	min-height: 72px !important;
+	min-height: 74px !important;
+	width: auto !important;
+	min-width: 96px !important;
+	padding: 6px 12px !important;
 	border-radius: 10px !important;
+}
+.saac-tile-btn.is-sentence-tile .tile-inner-container {
+	padding: 4px 6px !important;
 }
 .saac-tile-btn.is-sentence-tile .tile-visual-slot {
 	height: 32px;
@@ -575,12 +589,20 @@ export default {
 	font-size: 0.72rem;
 }
 .saac-tile-btn.is-sentence-tile .tile-label {
-	font-size: 0.8rem;
+	font-size: 0.86rem;
+	line-height: 1.3;
+	white-space: nowrap !important;
+	word-break: normal !important;
+	padding: 2px 4px;
 }
 @media (max-width: 640px) {
 	.saac-tile-btn {
-		min-height: 86px !important;
+		min-height: 90px !important;
+		padding: 4px 4px !important;
 		border-radius: 11px !important;
+	}
+	.saac-tile-btn .tile-inner-container {
+		padding: 4px 2px !important;
 	}
 	.tile-visual-slot {
 		height: 36px;
@@ -595,35 +617,41 @@ export default {
 		font-size: 0.78rem;
 	}
 	.tile-label {
-		font-size: 0.82rem;
-		line-height: 1.16;
+		font-size: 0.84rem;
+		line-height: 1.24;
 	}
 	.collection-folder-ribbon {
 		font-size: 0.6rem;
 		padding: 2px 5px;
 	}
 	.saac-tile-btn.is-sentence-tile {
-		min-height: 46px !important;
-		border-radius: 8px !important;
+		min-height: 66px !important;
+		min-width: 88px !important;
+		width: auto !important;
+		padding: 6px 12px !important;
+		border-radius: 10px !important;
 	}
 	.saac-tile-btn.is-sentence-tile .tile-inner-container {
-		padding: 3px 4px !important;
+		padding: 2px 4px !important;
 	}
 	.saac-tile-btn.is-sentence-tile .tile-visual-slot {
-		height: 22px;
+		height: 28px;
 	}
 	.saac-tile-btn.is-sentence-tile .tile-pictogram-img {
-		width: 22px !important;
-		height: 22px !important;
+		width: 28px !important;
+		height: 28px !important;
 	}
 	.saac-tile-btn.is-sentence-tile .tile-pictogram-fallback {
-		width: 20px;
-		height: 20px;
-		font-size: 0.62rem;
+		width: 26px;
+		height: 26px;
+		font-size: 0.72rem;
 	}
 	.saac-tile-btn.is-sentence-tile .tile-label {
-		font-size: 0.7rem;
-		line-height: 1.1;
+		font-size: 0.84rem !important;
+		line-height: 1.3 !important;
+		white-space: nowrap !important;
+		word-break: normal !important;
+		padding: 2px 4px !important;
 	}
 }
 .new-tile-icon-circle {
