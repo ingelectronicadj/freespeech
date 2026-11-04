@@ -92,10 +92,11 @@
 									v-for="swatch in colorSwatches"
 									:key="swatch.key"
 									type="button"
+									role="radio"
 									class="color-swatch-btn"
 									:class="{ 'is-selected': (activeValues.accent || 'white') === swatch.key }"
 									:style="{ backgroundColor: swatch.hex }"
-									:aria-pressed="(activeValues.accent || 'white') === swatch.key"
+									:aria-checked="String((activeValues.accent || 'white') === swatch.key)"
 									@click="update('accent', swatch.key)"
 								>
 									<span class="swatch-check" aria-hidden="true">
@@ -233,24 +234,24 @@
 import { mapActions, mapGetters } from 'vuex';
 
 const QUICK_PICTOGRAMS = [
-	{ label: 'Sí / Aceptar', url: 'https://img.icons8.com/officexs/64/000000/checked.png' },
-	{ label: 'No / Cancelar', url: 'https://img.icons8.com/officexs/64/000000/cancel-2.png' },
-	{ label: 'Ayuda', url: 'https://img.icons8.com/officexs/64/000000/help.png' },
-	{ label: 'Feliz / Bien', url: 'https://img.icons8.com/officexs/64/000000/happy.png' },
-	{ label: 'Triste', url: 'https://img.icons8.com/officexs/64/000000/sad.png' },
-	{ label: 'Me gusta / Quiero', url: 'https://img.icons8.com/officexs/64/000000/hearts.png' },
-	{ label: 'Comer / Comida', url: 'https://img.icons8.com/officexs/64/000000/restaurant.png' },
-	{ label: 'Beber / Agua', url: 'https://img.icons8.com/officexs/64/000000/water.png' },
-	{ label: 'Casa / Hogar', url: 'https://img.icons8.com/officexs/64/000000/home.png' },
-	{ label: 'Escuela / Clase', url: 'https://img.icons8.com/officexs/64/000000/school.png' },
-	{ label: 'Dormir / Descansar', url: 'https://img.icons8.com/officexs/64/000000/sleeping-in-bed.png' },
-	{ label: 'Música / Escuchar', url: 'https://img.icons8.com/officexs/64/000000/musical-notes.png' },
-	{ label: 'Libro / Leer', url: 'https://img.icons8.com/officexs/64/000000/book.png' },
-	{ label: 'Jugar', url: 'https://img.icons8.com/officexs/64/000000/controller.png' },
-	{ label: 'Arriba', url: 'https://img.icons8.com/officexs/64/000000/long-arrow-up.png' },
-	{ label: 'Abajo', url: 'https://img.icons8.com/officexs/64/000000/long-arrow-down.png' },
-	{ label: 'Más', url: 'https://img.icons8.com/officexs/64/000000/more.png' },
-	{ label: 'Parar / Alto', url: 'https://img.icons8.com/officexs/64/000000/stop-sign.png' },
+	{ label: 'Sí', labels: { es: 'Sí', en: 'Yes', de: 'Ja' }, url: '/img/pictograms/5584.png' },
+	{ label: 'No', labels: { es: 'No', en: 'No', de: 'Nein' }, url: '/img/pictograms/5526.png' },
+	{ label: 'Ayuda', labels: { es: 'Ayuda', en: 'Help', de: 'Hilfe' }, url: '/img/pictograms/32648.png' },
+	{ label: 'Feliz', labels: { es: 'Feliz', en: 'Happy', de: 'Glücklich' }, url: '/img/pictograms/35533.png' },
+	{ label: 'Triste', labels: { es: 'Triste', en: 'Sad', de: 'Traurig' }, url: '/img/pictograms/35545.png' },
+	{ label: 'Me gusta', labels: { es: 'Me gusta', en: 'I like it', de: 'Gefällt mir' }, url: '/img/pictograms/37826.png' },
+	{ label: 'Comer', labels: { es: 'Comer', en: 'Eat', de: 'Essen' }, url: '/img/pictograms/6456.png' },
+	{ label: 'Beber', labels: { es: 'Beber', en: 'Drink', de: 'Trinken' }, url: '/img/pictograms/6061.png' },
+	{ label: 'Casa', labels: { es: 'Casa', en: 'Home', de: 'Zuhause' }, url: '/img/pictograms/6964.png' },
+	{ label: 'Escuela', labels: { es: 'Escuela', en: 'School', de: 'Schule' }, url: '/img/pictograms/32446.png' },
+	{ label: 'Dormir', labels: { es: 'Dormir', en: 'Sleep', de: 'Schlafen' }, url: '/img/pictograms/6479.png' },
+	{ label: 'Música', labels: { es: 'Música', en: 'Music', de: 'Musik' }, url: '/img/pictograms/24791.png' },
+	{ label: 'Libro', labels: { es: 'Libro', en: 'Book', de: 'Buch' }, url: '/img/pictograms/25191.png' },
+	{ label: 'Jugar', labels: { es: 'Jugar', en: 'Play', de: 'Spielen' }, url: '/img/pictograms/23392.png' },
+	{ label: 'Arriba', labels: { es: 'Arriba', en: 'Up', de: 'Oben' }, url: '/img/pictograms/5388.png' },
+	{ label: 'Abajo', labels: { es: 'Abajo', en: 'Down', de: 'Unten' }, url: '/img/pictograms/5355.png' },
+	{ label: 'Más', labels: { es: 'Más', en: 'More', de: 'Mehr' }, url: '/img/pictograms/5508.png' },
+	{ label: 'Alto', labels: { es: 'Alto', en: 'Stop', de: 'Stopp' }, url: '/img/pictograms/7196.png' },
 ];
 
 const COLOR_SWATCHES = [
@@ -309,7 +310,13 @@ export default {
 			return found ? found.hex : '#FFFFFF';
 		},
 		displayedPictograms () {
-			return this.arasaacResults.length > 0 ? this.arasaacResults : QUICK_PICTOGRAMS;
+			if (this.arasaacResults.length > 0) return this.arasaacResults;
+			const loc = String(this.locale || 'es').toLowerCase();
+			const langKey = loc.startsWith('de') ? 'de' : (loc.startsWith('en') ? 'en' : 'es');
+			return QUICK_PICTOGRAMS.map(item => ({
+				...item,
+				label: (item.labels && item.labels[langKey]) || item.label
+			}));
 		},
 		areRequiredFieldsFilled () {
 			return !!this.newTileObject.name && !!this.newTileObject.text;
@@ -414,6 +421,10 @@ export default {
 			if (this.voices && this.selectedVoiceIndex !== null && this.voices[this.selectedVoiceIndex]) {
 				utter.voice = this.voices[this.selectedVoiceIndex];
 			}
+			const rate = this.$store && this.$store.state && this.$store.state.settings && this.$store.state.settings.voiceRate;
+			const pitch = this.$store && this.$store.state && this.$store.state.settings && this.$store.state.settings.voicePitch;
+			if (rate && rate !== 1) utter.rate = rate;
+			if (pitch && pitch !== 1) utter.pitch = pitch;
 			window.speechSynthesis.speak(utter);
 		},
 		removeTile () {

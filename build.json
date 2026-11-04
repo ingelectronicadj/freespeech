@@ -4,8 +4,8 @@
 			{
 				"name": "Another",
 				"text": "another",
-				"accent": 17054,
-				"image": "/img/pictograms/sunny.png",
+				"accent": "sunny",
+				"image": "/img/pictograms/37162.png",
 				"id": 0,
 				"messages": {
 					"de": {
@@ -21,8 +21,8 @@
 			{
 				"name": "Because",
 				"text": "because",
-				"accent": 36719,
-				"image": "/img/pictograms/white.png",
+				"accent": "white",
+				"image": "/img/pictograms/36719.png",
 				"id": 1,
 				"messages": {
 					"de": {
@@ -38,8 +38,8 @@
 			{
 				"name": "But",
 				"text": "but",
-				"accent": 11377,
-				"image": "/img/pictograms/white.png",
+				"accent": "white",
+				"image": "/img/pictograms/11377.png",
 				"id": 2,
 				"messages": {
 					"de": {
@@ -4027,7 +4027,7 @@
 			}
 		]
 	},
-	"_v": 9,
+	"_v": 10,
 	"6": {
 		"tileData": [
 			{

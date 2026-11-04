@@ -83,10 +83,10 @@
 			<span class="frequent-label">{{ frequentLabel }}</span>
 			<button
 				v-for="tile in frequentTiles"
-				:key="'freq-' + tile.id"
+				:key="'freq-' + (tile._freqKey || tile.id)"
 				type="button"
 				class="frequent-btn"
-				@click="sentenceTiles.push(tile)"
+				@click="handleFrequentTileTap(tile)"
 			>
 				<img
 					v-if="tile.image"
@@ -184,7 +184,9 @@ export default {
 			const byKey = {};
 			Object.keys(boards).forEach(k => {
 				(boards[k] && boards[k].tileData || []).forEach(t => {
-					if (t && t.id !== undefined && !t.navigation) byKey[k + ':' + t.id] = t;
+					if (t && t.id !== undefined && !t.navigation) {
+						byKey[k + ':' + t.id] = { ...t, _freqKey: k + ':' + t.id };
+					}
 				});
 			});
 			return this.tileTapsCount
@@ -378,6 +380,26 @@ export default {
 				this.sentenceTiles.pop();
 			} else if (data.command === 'speakSentence' && this.sentenceTiles.length > 0) {
 				this.speakSentence();
+			}
+		},
+		handleFrequentTileTap (tile) {
+			if (!tile) return;
+			const msg = tile.messages && tile.messages[this.currentLocaleCode];
+			const localizedTile = (msg && typeof msg === 'object')
+				? { ...tile, ...msg }
+				: { ...tile };
+			const spokenText = String(localizedTile.text || localizedTile.name || '').trim();
+			if (spokenText) {
+				this.speakText(spokenText);
+			}
+			this.sentenceTiles.push(localizedTile);
+			if (typeof window !== 'undefined' && window.parent && window.parent !== window) {
+				window.parent.postMessage({
+					type: 'FREESPEECH_SAAC_MESSAGE',
+					action: 'tileTap',
+					text: spokenText,
+					name: localizedTile.name || spokenText
+				}, '*');
 			}
 		},
 		selectCollectionTab (key) {

@@ -7,6 +7,7 @@
 			'is-sentence-tile': inSentenceComponent,
 			'is-collection-tile': isNavigationTile && tileData.navigation !== 'home',
 			'is-back-home-tile': isNavigationTile && tileData.navigation === 'home',
+			'is-holding-tile': isHolding,
 			['tile-img-' + (tileImageSize || 'medium')]: true
 		}"
 		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFF' : cardColor"
@@ -128,6 +129,12 @@
 				</v-card-text>
 			</v-row>
 		</v-container>
+		<span
+			v-if="isHolding"
+			class="tile-hold-progress"
+			:style="{ animationDuration: holdDurationMs + 'ms' }"
+			aria-hidden="true"
+		/>
 	</v-btn>
 </template>
 
@@ -171,7 +178,9 @@ export default {
 	data () {
 		return {
 			imgFailed: false,
-			imgLoaded: false
+			imgLoaded: false,
+			isHolding: false,
+			holdDurationMs: 0
 		};
 	},
 	computed: {
@@ -314,7 +323,10 @@ export default {
 			this._holdTriggered = false;
 			const delay = (this.$store && this.$store.state && this.$store.state.settings && this.$store.state.settings.activationDelay) || 0;
 			if (delay > 0) {
+				this.holdDurationMs = delay;
+				this.isHolding = true;
 				this._pressTimer = setTimeout(() => {
+					this.isHolding = false;
 					if (!this._pointerMoved) {
 						this._holdTriggered = true;
 						this.tileClickedEvent();
@@ -345,6 +357,7 @@ export default {
 				clearTimeout(this._pressTimer);
 				this._pressTimer = null;
 			}
+			this.isHolding = false;
 		},
 		handleTileClick (e) {
 			this.clearPressTimer();
@@ -666,6 +679,26 @@ export default {
 .saac-tile-btn:active {
 	transform: scale(.93);
 	transition: transform .08s ease;
+}
+.saac-tile-btn.is-holding-tile {
+	border-color: #0f766e !important;
+	box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.28) !important;
+}
+.tile-hold-progress {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 5px;
+	width: 0%;
+	background: linear-gradient(90deg, #0f766e, #0284c7);
+	animation-name: saacHoldFill;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+}
+@keyframes saacHoldFill {
+	from { width: 0%; }
+	to { width: 100%; }
 }
 .saac-tile-btn {
 	transition: transform .15s ease;

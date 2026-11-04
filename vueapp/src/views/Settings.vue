@@ -6,126 +6,125 @@
 
 		<div class="settings-grid">
 			<div>
-		<v-select
-			v-model="selectedLanguage"
-			:items="languageOptions"
-			item-title="text"
-			item-value="value"
-			:label="$t('settings.optionLanguage')"
-		/>
+				<v-select
+					v-model="selectedLanguage"
+					:items="languageOptions"
+					item-title="text"
+					item-value="value"
+					:label="$t('settings.optionLanguage')"
+				/>
 
-		<v-select
-			v-model="selectedVoiceIndex"
-			:items="voiceOptions"
-			item-title="text"
-			item-value="value"
-			:label="$t('settings.optionVoice')"
-		/>
+				<v-select
+					v-model="selectedVoiceIndex"
+					:items="voiceOptions"
+					item-title="text"
+					item-value="value"
+					:label="$t('settings.optionVoice')"
+				/>
 
-		<v-slider
-			v-model="voiceRate"
-			:min="0.5"
-			:max="1.5"
-			:step="0.1"
-			thumb-label
-			:label="$t('settings.optionVoiceRate')"
-			:hint="$t('settings.hintVoiceRate')"
-			persistent-hint
-			class="mb-3"
-		/>
+				<v-slider
+					v-model="voiceRate"
+					:min="0.5"
+					:max="1.5"
+					:step="0.1"
+					thumb-label
+					:label="$t('settings.optionVoiceRate')"
+					:hint="$t('settings.hintVoiceRate')"
+					persistent-hint
+					class="mb-3"
+				/>
 
-		<v-slider
-			v-model="voicePitch"
-			:min="0.5"
-			:max="2"
-			:step="0.1"
-			thumb-label
-			:label="$t('settings.optionVoicePitch')"
-			:hint="$t('settings.hintVoicePitch')"
-			persistent-hint
-			class="mb-3"
-		/>
-		<v-select
-			v-model="tileImageSize"
-			:items="tileImageSizeOptions"
-			item-title="text"
-			item-value="value"
-			:label="$t('settings.optionPictogramSize')"
-			:hint="$t('settings.hintPictogramSize')"
-			persistent-hint
-		/>
+				<v-slider
+					v-model="voicePitch"
+					:min="0.5"
+					:max="2"
+					:step="0.1"
+					thumb-label
+					:label="$t('settings.optionVoicePitch')"
+					:hint="$t('settings.hintVoicePitch')"
+					persistent-hint
+					class="mb-3"
+				/>
+				<v-select
+					v-model="tileImageSize"
+					:items="tileImageSizeOptions"
+					item-title="text"
+					item-value="value"
+					:label="$t('settings.optionPictogramSize')"
+					:hint="$t('settings.hintPictogramSize')"
+					persistent-hint
+				/>
 
-		<v-select
-			v-model="gridDensity"
-			:items="gridDensityOptions"
-			item-title="text"
-			item-value="value"
-			:label="$t('settings.optionBoardTileSize')"
-			:hint="$t('settings.hintBoardTileSize')"
-			persistent-hint
-		/>
+				<v-select
+					v-model="gridDensity"
+					:items="gridDensityOptions"
+					item-title="text"
+					item-value="value"
+					:label="$t('settings.optionBoardTileSize')"
+					:hint="$t('settings.hintBoardTileSize')"
+					persistent-hint
+				/>
 
-		<v-switch
-			v-model="highContrast"
-			color="primary"
-			:label="$t('settings.optionHighContrast')"
-			:hint="$t('settings.hintHighContrast')"
-			persistent-hint
-		/>
+				<v-switch
+					v-model="highContrast"
+					color="primary"
+					:label="$t('settings.optionHighContrast')"
+					:hint="$t('settings.hintHighContrast')"
+					persistent-hint
+				/>
 
-		<v-select
-			v-model="activationDelay"
-			:items="activationDelayOptions"
-			item-title="text"
-			item-value="value"
-			:label="$t('settings.optionActivationDelay')"
-			:hint="$t('settings.hintActivationDelay')"
-			persistent-hint
-		/>
-
+				<v-select
+					v-model="activationDelay"
+					:items="activationDelayOptions"
+					item-title="text"
+					item-value="value"
+					:label="$t('settings.optionActivationDelay')"
+					:hint="$t('settings.hintActivationDelay')"
+					persistent-hint
+				/>
 			</div>
 			<div
-			class="settings-live-preview"
-			:class="{ 'preview-contrast': highContrast }"
-			role="img"
-			:aria-label="$t('settings.previewAria')"
-		>
-			<span class="preview-caption">{{ $t('settings.previewLabel') }}</span>
-			<div
-				class="preview-tile"
-				:class="['preview-' + (tileImageSize || 'medium'), 'dens-' + (gridDensity || 'auto')]"
+				class="settings-live-preview"
+				:class="{ 'preview-contrast': highContrast }"
+				role="img"
+				:aria-label="$t('settings.previewAria')"
 			>
-				<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
-				<span>{{ previewWord }}</span>
-				<span v-if="tapCount" class="preview-taps">7</span>
+				<span class="preview-caption">{{ $t('settings.previewLabel') }}</span>
+				<div
+					class="preview-tile"
+					:class="['preview-' + (tileImageSize || 'medium'), 'dens-' + (gridDensity || 'auto')]"
+				>
+					<img src="/img/pictograms/6456.png" alt="" aria-hidden="true">
+					<span>{{ previewWord }}</span>
+					<span v-if="tapCount" class="preview-taps">7</span>
+				</div>
 			</div>
-		</div>
 		</div>
 
 		<div class="switches-grid">
-		<v-switch
-			v-model="customTilePad"
-			color="primary"
-			:label="$t('settings.optionCustomTilePad')"
-		/>
+			<v-switch
+				v-model="customTilePad"
+				color="primary"
+				:label="$t('settings.optionCustomTilePad')"
+			/>
 
-		<v-switch
-			v-model="sentenceMode"
-			color="primary"
-			:label="$t('settings.optionCreateSentences')"
-		/>
+			<v-switch
+				v-model="sentenceMode"
+				color="primary"
+				:label="$t('settings.optionCreateSentences')"
+			/>
 
-		<v-switch
-			v-model="passcodeEnabled"
-			color="primary"
-			:label="$t('settings.optionPasscodeEnabled')"
-		/>
+			<v-switch
+				v-model="passcodeEnabled"
+				color="primary"
+				:label="$t('settings.optionPasscodeEnabled')"
+			/>
 
-		<v-switch
-			v-model="tapCount"
-			color="primary"
-			:label="$t('settings.displayTapCounter')"
-		/>
+			<v-switch
+				v-model="tapCount"
+				color="primary"
+				:label="$t('settings.displayTapCounter')"
+			/>
 		</div>
 
 		<v-dialog
@@ -229,10 +228,17 @@ export default {
 			set (value) {
 				this.setSelectedVoiceIndex(value);
 				if (typeof window !== 'undefined' && window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined') {
-					const speechSynthesisUtterance = new SpeechSynthesisUtterance('Welcome to Free Speech');
+					const loc = String(this.locale || 'es').toLowerCase();
+					const sample = loc.startsWith('de')
+						? 'Willkommen bei Free Speech'
+						: (loc.startsWith('en') ? 'Welcome to Free Speech' : 'Bienvenido a Free Speech');
+					window.speechSynthesis.cancel();
+					const speechSynthesisUtterance = new SpeechSynthesisUtterance(sample);
 					if (this.voices && this.voices[value]) {
 						speechSynthesisUtterance.voice = this.voices[value];
 					}
+					if (this.voiceRate && this.voiceRate !== 1) speechSynthesisUtterance.rate = this.voiceRate;
+					if (this.voicePitch && this.voicePitch !== 1) speechSynthesisUtterance.pitch = this.voicePitch;
 					window.speechSynthesis.speak(speechSynthesisUtterance);
 				}
 			}
@@ -375,6 +381,14 @@ export default {
 				'settings/setSentenceMode': this.sentenceMode,
 				'settings/setCustomTilePad': this.customTilePad,
 				'settings/setPasscode': this.passcode,
+				'settings/setLocale': this.locale,
+				'settings/setDisplayTapCount': this.tapCount,
+				'settings/setTileImageSize': this.tileImageSize,
+				'settings/setGridDensity': this.gridDensity,
+				'settings/setHighContrast': this.highContrast,
+				'settings/setVoiceRate': this.voiceRate,
+				'settings/setVoicePitch': this.voicePitch,
+				'settings/setActivationDelay': this.activationDelay,
 				'tilePad/setCustomTilePadData': this.customTilePadData
 			});
 

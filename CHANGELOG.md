@@ -4,6 +4,20 @@ Historial de versiones y evolución técnica del proyecto **Free Speech SAAC** (
 
 ---
 
+## [2.9.2] - 2026-11-04
+
+> Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
+
+### Pictogramas locales en el editor, feedback visual de pulsación, tira Frecuentes con voz e integración completa de perfil clínico
+
+- **Corrección de pictogramas núcleo en `home` (`build.json`, `_v: 10`)**: corregidos los campos `image` y `accent` que estaban invertidos en las baldosas iniciales `Otro` (`Another`), `Porque` (`Because`) y `Pero` (`But`) del tablero principal.
+- **Tira `Frecuentes` conectada a voz y a `Escritura directa` (`TilePad.vue`)**: al tocar un pictograma frecuente ahora se resuelve el texto localizado en el idioma activo (`es`, `en`, `de`), se pronuncia mediante `speakText` y se envía `postMessage` (`tileTap`) a la ventana anfitriona para que `freespeech-widget.js` inserte la palabra automáticamente en modo `Escritura directa`.
+- **Galería rápida 100 % offline y semántica ARIA en el editor (`EditTileDialog.vue`)**: `QUICK_PICTOGRAMS` migrado de URLs externas (`img.icons8.com`) a 18 pictogramas ARASAAC locales (`/img/pictograms/*.png`) con etiquetas trilingües (`es`, `en`, `de`); corregidos los botones de color Fitzgerald dentro de `role="radiogroup"` para usar `role="radio"` y `aria-checked`; `testSpeakPreview` aplica ahora `voiceRate` y `voicePitch`.
+- **Indicador visual de progreso en pulsación prolongada (`Tile.vue`)**: cuando `activationDelay` (`300 / 500 / 800 ms`) está activo, mantener presionada una baldosa muestra un anillo de enfoque y una barra inferior de progreso animada (`.tile-hold-progress`) que confirma visualmente el tiempo de activación.
+- **Exportación completa del perfil clínico y prueba de voz localizada (`Settings.vue`)**: `exportSettings()` incluye todos los parámetros clínicos y visuales (`locale`, `displayTapCount`, `tileImageSize`, `gridDensity`, `highContrast`, `voiceRate`, `voicePitch`, `activationDelay`); la muestra de voz al cambiar de sintetizador se pronuncia en el idioma activo respetando velocidad y tono; corregida la indentación para pasar `eslint --max-warnings 0`.
+
+---
+
 ## [2.9.1] - 2026-11-04
 
 > Autor: **Diego Javier Mena Amado** (`@ingelectronicadj`)
